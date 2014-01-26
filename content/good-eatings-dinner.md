@@ -14,7 +14,7 @@ Tonight's selection was amazing! I had:
 -   A bit of smoked salmon alfredo with orzo, roasted garlic, cream,
     arugula, parmesan cheese, chives, caper and red onion relish
 -   A bit of sauteed broccolini with red cabbage, shallots, corn and
-    blackberryâ€“walnut vinaigrette
+    blackberry-walnut vinaigrette
 -   A devil's food cupcake, with white chocolate-raspberry cream
 -   A glass of water
 

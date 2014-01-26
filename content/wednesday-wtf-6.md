@@ -39,7 +39,7 @@ happened today?
 
 Finally to provide a proper Wednesday WTF, I'm stealing one from
 [thedailywtf][]:  
-[The Dream Customer][] â€“ A lady calls in customer support, for her
+[The Dream Customer][] - A lady calls in customer support, for her
 computer I presume, because she cannot access the wireless internet. All
 in all it turns out she was paying for internet for two years, but had
 never connected her modem and was stealing the internet from a neighbor.

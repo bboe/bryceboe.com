@@ -28,7 +28,7 @@ events in the past four years:
 -   Taking first place in the UCSB Programming Battle
 -   Creating gauchoShare with Adam for CS50
 -   Goleta Beach BBQ with Anacapa friends
--   The dining commons â€“ late night at DLG, tuna melts at FT, pizza at
+-   The dining commons - late night at DLG, tuna melts at FT, pizza at
     Carillo, shake night at Ortega, tots, and so much more
 -   Learning to program Java
 
@@ -55,7 +55,7 @@ events in the past four years:
     competition with Adam and Scott
 -   UCSB Soccer National Champions
 -   Early mornings in the digilab for ECE152A
--   Discovering better beer than Natty Lite â€“ Mmm Blue Moon
+-   Discovering better beer than Natty Lite - Mmm Blue Moon
 -   Taking Compilers with Tim
 -   Taking the GRE three days after I discovered I needed to take it
 -   Spring Break at Avila Beach with A.J. Mike and Johnny
@@ -75,7 +75,7 @@ events in the past four years:
 -   Starting networking research in the current lab
 -   OTT Wednesdays
 -   Downtown Thursdays
--   CS176A â€“ Networking
+-   CS176A - Networking
 -   The return of American Gladiators
 -   Super Mario Galaxy
 -   Getting our home IP banned from UCSB's network during CS176B

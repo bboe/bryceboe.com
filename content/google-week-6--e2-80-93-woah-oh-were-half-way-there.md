@@ -105,7 +105,7 @@ Well that's all for last week. As one can see the common theme for last
 week was Rock Band. I had played once last Thanksgiving and wasn't very
 intrigued by it, but that definitely changed last week. Anyway, I think
 Adam, Scott, and I will be purchasing it when we get back to Santa
-Barbara â€“ woo!
+Barbara - woo!
 
   [here]: http://www.youtube.com/atgoogletalks
   [Burn Rate]: http://www.cool-studio.net/
