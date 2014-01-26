@@ -76,8 +76,8 @@ at most 6 characters a-z, and the password could be at most two
 numerical digits. The passwords could be easily brute forced, however
 the username space was 27^6^-1 in size which is not feasible to brute
 force. Thus, I populated the database with many guessable usernames such
-as, â€˜user', â€˜ictf', â€˜a', â€˜admin', â€˜root', â€˜dev',
-â€˜test', as well as some keywords from the annoying video. Further
+as, 'user', 'ictf', 'a', 'admin', 'root', 'dev',
+'test', as well as some keywords from the annoying video. Further
 error messages indicated invalid usernames, incorrect passwords,
 inactive accounts, and non-administrator accounts allowing teams to
 guess valid username and password combinations in a minimal amount of

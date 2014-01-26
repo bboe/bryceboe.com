@@ -43,7 +43,7 @@ back to Los Altos Hills for the last time. From there it took me a few
 hours to load up my things and hit the road for Santa Barbara thus
 ending my summer.
 
-The summer of â€˜08 was by far the best summer since the summer of '04
+The summer of '08 was by far the best summer since the summer of '04
 in which I went to Hawaii. I had the opportunity to meet a ton of new
 people, and experience an internship like no other. Sadly, unless I work
 for Google again, or another Googley company, I likely wont have any
