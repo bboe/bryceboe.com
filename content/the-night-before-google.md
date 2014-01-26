@@ -12,7 +12,7 @@ Slug: the-night-before-google
 
 ...
 
-It would be interesting to complete â€œThe Night Before Googleâ€?
+It would be interesting to complete "The Night Before Googleâ€?
 however it could take hours and I want to be up around 7:30 so that I am
 ready for my 10AM start at Google headquarters tomorrow. So to keep this
 simple I wanted to write about my experience becoming a Google intern.
@@ -40,7 +40,7 @@ mine.
     singly linked list.
 3.  Describe character for character the C code to reverse a 32 bit
     integer. If the following string represents a 5 bit integer
-    â€œ10011â€? the reverse would be â€œ11001â€?.
+    "10011â€? the reverse would be "11001â€?.
 
 A few comments and hints for those having some difficulty. The first can
 be done with constant memory and O(n). The second can be done in O(n)

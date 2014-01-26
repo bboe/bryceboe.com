@@ -40,7 +40,7 @@ leaving, but I didn't pay $50 for just the keynote. At this point I
 simply wanted to hide for a bit while my pants dried, so I sat down to
 browse the internet some more. It was then I realized I only had a few
 minutes of battery left and had forgotten my power adapter. I simply
-thought, â€œtoday is a [Terrible, Horrible, No Good, Very Bad Day][].â€?
+thought, "today is a [Terrible, Horrible, No Good, Very Bad Day][].â€?
 
 After a few talks my pants were dry, however they were horribly stained
 and the smell of espresso was inescapable. Nonetheless the day was
@@ -78,15 +78,15 @@ addresses, all of which were immediately bounced. So I sent an email to
 Mark directly, explaining the problem, thinking he'll never read this.
 
 Well I was incorrect. I walked up to Mark and said something along the
-lines of, â€œHey Mark my name is Bryce Boe, and I just wanted to take
-this opportunity to meet you.â€? To which he replied, â€œNice to meet
+lines of, "Hey Mark my name is Bryce Boe, and I just wanted to take
+this opportunity to meet you.â€? To which he replied, "Nice to meet
 you, and thanks for the email you sent me last night. I forwarded it to
 the appropriate department.â€? So I once again was shocked. Mark
 Zuckerberg, a celebrity amongst the technology crowd, was able to recall
 something I did. I told him that Facebook essentially revolutionized the
 college experience as all parties were organized and later remembered
 through Facebook events and Facebook photos respectively. I then asked
-for a picture, and the coolest thing happened. He said, â€œSure! Hey dad
+for a picture, and the coolest thing happened. He said, "Sure! Hey dad
 can you take this for us?â€? Mark is only a few years older than I,
 however one doesn't expect a billionaire's parents to be around. I think
 it was awesome that his parents were there to share the experience with

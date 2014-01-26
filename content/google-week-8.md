@@ -92,7 +92,7 @@ properly, which it did. Additionally I tested the 6 disc CD changer in
 Verena and after a few problems managed to get it working. I currently
 have 5 discs in there, the first three are a set of Electro House
 compilations, the fourth is a Classic Rock creation I made in high
-school dubbed â€œKick Ass Classic Rockâ€? and the fifth is Radiohead's
+school dubbed "Kick Ass Classic Rockâ€? and the fifth is Radiohead's
 OK Computer album. Finally I put on my UCSB Santa Barbara license plate
 frame, which was given to me by [Cheri][] over four years ago. I then
 spoke to Molly who asked if I was interested in seeing The Dark Knight,

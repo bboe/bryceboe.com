@@ -20,7 +20,7 @@ man with two kids from South Africa and some other familiar faces.
 Tuesday there was an all department TA orientation in which myself along
 with a few other CS students attended the breakout sessions TAing
 Engineering Students and Profiles of UCSB Students. The second session
-was rather interesting as I found the â€œprofilesâ€? of UCSB students to
+was rather interesting as I found the "profilesâ€? of UCSB students to
 be rather accurate. Additionally it was also the first time I heard the
 phrase [Helicopter parent][], which seemed incredibly strange to me
 since my parents are definitely not that way, and as far as I can tell
