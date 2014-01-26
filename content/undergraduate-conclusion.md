@@ -84,7 +84,7 @@ events in the past four years:
 -   Developing an awesome web scraping toolkit
 -   Being partially responsible for getting lab computers blocked by
     overstock.com
--   Being accepted in the the UCSB CS PhD program
+-   Being accepted in the the UCSB CS Ph.D. program
 -   Interviewing and accepting my summer internship offer with Google
 -   Working on my first research papers and having one accepted
 -   Late nights in CSIL for CS176C

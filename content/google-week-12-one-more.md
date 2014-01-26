@@ -81,7 +81,7 @@ for the next thing to do. Have I mentioned that I don't work well when I
 don't have much to do?
 
 So this is my last week. It's going to be sad to leave this all behind,
-but I am eager to officially start my PhD. Other than Wednesday WTF
+but I am eager to officially start my Ph.D.. Other than Wednesday WTF
 (assuming I write one), the next time you read from me, it'll be written
 from Santa Barbara. Adios from the Hills!
 

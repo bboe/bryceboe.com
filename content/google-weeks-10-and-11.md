@@ -50,13 +50,12 @@ Santa Cruz. We grilled some steaks and drank until our livers quivered.
 Yesterday was simply a recovery day in which I watched quite a few
 episodes of House.
 
-And that reminds me I forgot to mention I finished the Star Trek series
-[The Next Generation][] a week or so ago which I had started over
-Christmas break. I'm pretty sure it's all downhill from here with
-respect to Star Trek, but nonetheless I will complete [DS9][],
-[Voyager][] and [Enterprise][] before I am done with my PhD. However my
-current TV adventure is catching up on House, which I just today
-finished the second season.
+And that reminds me I forgot to mention I finished the Star Trek series [The
+Next Generation][] a week or so ago which I had started over Christmas
+break. I'm pretty sure it's all downhill from here with respect to Star Trek,
+but nonetheless I will complete [DS9][], [Voyager][] and [Enterprise][] before
+I am done with my Ph.D.. However my current TV adventure is catching up on
+House, which I just today finished the second season.
 
 Finally, today as I already mentioned, I sold the 944. I also went to
 Google for some Sunday afternoon volleyball. After grabbing some dinner,
