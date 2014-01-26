@@ -7,11 +7,11 @@ The drive back down to Santa Barbara was awesome. I really got to enjoy
 [Verena][] and test out the roof rack system with my bike on top.
 Despite having more stuff than I came up with, the increased space in
 Verena left me with plenty of visibility. Upon arriving in Santa Barbara
-I headed to Frank, Mark and Daveâ€™s house whose garage would be my home
+I headed to Frank, Mark and Dave's house whose garage would be my home
 for the next week.
 
 Monday I attended a new student orientation for the Department of
-Computer science. Iâ€™m pretty sure I had heard most of the material
+Computer science. I'm pretty sure I had heard most of the material
 already, but I was not there for the information. I was there to meet
 the new faces that I would likely be hanging out with for the next five
 years. Among the new Ph.D. students was a girl from Lebanon, a married
@@ -24,13 +24,13 @@ was rather interesting as I found the â€œprofilesâ€? of UCSB students to
 be rather accurate. Additionally it was also the first time I heard the
 phrase [Helicopter parent][], which seemed incredibly strange to me
 since my parents are definitely not that way, and as far as I can tell
-none of my friendsâ€™ parents are either. Nonetheless since I heard the
-phrase Iâ€™ve overheard peopleâ€™s conversations with Helicopter parents
-and I must say itâ€™s ridiculous how involved some parents are.
+none of my friends' parents are either. Nonetheless since I heard the
+phrase I've overheard people's conversations with Helicopter parents
+and I must say it's ridiculous how involved some parents are.
 
 By Wednesday Scott and Adam were back and the three of us started the
 hunt for a place to live. We started with Sesame Tree, the place we
-originally planned to live, despite being told we didnâ€™t meet their
+originally planned to live, despite being told we didn't meet their
 income requirement. We figured since we had plenty of income from the
 summer to cover expenses we could work around it. We were told us they
 would consider us.
@@ -41,7 +41,7 @@ I took the course last fall, but my writing can always improve as well
 as my presentation skills, thus I signed up to take it again. Friday I
 received a call in the morning that we could live at Sesame Tree under
 one circumstance, paying all nine months rent up front. Given the
-apartmentâ€™s fair price, as well as its proximity to UCSB, we decided
+apartment's fair price, as well as its proximity to UCSB, we decided
 to pay a significant portion of our summer savings up front for nine
 months rent. It was by far the most money I had ever spent at once.
 

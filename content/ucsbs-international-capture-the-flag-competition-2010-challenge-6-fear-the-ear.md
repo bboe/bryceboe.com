@@ -23,8 +23,8 @@ to a previously unpublicized web vulnerability that we are calling the
 **Execution After Redirect**, or **EAR Vulnerability**. This
 vulnerability is exactly as the name states, however to be a bit more
 precise our exact definition of the vulnerability is, â€œcode that
-executes after the developerâ€™s intended termination pointâ€?. The
-developerâ€™s intended termination point is often indicated by a
+executes after the developer's intended termination pointâ€?. The
+developer's intended termination point is often indicated by a
 server-initiated redirect, or more precisely an HTTP [301][], [302][],
 [303][], or [307][] status code along with an HTTP Location header. It
 is important to note that there are cases in which the developer intends
@@ -37,7 +37,7 @@ understanding this challenge, you need only know that when a modern
 browser receives the redirect, any data sent in conjunction with the
 server-initiated redirect will not be displayed as the browser
 automatically fetches the resource indicated by the redirect.
-Furthermore, tools such as wget, curl and pythonâ€™s urllib, among
+Furthermore, tools such as wget, curl and python's urllib, among
 others, also automatically handle the redirect in their default
 configuration thus making the EAR vulnerability that much more difficult
 to detect.
@@ -76,8 +76,8 @@ at most 6 characters a-z, and the password could be at most two
 numerical digits. The passwords could be easily brute forced, however
 the username space was 27^6^-1 in size which is not feasible to brute
 force. Thus, I populated the database with many guessable usernames such
-as, â€˜userâ€™, â€˜ictfâ€™, â€˜aâ€™, â€˜adminâ€™, â€˜rootâ€™, â€˜devâ€™,
-â€˜testâ€™, as well as some keywords from the annoying video. Further
+as, â€˜user', â€˜ictf', â€˜a', â€˜admin', â€˜root', â€˜dev',
+â€˜test', as well as some keywords from the annoying video. Further
 error messages indicated invalid usernames, incorrect passwords,
 inactive accounts, and non-administrator accounts allowing teams to
 guess valid username and password combinations in a minimal amount of

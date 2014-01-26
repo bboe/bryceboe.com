@@ -4,10 +4,10 @@ Category: all
 Tags: google
 Slug: bye-bye-google-the-end-of-a-great-summer
 
-Damn itâ€™s been over 8 weeks since I last wrote, and how Iâ€™ve missed
-it. As you may have guessed Iâ€™ve been terribly busy since my last
+Damn it's been over 8 weeks since I last wrote, and how I've missed
+it. As you may have guessed I've been terribly busy since my last
 post, especially in the most recent weeks. Since there is too much
-information for a single post, Iâ€™ll split up the last 8 weeks into a
+information for a single post, I'll split up the last 8 weeks into a
 few segments starting with the end of summer.
 
 I finished my Internship at Google and said goodbye to all the friends I
@@ -34,7 +34,7 @@ game of [Kings Cup][] which I believe I lost. I must have shouted "Light
 up the eyes boys!" a few times, as we put 3 Ninjas on in the background.
 After the game and the movie I said my goodbyes and headed home.
 
-Saturday afternoon I spent packing and cleaning which wasnâ€™t terribly
+Saturday afternoon I spent packing and cleaning which wasn't terribly
 exciting. That evening I went up to Berkeley one last time to hang out
 with Mira, Bung and Reina. I ended the summer the same way I started it,
 by playing pool at a bar, crashing at Mira's, finally followed by
@@ -43,7 +43,7 @@ back to Los Altos Hills for the last time. From there it took me a few
 hours to load up my things and hit the road for Santa Barbara thus
 ending my summer.
 
-The summer of â€˜08 was by far the best summer since the summer of â€™04
+The summer of â€˜08 was by far the best summer since the summer of '04
 in which I went to Hawaii. I had the opportunity to meet a ton of new
 people, and experience an internship like no other. Sadly, unless I work
 for Google again, or another Googley company, I likely wont have any

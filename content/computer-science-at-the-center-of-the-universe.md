@@ -16,7 +16,7 @@ Sometimes, however, I stop and wonder if all this technology really for
 the better? I was reading a blog post by Michael Zimmer titled [Amusing
 Ourselves to Death: The Comic][]. His posts are mostly about online
 privacy, however, this particular post brought attention to a comparison
-between [Orwell's 1984][], which I've started reading, and [Huxleyâ€™s
+between [Orwell's 1984][], which I've started reading, and [Huxley's
 Brave New World][], which I've now added to my reading list. I don't
 have time to provide my thoughts on the matter, nonetheless I thought it
 was worth sharing. I'll end by saying that if this technology wasn't for
@@ -26,4 +26,4 @@ the better, then I'd be out of a job :)
   [Eric Schmidt]: http://en.wikipedia.org/wiki/Eric_E._Schmidt
   [Amusing Ourselves to Death: The Comic]: http://michaelzimmer.org/2009/05/27/amusing-ourselves-to-death-the-comic/
   [Orwell's 1984]: http://en.wikipedia.org/wiki/Nineteen_Eighty-Four
-  [Huxleyâ€™s Brave New World]: http://en.wikipedia.org/wiki/Brave_New_World
+  [Huxley's Brave New World]: http://en.wikipedia.org/wiki/Brave_New_World

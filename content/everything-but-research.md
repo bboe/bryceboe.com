@@ -4,36 +4,36 @@ Category: all
 Tags: acm
 Slug: everything-but-research
 
-So much has happened this quarter that itâ€™s now difficult to recall
+So much has happened this quarter that it's now difficult to recall
 specifics, but knowing all too well that it only gets more difficult
-with time Iâ€™ll try to recall some of the more awesome events. Early in
+with time I'll try to recall some of the more awesome events. Early in
 the quarter the computer science department hosted an industry related
-event. One of the cool talks was by Googleâ€™s director of research,
+event. One of the cool talks was by Google's director of research,
 [Peter Norvig][]. The annual Computer Science Fall Kickoff Barbeque
 followed the event in which Christo and I made it to the final three of
 the water balloon toss. While this alone would be no spectacular feat,
 we performed trick throws the entire time, with Christo throwing under
 the leg, and myself performing the scorpion toss. Unfortunately one of
-Christoâ€™s under the leg tosses came up short, and we were defeated.
+Christo's under the leg tosses came up short, and we were defeated.
 
-That same night we celebrated Adamâ€™s birthday by Pub Golfing in
+That same night we celebrated Adam's birthday by Pub Golfing in
 downtown Santa Barbara. Pub Golfing is an event where participants dress
 up as golfers and score plus or minus strokes at a list of bars. Since
-we arenâ€™t too crazy, we only did a 9 bar (hole) Pub Golf, which
+we aren't too crazy, we only did a 9 bar (hole) Pub Golf, which
 included penalties for PDA, water hazards, or bars at which people,
-couldnâ€™t pee, and sand traps, or being caught talking to a cougar.
+couldn't pee, and sand traps, or being caught talking to a cougar.
 Bonuses were offered for drinking the hole specialty, downing a drink in
 a single attempt, buying drinks for others and drinking more than the 1
 required drink per hole. No one was penalized for a water hazard, but
 Adam did get trapped in the sand when a cougar pounced. Fortunately he
-escaped from the cougarâ€™s paws before more penalties occurred. It was
+escaped from the cougar's paws before more penalties occurred. It was
 a glorious night.
 
 The weekend following the previous events I decided it was time to
 properly network our apartment, so I took it upon myself to run wires
 between the rooms through the attic, as well as between the first and
 second floor. Wiring between the rooms was a piece of cake but getting
-between the first and second floor was a bit trickier. Iâ€™ll just say
+between the first and second floor was a bit trickier. I'll just say
 involved a coat hanger and some duct tape. With our house fully
 connected we can now stream movies or TV shows from any computer in the
 house down to our huge ass rear projection TV, which we got for $100

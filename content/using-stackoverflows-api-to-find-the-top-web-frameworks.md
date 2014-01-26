@@ -152,7 +152,7 @@ asp.net MVC, it makes sense that it would rank quite high.
 
 <ins datetime="2011-02-22T18:50:07+00:00">I added the below chart to
 show the relative percentage of questions per tag over time as per Big
-Daveâ€™s Gusset's comment. This hides the growing popularity of
+Dave's Gusset's comment. This hides the growing popularity of
 stackoverflow.</ins>
 
 ![image][]  
