@@ -86,8 +86,8 @@ is, downloading albums that I am tagged in where photos in each album
 are grouped into their own folder. I have made available my [patch][] to
 photograbber which you can use to patch the source and run yourself.
 Alternatively, I have also repackaged photograbber for Mac so you don't
-have to mess with patching the application ([download][]). ~~A window's
-repackage will follow shortly.~~ Running the application is pretty
+have to mess with patching the application ([download][]). <del>A window's
+repackage will follow shortly.</del> Running the application is pretty
 simple, but if you need any assistance please post a comment.
 <ins datetime="2010-05-14T07:22:29+00:00">I have now made a [zip file][]
 available which should work on windows. Unzip, and run pg.exe. </ins>

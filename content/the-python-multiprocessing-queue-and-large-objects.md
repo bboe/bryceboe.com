@@ -13,7 +13,7 @@ converting my code seemed pretty trivial. Unfortunately, my analysis
 code deals with large amounts of data which when passed to processes
 using the [multiprocessing queue class][], produced unexpected results.
 Thus the sample I originally used in my previous post, isn't as robust
-as I hoped. ~~It will soon be updated.~~
+as I hoped. <del>It will soon be updated.<del>
 <ins datetime="2011-01-28T19:08:44+00:00">The post has been updated with
 a reference to this post.</ins>
 

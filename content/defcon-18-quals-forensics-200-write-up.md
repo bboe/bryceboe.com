@@ -12,8 +12,8 @@ Shellphish. We unfortunately only placed 15th, nonetheless, it was an
 exciting and challenging weekend. Below is my write up for the Forensics
 200 challenge.
 
-~~I don't recall the phrasing they gave (if you remember it please let
-me know), however this was the file they provided:~~
+<del>I don't recall the phrasing they gave (if you remember it please let
+me know), however this was the file they provided:</del>
 <ins datetime="2010-05-26T03:34:43+00:00">The caption read, "find the
 key" and linked to this file:</ins>
 [f200\_02b7b50f575759cff7.tar.lzma][]

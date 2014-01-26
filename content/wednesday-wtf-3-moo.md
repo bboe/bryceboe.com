@@ -12,6 +12,7 @@ The bug filer complains that the current cow displayed when someone
 types apt-get moo does not look like an actual cow. The following is
 output from my terminal:
 
+    :::text
     bboe@sybok:~$ apt-get moo
              (__)
              (oo)
@@ -24,6 +25,7 @@ output from my terminal:
 The following is what the cow would look like if today's patch is
 accepted:
 
+    :::text
              (__)
      _______~(..)~
        ,----\(oo)

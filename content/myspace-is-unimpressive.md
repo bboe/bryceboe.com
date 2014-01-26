@@ -13,7 +13,7 @@ contracted by a social networking company in which I will be testing
 some stuff that involves MySpace. It would be quite difficult to perform
 these tasks without an account, however I realize creating a fake
 account is not difficult, and could even help me pick up little boys or
-girls, if I were into that (see below). But I ~~sustained~~ refrained
+girls, if I were into that (see below). But I <del>sustained</del> refrained
 from creating a fake account because I figure I can draw traffic here
 with my MySpace profile. The second reason for creating a MySpace
 account is because I figured I should try it before I continue to put it

@@ -14,7 +14,7 @@ traveling with some friends in the Bay Area during Winter break of our
 junior year when their vehicle rolled and engulfed in flames; three
 others survived. Finally a little over an hour ago I was told Jaymie
 Darrow, who lived a few houses down the street from me at UCSB, was
-found in the water near a ~~La Jolla~~ Palomar Mountain campsite. The
+found in the water near a <del>La Jolla</del> Palomar Mountain campsite. The
 cause of death is uncertain at this time, but it appears there was no
 foul play.
 

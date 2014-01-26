@@ -92,8 +92,8 @@ because I can develop the system faster without the need for external
 dependencies and have confidence that it will work on any operating
 system that python runs on. Nevertheless, my curiosity peaked and I set
 out to write a *simple* process-based job management system in C. The
-system is complete, ~~though I've yet to write about
-it~~<ins datetime="2012-02-24T07:02:59+00:00"> and I've now written
+system is complete, <del>though I've yet to write about
+it<del><ins datetime="2012-02-24T07:02:59+00:00"> and I've now written
 about it. Read the followup: [Implementation of a Process-Based Job
 Management System in C][]</ins>
 
