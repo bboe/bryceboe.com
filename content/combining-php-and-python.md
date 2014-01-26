@@ -93,9 +93,9 @@ The whole package with proper extensions can be downloaded:
   [documentation]: http://docs.python.org/lib/lib.html
   [php's]: http://www.php.net/manual/en/
   [mysql-python]: http://sourceforge.net/project/showfiles.php?group_id=22307
-  [main.sh]: /wordpress/wp-content/uploads/2006/11/main.txt
-  [phpPart1.php]: /wordpress/wp-content/uploads/2006/11/phppart1.txt
+  [main.sh]: /images/2006/11/main.txt
+  [phpPart1.php]: /images/2006/11/phppart1.txt
   [Queue]: http://docs.python.org/lib/module-Queue.html
-  [python.py]: /wordpress/wp-content/uploads/2006/11/python.py
-  [phpPart2.php]: /wordpress/wp-content/uploads/2006/11/phppart2.txt
-  [phpPython]: /wordpress/wp-content/uploads/2006/11/phppython.tgz
+  [python.py]: /images/2006/11/python.py
+  [phpPart2.php]: /images/2006/11/phppart2.txt
+  [phpPython]: /images/2006/11/phppython.tgz

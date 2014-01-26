@@ -207,7 +207,7 @@ Happy "free" surfing, for now anyway :)
   [TCP-over-ICMP]: http://www.cs.uit.no/~daniels/PingTunnel/
   [TCP-over-DNS]: http://analogbit.com/tcp-over-dns_howto
   [www.google.com]: http://www.google.com
-  [1]: /wordpress/wp-content/uploads/2012/03/gogo_dm.png
+  [1]: /images/2012/03/gogo_dm.png
   [2]: https://twitter.com/#!/Gogo/status/176504298967015424
   [Now back to the good part]: http://www.youtube.com/watch?v=GI6CfKcMhjY&t=1m37s
   [Google Chrome]: https://www.google.com/chrome

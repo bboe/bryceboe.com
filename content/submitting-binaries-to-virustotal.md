@@ -128,4 +128,4 @@ you a copy and paste.
   [see full list]: http://www.virustotal.com/about.html
   [API]: http://www.virustotal.com/advanced.html#publicapi
   [this snippet]: http://code.activestate.com/recipes/146306/
-  [downloaded here]: /wordpress/wp-content/uploads/2010/09/virustotal_report.py
+  [downloaded here]: /images/2010/09/virustotal_report.py

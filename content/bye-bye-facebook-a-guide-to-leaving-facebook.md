@@ -159,7 +159,7 @@ these tasks, or other tasks, in the comments. Bye bye Facebook!
   [link to this blog posting]: /2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/
   [facePAD]: https://addons.mozilla.org/en-US/firefox/addon/8442/
   [photograbber]: http://code.google.com/p/photograbber/
-  [facePAD Usage]: /wordpress/wp-content/uploads/2010/05/facepad.jpg
+  [facePAD Usage]: /images/2010/05/facepad.jpg
     "facePAD Usage"
   [revision 38]: http://code.google.com/p/photograbber/source/detail?r=38
   [patch]: http://cs.ucsb.edu/~bboe/public/patches/photograbber-r38+bboe.patch

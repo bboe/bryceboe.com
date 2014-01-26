@@ -12,4 +12,4 @@ was attempting to achieve.
 
 I call it Tomato Accident.
 
-  [Tomato-Accident]: /wordpress/wp-content/uploads/2006/12/accident.jpg
+  [Tomato-Accident]: /images/2006/12/accident.jpg

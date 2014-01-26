@@ -94,6 +94,6 @@ is.gd url [http://is.gd/ced7F][] is the key. Yeah Sexy CPR.
   [lmgtfy lzma file]: http://lmgtfy.com/?q=lzma+file&l=1
   [python's imaging library]: http://www.pythonware.com/products/pil/
   [http://is.gd/ced7F]: http://is.gd/ced7F
-  [Defcon 18 Forensics 200 Result]: /wordpress/wp-content/uploads/2010/05/f200_result-43x300.png
+  [Defcon 18 Forensics 200 Result]: /images/2010/05/f200_result-43x300.png
     "Defcon 18 Forensics 200 Result"
-  [![Defcon 18 Forensics 200 Result][]]: /wordpress/wp-content/uploads/2010/05/f200_result.png
+  [![Defcon 18 Forensics 200 Result][]]: /images/2010/05/f200_result.png

@@ -131,9 +131,9 @@ sanity trying to solve "The Difference"; that gave me a good laugh :)
   [search engine code]: http://cs.ucsb.edu/~bboe/public/ictf09/search_engine.tar.gz
   [xkcd]: http://xkcd.com/
   [The Difference]: http://xkcd.com/242/
-  [1]: /wordpress/wp-content/uploads/2009/12/the_difference-159x300.png
+  [1]: /images/2009/12/the_difference-159x300.png
     "The Difference"
-  [![The Difference][1]]: /wordpress/wp-content/uploads/2009/12/the_difference.png
+  [![The Difference][1]]: /images/2009/12/the_difference.png
   [the\_difference\_values.txt]: http://cs.ucsb.edu/~bboe/public/ictf09/the_difference_values.txt
   [ASCII]: http://en.wikipedia.org/wiki/ASCII
   [generate]: http://cs.ucsb.edu/~bboe/public/ictf09/the_difference_maker.py

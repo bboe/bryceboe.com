@@ -19,7 +19,7 @@ awesome, though I'd much prefer having gills to wearing \~75 pounds
 worth of gear. [Gillyweed][] would be sweet too. Unfortunately it
 doesn't exist... yet.
 
-  [Connor Pitching]: /wordpress/wp-content/uploads/2009/04/img_1228-225x300.jpg
+  [Connor Pitching]: /images/2009/04/img_1228-225x300.jpg
     "Connor Pitching"
-  [![Connor Pitching][]]: /wordpress/wp-content/uploads/2009/04/img_1228.jpg
+  [![Connor Pitching][]]: /images/2009/04/img_1228.jpg
   [Gillyweed]: http://en.wikipedia.org/wiki/Gillyweed#Plants_from_J._K._Rowling.27s_Harry_Potter_series

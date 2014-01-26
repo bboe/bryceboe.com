@@ -20,4 +20,4 @@ from $70-500; I'd say we got a sweet deal.
 
   [Daily Nexus]: http://www.dailynexus.com/
   [Comedy Central Host Jon Stewart To Perform Live.]: http://www.dailynexus.com/news/2006/12290.html
-  [Jon Stewart Ticket]: /wordpress/wp-content/uploads/2006/10/jon_stewart.jpg
+  [Jon Stewart Ticket]: /images/2006/10/jon_stewart.jpg

@@ -65,7 +65,7 @@ need to see Batman. So much to do.
   [Cheri]: http://blogthismom.blogspot.com/
   [Pusoy Dos]: http://en.wikipedia.org/wiki/Pusoy_Dos
   [Allen Edmonds "Wendel"]: http://www.allenedmonds.com/aeonline/ProductDisplay?catalogId=40000000001&storeId=1&langId=-1&productId=6463281&parentCategoryId=&imageType=2&parent_category_rn=0
-  [Aren\\'t we ballers?]: /wordpress/wp-content/uploads/2008/07/img_3588-300x225.jpg
+  [Aren\\'t we ballers?]: /images/2008/07/img_3588-300x225.jpg
     "Bryce and the WordViz Crew"
-  [![Aren\\'t we ballers?][]]: /wordpress/wp-content/uploads/2008/07/img_3588.jpg
+  [![Aren\\'t we ballers?][]]: /images/2008/07/img_3588.jpg
   [Splash Cafe]: http://www.splashcafe.com/

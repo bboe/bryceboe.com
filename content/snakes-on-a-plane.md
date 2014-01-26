@@ -27,7 +27,7 @@ a [Beirut][] table. However we always manage to unite whenever the cause
 is right, and tonight that's Samuel L. Jackson and mother f\*\*\*in'
 Snakes On A Plane!
 
-  [Snakes on a Plane Ticket]: /wordpress/wp-content/uploads/2006/09/snakes.jpg
+  [Snakes on a Plane Ticket]: /images/2006/09/snakes.jpg
   [Official]: http://www.snakesonaplane.com/
   [IMDB]: http://www.imdb.com/title/tt0417148/
   [Wikipedia]: http://en.wikipedia.org/wiki/Snakes_on_a_plane

@@ -164,7 +164,7 @@ page][]. Thanks again.
   you]: /2006/08/27/official-pricetrackr-launch/#comment-19
   [posted]: /2006/08/27/official-pricetrackr-launch/#comment-29
   [pear's Cache\_Lite]: http://pear.php.net/package/Cache_Lite
-  [Bryce Boe Traffic Graph]: /wordpress/wp-content/uploads/2006/09/2006-bbdigggraph.png
-  [priceTrackr Traffic Graph]: /wordpress/wp-content/uploads/2006/09/2006-ptdigggraph.png
+  [Bryce Boe Traffic Graph]: /images/2006/09/2006-bbdigggraph.png
+  [priceTrackr Traffic Graph]: /images/2006/09/2006-ptdigggraph.png
   [Google Adsense]: https://google.com/adsense/
   [priceTrackr project page]: /projects/pricetrackr/

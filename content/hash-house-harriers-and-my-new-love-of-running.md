@@ -93,10 +93,10 @@ Washington Post article titled, "[Making a Hash of Exercise][]". On-On!
   [Hash House Harriers]: http://en.wikipedia.org/wiki/Hash_House_Harriers
   [H3SoB]: http://h3sob.com/
   [The Count from Sesame Street]: http://www.youtube.com/watch?v=5l7KbMVdN7E%20
-  [bikini]: /wordpress/wp-content/uploads/2009/12/bikini-300x225.jpg
+  [bikini]: /images/2009/12/bikini-300x225.jpg
     "bikini"
-  [![bikini][]]: /wordpress/wp-content/uploads/2009/12/bikini.jpg
-  [Super Hare!]: /wordpress/wp-content/uploads/2009/12/super_hare-225x300.jpg
+  [![bikini][]]: /images/2009/12/bikini.jpg
+  [Super Hare!]: /images/2009/12/super_hare-225x300.jpg
     "Super Hare!"
-  [![Super Hare!][]]: /wordpress/wp-content/uploads/2009/12/super_hare.jpg
+  [![Super Hare!][]]: /images/2009/12/super_hare.jpg
   [Making a Hash of Exercise]: http://www.washingtonpost.com/wp-dyn/content/article/2009/09/18/AR2009091801357.html

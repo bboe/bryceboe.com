@@ -13,6 +13,6 @@ attached a screenshot of this:
 [![Google Search][]][]
 
   [snakes on a plane fake boobs]: http://www.google.com/search?hl=en&lr=&rls=com.microsoft%3Aen-US&q=snakes+on+a+plane+fake+boobs
-  [Google Search]: /wordpress/wp-content/uploads/2006/08/2006-08-google-300x181.png
+  [Google Search]: /images/2006/08/2006-08-google-300x181.png
     "Google Search"
-  [![Google Search][]]: /wordpress/wp-content/uploads/2006/08/2006-08-google.png
+  [![Google Search][]]: /images/2006/08/2006-08-google.png
