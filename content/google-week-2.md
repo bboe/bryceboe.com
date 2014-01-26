@@ -10,16 +10,16 @@ volleyball. Lots happened Wednesday. I had my first experience with a
 modern bidet and I believe it went something like the following.
 
 I went into the bathroom to deuce it up, and upon opening the stall I
-uttered, "what the fuckâ€? which fortunately no one was there to hear.
+uttered, "what the fuck" which fortunately no one was there to hear.
 I was baffled because the back of the toilet seat had some sort of
 contraption, and there was a control box affixed to the side of the
 stall. Proceeding with caution I put the seat down, put a piece of the
 butt paper down and I sat upon the toilet. At this moment I let out a
-faint pleasurable "ooohâ€? due to warm comforting feel of the seat
+faint pleasurable "oooh" due to warm comforting feel of the seat
 upon my butt. Yes it was heated.
 
 While I was doing my business I was checking out the controls to the
-side. I was quite intrigued by the button that read "rear cleaningâ€?
+side. I was quite intrigued by the button that read "rear cleaning"
 so after dropping the kids off at the pool I pressed the button. Next
 came the noise of the servo followed by a warm stream of water. I then
 proceeded to try the drier button but decided against the last button as

@@ -22,7 +22,7 @@ that I would be rested for work on Friday. It was great to spend some
 time with old college friends. Ha! Old! My friends and I joke about how
 the ridiculous things we did during the last four years are no longer
 humiliating. Our joking rebuttal is simply, "guys -- that happened in
-college.â€?
+college."
 
 On Friday Rashida and Victor came to Google for lunch. That night I
 stayed in the Peninsula area as many of my friends were attending the
@@ -71,13 +71,13 @@ needed to swap in my mp3 cd stereo from the Porsche. Despite [this
 consumerist article][] and poor [yelp reviews][] I went to a local car
 audio store to purchase a wiring harness and an antenna connection
 converter. According to the guy at the stereo store, Verena's stock
-stereo "requiredâ€? a special tool to remove, which I asked if I could
+stereo "required" a special tool to remove, which I asked if I could
 borrow one. He informed me that they didn't lend tools to customers
 but that he would remove it for $5. Last time I checked most auto stores
 allow their customers to borrow tools, and in some cases they will help
 their customers out for free. I definitely was not going to pay $5 for a
 10 second job with a $20 tool. Being creative I used a few hex keys to
-remove the stereo; so much for a "requiredâ€? tool. I crimped the wire
+remove the stereo; so much for a "required" tool. I crimped the wire
 harnesses together and then packed everything neatly back in place.
 Everything worked beautifully and I can now listen to \~30% more music
 before having to change a disc.

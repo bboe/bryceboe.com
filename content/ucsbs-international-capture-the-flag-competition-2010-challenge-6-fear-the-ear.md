@@ -10,10 +10,10 @@ pitting [security groups at various universities][] around the world
 against each other. Last year I had the privilege of [contributing
 significantly][] to the setup on the iCTF, and later publishing and
 presenting a paper, "[Organizing Large Scale Hacking
-Competitions][]â€? at [DIMVA 2010][]. This year, I finally had an
+Competitions][]" at [DIMVA 2010][]. This year, I finally had an
 opportunity to take Giovanni Vigna's security course, thus allowing me
 to participate in the competition. I led the team, "Tr0llF4ce Pwns
-Youâ€?, and we did decently well considering this was the first hacking
+You", and we did decently well considering this was the first hacking
 competition for many on our team.
 
 Despite my participation, I was still able to contribute a challenge to
@@ -23,7 +23,7 @@ to a previously unpublicized web vulnerability that we are calling the
 **Execution After Redirect**, or **EAR Vulnerability**. This
 vulnerability is exactly as the name states, however to be a bit more
 precise our exact definition of the vulnerability is, "code that
-executes after the developer's intended termination pointâ€?. The
+executes after the developer's intended termination point". The
 developer's intended termination point is often indicated by a
 server-initiated redirect, or more precisely an HTTP [301][], [302][],
 [303][], or [307][] status code along with an HTTP Location header. It
@@ -46,8 +46,8 @@ With that said, the following is a complete walkthrough of solving my
 iCTF 2010 challege:
 
 Teams were presented with the message, "Obey the error messages and
-find the secret at http://10.15.3.1:8000.â€? Upon visiting the URL teams
-would see the title, "User Administrationâ€? [this video][] playing
+find the secret at http://10.15.3.1:8000." Upon visiting the URL teams
+would see the title, "User Administration" [this video][] playing
 immediately, and a simple file upload submission form. The video was
 mostly an annoying red herring, however, some of the keywords in the
 video happened to be valid user names that could be beneficial. The
@@ -97,9 +97,9 @@ trivial thus this process required teams to do something special in
 order to view the raw response.
 
 Once the vulnerability was discovered, teams learned, via an error
-message, that they could send the command "helpâ€? to list all the
+message, that they could send the command "help" to list all the
 administrator commands, thus informing them about the other commands,
-"addâ€?, "infoâ€?, and "listâ€?. The add command simply exposed
+"add", "info", and "list". The add command simply exposed
 the information that the SQLITE database was read only, the info command
 listed the info field for the specified user, and the list command
 listed all the active users in the system along with their info field.
@@ -119,7 +119,7 @@ During the competition, 69 of the 72 teams attempted to solve my
 challenge, of which 44 teams were able to submit valid control files. 34
 of those teams, successfully guessed regular user accounts, thus
 exposing them to the Execution After Redirect Vulnerability. However, as
-indicated by the teams who successfully ran the "helpâ€? command, of
+indicated by the teams who successfully ran the "help" command, of
 these 34 teams, only 12 of them discovered the EAR vulnerability.
 Finally of those 12 teams, 7 successfully exploited the SQL injection
 vulnerability that provided them with:  
