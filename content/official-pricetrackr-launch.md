@@ -36,7 +36,7 @@ to priceTrackr:
 
 -   Adam -- thanks for suggesting the web2.0ish name, as well as the
     other ideas you provided.
--   Boney and Doupe -- thanks for all the constructive criticism as
+-   Bones and Doupé -- thanks for all the constructive criticism as
     always.
 -   Buz -- thanks for checking the layout in IE7 for me.
 -   Cheri and Tom -- thanks for correcting my grammatical errors.

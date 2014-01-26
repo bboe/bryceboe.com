@@ -31,7 +31,7 @@ is important to note that there are cases in which the developer intends
 server side code to continue executing following a redirect. Such cases
 are not EAR vulnerabilities.
 
-[Adam DoupÃ©][] and I are in the process of writing a paper describing
+[Adam Doupé][] and I are in the process of writing a paper describing
 the complete details of the EAR vulnerability. For the purpose of
 understanding this challenge, you need only know that when a modern
 browser receives the redirect, any data sent in conjunction with the
@@ -176,7 +176,7 @@ feedback will help me create better challenges for next year's iCTF.
   [302]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.3
   [303]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.4
   [307]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.8
-  [Adam DoupÃ©]: http://adamdoupe.com/
+  [Adam Doupé]: http://adamdoupe.com/
   [this video]: http://www.archive.org/download/MannyCanard_USCSpeedRemix/MannyCanardH264.ogv
   [XSS vulnerability]: http://en.wikipedia.org/wiki/Cross-site_scripting
   [SQL injection vulnerability]: http://en.wikipedia.org/wiki/SQL_injection
