@@ -59,13 +59,13 @@ Anyway that was last week. Ann and I are going to see Wall-E tomorrow,
 and I am very excited as I have been wanting to see it. I also still
 need to see Batman. So much to do.
 
-  [F8]: http://www.bryceboe.com/2008/07/29/f8-08-%E2%80%93-the-facebook-developers-conference/
+  [F8]: /2008/07/29/f8-08-%E2%80%93-the-facebook-developers-conference/
   [IRC]: http://en.wikipedia.org/wiki/Internet_Relay_Chat
   [ERC]: http://www.emacswiki.org/cgi-bin/wiki/ERC
   [Cheri]: http://blogthismom.blogspot.com/
   [Pusoy Dos]: http://en.wikipedia.org/wiki/Pusoy_Dos
   [Allen Edmonds "Wendel"]: http://www.allenedmonds.com/aeonline/ProductDisplay?catalogId=40000000001&storeId=1&langId=-1&productId=6463281&parentCategoryId=&imageType=2&parent_category_rn=0
-  [Aren\\'t we ballers?]: http://www.bryceboe.com/wordpress/wp-content/uploads/2008/07/img_3588-300x225.jpg
+  [Aren\\'t we ballers?]: /wordpress/wp-content/uploads/2008/07/img_3588-300x225.jpg
     "Bryce and the WordViz Crew"
-  [![Aren\\'t we ballers?][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2008/07/img_3588.jpg
+  [![Aren\\'t we ballers?][]]: /wordpress/wp-content/uploads/2008/07/img_3588.jpg
   [Splash Cafe]: http://www.splashcafe.com/

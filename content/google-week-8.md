@@ -147,12 +147,12 @@ Mohammad. Week 9 should be another exciting week!
   [WOSN]: http://conferences.sigcomm.org/sigcomm/2008/workshops/wosn/
   [Can Social Networks Improve e-Commerce: a Study on Social
   Marketplaces]: http://conferences.sigcomm.org/sigcomm/2008/workshops/wosn/papers/p1.pdf
-  [Verena from the Front]: http://www.bryceboe.com/wordpress/wp-content/uploads/2008/08/img_3649-300x225.jpg
+  [Verena from the Front]: /wordpress/wp-content/uploads/2008/08/img_3649-300x225.jpg
     "Verena from the Front"
-  [![Verena from the Front][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2008/08/img_3649.jpg
-  [Verena from the Back]: http://www.bryceboe.com/wordpress/wp-content/uploads/2008/08/img_3651-300x225.jpg
+  [![Verena from the Front][]]: /wordpress/wp-content/uploads/2008/08/img_3649.jpg
+  [Verena from the Back]: /wordpress/wp-content/uploads/2008/08/img_3651-300x225.jpg
     "Verena from the Back"
-  [![Verena from the Back][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2008/08/img_3651.jpg
+  [![Verena from the Back][]]: /wordpress/wp-content/uploads/2008/08/img_3651.jpg
   [segment]: http://www.cnbc.com/id/26182232
   [Cricket]: http://en.wikipedia.org/wiki/Cricket_(darts)
   [Shannon]: http://shannonebarry.blogspot.com/

@@ -57,8 +57,8 @@ an interest in hobby RC cars after driving (and slightly damaging --
 sorry Victor) one in San Mateo. And this evening, I will finally get to
 check out a Palo Alto (Stanford area) bar. It was a good week.
 
-  [previously]: http://www.bryceboe.com/2008/06/24/i-am-a-noogler/
-  [The avp logo]: http://www.bryceboe.com/wordpress/wp-content/uploads/2008/06/avp.gif
+  [previously]: /2008/06/24/i-am-a-noogler/
+  [The avp logo]: /wordpress/wp-content/uploads/2008/06/avp.gif
     "avp"
   [Wanted]: http://www.imdb.com/title/tt0493464/
   [camelbak]: http://www.camelbak.com/

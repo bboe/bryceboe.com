@@ -169,7 +169,7 @@ feedback will help me create better challenges for next year's iCTF.
 
   [International Capture the Flag]: http://ictf.cs.ucsb.edu/
   [security groups at various universities]: http://ictf.cs.ucsb.edu/ictf10/participants.php
-  [contributing significantly]: http://www.bryceboe.com/2009/12/06/ictf09-%E2%80%93-ucsbs-international-capture-the-flag-competition/
+  [contributing significantly]: /2009/12/06/ictf09-%E2%80%93-ucsbs-international-capture-the-flag-competition/
   [Organizing Large Scale Hacking Competitions]: http://portal.acm.org/citation.cfm?id=1884859
   [DIMVA 2010]: http://dimva2010.fkie.fraunhofer.de/program.html
   [301]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.2

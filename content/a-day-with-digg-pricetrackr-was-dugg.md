@@ -150,7 +150,7 @@ page][]. Thanks again.
 
   [priceTrackr]: http://www.pricetrackr.com
   [Digg]: http://www.digg.com
-  [Official priceTrackr Launch]: http://www.bryceboe.com/2006/08/27/official-pricetrackr-launch/
+  [Official priceTrackr Launch]: /2006/08/27/official-pricetrackr-launch/
   [Here's the Digg article]: http://www.digg.com/tech_deals/Newegg_priceTrackr
   [the Digg Effect]: http://en.wikipedia.org/wiki/Slashdot_effect
   [wp-cache plugin]: http://mnm.uib.es/gallir/wp-cache-2/
@@ -161,10 +161,10 @@ page][]. Thanks again.
   [herrshuster]: http://www.digg.com/users/herrshuster
   [the Dean Scream]: http://en.wikipedia.org/wiki/Howard_Dean#Iowa_results_and_the_.22Scream_Heard_.27Round_the_World.22
   [your site is down, probably will never visit again. nice knowing
-  you]: http://www.bryceboe.com/2006/08/27/official-pricetrackr-launch/#comment-19
-  [posted]: http://www.bryceboe.com/2006/08/27/official-pricetrackr-launch/#comment-29
+  you]: /2006/08/27/official-pricetrackr-launch/#comment-19
+  [posted]: /2006/08/27/official-pricetrackr-launch/#comment-29
   [pear's Cache\_Lite]: http://pear.php.net/package/Cache_Lite
-  [Bryce Boe Traffic Graph]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/09/2006-bbdigggraph.png
-  [priceTrackr Traffic Graph]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/09/2006-ptdigggraph.png
+  [Bryce Boe Traffic Graph]: /wordpress/wp-content/uploads/2006/09/2006-bbdigggraph.png
+  [priceTrackr Traffic Graph]: /wordpress/wp-content/uploads/2006/09/2006-ptdigggraph.png
   [Google Adsense]: https://google.com/adsense/
-  [priceTrackr project page]: http://www.bryceboe.com/projects/pricetrackr/
+  [priceTrackr project page]: /projects/pricetrackr/

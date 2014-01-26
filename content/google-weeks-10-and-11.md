@@ -70,7 +70,7 @@ breakfasts, 10 more Google lunches, at least 8 more Google dinners and
 who knows how many more bidet experiences. In either case I'm going to
 make the most of these last two weeks, and enjoy as much as I can.
 
-  [my bidet adventure]: http://www.bryceboe.com/2008/07/07/google-week-2/
+  [my bidet adventure]: /2008/07/07/google-week-2/
   [Pineapple Express]: http://www.imdb.com/title/tt0910936/
   [The Next Generation]: http://en.wikipedia.org/wiki/Star_Trek:_The_Next_Generation
   [DS9]: http://en.wikipedia.org/wiki/Star_Trek:_Deep_Space_Nine

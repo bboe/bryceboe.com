@@ -93,24 +93,24 @@ Flat Stanley working on [torrentphobe][] with Jon and Adam
 Bye bye Flat Stanley
 
   [torrentphobe]: http://torrentpho.be
-  [image]: http://www.bryceboe.com/wordpress/wp-content/uploads/2009/03/img_3816-300x225.jpg
+  [image]: /wordpress/wp-content/uploads/2009/03/img_3816-300x225.jpg
     "stanley_tv"
-  [![image][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2009/03/img_3816.jpg
-  [1]: http://www.bryceboe.com/wordpress/wp-content/uploads/2009/03/img_3818-300x225.jpg
+  [![image][]]: /wordpress/wp-content/uploads/2009/03/img_3816.jpg
+  [1]: /wordpress/wp-content/uploads/2009/03/img_3818-300x225.jpg
     "stanley_dinner"
-  [![image][1]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2009/03/img_3818.jpg
-  [2]: http://www.bryceboe.com/wordpress/wp-content/uploads/2009/03/img_3823-300x225.jpg
+  [![image][1]]: /wordpress/wp-content/uploads/2009/03/img_3818.jpg
+  [2]: /wordpress/wp-content/uploads/2009/03/img_3823-300x225.jpg
     "stanley_programming"
-  [![image][2]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2009/03/img_3823.jpg
-  [3]: http://www.bryceboe.com/wordpress/wp-content/uploads/2009/03/img_3824-300x225.jpg
+  [![image][2]]: /wordpress/wp-content/uploads/2009/03/img_3823.jpg
+  [3]: /wordpress/wp-content/uploads/2009/03/img_3824-300x225.jpg
     "stanley_reading"
-  [![image][3]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2009/03/img_3824.jpg
-  [4]: http://www.bryceboe.com/wordpress/wp-content/uploads/2009/03/img_3826-300x225.jpg
+  [![image][3]]: /wordpress/wp-content/uploads/2009/03/img_3824.jpg
+  [4]: /wordpress/wp-content/uploads/2009/03/img_3826-300x225.jpg
     "stanley_sleeping"
-  [![image][4]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2009/03/img_3826.jpg
-  [5]: http://www.bryceboe.com/wordpress/wp-content/uploads/2009/03/img_3829-300x225.jpg
+  [![image][4]]: /wordpress/wp-content/uploads/2009/03/img_3826.jpg
+  [5]: /wordpress/wp-content/uploads/2009/03/img_3829-300x225.jpg
     "stanley_torrentphobe"
-  [![image][5]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2009/03/img_3829.jpg
-  [6]: http://www.bryceboe.com/wordpress/wp-content/uploads/2009/03/img_3832-300x225.jpg
+  [![image][5]]: /wordpress/wp-content/uploads/2009/03/img_3829.jpg
+  [6]: /wordpress/wp-content/uploads/2009/03/img_3832-300x225.jpg
     "stanley_envelope"
-  [![image][6]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2009/03/img_3832.jpg
+  [![image][6]]: /wordpress/wp-content/uploads/2009/03/img_3832.jpg

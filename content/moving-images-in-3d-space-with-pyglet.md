@@ -154,20 +154,20 @@ if __name__ == "__main__":
   [6th annual Graduate Student Workshop on Computing (GSWC)]: http://gswc.cs.ucsb.edu/2011/
   [Worldviz]: http://www.worldviz.com/
   [Vizard]: http://www.worldviz.com/products/vizard4/index.html
-  [image]: http://www.bryceboe.com/wordpress/wp-content/uploads/2011/10/animator0-150x150.png
+  [image]: /wordpress/wp-content/uploads/2011/10/animator0-150x150.png
     "animator0"
-  [![image][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2011/10/animator0.png
-  [1]: http://www.bryceboe.com/wordpress/wp-content/uploads/2011/10/animator1-150x150.png
+  [![image][]]: /wordpress/wp-content/uploads/2011/10/animator0.png
+  [1]: /wordpress/wp-content/uploads/2011/10/animator1-150x150.png
     "animator1"
-  [![image][1]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2011/10/animator1.png
-  [2]: http://www.bryceboe.com/wordpress/wp-content/uploads/2011/10/animator2-150x150.png
+  [![image][1]]: /wordpress/wp-content/uploads/2011/10/animator1.png
+  [2]: /wordpress/wp-content/uploads/2011/10/animator2-150x150.png
     "animator2"
-  [![image][2]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2011/10/animator2.png
-  [3]: http://www.bryceboe.com/wordpress/wp-content/uploads/2011/10/animator4-150x150.png
+  [![image][2]]: /wordpress/wp-content/uploads/2011/10/animator2.png
+  [3]: /wordpress/wp-content/uploads/2011/10/animator4-150x150.png
     "animator4"
-  [![image][3]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2011/10/animator4.png
+  [![image][3]]: /wordpress/wp-content/uploads/2011/10/animator4.png
   [OpenGL with Python]: http://stackoverflow.com/questions/242059/opengl-with-python
   [pyglet]: http://pyglet.org/
   [Moving an image around in 3D space]: http://stackoverflow.com/questions/7681899/moving-an-image-around-in-3d-space
   [crowdsourcing]: http://en.wikipedia.org/wiki/Crowdsourcing
-  [download animator.py]: http://www.bryceboe.com/wordpress/wp-content/uploads/2011/10/animator.py
+  [download animator.py]: /wordpress/wp-content/uploads/2011/10/animator.py

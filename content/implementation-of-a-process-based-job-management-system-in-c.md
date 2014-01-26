@@ -129,13 +129,13 @@ Happy coding!
 [gist id=1894848 file=main.c]
 
   [a few differences between using C and python to handle a
-  process-based job management system]: http://www.bryceboe.com/2012/02/20/process-based-job-management-in-c-and-python/
+  process-based job management system]: /2012/02/20/process-based-job-management-in-c-and-python/
     "Process-Based Job Management in C and Python"
   [multiprocessing.Pool]: http://docs.python.org/library/multiprocessing.html#module-multiprocessing.pool
   [POSIX-based]: http://en.wikipedia.org/wiki/POSIX
   [found and downloaded in entirety]: https://gist.github.com/1894848
-  [the issue]: http://www.bryceboe.com/2010/08/26/python-multiprocessing-and-keyboardinterrupt/
+  [the issue]: /2010/08/26/python-multiprocessing-and-keyboardinterrupt/
     "Python Multiprocessing and KeyboardInterrupt"
   [volatile]: http://en.wikipedia.org/wiki/Volatile_variable
-  [the python solution that gracefully handles the keyboard interrupt]: http://www.bryceboe.com/2012/02/14/python-multiprocessing-pool-and-keyboardinterrupt-revisited/
+  [the python solution that gracefully handles the keyboard interrupt]: /2012/02/14/python-multiprocessing-pool-and-keyboardinterrupt-revisited/
     "Python Multiprocessing Pool and KeyboardInterrupt Revisited"

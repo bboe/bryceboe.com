@@ -108,7 +108,7 @@ queue's put function has a **block** argument, however that argument,
 **true** by default, is for cases when the queue has a maximum size.
 
   [Usenix security]: http://usenix.org/events/sec11/
-  [python multiprocessing and keyboard interrupts]: http://www.bryceboe.com/2010/08/26/python-multiprocessing-and-keyboardinterrupt/
+  [python multiprocessing and keyboard interrupts]: /2010/08/26/python-multiprocessing-and-keyboardinterrupt/
   [multiprocessing queue class]: http://docs.python.org/library/multiprocessing.html#multiprocessing.Queue
   [1]: #ref1
   [Dumping a multiprocessing.Queue into a list]: http://stackoverflow.com/questions/1540822/dumping-a-multiprocessing-queue-into-a-list

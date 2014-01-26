@@ -84,14 +84,14 @@ Senior Year Good Times][]][]
   [Adam]: http://www.adamdoupe.com/
   [Academic Misconduct]: http://cs.ucsb.edu/~bboe/random/AcademicMisconduct.html
   [Bryce, Adam, Scott - Sophomore Year Cocktail Party]: /wordpress/wp-content/uploads/2007/10/sophmore0-150x150.jpg
-  [![Bryce, Adam, Scott - Sophomore Year Cocktail Party][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2007/10/sophmore0.jpg
+  [![Bryce, Adam, Scott - Sophomore Year Cocktail Party][]]: /wordpress/wp-content/uploads/2007/10/sophmore0.jpg
     "Bryce, Adam, Scott - Sophomore Year Cocktail Party"
   [Scott, Adam, Bryce - Sophomore Year With Silly Hats]: /wordpress/wp-content/uploads/2007/10/sophmore1-150x150.jpg
-  [![Scott, Adam, Bryce - Sophomore Year With Silly Hats][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2007/10/sophmore1.jpg
+  [![Scott, Adam, Bryce - Sophomore Year With Silly Hats][]]: /wordpress/wp-content/uploads/2007/10/sophmore1.jpg
     "Scott, Adam, Bryce - Sophomore Year With Silly Hats"
   [Bryce, Adam, Scott - Junior Year Halloween as Top Gun Pilots]: /wordpress/wp-content/uploads/2007/10/junior-150x150.jpg
-  [![Bryce, Adam, Scott - Junior Year Halloween as Top Gun Pilots][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2007/10/junior.jpg
+  [![Bryce, Adam, Scott - Junior Year Halloween as Top Gun Pilots][]]: /wordpress/wp-content/uploads/2007/10/junior.jpg
     "Bryce, Adam, Scott - Junior Year Halloween as Top Gun Pilots"
   [Scott, Bryce, Adam - Senior Year Good Times]: /wordpress/wp-content/uploads/2007/10/senior-150x150.jpg
-  [![Scott, Bryce, Adam - Senior Year Good Times][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2007/10/senior.jpg
+  [![Scott, Bryce, Adam - Senior Year Good Times][]]: /wordpress/wp-content/uploads/2007/10/senior.jpg
     "Scott, Bryce, Adam - Senior Year Good Times"

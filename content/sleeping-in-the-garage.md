@@ -54,5 +54,5 @@ unlike the hallway-ish room I had for the last three years. Finally
 words cannot describe how awesome sleeping on my own bed for the first
 time since June was, however I can say that I was finally home.
 
-  [Verena]: http://www.bryceboe.com/2008/08/17/google-week-8/
+  [Verena]: /2008/08/17/google-week-8/
   [Helicopter parent]: http://en.wikipedia.org/wiki/Helicopter_parent

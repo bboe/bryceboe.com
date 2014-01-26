@@ -111,4 +111,4 @@ if __name__ == '__main__':
   [recently]: http://code.google.com/p/boto/source/detail?r=1595
   [boto]: http://code.google.com/p/boto/
   [one by the boto author]: http://www.elastician.com/2010/06/using-reduced-redundancy-storage-rrs-in.html
-  [here]: http://www.bryceboe.com/wordpress/wp-content/uploads/2010/07/convert_to_rrs.py
+  [here]: /wordpress/wp-content/uploads/2010/07/convert_to_rrs.py

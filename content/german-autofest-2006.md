@@ -40,22 +40,22 @@ the weekend.
 
   [Porsche 944]: http://en.wikipedia.org/wiki/Porsche_944
   [German Autofest]: http://www.germanautofest.com/
-  [356 Super 90 Cab]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/09/0909061359-150x150.jpg
-  [![356 Super 90 Cab][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/09/0909061359.jpg
+  [356 Super 90 Cab]: /wordpress/wp-content/uploads/2006/09/0909061359-150x150.jpg
+  [![356 Super 90 Cab][]]: /wordpress/wp-content/uploads/2006/09/0909061359.jpg
     "356 Super 90 Cab"
-  [356 SC]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/09/0909061136-150x150.jpg
-  [![356 SC][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/09/0909061136.jpg
+  [356 SC]: /wordpress/wp-content/uploads/2006/09/0909061136-150x150.jpg
+  [![356 SC][]]: /wordpress/wp-content/uploads/2006/09/0909061136.jpg
     "356 SC"
-  [Blue 911 SC]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/09/0909061142-150x150.jpg
-  [![Blue 911 SC][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/09/0909061142.jpg
+  [Blue 911 SC]: /wordpress/wp-content/uploads/2006/09/0909061142-150x150.jpg
+  [![Blue 911 SC][]]: /wordpress/wp-content/uploads/2006/09/0909061142.jpg
     "Blue 911 SC"
-  [944 S2]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/09/0909061133a-150x150.jpg
-  [![944 S2][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/09/0909061133a.jpg
+  [944 S2]: /wordpress/wp-content/uploads/2006/09/0909061133a-150x150.jpg
+  [![944 S2][]]: /wordpress/wp-content/uploads/2006/09/0909061133a.jpg
     "944 S2"
-  [997 Turbo]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/09/0909061125-150x150.jpg
-  [![997 Turbo][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/09/0909061125.jpg
+  [997 Turbo]: /wordpress/wp-content/uploads/2006/09/0909061125-150x150.jpg
+  [![997 Turbo][]]: /wordpress/wp-content/uploads/2006/09/0909061125.jpg
     "997 Turbo"
-  [Porsche Shell Racer]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/09/0909061406a-150x150.jpg
-  [![Porsche Shell Racer][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/09/0909061406a.jpg
+  [Porsche Shell Racer]: /wordpress/wp-content/uploads/2006/09/0909061406a-150x150.jpg
+  [![Porsche Shell Racer][]]: /wordpress/wp-content/uploads/2006/09/0909061406a.jpg
     "Porsche Shell Racer"
   [Daily Drops]: http://www.pricetrackr.com/daily/

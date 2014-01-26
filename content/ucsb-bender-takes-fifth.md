@@ -128,9 +128,9 @@ still a brilliant plan.
 
   [victorious]: http://icpc.baylor.edu/icpc/regionals/ViewRegionalStandings.asp?ContestID=767
   [2006 Southern California Regional ACM programming competition]: http://www.socalcontest.org/
-  [ACM $50 Check]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/11/2006-acmcheck.jpg
-  [Line Segment Intersection Algorithm]: http://www.bryceboe.com/2006/10/23/line-segment-intersection-algorithm/
+  [ACM $50 Check]: /wordpress/wp-content/uploads/2006/11/2006-acmcheck.jpg
+  [Line Segment Intersection Algorithm]: /2006/10/23/line-segment-intersection-algorithm/
   [Futurama]: http://en.wikipedia.org/wiki/Futurama
-  [ACM 5th Place Certificate]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/11/2006-acmfifthplace.jpg
+  [ACM 5th Place Certificate]: /wordpress/wp-content/uploads/2006/11/2006-acmfifthplace.jpg
   [Detailed Results]: http://www.socalcontest.org/champs/details-2006.html
   [Problem Set]: http://www.socalcontest.org/prev_probs/2006.zip

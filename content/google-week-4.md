@@ -77,7 +77,7 @@ that I have wanted to write a blog entry to my future children describing my
 current thoughts on parenthood. That one will be interesting, especially when I
 read it twenty or so years from now.
 
-  [A Loss -- RIP Jaymie Darrow]: http://www.bryceboe.com/2008/07/20/a-loss/
+  [A Loss -- RIP Jaymie Darrow]: /2008/07/20/a-loss/
   [autotest]: http://test.kernel.org/autotest/Developer
   [Ovarian Hyperstimulation Syndrome]: http://en.wikipedia.org/wiki/Ovarian_hyperstimulation_syndrome
   [Hands Off Our Ovaries]: http://handsoffourovaries.com/

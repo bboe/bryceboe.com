@@ -311,5 +311,5 @@ Me:Sat, Jun 9, 2007 at 5:30 PM
 >
 > [AW]
 
-  [here]: http://www.bryceboe.com/2008/06/21/undergraduate-conclusion/
+  [here]: /2008/06/21/undergraduate-conclusion/
   [Ben Zhao]: http://cs.ucsb.edu/~ravenben

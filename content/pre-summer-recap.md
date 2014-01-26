@@ -94,7 +94,7 @@ for Microsoft. The move marked the end of an era: the end of the Three
 Musketeers. However, the move also marked the start of a new life for
 me, which has been great so far. Nonetheless Scotty and Adam are missed.
 
-  [Flat Stanley's Adventures]: http://www.bryceboe.com/2009/03/03/flat-stanley%E2%80%99s-not-so-adventures-at-ucsb/
+  [Flat Stanley's Adventures]: /2009/03/03/flat-stanley%E2%80%99s-not-so-adventures-at-ucsb/
   [Tim Sherwood]: http://cs.ucsb.edu/~sherwood/
   [automatic grading utilities]: http://cs.ucsb.edu/~bboe/static/projects
   [Chris Kruegel]: http://cs.ucsb.edu/~chris/

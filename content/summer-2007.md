@@ -73,13 +73,13 @@ few research papers. It's going to be a good year.
   [Live Characters]: http://www.worldviz.com/products/livecharacters/index.html
   [force feedback]: http://en.wikipedia.org/wiki/Haptic
   [Connor\_Bike\_0]: /wordpress/wp-content/uploads/2007/09/connor-bike-0-150x150.jpg
-  [![Connor\_Bike\_0][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2007/09/connor-bike-0.jpg
+  [![Connor\_Bike\_0][]]: /wordpress/wp-content/uploads/2007/09/connor-bike-0.jpg
     "Connor_Bike_0"
   [Connor\_Bike\_1]: /wordpress/wp-content/uploads/2007/09/connor-bike-1-150x150.jpg
-  [![Connor\_Bike\_1][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2007/09/connor-bike-1.jpg
+  [![Connor\_Bike\_1][]]: /wordpress/wp-content/uploads/2007/09/connor-bike-1.jpg
     "Connor_Bike_1"
   [SIGGRAPH 2007]: /wordpress/wp-content/uploads/2007/09/siggraph-0-150x150.jpg
-  [![SIGGRAPH 2007][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2007/09/siggraph-0.jpg
+  [![SIGGRAPH 2007][]]: /wordpress/wp-content/uploads/2007/09/siggraph-0.jpg
     "SIGGRAPH 2007"
   [Cheri]: http://blogthismom.blogspot.com/
   [Storage Area Network]: http://en.wikipedia.org/wiki/Storage_area_network

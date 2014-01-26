@@ -71,6 +71,6 @@ echo "Run via: python pg.py"
 python pg.py
 ~~~~
 
-  [previously wrote]: http://www.bryceboe.com/2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/
+  [previously wrote]: /2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/
   [photograbber]: http://code.google.com/p/photograbber/
   [here]: http://cs.ucsb.edu/~bboe/public/patches/photograbber-r38+bboe.patch

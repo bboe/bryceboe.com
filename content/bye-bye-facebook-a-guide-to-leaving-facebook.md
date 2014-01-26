@@ -143,7 +143,7 @@ completed. Now you can add a birthday calendar to your Google Calendar
 Well that's all. Feel free to post alternative methods to accomplish
 these tasks, or other tasks, in the comments. Bye bye Facebook!
 
-  [Facebook Photograbber Updates]: http://www.bryceboe.com/2010/05/27/facebook-photograbber-updates/
+  [Facebook Photograbber Updates]: /2010/05/27/facebook-photograbber-updates/
   [Facebook]: http://www.facebook.com/
   [June 24]: http://web.archive.org/web/20040624152328/http://thefacebook.com/
   [later removed]: http://blog.facebook.com/blog.php?post=4314497130
@@ -156,10 +156,10 @@ these tasks, or other tasks, in the comments. Bye bye Facebook!
   [Facebook's Gone Rogue; It's Time for an Open Alternative]: http://www.wired.com/epicenter/2010/05/facebook-rogue/
   [the straw that broke the camel's back]: http://en.wikipedia.org/wiki/The_last_straw
   [delete button]: http://www.facebook.com/help/contact.php?show_form=delete_account
-  [link to this blog posting]: http://www.bryceboe.com/2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/
+  [link to this blog posting]: /2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/
   [facePAD]: https://addons.mozilla.org/en-US/firefox/addon/8442/
   [photograbber]: http://code.google.com/p/photograbber/
-  [facePAD Usage]: http://www.bryceboe.com/wordpress/wp-content/uploads/2010/05/facepad.jpg
+  [facePAD Usage]: /wordpress/wp-content/uploads/2010/05/facepad.jpg
     "facePAD Usage"
   [revision 38]: http://code.google.com/p/photograbber/source/detail?r=38
   [patch]: http://cs.ucsb.edu/~bboe/public/patches/photograbber-r38+bboe.patch

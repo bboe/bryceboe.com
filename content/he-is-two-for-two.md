@@ -15,4 +15,4 @@ Connor, you are welcome and happy birthday buddy!
 
 <object type="application/x-shockwave-flash" data="https://clients4.google.com/voice/embed/embedPlayer" width="100%" height="64"><param name="movie" value="https://clients4.google.com/voice/embed/embedPlayer"></param><param name="wmode" value="transparent"></param><param name="FlashVars" value="u=12003091102054585858&amp;k=AHwOX_AlU7YJGg8rnnHeMTpLoxasz6-5zSgj1hWIiY4YS5gEJnAdE3S47yCuZoSS3NaGZTREt6_HKbPQKYLRioXC299qnLhtsMmGIYek9xxBv8S8L1mFh9qv-fdz1j_MYdAxARLqdd81Pl5tjxnqATGxy7lzht7ByntA8D67BHs0ml1RVbMgLxA&amp;baseurl=https://clients4.google.com/voice&amp;autoPlay=false∩=Connor%27s%20Thank%20You"></param></object>
 
-  [Last week]: http://www.bryceboe.com/2010/03/20/the-best-phone-message-ive-ever-received/
+  [Last week]: /2010/03/20/the-best-phone-message-ive-ever-received/

@@ -266,7 +266,7 @@ Happy web-framework coding!
 
   [here is the table]: https://spreadsheets0.google.com/pub?key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&output=html
   [Adam]: http://adamdoupe.com/
-  [2010 iCTF]: http://www.bryceboe.com/2010/12/09/ucsbs-international-capture-the-flag-competition-2010-challenge-6-fear-the-ear/
+  [2010 iCTF]: /2010/12/09/ucsbs-international-capture-the-flag-competition-2010-challenge-6-fear-the-ear/
   [ruby on rails]: http://rubyonrails.org/
   [Best Web-Frameworks]: http://www.bestwebframeworks.com/
   [Framework Usage Statistics]: http://trends.builtwith.com/framework

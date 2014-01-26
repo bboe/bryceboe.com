@@ -200,4 +200,4 @@ doesn't gain you much in this particular case.
   [KeyboardInterrupt exception,]: http://docs.python.org/library/exceptions.html#exceptions.KeyboardInterrupt
   [Fibonacci]: http://en.wikipedia.org/wiki/Fibonacci_number
   [bad practice]: http://linux.die.net/man/2/signal
-  [this tarball]: http://www.bryceboe.com/wordpress/wp-content/uploads/2010/09/bboe_module.tgz
+  [this tarball]: /wordpress/wp-content/uploads/2010/09/bboe_module.tgz

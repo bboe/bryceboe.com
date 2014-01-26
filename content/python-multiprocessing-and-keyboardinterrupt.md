@@ -190,9 +190,9 @@ the keyboard interrupt. If that is not important, than this is a much
 more elegant solution. Thanks for bringing the solution to my attention
 Georges.
 
-  [Python Multiprocessing Pool and KeyboardInterrupt Revisited]: http://www.bryceboe.com/2012/02/14/python-multiprocessing-pool-and-keyboardinterrupt-revisited/
+  [Python Multiprocessing Pool and KeyboardInterrupt Revisited]: /2012/02/14/python-multiprocessing-pool-and-keyboardinterrupt-revisited/
   [Added commentary]: #georges
   [this stackoverflow thread]: http://stackoverflow.com/questions/1408356/keyboard-interrupts-with-pythons-multiprocessing-pool
-  [The Python Multiprocessing Queue and Large Objects]: http://www.bryceboe.com/2011/01/28/the-python-multiprocessing-queue-and-large-objects/
+  [The Python Multiprocessing Queue and Large Objects]: /2011/01/28/the-python-multiprocessing-queue-and-large-objects/
   [multiprocessing]: http://docs.python.org/library/multiprocessing.html
   [threading]: http://docs.python.org/library/threading.html

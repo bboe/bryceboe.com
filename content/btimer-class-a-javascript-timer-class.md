@@ -147,7 +147,7 @@ Finally the getCount() function returns the timer count.
 To demonstrate BTimer in action check out the following:
 
 <p>
-<script type="text/javascript" src="http://www.bryceboe.com/wordpress/wp-content/uploads/2007/04/btimer0.js"></script>
+<script type="text/javascript" src="/wordpress/wp-content/uploads/2007/04/btimer0.js"></script>
   
 <textarea id="BTimerStatus0" style="width:200px;height:150px;">Status
 Area</textarea>
@@ -241,5 +241,5 @@ support on the timer.
 [BTimer Class Source][]
 
   [Get Firefox.]: http://www.getfirefox.com
-  [BTimer Class Source]: http://www.bryceboe.com/wordpress/wp-content/uploads/2007/04/btimer.js
+  [BTimer Class Source]: /wordpress/wp-content/uploads/2007/04/btimer.js
     "BTimer Class"

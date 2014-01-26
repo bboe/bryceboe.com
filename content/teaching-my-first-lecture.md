@@ -39,6 +39,6 @@ To end this I want to write that I've finally updated my CV on my
 Computer Science home page. If you're interested in what academic and
 professional things I've been up to [check it out][].
 
-  [mentioned]: http://www.bryceboe.com/2009/03/11/how-do-i-end-it/
+  [mentioned]: /2009/03/11/how-do-i-end-it/
   [It's a trap!]: http://www.youtube.com/watch?v=dddAi8FF3F4
   [check it out]: http://cs.ucsb.edu/~bboe/static/cv

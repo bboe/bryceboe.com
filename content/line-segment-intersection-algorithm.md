@@ -53,4 +53,4 @@ I've created a [python script][] which demonstrates this algorithm.
   [solution]: http://www-rcf.usc.edu/~dkempe/contest/fall06/ee.c.txt
   [simpler way]: http://compgeom.cs.uiuc.edu/~jeffe/teaching/373/notes/x06-sweepline.pdf
   [this]: http://compgeom.cs.uiuc.edu/~jeffe/teaching/373/notes/x05-convexhull.pdf
-  [python script]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/10/intersect.py
+  [python script]: /wordpress/wp-content/uploads/2006/10/intersect.py

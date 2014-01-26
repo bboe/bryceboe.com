@@ -42,11 +42,11 @@ Ubuntu offers all of this out of the box and sets up most hardware on
 install so no need to find all those driver CDs.
 
   [Windows XP Screenshot]: /wordpress/wp-content/uploads/2006/09/xp-150x150.png
-  [![Windows XP Screenshot][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/09/xp.png
+  [![Windows XP Screenshot][]]: /wordpress/wp-content/uploads/2006/09/xp.png
     "Windows XP Screenshot"
   [Windows Vista Screenshot]: /wordpress/wp-content/uploads/2006/09/vista-150x150.png
-  [![Windows Vista Screenshot][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/09/vista.png
+  [![Windows Vista Screenshot][]]: /wordpress/wp-content/uploads/2006/09/vista.png
     "Windows Vista Screenshot"
   [Ubuntu 6.06 LTS Screenshot]: /wordpress/wp-content/uploads/2006/09/ubuntu-150x150.png
-  [![Ubuntu 6.06 LTS Screenshot][]]: http://www.bryceboe.com/wordpress/wp-content/uploads/2006/09/ubuntu.png
+  [![Ubuntu 6.06 LTS Screenshot][]]: /wordpress/wp-content/uploads/2006/09/ubuntu.png
     "Ubuntu 6.06 LTS Screenshot"

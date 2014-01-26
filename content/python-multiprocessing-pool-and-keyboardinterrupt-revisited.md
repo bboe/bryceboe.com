@@ -84,6 +84,6 @@ if __name__ == "__main__":
 ~~~~
 
   [Python: Using KeyboardInterrupt with a Multiprocessing Pool]: http://noswap.com/blog/python-multiprocessing-keyboardinterrupt/
-  [Python Multiprocessing and KeyboardInterrupt]: http://www.bryceboe.com/2010/08/26/python-multiprocessing-and-keyboardinterrupt/
-  [second update]: http://www.bryceboe.com/2010/08/26/python-multiprocessing-and-keyboardinterrupt/#georges
+  [Python Multiprocessing and KeyboardInterrupt]: /2010/08/26/python-multiprocessing-and-keyboardinterrupt/
+  [second update]: /2010/08/26/python-multiprocessing-and-keyboardinterrupt/#georges
   [multiprocessing.Pool]: http://docs.python.org/library/multiprocessing.html#module-multiprocessing.pool

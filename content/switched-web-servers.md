@@ -21,4 +21,4 @@ that. <ins datetime="2010-08-11T22:46:50+00:00">Subscribe to comments
 feature confirmed to work.</ins>
 
   [WebFaction]: http://www.webfaction.com/?affiliate=bbz
-  [comments feed]: http://bryceboe.com/comments/feed
+  [comments feed]: /comments/feed
