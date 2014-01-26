@@ -17,7 +17,7 @@ Google interview. Additionally a few weeks ago I was catching up on
 problem. I submitted a similar solution to the one below in his
 comments.
 
-Anyway, a naÃ¯ve solution to this problem involves calculating a random
+Anyway, a naïve solution to this problem involves calculating a random
 position in the file, with the file size being the max. However this
 solution does not give equal probability to each line as longer lines
 will more likely be selected.

@@ -26,7 +26,7 @@ for those who want to write a python C module, please do not think of
 this as a tutorial.
 
 Let's start with a simple C program that computes the nth [Fibonacci][]
-number using naÃ¯ve recursion. This approach has an exponential running
+number using naïve recursion. This approach has an exponential running
 time and therefore is perfect for demonstrating the want to end the
 process. You'll notice in the code below that I have already added the
 SIGINT interrupt handler. This handler normally would be redundant as C

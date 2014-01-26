@@ -45,7 +45,7 @@ in all it turns out she was paying for internet for two years, but had
 never connected her modem and was stealing the internet from a neighbor.
 This just goes to show you it's not only the tech savvy one must protect
 their wireless internet from. It's easy to think "wtf, how can one be so
-naive?" However I don't really feel this meets the wtf category as
+naïve?" However I don't really feel this meets the wtf category as
 technology can be hard to understand. For this lady, she turned her
 laptop on, and simply connected to the internet, but the process was
 *too* simple that she didn't realize she had done it improperly. After
