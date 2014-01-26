@@ -110,10 +110,10 @@ I didn't find a direct way to solve this problem, though I'll admit I
 didn't look very hard as I stopped with the [first result][] I found for
 "export facebook emails to gmail". The method suggested involves using a
 Yahoo email account. From Yahoo's contact page you can select "Tools"
-followed by "Importâ€¦" and finally you have the option to import from
+followed by "Import..." and finally you have the option to import from
 Facebook. This uses Facebook Connect, so you will have to authorize
 Yahoo to access your information. Following the import you can select
-"Exportâ€¦" from the "Tools" menu and export to a "Yahoo! CSV" file,
+"Export..." from the "Tools" menu and export to a "Yahoo! CSV" file,
 which you download to your computer. Finally, on the Gmail contact page
 you can select "Import" from the upper right and provide it with the
 downloaded CSV file.

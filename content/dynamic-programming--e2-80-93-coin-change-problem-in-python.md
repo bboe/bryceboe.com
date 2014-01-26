@@ -32,7 +32,7 @@ probably figured out the correct, or optimal solution is with two coins:
 As I'm very fond of python I coded up a solution which should work in
 any circumstance so long as *1* is one of the coin denominations. The
 solution works as follows: Calculate the minimum number of coins to make
-*1*, *2*, *3*, â€¦, all the way up to the number we want to make change
+*1*, *2*, *3*, ..., all the way up to the number we want to make change
 for. At any given point, *i*, the minimum number of coins to make *i* is
 dependent upon previous solutions.
 
