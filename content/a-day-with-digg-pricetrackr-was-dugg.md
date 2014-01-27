@@ -28,7 +28,7 @@ the Digg article][].
 **9/5/2006 @ 10:56AM**
 
 priceTrackr had already received 6 diggs, and Adam said, "I hope your WordPress
-doesn't crap out." I though that it'd suck to be a victim of [the Digg
+doesn't crap out." I though that it'd suck to be a victim of "[the Digg
 Effect][]" so I downloaded the [wp-cache plugin][] and tested it's
 functionality. I had to fix one line in the code to get it to display the page
 if there was no cached version. In addition Adam pointed me to the [Digg This
@@ -61,8 +61,8 @@ for that day pretty much stopped.
 
 I was constantly checking the most popular page of upcoming tech articles and
 upon refresh my article had disappeared from the top of the list. My excitement
-peaked, I yelled something similar to  
-[the Dean Scream][], and immediately went to check on the comments.
+peaked, I yelled something similar to [the Dean Scream][], and immediately went
+to check on the comments.
 
 **9/6/2006 @ 10:35AM**
 

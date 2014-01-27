@@ -74,7 +74,8 @@ some point in my past, I had a hunch that Google's front-end web servers would
 likely provide the correct response to any Google web service. Hence, I opened
 up my /etc/hosts file on my OS X machine, and added the following line:
 
-`74.125.225.40 mail.google.com`
+    :::text
+    74.125.225.40 mail.google.com
 
 Voila! Immediately, I was able to access Gmail. The IP address, 74.125.225.40,
 corresponds to the IP address my computer was successfully able to connect to
@@ -85,7 +86,8 @@ additionally receive successful access to [Google+][], [YouTube][], [Google
 Docs][docs.google.com], [Google Code][], and Google's chat interface, I updated
 the line to the following:
 
-`74.125.225.40 mail.google.com plus.google.com youtube.com docs.google.com code.google.com chatenabled.mail.google.com`
+    :::text
+    74.125.225.40 mail.google.com plus.google.com youtube.com docs.google.com code.google.com chatenabled.mail.google.com
 
 What I previously described is how I was able to bypass Gogo's Inflight
 Internet Authentication in order to access a number of Google services for

@@ -27,4 +27,5 @@ Also on a semi-related note, if you want to run **make clean** on any folder
 under your current one which contains a makefile for archiving purposes try the
 following command:
 
-`find . -iname Makefile -exec dirname {} \; | while read i; do make clean -C $i; done`
+    :::bash
+    find . -iname Makefile -exec dirname {} \; | while read i; do make clean -C $i; done

@@ -21,6 +21,7 @@ worry about the details of the setTimeout function or setInterval. This is
 particularly useful in cases where a page has different AJAX portions that need
 to be updated at different rates.
 
+    :::javascript
     // Bryce Boe
     // http://www.bryceboe.com/2007/04/11/btimer-class-a-javascript-timer-class/
     function BTimer(interval,f,args) {
@@ -98,7 +99,7 @@ automatically when one writes: "new BTimer(someFunc,someList)". The constructor
 takes as its first argument the update interval in milliseconds, the name of
 the function to call on update and finally a list of arguments that should be
 passed to the update function. If the update function takes no arguments one
-must simply pass in an empty array [].
+must simply pass in an empty array `[]`.
 
 The BTimer's \_run() function is where the magic occurs and should never be
 called directly. This function verifies that it should be running and if so it
@@ -140,31 +141,31 @@ Finally the getCount() function returns the timer count.
 
 To demonstrate BTimer in action check out the following:
 
-<p>
+---
+
 <script type="text/javascript" src="/images/2007/04/btimer0.js"></script>
-  
 <textarea id="BTimerStatus0" style="width:200px;height:150px;">
 Status Area
 </textarea>
-
-</p>
-<div id="BTimerDynamic0">
-Count: 0
-
-</div>
-<input type="button" value="Start" id="BTimerStart0" onclick="BTimerMyStart0();"></input><input type="button" value="Pause" id="BTimerPause0" onclick="BTimerMyTimer0.stop();" disabled></input><input type="button" value="Reset" id="BTimerReset0" onclick="BTimerMyTimer0.reset();" disabled></input>
+<div id="BTimerDynamic0">Count: 0</div>
+<input type="button" value="Start" id="BTimerStart0" onclick="BTimerMyStart0();"></input>
+<input type="button" value="Pause" id="BTimerPause0" onclick="BTimerMyTimer0.stop();" disabled></input>
+<input type="button" value="Reset" id="BTimerReset0" onclick="BTimerMyTimer0.reset();" disabled></input>  
 
 <input type="radio" id="BTimerRadio00" name="BTimertimeout" onclick="BTimerMyTimer0.setInterval(300);BTimerOther0('selected .3 second');" checked disabled></input>
-0.3 second  
+0.3 second
 <input type="radio" id="BTimerRadio10" name="BTimertimeout" onclick="BTimerMyTimer0.setInterval(1000);BTimerOther0('selected 1 second');" disabled></input>
-1 second  
+1 second
 <input type="radio" id="BTimerRadio20" name="BTimertimeout" onclick="BTimerMyTimer0.setInterval(5000);BTimerOther0('selected 5 seconds');" disabled></input>
 5 seconds
 
-Note: Clicking on reset does not update the count to 0.
+**Note**: Clicking on reset does not update the count to 0.
+
+---
 
 The extra needed javascript functions for this are the following:
 
+    :::javascript
     function BTimerMyStart0() {
         document.getElementById('BTimerPause0').disabled=false;
         document.getElementById('BTimerReset0').disabled=false;
