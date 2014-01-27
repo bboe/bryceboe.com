@@ -28,7 +28,7 @@ downloaded [here][]. Running the script concurrent times will take
 significantly much less time, therefore stopping the script midway through is
 of minor consequence.
 
-`svn checkoutÂ http://boto.googlecode.com/svn/trunk/@1595 boto-read-only cd boto-read-only (as root) python setup.py install cd .. rm -rf boto-read-only ./convert_to_rss.py your_bucket_name [aws_access_key_id aws_secret_access_key]`
+`svn checkout http://boto.googlecode.com/svn/trunk/@1595 boto-read-only cd boto-read-only (as root) python setup.py install cd .. rm -rf boto-read-only ./convert_to_rss.py your_bucket_name [aws_access_key_id aws_secret_access_key]`
 
 Note that you may alternatively put your aws\_access\_key\_id and
 aws\_secret\_access\_key into the environment variables AWS\_ACCESS\_KEY\_ID

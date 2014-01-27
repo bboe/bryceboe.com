@@ -78,7 +78,7 @@ computer lab
 > entire day on this assignment. I say we turn in what  
 >  we had time for and go our seperate ways, until the demo that is.
 >
-> Â -SR
+>  -SR
 
 ### PC: Sat, Jun 9, 2007 at 4:56 PM
 
@@ -293,7 +293,7 @@ computer lab
 > were very conclusive and it was found out that exactly 6 beers (corona extra
 > only) provided enough "feel good factor" to fully enable the test subjects to
 > enjoy their day. However the study recommends 2 jager shots every four hours
-> after consuming breakfast to prolong this feel good factor.Â or the subject
+> after consuming breakfast to prolong this feel good factor. or the subject
 > can go to a strip bar. either works
 >
 > cheers

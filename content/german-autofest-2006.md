@@ -4,7 +4,7 @@ Category: all
 Tags: priceTrackr
 Slug: german-autofest-2006
 
-I drive a 1985 Â½ [Porsche 944][] (the Â½ is very important) which I purchased
+I drive a 1985 ½ [Porsche 944][] (the ½ is very important) which I purchased
 my junior year in high school. You might be wondering how I could afford a
 Porsche at such a young age, as I wondered the same thing when I saw the
 classified for it. The catch is these cars are quite cheap, monetarily
