@@ -6,12 +6,12 @@ Slug: quarter-from-hell
 It's been a very long time since my last post, and I felt I would take this
 brief break to share how my life's been in the last month and a half.
 
-I went to San Diego for the first part of my Christmas break and saw my
-dad. From there I was supposed to fly through Denver to Omaha, however my
-flight was canceled due to [lots of fluffy water][]. Luckily my flight wasn't a
-few hours sooner otherwise I would have been stuck in Denver for a few days. I
-was able to get a flight the next day with Southwest, thus reminding me to
-never fly United again because their customer service is terrible.
+I went to San Diego for the first part of my Christmas break and saw my dad.
+From there I was supposed to fly through Denver to Omaha, however my flight was
+canceled due to [lots of fluffy water][]. Luckily my flight wasn't a few hours
+sooner otherwise I would have been stuck in Denver for a few days. I was able
+to get a flight the next day with Southwest, thus reminding me to never fly
+United again because their customer service is terrible.
 
 Nebraska wasn't too bad because I was with most of my family, except for my
 dad; and much of this family I haven't seen in over five years. I also turned
@@ -24,8 +24,8 @@ greatly contributed to where I am today, and without them I definitely wouldn't
 be where I am today.
 
 Following this I came back and spent New Years with my girlfriend and eagerly
-awaited school to start because I get bored when there isn't much to do.  Well
-I got what I wanted which was a loss of boredom, and in addition a lack of free
+awaited school to start because I get bored when there isn't much to do. Well I
+got what I wanted which was a loss of boredom, and in addition a lack of free
 time. This is the first quarter in awhile that I've taken four courses and thus
 am feeling a bit overwhelmed, hence the quarter from hell, though I've managed
 thus far. I say thus far because next week I have two projects due and three

@@ -3,12 +3,12 @@ Date: 2006-07-24 02:08
 Category: all
 Slug: paper-writing
 
-Paper writing is a time of absolute procrastination and major
-productivity with everything but the paper it self. The following is the
-list of things I've accomplished since setting out to write my paper.
+Paper writing is a time of absolute procrastination and major productivity with
+everything but the paper it self. The following is the list of things I've
+accomplished since setting out to write my paper.
 
-1.  Put together my new computer (I've restrained from installing
-    everything as I don't have my hard drive yet)
+1.  Put together my new computer (I've restrained from installing everything as
+    I don't have my hard drive yet)
 2.  Drink
 3.  Go to a few parties
 4.  Sleep
@@ -27,8 +27,8 @@ list of things I've accomplished since setting out to write my paper.
 17. Birthday party
 18. Move content to a database
 
-And finally write this entry. What a weekend. The good news is only five
-pages left to go.
+And finally write this entry. What a weekend. The good news is only five pages
+left to go.
 
   [thepricetracker.com]: http://www.thepricetracker.com/
   [sedo]: http://www.sedo.com/

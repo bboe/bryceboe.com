@@ -10,20 +10,20 @@ the dangerous [passing on the right][] move. This driver that I initially
 zipped up behind refused to pull over for the duration of the drive. Upon
 realizing that passing this driver on the left would be difficult I performed a
 few actions in hopes of persuading the driver to move over. The actions include
-tailgating and the back up, close in method of which neither proved
-successful. I'm not sure if this driver was oblivious to my attempts or was
-single-handedly trying to stop me from passing, but not only did he refuse to
-move over to the right, he also moved into a newly opened left lane rather than
-allowing me use of this lane to pass.
+tailgating and the back up, close in method of which neither proved successful.
+I'm not sure if this driver was oblivious to my attempts or was single-handedly
+trying to stop me from passing, but not only did he refuse to move over to the
+right, he also moved into a newly opened left lane rather than allowing me use
+of this lane to pass.
 
 To greater explain the situation there was a good quarter of a mile in front of
 his car, and there was plenty of room for him to move to the right. Of course
 the means that I could have easily passed on the right, but despite [Section
 21754][] stating that it is legal, the move is dangerous and makes it more
-difficult for these drivers to move over due to passing cars on the
-right. Further more this perpetuates the problem as in time these drivers will
-assume that others will pass on the right; I call this suffering from passing
-on the right syndrome.
+difficult for these drivers to move over due to passing cars on the right.
+Further more this perpetuates the problem as in time these drivers will assume
+that others will pass on the right; I call this suffering from passing on the
+right syndrome.
 
 I'm not suggesting it should be illegal to drive in the fast lane but rather
 suggesting be courteous (and safe) by moving over when approached by a faster

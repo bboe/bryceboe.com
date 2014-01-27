@@ -3,9 +3,9 @@ Date: 2006-08-15 03:45
 Category: all
 Slug: core-2-duo-prices-drop
 
-While updating [priceTrackr][] tonight I noticed that newegg has dropped
-their prices for the Intel Core 2 Duo series processors. I think I'll
-still wait awhile before I make my next upgrade.
+While updating [priceTrackr][] tonight I noticed that newegg has dropped their
+prices for the Intel Core 2 Duo series processors. I think I'll still wait
+awhile before I make my next upgrade.
 
 The changes are as follows:
 
@@ -15,10 +15,10 @@ The changes are as follows:
 -   [E6400][] dropped $39.01 - now $259.99
 -   [E6300][] dropped $10.01 - now $218.99
 
-My [priceTrackr][1] service is expected to launch on Monday once I
-complete the FAQ, About, and contact pages. It's looking quite good
-though I must say and hopefully doesn't have IE problems like this page.
-If you would like to beta test please contact me.
+My [priceTrackr][1] service is expected to launch on Monday once I complete the
+FAQ, About, and contact pages. It's looking quite good though I must say and
+hopefully doesn't have IE problems like this page. If you would like to beta
+test please contact me.
 
   [priceTrackr]: http://www.pricetrackr.com
   [X6800]: http://www.newegg.com/Product/Product.asp?Item=N82E16819115001

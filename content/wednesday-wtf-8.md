@@ -1,12 +1,12 @@
-Title: Wednesday WTF #8
+Title: Wednesday WTF \#8
 Date: 2008-08-20 16:28
 Category: all
 Tags: Wednesday WTF
 Slug: wednesday-wtf-8
 
-Almost forgot about this today, so it's not quite as clever as I was
-hoping my Wednesday WTFs would be, oh well. I can't live up to my own
-expectations all the time.
+Almost forgot about this today, so it's not quite as clever as I was hoping my
+Wednesday WTFs would be, oh well. I can't live up to my own expectations all
+the time.
 
 [Michael Phelps in the wee stage of life][]
 

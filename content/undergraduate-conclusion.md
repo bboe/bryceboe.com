@@ -4,14 +4,13 @@ Category: all
 Slug: undergraduate-conclusion
 
 My undergraduate education at UCSB can simply be described as AMAZING.
-Achieving my Bachelors of Science in Computer Science over the past four
-years was the best time of my life. My memories of the time will last on
-forever and with social networking sites it will hopefully be much
-easier to remain in contact with all the wonderful friends I made over
-the years.
+Achieving my Bachelors of Science in Computer Science over the past four years
+was the best time of my life. My memories of the time will last on forever and
+with social networking sites it will hopefully be much easier to remain in
+contact with all the wonderful friends I made over the years.
 
-For future nostalgic purposes I will list some of the most memorable
-events in the past four years:
+For future nostalgic purposes I will list some of the most memorable events in
+the past four years:
 
 **Freshmen Year:**
 
@@ -19,8 +18,7 @@ events in the past four years:
 -   Meeting Adam and Scott at our first class
 -   Thursday night Sushi at Somethings Fishy with my FT floor mates
 -   Drinking for the first time with Buz in Flagstaff
--   Finding a place to live for the following three years (6660 Trigo
-    A!)
+-   Finding a place to live for the following three years (6660 Trigo A!)
 -   Showing up half an hour late to my one hour CS30 midterm yet still
     receiving 100%
 -   Learning to skimboard
@@ -28,8 +26,8 @@ events in the past four years:
 -   Taking first place in the UCSB Programming Battle
 -   Creating gauchoShare with Adam for CS50
 -   Goleta Beach BBQ with Anacapa friends
--   The dining commons - late night at DLG, tuna melts at FT, pizza at
-    Carillo, shake night at Ortega, tots, and so much more
+-   The dining commons - late night at DLG, tuna melts at FT, pizza at Carillo,
+    shake night at Ortega, tots, and so much more
 -   Learning to program Java
 
 **Sophomore Year:**
@@ -39,20 +37,18 @@ events in the past four years:
 -   Discovering that food was offered at company informational sessions
 -   Discovering Natty Lite
 -   Eating way too much Domino's Pizza
--   Late night hangout sessions with friends from freshmen year in
-    Scott's room
+-   Late night hangout sessions with friends from freshmen year in Scott's room
 -   Learning python and c/c++
 -   Switching to Linux
 
 **Junior Year:**
 
 -   Taking Soc 152B
--   Developing priceTrackr while procrastinating writing a Soc 152B
-    paper
+-   Developing priceTrackr while procrastinating writing a Soc 152B paper
 -   Snakes on a Plane!
 -   Jon Stewart at UCSB
--   Taking 5th place in a Southern California regional programming
-    competition with Adam and Scott
+-   Taking 5th place in a Southern California regional programming competition
+    with Adam and Scott
 -   UCSB Soccer National Champions
 -   Early mornings in the digilab for ECE152A
 -   Discovering better beer than Natty Lite - Mmm Blue Moon
@@ -61,8 +57,7 @@ events in the past four years:
 -   Spring Break at Avila Beach with A.J. Mike and Johnny
 -   Being accepted into the 5 year BS/MS program
 -   Taking Operating Systems with Ben
--   Having ridiculously long hair and keeping it out of my face with a
-    beanie
+-   Having ridiculously long hair and keeping it out of my face with a beanie
 -   Growing my first real beard
 
 **Senior Year**
@@ -70,8 +65,8 @@ events in the past four years:
 -   Watching my little brother ride his bike for the first time
 -   Power Hours and 40 Hands over the summer
 -   SIGGRAPH 2007 with WorldViz
--   Drinking with Professors at the CS BBQ and discovering they call us
-    the Three Musketeers
+-   Drinking with Professors at the CS BBQ and discovering they call us the
+    Three Musketeers
 -   Starting networking research in the current lab
 -   OTT Wednesdays
 -   Downtown Thursdays
@@ -93,8 +88,7 @@ events in the past four years:
 -   Mimosas and Graduation
 -   Sharing the last moments with many friends
 
-I've probably missed a few things, but this is a solid start. Lastly I
-just want to thank all of my college friends for all the memories, which
-I will cherish for ever. I sincerely hope that we all stay in good
-contact with one another. Best of luck to all of you on your future
-endeavors.
+I've probably missed a few things, but this is a solid start. Lastly I just
+want to thank all of my college friends for all the memories, which I will
+cherish for ever. I sincerely hope that we all stay in good contact with one
+another. Best of luck to all of you on your future endeavors.

@@ -4,14 +4,14 @@ Category: all
 Tags: facebook, python
 Slug: facebook-photograbber-updates
 
-I [previously wrote][] about my preparation for leaving Facebook. This
-morning I have finally completed the last few things I wanted to do.
-Those last few things were to store the photo captions, photo comments,
-and photo tags for each photo downloaded.
+I [previously wrote][] about my preparation for leaving Facebook. This morning
+I have finally completed the last few things I wanted to do. Those last few
+things were to store the photo captions, photo comments, and photo tags for
+each photo downloaded.
 
-Yesterday, in order to extract this information from Facebook, I spent
-some time and made some significant modifications to [photograbber][].
-You can download the patch [here][]. The changes are as follows:
+Yesterday, in order to extract this information from Facebook, I spent some
+time and made some significant modifications to [photograbber][]. You can
+download the patch [here][]. The changes are as follows:
 
 -   GUI checkbox option to download entire album if tagged
 -   Saves photo caption and comments in *{pid}*\_comments.txt
@@ -31,45 +31,38 @@ Features specific to the complete album download feature
 
 Photo captions and comments are stored in the following form:
 
-~~~~ {lang="text"}
-Photo Caption
-The only men running in bikini bottoms.
+    Photo Caption
+    The only men running in bikini bottoms.
 
-Sun Sep  6 18:20:52 2009 John Smith
-high five.  a million high hives.
+    Sun Sep  6 18:20:52 2009 John Smith
+    high five.  a million high hives.
 
-Sun Sep  6 20:05:40 2009 Sally Thomson
-OH my gosh ... I love it!
-~~~~
+    Sun Sep  6 20:05:40 2009 Sally Thomson
+    OH my gosh ... I love it!
 
-Album descriptions, locations, and comments are stored in the following
-form:
+Album descriptions, locations, and comments are stored in the following form:
 
-~~~~ {lang="text"}
-Album Description
-The best vacation ever!
+    Album Description
+    The best vacation ever!
 
-Album Location
-Aruba
+    Album Location
+    Aruba
 
-Tue Jul 21 15:33:46 2009 Sally Thomson
-whatever u do don't get abducted! jk ;)
+    Tue Jul 21 15:33:46 2009 Sally Thomson
+    whatever u do don't get abducted! jk ;)
 
-Tue Jul 21 15:35:44 2009 Bryce Boe
-I don't even know how that's possible there as everyone was so nice.
-~~~~
+    Tue Jul 21 15:35:44 2009 Bryce Boe
+    I don't even know how that's possible there as everyone was so nice.
 
-I have yet to make a Windows and OS X build, but if you're not afraid of
-a terminal and have *svn*, *wget*, *patch*, and *python* you can get and
-run my modified version of photograbber via:
+I have yet to make a Windows and OS X build, but if you're not afraid of a
+terminal and have *svn*, *wget*, *patch*, and *python* you can get and run my
+modified version of photograbber via:
 
-~~~~ {lang="bash"}
-svn checkout http://photograbber.googlecode.com/svn/trunk/ photograbber-read-only -r38
-cd photograbber-read-only/
-wget -qO - http://cs.ucsb.edu/~bboe/public/patches/photograbber-r38+bboe.patch | patch -p0
-echo "Run via: python pg.py"
-python pg.py
-~~~~
+    svn checkout http://photograbber.googlecode.com/svn/trunk/ photograbber-read-only -r38
+    cd photograbber-read-only/
+    wget -qO - http://cs.ucsb.edu/~bboe/public/patches/photograbber-r38+bboe.patch | patch -p0
+    echo "Run via: python pg.py"
+    python pg.py
 
   [previously wrote]: /2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/
   [photograbber]: http://code.google.com/p/photograbber/
