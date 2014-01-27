@@ -40,7 +40,7 @@ production went way up as I pounded out the rest of the patch. Around 5:30 a
 little bit of Rock Band took place and at 6:30 Steve and I met up with Molly
 and Julie at Stanford for the UCSB Stanford Women's volleyball match. Julie,
 Molly and I were decked out in our UCSB gear, and all were hoping for a UCSB
-upset against the \#2 ranked Stanford girls, however it unfortunately did not
+upset against the #2 ranked Stanford girls, however it unfortunately did not
 happen. Nonetheless we represented our school by starting the Gaucho cheer:
 "OLE!, OLE! OLE! OLE!, GUACHOS!, GAUCHOS! (repeat)" Following the game the four
 of us went to Pizza My Heart and then the Rose and Crown for some darts. I

@@ -1,4 +1,4 @@
-Title: Wednesday WTF \#9
+Title: Wednesday WTF #9
 Date: 2008-08-27 21:02
 Category: all
 Tags: Wednesday WTF

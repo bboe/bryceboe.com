@@ -23,7 +23,7 @@ full of advertisements which weren't regular text or picture advertisements but
 rather pages filled with flash advertisements. Because of these flash
 advertisements my CPU resources were quickly filled immediately disappointing
 me. I understand the need for advertisements, especially when MySpace is ranked
-the [\#6 website for traffic globally][], however MySpace has taken this beyond
+the [#6 website for traffic globally][], however MySpace has taken this beyond
 ridiculous which is light years away from acceptable.
 
 The second thing that made my MySpace experience unsatisfying was their user
@@ -55,7 +55,7 @@ testing, and referring people to here and priceTrackr.
 > the boy becomes a man.
 
   [profile]: http://www.myspace.com/bryceboe
-  [\#6 website for traffic globally]: http://www.alexa.com/data/details/main?q=&url=http://www.myspace.com
+  [#6 website for traffic globally]: http://www.alexa.com/data/details/main?q=&url=http://www.myspace.com
   [brother's MySpace]: http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&friendid=18401585
   [A Call For Justice]: http://216.220.97.17/beslut.htm
   [NAMBLA]: http://www.nambla.org/

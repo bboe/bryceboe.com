@@ -13,7 +13,7 @@ Unfortunately [Adam][], [Jason][], and [Chris][] are the only bloggers I know
 who wasn't already mentioned on Cheri's list, thus I guess I am doomed to have
 terrible luck for the next 5 years.
 
-The following are the rules. It looks like I already broke \#4 as I posted
+The following are the rules. It looks like I already broke #4 as I posted
 their links already.
 
 1.  I have to post these rules before I give you the facts.

@@ -1,4 +1,4 @@
-Title: Wednesday WTF \#2: ICANN Domains Hijacked
+Title: Wednesday WTF #2: ICANN Domains Hijacked
 Date: 2008-07-09 12:54
 Category: all
 Tags: Wednesday WTF

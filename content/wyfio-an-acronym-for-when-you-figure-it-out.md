@@ -17,7 +17,7 @@ ridiculous. ;)
 
 My next thought process was that someone else had to have already defined this
 particular acronym. However a [Google][], [bing][], and [YAHOO!][] search
-turned up no results save for [this one][] (post \#2) which uses the acronym in
+turned up no results save for [this one][] (post #2) which uses the acronym in
 the same way I am, but fails to define it.
 
 Let it be known that here on this 9th day of February, 2010 I, Bryce Boe, first

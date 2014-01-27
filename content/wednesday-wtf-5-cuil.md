@@ -1,4 +1,4 @@
-Title: Wednesday WTF \#5: cuil
+Title: Wednesday WTF #5: cuil
 Date: 2008-07-30 10:22
 Category: all
 Tags: Wednesday WTF
