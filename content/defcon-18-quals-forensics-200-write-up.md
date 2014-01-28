@@ -16,13 +16,14 @@ weekend. Below is my write up for the Forensics 200 challenge.
 I don't recall the phrasing they gave (if you remember it please let me know),
 however this was the file they provided:</del>
 <ins datetime="2010-05-26T03:34:43+00:00">The caption read, "find the key" and
-linked to this file:</ins> [f200\_02b7b50f575759cff7.tar.lzma][]
+linked to this file:</ins> [f200_02b7b50f575759cff7.tar.lzma][]
 
 Running *file* on f200\_02b7b50f575759cff7.tar.lzma simply returned **data**
 however fortunately the lzma extension was useful to identify that this
 possibly be uncompressed with 7zip ([lmgtfy lzma file][]). On ubuntu there is a
 package called p7zip thus:
 
+    :::console
     bryce@sarek:f200$ mv f200_02b7b50f575759cff7.tar.lzma f200_02b7b50f575759cff7.tar.7z
     bryce@sarek:f200$ p7zip -d f200_02b7b50f575759cff7.tar.7z
 
@@ -41,6 +42,7 @@ package called p7zip thus:
 
 This extracts 1121 png image files.
 
+    :::console
     bryce@sarek:f200$ ls | head
     f200_02b7b50f575759cff7.tar
     IMG_0001.png
@@ -59,6 +61,7 @@ inspection we see a mostly transparent image with some white and black pixels.
 Thus using [python's imaging library][] (PIL) we simply write a quick program
 that will combine all the images into one:
 
+    :::python
     #!/usr/bin/env python
     import Image
 
@@ -81,12 +84,11 @@ that will combine all the images into one:
 Running this eventually produces the following image, from which the is.gd url
 <http://is.gd/ced7F> is the key. Yeah Sexy CPR.
 
-[![Defcon 18 Forensics 200 Result][]][]
+[![Defcon 18 Forensics 200 Result][]](/images/2010/05/f200_result.png)
 
   [vnSecurity site]: http://www.vnsecurity.net/2010/05/defcon-18-quals-writeups-collection/
-  [f200\_02b7b50f575759cff7.tar.lzma]: http://cs.ucsb.edu/~bboe/public/bin/f200_02b7b50f575759cff7.tar
+  [f200_02b7b50f575759cff7.tar.lzma]: http://cs.ucsb.edu/~bboe/public/bin/f200_02b7b50f575759cff7.tar
   [lmgtfy lzma file]: http://lmgtfy.com/?q=lzma+file&l=1
   [python's imaging library]: http://www.pythonware.com/products/pil/
   [Defcon 18 Forensics 200 Result]: /images/2010/05/f200_result-43x300.png
     "Defcon 18 Forensics 200 Result"
-  [![Defcon 18 Forensics 200 Result][]]: /images/2010/05/f200_result.png

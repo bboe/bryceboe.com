@@ -9,7 +9,7 @@ pulled through with some amazing points at the end to finish in [8th place][].
 My successful contributions, however, were really only with respect to
 Forensics 100 and 300. My write up for the following are below:
 
-**Forensics 100**  
+## Forensics 100
 The forensics 100 challenge indicated to find the key, and [provided a png
 file][] that was 19025x1 in resolution. Immediately our team thought we could
 simply change the resolution to [25x761][] and would be on to something. After
@@ -24,6 +24,7 @@ pixels) [resulted in success][]! The key "thankYouSirPleasemayIhaveAnother"
 appeared and worked. The following is my simple python solution for Forensics
 100:
 
+    :::python
     #!/usr/bin/env python
     import sys, Image
 
@@ -36,7 +37,7 @@ appeared and worked. The following is my simple python solution for Forensics
     if __name__ == '__main__':
         sys.exit(main())
 
-**Forensics 300**  
+## Forensics 300
 Forensics 300 was quite an interesting challenge. I don't have the original
 file, nevertheless, one had to extract the initial file with a password to get
 a dmg containing a dump from an iphone. I came into the challenge a little
@@ -67,13 +68,14 @@ location is called Ross Island. From that point we simply attempted different
 submitted successfully. Below is the script I used to find the coordinates from
 the [consolodated.db input file][]:
 
+    :::python
     #!/usr/bin/env python
     import os, sys
 
     def main():
         os.system('sqlite3 consolidated.db "select Latitude, Longitude '
                   'from CellLocation;" > tmp')
-        
+
         uniq = {}
         for line in open('tmp'):
             pos = tuple('%.3f' % float(x) for x in line.split('|')[:2])
