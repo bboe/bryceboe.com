@@ -92,7 +92,7 @@ computer lab
 
 > Ummm....
 >
-> Ok so I can speak for \[DK\] and say that he wasn't really going to kill
+> Ok so I can speak for DK and say that he wasn't really going to kill
 > himself. That was a joke PLEASE don't give us an extension. We just want it
 > to end. For the love of god.
 >

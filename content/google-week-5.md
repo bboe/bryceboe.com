@@ -41,7 +41,7 @@ Boss pants, a light blue Hugo Boss button down and [Allen Edmonds "Wendel"][]
 shoes in black. Yes I probably spent a bit much, but damn it feels good to be a
 baller.
 
-[![Aren\\'t we ballers?][]][]
+[![Aren't we ballers?][]](/images/2008/07/img_3588.jpg)
 
 Anyway the wedding was awesome and one of my most fun friends, Margaux,
 attended with me. I can't wait for the next one! Anyway, on Sunday Molly, Mira
@@ -61,7 +61,6 @@ So much to do.
   [Cheri]: http://blogthismom.blogspot.com/
   [Pusoy Dos]: http://en.wikipedia.org/wiki/Pusoy_Dos
   [Allen Edmonds "Wendel"]: http://www.allenedmonds.com/aeonline/ProductDisplay?catalogId=40000000001&storeId=1&langId=-1&productId=6463281&parentCategoryId=&imageType=2&parent_category_rn=0
-  [Aren\\'t we ballers?]: /images/2008/07/img_3588-300x225.jpg
+  [Aren't we ballers?]: /images/2008/07/img_3588-300x225.jpg
     "Bryce and the WordViz Crew"
-  [![Aren\\'t we ballers?][]]: /images/2008/07/img_3588.jpg
   [Splash Cafe]: http://www.splashcafe.com/

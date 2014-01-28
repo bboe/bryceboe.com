@@ -21,12 +21,12 @@ HTTP request, i.e., port 80, that is sent to a non-permitted IP address.
 
 Two common techniques for bypassing pay-for-wireless providers are
 [TCP-over-ICMP][] and [TCP-over-DNS][]. In a nutshell, TCP is the protocol
-required to browse the web, ICMP is the protocol used by the command \`ping\`
-to determine if a host is available, and DNS is required to resolve domain
-names like [www.google.com][] to an IP address. When TCP is not completely
-available yet either ICMP or DNS is, then it is possible to encapsulate TCP
-connections over the other available protocol. Gogo blocked my ping attempts,
-hence TCP-over-ICMP was not possible. However, while Gogo doesn't permit direct
+required to browse the web, ICMP is the protocol used by the command `ping` to
+determine if a host is available, and DNS is required to resolve domain names
+like [www.google.com][] to an IP address. When TCP is not completely available
+yet either ICMP or DNS is, then it is possible to encapsulate TCP connections
+over the other available protocol. Gogo blocked my ping attempts, hence
+TCP-over-ICMP was not possible. However, while Gogo doesn't permit direct
 access to external DNS servers, Gogo's DNS server recursively resolved the DNS
 queries I made. Therefore, Gogo appears to be susceptible to TCP-over-DNS.
 Despite not being able to verify this finding, I will simply state that Gogo

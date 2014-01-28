@@ -10,7 +10,7 @@ to a single topic.
 
 So whilst I was waiting for Ubuntu Fesity Fawn to download I started checking
 out the [Django Project][] and wow I'm pretty impressed. For my next CS162
-\`project\` we have to learn a new language or API and do a thorough report on
+project we have to learn a new language or API and do a thorough report on
 it. From what I've read and watched the Django project is amazing. It's very
 comparable to Ruby on Rails, though I cannot speak from experience about that.
 
