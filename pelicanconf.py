@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'Bryce Boe'
-SITENAME = u'Bryce Boe'
+AUTHOR = 'Bryce Boe'
+SITENAME = 'Bryce Boe'
 SITEURL = ''
 
 TIMEZONE = 'America/Los_Angeles'
 
-DEFAULT_LANG = u'en'
+DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -24,6 +24,9 @@ LINKS =  (('Pelican', 'http://getpelican.com/'),
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
+
+STATIC_PATHS = ['extra/robots.txt', 'images']
+EXTRA_PATH_METADATA = {'extra/robots.txt': {'path': 'robots.txt'}}
 
 DEFAULT_PAGINATION = 10
 
