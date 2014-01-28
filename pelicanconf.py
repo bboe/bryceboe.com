@@ -6,6 +6,9 @@ AUTHOR = 'Bryce Boe'
 SITENAME = 'Bryce Boe'
 SITEURL = ''
 
+ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+
 TIMEZONE = 'America/Los_Angeles'
 
 DEFAULT_LANG = 'en'

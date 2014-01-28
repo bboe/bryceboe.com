@@ -2,7 +2,7 @@ Title: Flat Stanley's (not so) Adventures at UCSB
 Date: 2009-03-03 21:51
 Category: all
 Tags: family
-Slug: flat-stanley%e2%80%99s-not-so-adventures-at-ucsb
+Slug: flat-stanley’s-not-so-adventures-at-ucsb
 
 My brother Connor recently mailed me a letter that read:
 

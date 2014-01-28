@@ -1,7 +1,7 @@
 Title: F8 08 - The Facebook Developers Conference
 Date: 2008-07-29 00:11
 Category: all
-Slug: f8-08-%e2%80%93-the-facebook-developers-conference
+Slug: f8-08-–-the-facebook-developers-conference
 
 The following is a detailed description of last Wednesday, 2008-07-23.
 

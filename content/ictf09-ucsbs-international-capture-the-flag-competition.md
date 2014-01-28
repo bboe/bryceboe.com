@@ -2,7 +2,7 @@ Title: iCTF09: UCSB's International Capture the Flag Competition
 Date: 2009-12-06 00:45
 Category: all
 Tags: hacking, python
-Slug: ictf09-%e2%80%93-ucsbs-international-capture-the-flag-competition
+Slug: ictf09-–-ucsbs-international-capture-the-flag-competition
 
 As a member of the Security Lab at UCSB I had the privilege to help create and
 run this year's [iCTF][] Hacking Competition. The six-year-old competition was

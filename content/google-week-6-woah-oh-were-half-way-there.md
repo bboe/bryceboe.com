@@ -2,7 +2,7 @@ Title: Google: Week 6 - Woah-oh We're Half Way There!
 Date: 2008-08-05 23:42
 Category: all
 Tags: google
-Slug: google-week-6-%e2%80%93-woah-oh-were-half-way-there
+Slug: google-week-6-–-woah-oh-were-half-way-there
 
 Damn I'm late again! I never make my personal Sunday midnight deadline. If it's
 any consolation I wrote most of this Sunday night, started editing Monday

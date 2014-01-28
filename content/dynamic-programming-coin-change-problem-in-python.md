@@ -2,7 +2,7 @@ Title: Dynamic Programming - Coin Change Problem in Python
 Date: 2009-11-04 22:35
 Category: all
 Tags: python
-Slug: dynamic-programming-%e2%80%93-coin-change-problem-in-python
+Slug: dynamic-programming-–-coin-change-problem-in-python
 
 <ins datetime="2011-02-25T20:06:41+00:00">
 **Update 2011/02/25 12:07**  
