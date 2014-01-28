@@ -49,7 +49,7 @@ up which most people appear to have wrong is the following:
 
 Don't use the /usr/src directory for your sources. The directory is owned by
 root and the kernel should not be made with root privileges, thus using
-/usr/src is not recommended. Create a \~/src directory and work from there.
+/usr/src is not recommended. Create a ~/src directory and work from there.
 
 Also in order to make use of a multi core processor in make-kpkg one must run
 the following command:

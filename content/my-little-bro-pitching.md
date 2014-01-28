@@ -15,8 +15,8 @@ occasionally neglect unfavorable details.
 My past weekend involved getting scuba certified with Adam, Daria, and Margaux
 as we did our four beach dives. We now can rent scuba tanks and are \_allowed\_
 to dive down to 60 feet. I must say that scuba is awesome, though I'd much
-prefer having gills to wearing \~75 pounds worth of gear. [Gillyweed][] would
-be sweet too. Unfortunately it doesn't exist... yet.
+prefer having gills to wearing ~75 pounds worth of gear. [Gillyweed][] would be
+sweet too. Unfortunately it doesn't exist... yet.
 
   [caption id="attachment\_225" align="alignnone" width="225" caption="Connor
   Pitching"]: /images/2009/04/img_1228.jpg

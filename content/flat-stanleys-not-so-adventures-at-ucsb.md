@@ -26,8 +26,8 @@ My brother Connor recently mailed me a letter that read:
 In lieu of mailing back a letter I chose to write about Flat Stanley's visit
 here.
 
-Flat Stanley arrived in via snail mail Tuesday February 10 at \~8PM just in
-time for diner. Scott had prepared some chicken and pasta while Adam and I were
+Flat Stanley arrived in via snail mail Tuesday February 10 at ~8PM just in time
+for diner. Scott had prepared some chicken and pasta while Adam and I were
 coming back from campus. Following dinner, Flat Stanley watched the previous
 night's Daily Show with us, and then aided me with one of my course projects.
 This project involved subverting the security checks in place in a particular

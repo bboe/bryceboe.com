@@ -6,7 +6,7 @@ Slug: how-do-i-end-it
 Next quarter I am TAing the Operating Systems course at UCSB, which was one of
 my favorite classes (I even mentioned it [here][]- see junior year), despite it
 being considered the most difficult required Computer Science course. For our
-class of \~50 students we had 3 TAs for whom this class sucked the life out of.
+class of ~50 students we had 3 TAs for whom this class sucked the life out of.
 The class next quarter currently has 39 students enrolled, and I am the only
 TA, so it's going to be an adventure to say the least. Fortunately the projects
 seem much simpler than when I took it so that's a good sign. I think the

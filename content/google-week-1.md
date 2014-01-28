@@ -9,8 +9,8 @@ here goes, with a few extras. As I mentioned [previously][], working at Google
 is much more amazing than everyone makes it out to be. Yes they do make it out
 to seem awesome, but imagine awesome-er, and your still short. Okay... maybe
 I'm elaborating a little bit, but they do an excellent job of ensuring I'm not
-bored from the times of \~8AM to \~8PM. On a separate note, I don't have much
-to leave work for (yet), so chilling at Google a few extra hours is the easy
+bored from the times of ~8AM to ~8PM. On a separate note, I don't have much to
+leave work for (yet), so chilling at Google a few extra hours is the easy
 decision, plus I eat breakfast, lunch and dinner there every day.
 
 Anyway during week I watched a few videos, did a few tutorials, and tried to

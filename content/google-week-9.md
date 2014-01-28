@@ -74,7 +74,7 @@ their customers out for free. I definitely was not going to pay $5 for a 10
 second job with a $20 tool. Being creative I used a few hex keys to remove the
 stereo; so much for a "required" tool. I crimped the wire harnesses together
 and then packed everything neatly back in place. Everything worked beautifully
-and I can now listen to \~30% more music before having to change a disc.
+and I can now listen to ~30% more music before having to change a disc.
 
 Spilling over into this week; Monday I made the decision to be a research
 assistant rather than a teaching assistant fall quarter. There are a few paper

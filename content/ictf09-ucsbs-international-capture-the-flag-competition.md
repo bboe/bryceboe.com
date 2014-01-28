@@ -77,7 +77,7 @@ and what they are. One additional difficulty is figuring out that the ASCII
 values need to be subtracted by 95 prior to XORing so the numbers being XORed
 fit within 32 bits. This can be discovered by taking the min value that appears
 in the paragraphs which is 95 corresponding to '\_' and additionally the max
-value that appears which is 126 corresponding to '\~'. The '95' that appears in
+value that appears which is 126 corresponding to '~'. The '95' that appears in
 the blurb was to hint at this.
 
 Finding the places where the characters should go requires XORing the current
