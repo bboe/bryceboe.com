@@ -33,6 +33,7 @@ the interrupt handler to distinguish it from the default operation. I
 acknowledge that it is a [bad practice][] to use printf in a signal handler,
 however I am neglecting that concern for demonstration purposes.
 
+    :::c
     #include 
     #include 
 
@@ -66,6 +67,7 @@ you'll notice I eliminated the main function and the include statements as they
 are no longer needed. All code that was added was needed to call the function
 **fibo** from the python C module **bboe**.
 
+    :::c
     #include 
 
     volatile sig_atomic_t kb_interrupt = 0;
@@ -110,6 +112,7 @@ are no longer needed. All code that was added was needed to call the function
 
 The proper distutils setup.py script for this C module is shown below.
 
+    :::python
     from distutils.core import setup, Extension
 
     setup(name = 'BBoe',
@@ -123,6 +126,7 @@ builds both the C and python parts. Simply run **make** followed by
 **./fibo\_prog** for the C version, or **./fibo\_prog.py** for the python
 version.
 
+    :::python
     #!/usr/bin/env python
     import bboe
 
@@ -156,6 +160,7 @@ implementation, and a pure python implementation. Thus I have updated [the
 source tarball][this tarball] to include the following python file as well as a
 script to generate the timing results which are also shown below.
 
+    :::python
     #!/usr/bin/env python
 
     def fibo(n):
@@ -176,7 +181,30 @@ script to generate the timing results which are also shown below.
     if __name__ == '__main__':
         main()
 
-`fibo(00) pure c: 0.002s c module: 0.016s pure python: 00.015s fibo(02) pure c: 0.002s c module: 0.014s pure python: 00.015s fibo(04) pure c: 0.002s c module: 0.014s pure python: 00.014s fibo(06) pure c: 0.002s c module: 0.015s pure python: 00.015s fibo(08) pure c: 0.002s c module: 0.015s pure python: 00.013s fibo(10) pure c: 0.002s c module: 0.017s pure python: 00.016s fibo(12) pure c: 0.002s c module: 0.013s pure python: 00.014s fibo(14) pure c: 0.002s c module: 0.015s pure python: 00.016s fibo(16) pure c: 0.002s c module: 0.014s pure python: 00.015s fibo(18) pure c: 0.002s c module: 0.014s pure python: 00.017s fibo(20) pure c: 0.002s c module: 0.014s pure python: 00.018s fibo(22) pure c: 0.002s c module: 0.012s pure python: 00.021s fibo(24) pure c: 0.003s c module: 0.013s pure python: 00.037s fibo(26) pure c: 0.004s c module: 0.017s pure python: 00.074s fibo(28) pure c: 0.008s c module: 0.020s pure python: 00.167s fibo(30) pure c: 0.018s c module: 0.027s pure python: 00.406s fibo(32) pure c: 0.034s c module: 0.040s pure python: 01.061s fibo(34) pure c: 0.067s c module: 0.080s pure python: 02.716s fibo(36) pure c: 0.167s c module: 0.183s pure python: 07.121s fibo(38) pure c: 0.425s c module: 0.450s pure python: 18.722s fibo(40) pure c: 1.099s c module: 1.153s pure python: 49.901s`
+Results:
+
+    :::text
+    fibo(00) pure c: 0.002s c module: 0.016s pure python: 00.015s
+    fibo(02) pure c: 0.002s c module: 0.014s pure python: 00.015s
+    fibo(04) pure c: 0.002s c module: 0.014s pure python: 00.014s
+    fibo(06) pure c: 0.002s c module: 0.015s pure python: 00.015s
+    fibo(08) pure c: 0.002s c module: 0.015s pure python: 00.013s
+    fibo(10) pure c: 0.002s c module: 0.017s pure python: 00.016s
+    fibo(12) pure c: 0.002s c module: 0.013s pure python: 00.014s
+    fibo(14) pure c: 0.002s c module: 0.015s pure python: 00.016s
+    fibo(16) pure c: 0.002s c module: 0.014s pure python: 00.015s
+    fibo(18) pure c: 0.002s c module: 0.014s pure python: 00.017s
+    fibo(20) pure c: 0.002s c module: 0.014s pure python: 00.018s
+    fibo(22) pure c: 0.002s c module: 0.012s pure python: 00.021s
+    fibo(24) pure c: 0.003s c module: 0.013s pure python: 00.037s
+    fibo(26) pure c: 0.004s c module: 0.017s pure python: 00.074s
+    fibo(28) pure c: 0.008s c module: 0.020s pure python: 00.167s
+    fibo(30) pure c: 0.018s c module: 0.027s pure python: 00.406s
+    fibo(32) pure c: 0.034s c module: 0.040s pure python: 01.061s
+    fibo(34) pure c: 0.067s c module: 0.080s pure python: 02.716s
+    fibo(36) pure c: 0.167s c module: 0.183s pure python: 07.121s
+    fibo(38) pure c: 0.425s c module: 0.450s pure python: 18.722s
+    fibo(40) pure c: 1.099s c module: 1.153s pure python: 49.901s
 
 These results show first that there is much to be gained by writing a C module
 for CPU intensive tasks, and second that a pure C implementation doesn't gain

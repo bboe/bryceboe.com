@@ -9,7 +9,11 @@ second hour of the day. Those people in time zones that were previously on
 [daylight saving time][] switched back to standard time and thus may have
 observed their digital devices record the following sequence of times:
 
-`2012-11-04 01:59:58 2012-11-04 01:59:59 2012-11-04 01:00:00 2012-11-04 01:00:01`
+    :::text
+    2012-11-04 01:59:58
+    2012-11-04 01:59:59
+    2012-11-04 01:00:00
+    2012-11-04 01:00:01
 
 The written timestamps make it appear as if time went back one hour, when of
 course time continued to proceed linearly. This perceived repetition of an hour
@@ -56,7 +60,12 @@ languages usually have a date and time representation that can be created from
 unix timestamps. In python, this representation is accomplished through the
 [datetime][] object:
 
-`>>> from datetime import datetime >>> print(datetime.fromtimestamp(1325448000)) 2012-01-01 12:00:00 >>> print(datetime.fromtimestamp(473414400)) 1985-01-01 00:00:00`
+    :::pycon
+    >>> from datetime import datetime
+    >>> print(datetime.fromtimestamp(1325448000))
+    2012-01-01 12:00:00
+    >>> print(datetime.fromtimestamp(473414400))
+    1985-01-01 00:00:00
 
 Using the datetime representation you should be able to more easily answer the
 previous questions. If you execute the above code, some of you might wonder why
@@ -67,7 +76,11 @@ local time zone is "America/Los\_Angeles", which corresponds to either PST or
 PDT depending on the time of year. With that in mind let's look at instances of
 datetime around the end of daylight savings time 2012.
 
-`>>> a = datetime.fromtimestamp(1352019599) >>> b = datetime.fromtimestamp(1352019600) >>> print((b - a).total_seconds()) -3599.0`
+    :::pycon
+    >>> a = datetime.fromtimestamp(1352019599)
+    >>> b = datetime.fromtimestamp(1352019600)
+    >>> print((b - a).total_seconds())
+    -3599.0
 
 Although the timestamp for *a* is one second less than the timestamp for *b*,
 it appears as if *b* represents a time 3599 seconds (one second less than one
@@ -77,7 +90,11 @@ information by default. Thus, naïve datetime objects, that is, those without
 time zone information, are only compared by their values. Below are the values
 for *a* and *b* from the previous example:
 
-`>>> print(a) 2012-11-04 01:59:59 >>> print(b) 2012-11-04 01:00:00`
+    :::pycon
+    >>> print(a)
+    2012-11-04 01:59:59
+    >>> print(b)
+    2012-11-04 01:00:00
 
 While these values are correct, we should also be able to compare them
 correctly. Fortunately python's datetime objects allow us to also associate
@@ -85,7 +102,16 @@ time zone information. Unfortunately, the easiest way is through the
 non-standard package [pytz][]. With pytz we can easily create time zone
 specific datetime objects. Doing so will solve the comparison problem:
 
-`>>> import pytz >>> a = datetime.fromtimestamp(1352019599, pytz.timezone('America/Los_Angeles')) >>> b = datetime.fromtimestamp(1352019600, pytz.timezone('America/Los_Angeles')) >>> print((b - a).total_seconds()) 1.0 >>> print(a) 2012-11-04 01:59:59-07:00 >>> print(b) 2012-11-04 01:00:00-08:00`
+    :::pycon
+    >>> import pytz
+    >>> a = datetime.fromtimestamp(1352019599, pytz.timezone('America/Los_Angeles'))
+    >>> b = datetime.fromtimestamp(1352019600, pytz.timezone('America/Los_Angeles'))
+    >>> print((b - a).total_seconds())
+    1.0
+    >>> print(a)
+    2012-11-04 01:59:59-07:00
+    >>> print(b)
+    2012-11-04 01:00:00-08:00
 
 In the previous example we get a [tzinfo][] object by calling
 `pytz.timezone('America/Los_Angeles')` and use that in creating the datetime
@@ -93,7 +119,15 @@ object. Note that the time zone selected only affects how the datetime object
 is represented. Observe that the following two datetime objects are the same
 despite their different representation:
 
-`>>> a = datetime.fromtimestamp(1352019599, pytz.timezone('America/Los_Angeles')) >>> b = datetime.fromtimestamp(1352019599, pytz.timezone('America/New_York')) >>> a == b True >>> print(a) 2012-11-04 01:59:59-07:00 >>> print(b) 2012-11-04 03:59:59-05:00`
+    :::pycon
+    >>> a = datetime.fromtimestamp(1352019599, pytz.timezone('America/Los_Angeles'))
+    >>> b = datetime.fromtimestamp(1352019599, pytz.timezone('America/New_York'))
+    >>> a == b
+    True
+    >>> print(a)
+    2012-11-04 01:59:59-07:00
+    >>> print(b)
+    2012-11-04 03:59:59-05:00
 
 It should now be obvious that it is always a good idea to create datetime
 objects with time zone information included. Two other common ways of creating
@@ -106,7 +140,13 @@ create a datetime object for a specific date and time.
 With time zone specific datetime objects, it's trivial to get a localized
 representation for any time zone through the [astimezone][] function:
 
-`>>> print(a) 2012-11-04 01:59:59-07:00 >>> print(a.astimezone(pytz.timezone('America/New_York'))) 2012-11-04 03:59:59-05:00 >>> print(a.astimezone(pytz.UTC)) 2012-11-04 08:59:59+00:00`
+    :::pycon
+    >>> print(a)
+    2012-11-04 01:59:59-07:00
+    >>> print(a.astimezone(pytz.timezone('America/New_York')))
+    2012-11-04 03:59:59-05:00
+    >>> print(a.astimezone(pytz.UTC))
+    2012-11-04 08:59:59+00:00
 
 Thus far we've shown that using unix timestamps is great for date and time
 consistency between machines at the cost of not being human readable. We then
@@ -131,7 +171,12 @@ Making no assumptions about the time zone the datetime object is currently
 represented in, the following shows how to convert a datetime object to a unix
 timestamp using **time.mktime**:
 
-`>>> import time >>> import pytz.reference >>> a = datetime.fromtimestamp(1352019599, pytz.timezone('America/New_York')) >>> time.mktime(a.astimezone(pytz.reference.LocalTimezone()).timetuple()) 1352019599.0`
+    :::pycon
+    >>> import time
+    >>> import pytz.reference
+    >>> a = datetime.fromtimestamp(1352019599, pytz.timezone('America/New_York'))
+    >>> time.mktime(a.astimezone(pytz.reference.LocalTimezone()).timetuple())
+    1352019599.0
 
 Notice that we must first convert the datetime object, *a*, into its identical
 representation in our localized time zone before calling timetuple. The
@@ -141,7 +186,10 @@ localized time zone.
 The second approach to convert from a datetime object to a unix timestamp is to
 first convert to UTC and then use **calendar.timegm**:
 
-`>>> import calendar >>> calendar.timegm(a.utctimetuple()) 1352019599`
+    :::pycon
+    >>> import calendar
+    >>> calendar.timegm(a.utctimetuple())
+    1352019599
 
 When using **calendar.timegm** we can conveniently use the datetime
 [utctimetuple][] function rather than using the astimezone function.
