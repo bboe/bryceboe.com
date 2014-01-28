@@ -15,7 +15,7 @@ DEFAULT_LANG = 'en'
 
 DEFAULT_PAGINATION = 10
 
-PLUGINS = ['plugins.sitemap']
+PLUGINS = ['plugins.sitemap', 'pelican_gist']
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None

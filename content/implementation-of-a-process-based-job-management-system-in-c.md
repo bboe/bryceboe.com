@@ -5,7 +5,9 @@ Tags: C, python
 Slug: implementation-of-a-process-based-job-management-system-in-c
 
 A few days ago I wrote about [a few differences between using C and python to
-handle a process-based job management system][]. My discussion covered
+handle a process-based job management
+system](/2012/02/20/process-based-job-management-in-c-and-python/
+"Process-Based Job Management in C and Python"). My discussion covered
 performance, development time, dependencies, and portability. I ended with the
 conclusion that despite C being vastly superior in performance, the relative
 difference in performance between various job management systems is irrelevant
@@ -39,6 +41,7 @@ function prototypes whereas **job\_management.c** contains the implementation.
 The entire library functionality is exposed through three functions:
 `manager_init`, `manager_run_jobs`, and `manager_destruct`.
 
+    :::c
     void manager_init(struct manager *manager, int num_workers,
               void (*input_callback)(char *),
               void (*output_callback)(char *),
@@ -65,6 +68,7 @@ will then be sent back to the master process. The *output\_callback* function
 is called by the master process as each job is completed. In this case, the
 buffer contains the output of a completed job.
 
+    :::c
     int manager_run_jobs(struct manager *manager, int num_jobs);
 
 Once the manager has been properly set up, a number of jobs can be started via
@@ -87,6 +91,7 @@ function handles the desired behavior through the combination of a global
 loop, and a SIGINT handler function that updates the value. Worker processes
 are unaffected by SIGINT as they are set to ignore it.
 
+    :::c
     void manager_destruct(struct manager *manager);
 
 The last function, `manager_destruct`, conveniently frees the contents of the
@@ -112,11 +117,8 @@ and much more portable. :)
 
 Happy coding!
 
-[gist id=1894848 file=main.c]
+[gist:id=1894848,file=main.c]
 
-  [a few differences between using C and python to handle a process-based job
-  management system]: /2012/02/20/process-based-job-management-in-c-and-python/
-    "Process-Based Job Management in C and Python"
   [multiprocessing.Pool]: http://docs.python.org/library/multiprocessing.html#module-multiprocessing.pool
   [POSIX-based]: http://en.wikipedia.org/wiki/POSIX
   [found and downloaded in entirety]: https://gist.github.com/1894848

@@ -40,13 +40,14 @@ everything else mentioned on the blog post currently works as described.
 The fix to the shell script is actually really simple, just replace the line
 shown in the first block of code below, with the line shown in the second:
 
+    :::console
     sudo /Applications/Tunnelblick.app/Contents/Resources/openvpn --dev tun \    sudo /Applications/Tunnelblick.app/Contents/Resources/openvpn/openvpn-2.2.1/openvpn --dev tun \
 
 Finally for your convenience, I created a github gist with the updated shell
 script. Observant readers will notice that I updated some of the comments in
 the script. Happy tethering!
 
-[gist id=1302227]
+[gist:id=1302227]
 
   [18th ACM Conference on Computer and Communications Security]: http://www.sigsac.org/ccs/CCS2011/
   [Adam Doupé]: http://adamdoupe.com/
