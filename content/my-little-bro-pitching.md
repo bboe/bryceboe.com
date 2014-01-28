@@ -4,8 +4,7 @@ Category: all
 Tags: family
 Slug: my-little-bro-pitching
 
-[caption id="attachment\_225" align="alignnone" width="225" caption="Connor
-Pitching"][][][/caption]
+[![Connor Pitching][]](/images/2009/04/img_1228.jpg)
 
 This past weekend my littlest brother pitched for the first time. Word has it
 that he pitched 3 consecutive strikeouts! Go Connor. However, this word needs
@@ -18,6 +17,5 @@ to dive down to 60 feet. I must say that scuba is awesome, though I'd much
 prefer having gills to wearing ~75 pounds worth of gear. [Gillyweed][] would be
 sweet too. Unfortunately it doesn't exist... yet.
 
-  [caption id="attachment\_225" align="alignnone" width="225" caption="Connor
-  Pitching"]: /images/2009/04/img_1228.jpg
+  [Connor Pitching]: /images/2009/04/img_1228-225x300.jpg
   [Gillyweed]: http://en.wikipedia.org/wiki/Gillyweed#Plants_from_J._K._Rowling.27s_Harry_Potter_series

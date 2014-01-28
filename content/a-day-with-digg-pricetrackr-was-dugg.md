@@ -108,7 +108,7 @@ priceTrackr. Of course some people weren't able to get to priceTrackr well into
 the evening, but there wasn't much I could do about that. After all the
 excitement a delayed hangover set in, so no day job work was accomplished.
 
-Later that night I implemented [pear's Cache\_Lite][] (I am a proud supporter
+Later that night I implemented [pear's Cache_Lite][] (I am a proud supporter
 of the pear packages), which to my surprise was amazingly simple and greatly
 decreased the server load, as well as the page loading time.
 
@@ -152,7 +152,7 @@ the status of priceTrackr at the [priceTrackr project page][]. Thanks again.
   [the Dean Scream]: http://en.wikipedia.org/wiki/Howard_Dean#Iowa_results_and_the_.22Scream_Heard_.27Round_the_World.22
   [your site is down, probably will never visit again. nice knowing you]: /2006/08/27/official-pricetrackr-launch/#comment-19
   [posted]: /2006/08/27/official-pricetrackr-launch/#comment-29
-  [pear's Cache\_Lite]: http://pear.php.net/package/Cache_Lite
+  [pear's Cache_Lite]: http://pear.php.net/package/Cache_Lite
   [Bryce Boe Traffic Graph]: /images/2006/09/2006-bbdigggraph.png
   [priceTrackr Traffic Graph]: /images/2006/09/2006-ptdigggraph.png
   [Google Adsense]: https://google.com/adsense/

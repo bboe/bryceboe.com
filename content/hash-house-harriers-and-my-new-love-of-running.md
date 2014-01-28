@@ -78,8 +78,8 @@ chalk and flour mark the trail everyone else runs. Hares often leave what are
 called **checks** to deceive the runners into following a false trail if they
 don't pick up the real trail.
 
-[![bikini][]][]  
-[![Super Hare!][]][]
+[![bikini][]](/images/2009/12/bikini.jpg)
+[![Super Hare!][]](/images/2009/12/super_hare.jpg)
 
 I encourage you all to seek out your local Hash House Harrier kennel and get a
 first hand experience. If you need more convincing check out the Washington
@@ -89,7 +89,5 @@ Post article titled, "[Making a Hash of Exercise][]". On-On!
   [H3SoB]: http://h3sob.com/
   [The Count from Sesame Street]: http://www.youtube.com/watch?v=5l7KbMVdN7E%20
   [bikini]: /images/2009/12/bikini-300x225.jpg "bikini"
-  [![bikini][]]: /images/2009/12/bikini.jpg
   [Super Hare!]: /images/2009/12/super_hare-225x300.jpg "Super Hare!"
-  [![Super Hare!][]]: /images/2009/12/super_hare.jpg
   [Making a Hash of Exercise]: http://www.washingtonpost.com/wp-dyn/content/article/2009/09/18/AR2009091801357.html

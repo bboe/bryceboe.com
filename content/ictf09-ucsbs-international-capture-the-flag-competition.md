@@ -32,14 +32,16 @@ Forensics 4. The only information people were given was the title and the
 following image. The first step to solve this challenge is recognizing the
 image is the [xkcd][] comic "[The Difference][]".
 
-[![The Difference][1]][]After downloading the original image one should notice
+[![The Difference][1]](/images/2009/12/the_difference.png)
+
+After downloading the original image one should notice
 the two files are different sizes with the original being 32KB and my image
 46K. At this point a pixel-by-pixel comparison is required which reveals that
 60 of the pixels differ and the values of the differing pixels are always
 larger in my image. This is where "The Difference" first comes into play by
 subtracting the value in my image from that of the original.
 
-Doing so produces the results shown in [the\_difference\_values.txt][]. Each
+Doing so produces the results shown in [the_difference_values.txt][]. Each
 line contains the difference value and the index of the pixel. The values in
 this list range from 33 to 41 with exceptions 10, 12 and 15. Additionally the
 numbers appear in groups of three where last number in the group is sometimes
@@ -121,8 +123,7 @@ Difference"; that gave me a good laugh :)
   [xkcd]: http://xkcd.com/
   [The Difference]: http://xkcd.com/242/
   [1]: /images/2009/12/the_difference-159x300.png "The Difference"
-  [![The Difference][1]]: /images/2009/12/the_difference.png
-  [the\_difference\_values.txt]: http://cs.ucsb.edu/~bboe/public/ictf09/the_difference_values.txt
+  [the_difference_values.txt]: http://cs.ucsb.edu/~bboe/public/ictf09/the_difference_values.txt
   [ASCII]: http://en.wikipedia.org/wiki/ASCII
   [generate]: http://cs.ucsb.edu/~bboe/public/ictf09/the_difference_maker.py
   [verify]: http://cs.ucsb.edu/~bboe/public/ictf09/the_difference_checker.py

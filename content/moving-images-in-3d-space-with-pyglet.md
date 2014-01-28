@@ -30,7 +30,10 @@ a 3D logo display in which the logos follow a circular path along the z-axis,
 as shown in the following photos. While this worked well, Vizard unfortunately
 only works on Windows and thus could not be run easily from my Mac laptop.
 
-[![image][]][][![image][1]][][![image][2]][][![image][3]][]
+[![image][]](/images/2011/10/animator0.png)
+[![image][1]](/images/2011/10/animator1.png)
+[![image][2]](/images/2011/10/animator2.png)
+[![image][3]](/images/2011/10/animator4.png)
 
 We wanted to use the same display for this year's GSWC so I sought to rewrite
 the display in a cross platform and free manor. While I have some previous
@@ -148,13 +151,9 @@ you'll need to run it via: `VERSIONER_PYTHON_PREFER_32_BIT=yes ./animator.py`
   [Worldviz]: http://www.worldviz.com/
   [Vizard]: http://www.worldviz.com/products/vizard4/index.html
   [image]: /images/2011/10/animator0-150x150.png "animator0"
-  [![image][]]: /images/2011/10/animator0.png
   [1]: /images/2011/10/animator1-150x150.png "animator1"
-  [![image][1]]: /images/2011/10/animator1.png
   [2]: /images/2011/10/animator2-150x150.png "animator2"
-  [![image][2]]: /images/2011/10/animator2.png
   [3]: /images/2011/10/animator4-150x150.png "animator4"
-  [![image][3]]: /images/2011/10/animator4.png
   [OpenGL with Python]: http://stackoverflow.com/questions/242059/opengl-with-python
   [pyglet]: http://pyglet.org/
   [Moving an image around in 3D space]: http://stackoverflow.com/questions/7681899/moving-an-image-around-in-3d-space

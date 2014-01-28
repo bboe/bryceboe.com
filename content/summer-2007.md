@@ -21,10 +21,14 @@ user being surrounded by crates which they could then knock over and given a
 little tweaking would enable the user to pick up the objects. There is also a
 video of this on the Live Characters site.
 
+[![SIGGRAPH 2007][]](/images/2007/09/siggraph-0.jpg "SIGGRAPH 2007")
+[![Connor_Bike_0][]](/images/2007/09/connor-bike-0.jpg)
+[![Connor_Bike_1][]](/images/2007/09/connor-bike-1.jpg)
+
 Once the demo was prepared I took a few days off to see my mom and brother
 Connor in Nebraska. It was good to see them, and I even got to see Connor ride
-his bike; he's a baller.  
-[![Connor\_Bike\_0][]][][![Connor\_Bike\_1][]][]  
+his bike; he's a baller.
+
 It was a time for many pictures as it was the first time in about ten years
 that all of the cousins were together which was eight of us then and nine of us
 now with Connor. In addition my mom scheduled the five of us (mom and her boys)
@@ -32,13 +36,13 @@ to get a family photo taken because this too previously occurred over ten years
 ago and because Connor was upset that he wasn't in the previous one hanging on
 the wall. As far as I know it turned out pretty well; my mom loves it.
 
-[![SIGGRAPH 2007][]][] After Nebraska I returned to see my dad in San Diego and
-to attend the last day of SIGGRAPH to see my demo in action. I personally
-wasn't too impressed by it, as after all I made a significant portion of it,
-however I got the impression that other people were. Not so much the demo
-itself but rather what the demo was demonstrating, which is great. Following
-that I went to see [Cheri][] and Tom, then returned to Santa Barbara for a
-party the following day; it was a nice little vacation.
+After Nebraska I returned to see my dad in San Diego and to attend the last day
+of SIGGRAPH to see my demo in action. I personally wasn't too impressed by it,
+as after all I made a significant portion of it, however I got the impression
+that other people were. Not so much the demo itself but rather what the demo
+was demonstrating, which is great. Following that I went to see [Cheri][] and
+Tom, then returned to Santa Barbara for a party the following day; it was a
+nice little vacation.
 
 Following the vacation I started a project at work which involves reconfiguring
 our server architecture and moving all of our storage and SVN repositories to a
@@ -71,12 +75,9 @@ few research papers. It's going to be a good year.
   [SIGGRAPH]: http://www.siggraph.org/
   [Live Characters]: http://www.worldviz.com/products/livecharacters/index.html
   [force feedback]: http://en.wikipedia.org/wiki/Haptic
-  [Connor\_Bike\_0]: /images/2007/09/connor-bike-0-150x150.jpg
-  [![Connor\_Bike\_0][]]: /images/2007/09/connor-bike-0.jpg "Connor_Bike_0"
-  [Connor\_Bike\_1]: /images/2007/09/connor-bike-1-150x150.jpg
-  [![Connor\_Bike\_1][]]: /images/2007/09/connor-bike-1.jpg "Connor_Bike_1"
   [SIGGRAPH 2007]: /images/2007/09/siggraph-0-150x150.jpg
-  [![SIGGRAPH 2007][]]: /images/2007/09/siggraph-0.jpg "SIGGRAPH 2007"
+  [Connor_Bike_0]: /images/2007/09/connor-bike-0-150x150.jpg
+  [Connor_Bike_1]: /images/2007/09/connor-bike-1-150x150.jpg
   [Cheri]: http://blogthismom.blogspot.com/
   [Storage Area Network]: http://en.wikipedia.org/wiki/Storage_area_network
   [Trac]: http://trac.edgewall.org/

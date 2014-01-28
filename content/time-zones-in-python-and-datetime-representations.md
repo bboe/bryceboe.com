@@ -120,7 +120,7 @@ objects back to the correct unix timestamp.
 In the python standard library there is nothing that directly converts from
 datetime objects to unix timestamps. However, there are two functions,
 [time.mktime][], and [calendar.timegm][] that will create timestamps from
-[struct\_time][] objects. These functions, in combination with the datetime
+[struct_time][] objects. These functions, in combination with the datetime
 [timetuple][] functions, allow for the conversion. The primary difference
 between **time.mktime** and **calendar.timegm** is that **time.mktime** expects
 the struct\_time object to store the date and time information in the system
@@ -180,7 +180,7 @@ function which handles the conversion from datetime objects to unix timestamps
   [astimezone]: http://docs.python.org/2/library/datetime.html#datetime.datetime.astimezone
   [time.mktime]: http://docs.python.org/2/library/time.html#time.mktime
   [calendar.timegm]: http://docs.python.org/2/library/calendar.html#calendar.timegm
-  [struct\_time]: http://docs.python.org/2/library/time.html#time.struct_time
+  [struct_time]: http://docs.python.org/2/library/time.html#time.struct_time
   [timetuple]: http://docs.python.org/2/library/datetime.html#datetime.date.timetuple
   [utctimetuple]: http://docs.python.org/2/library/datetime.html#datetime.datetime.utctimetuple
   [source]: http://docs.python.org/dev/library/datetime.html#datetime.datetime.timestamp

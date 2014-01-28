@@ -85,64 +85,37 @@ frameworks. I then narrowed the list down to the frameworks which had at least
 This produced the following frameworks sorted by total number of questions
 asked:
 
-1.  1.  [ruby-on-rails][]
 
-2.  1.  [asp.net-mvc][]
+0. (31156) [ruby-on-rails][]
+0. (20587) [asp.net-mvc][]
+0. (14951) [django][]
+0. (4726) [zend-framework][]
+0. (3510) [jsf][]
+0. (3336) [gwt][]
+0. (3296) [cakephp][]
+0. (3127) [codeigniter][]
+0. (2731) [grails][]
+0. (1976) [spring-mvc][]
+0. (1603) [symfony][]
+0. (912) [struts][]
+0. (538) [kohana][]
+0. (515) [pylons][]
+0. (514) [sinatra][]
+0. (506) [dotnetnuke][]
+0. (420) [wicket][]
+0. (227) [lift][]
+0. (194) [yii][]
+0. (163) [cherrypy][]
+0. (126) [web2py][]
+0. (106) [catalyst][]
 
-3.  1.  [django][]
 
-4.  1.  [zend-framework][]
+The following were originally included but are not web frameworks:
 
-5.  1.  [jsf][]
+* (6609) [hibernate][]
+* (5765) [spring][]
+* (178) [sass][]
 
-6.  1.  [gwt][]
-
-7.  1.  [cakephp][]
-
-8.  1.  [codeigniter][]
-
-9.  1.  [grails][]
-
-10. 1.  [spring-mvc][]
-
-11. 1.  [symfony][]
-
-12. 1.  [struts][]
-
-13. 1.  [kohana][]
-
-14. 1.  [pylons][]
-
-15. 1.  [sinatra][]
-
-16. 1.  [dotnetnuke][]
-
-17. 1.  [wicket][]
-
-18. 1.  [lift][]
-
-19. 1.  [yii][]
-
-20. 1.  [cherrypy][]
-
-21. 1.  [web2py][]
-
-22. 1.  [catalyst][]
-
-<ul>
-<li>
-<s>(6609) [hibernate][] (note: not a web framework)</s>
-
-</li>
-<li>
-<s>(5765) [spring][] (note: not a web framework)</s>
-
-</li>
-<li>
-<s>(178) [sass][] (note: not a web framework)</s>
-
-</li>
-</ol>
 This list alone seems to work fairly well, however, I wanted to take it one
 step further which was to see the number of questions asked on a per week basis
 since the start of StackOverflow. Using the [StackOverflow API][] (I used the

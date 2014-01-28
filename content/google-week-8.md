@@ -46,7 +46,8 @@ lost the game to the Rays, but it was $1 hotdog night so I was satisfied after
 having ate five. One of the guys with us caught a foul bowl, so he was stoked,
 and then we all headed home.
 
-[![Verena from the Front][]][] [![Verena from the Back][]][]
+[![Verena from the Front][]](/images/2008/08/img_3649.jpg)
+[![Verena from the Back][]](/images/2008/08/img_3651.jpg)
 
 Thursday morning I headed to the bank, pulled out some cash and went to pickup
 my car that I had named Verena on Wednesday morning. I also refer to her as the
@@ -136,10 +137,8 @@ friend from High School, Mohammad. Week 9 should be another exciting week!
   [Can Social Networks Improve e-Commerce: a Study on Social Marketplaces]: http://conferences.sigcomm.org/sigcomm/2008/workshops/wosn/papers/p1.pdf
   [Verena from the Front]: /images/2008/08/img_3649-300x225.jpg
     "Verena from the Front"
-  [![Verena from the Front][]]: /images/2008/08/img_3649.jpg
   [Verena from the Back]: /images/2008/08/img_3651-300x225.jpg
     "Verena from the Back"
-  [![Verena from the Back][]]: /images/2008/08/img_3651.jpg
   [segment]: http://www.cnbc.com/id/26182232
   [Cricket]: http://en.wikipedia.org/wiki/Cricket_(darts)
   [Shannon]: http://shannonebarry.blogspot.com/

@@ -22,15 +22,15 @@ For comparison here are screen shots of my three desktops:
 
 ### Windows Xp
 
-[![Windows XP Screenshot][]][]
+[![Windows XP Screenshot][]](/images/2006/09/xp.png)
 
 ### Windows Vista
 
-[![Windows Vista Screenshot][]][]
+[![Windows Vista Screenshot][]](/images/2006/09/vista.png)
 
 ### Ubuntu 6.06 LTS
 
-[![Ubuntu 6.06 LTS Screenshot][]][]
+[![Ubuntu 6.06 LTS Screenshot][]](/images/2006/09/ubuntu.png)
 
 This is *the* operating system. It may not be as pretty as the others but it is
 much more reliable, and installing software couldn't be easier. I feel that the
@@ -40,10 +40,5 @@ the box and sets up most hardware on install so no need to find all those
 driver CDs.
 
   [Windows XP Screenshot]: /images/2006/09/xp-150x150.png
-  [![Windows XP Screenshot][]]: /images/2006/09/xp.png "Windows XP Screenshot"
   [Windows Vista Screenshot]: /images/2006/09/vista-150x150.png
-  [![Windows Vista Screenshot][]]: /images/2006/09/vista.png
-    "Windows Vista Screenshot"
   [Ubuntu 6.06 LTS Screenshot]: /images/2006/09/ubuntu-150x150.png
-  [![Ubuntu 6.06 LTS Screenshot][]]: /images/2006/09/ubuntu.png
-    "Ubuntu 6.06 LTS Screenshot"

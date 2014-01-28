@@ -67,39 +67,32 @@ if he does he'll probably make me promise to be more interesting. A promise I
 likely will not be able to make. The following are a few pictures of Flat
 Stanley's visit.
 
-[![image][]][]  
+[![image][]](/images/2009/03/img_3816.jpg)  
 Flat Stanley watching TV with Scott and Adam
 
-[![image][1]][]  
+[![image][1]](/images/2009/03/img_3818.jpg)  
 Flat Stanley eating dinner
 
-[![image][2]][]  
+[![image][2]](/images/2009/03/img_3823.jpg)  
 Flat Stanley working on a Malware project
 
-[![image][3]][]  
+[![image][3]](/images/2009/03/img_3824.jpg)  
 Flat Stanley reading
 
-[![image][4]][]  
+[![image][4]](/images/2009/03/img_3826.jpg)  
 Flat Stanley sleeping
 
-[![image][5]][]  
+[![image][5]](/images/2009/03/img_3829.jpg)  
 Flat Stanley working on [torrentphobe][] with Jon and Adam
 
-[![image][6]][]  
+[![image][6]](/images/2009/03/img_3832.jpg)  
 Bye bye Flat Stanley
 
   [torrentphobe]: http://torrentpho.be
   [image]: /images/2009/03/img_3816-300x225.jpg "stanley_tv"
-  [![image][]]: /images/2009/03/img_3816.jpg
   [1]: /images/2009/03/img_3818-300x225.jpg "stanley_dinner"
-  [![image][1]]: /images/2009/03/img_3818.jpg
   [2]: /images/2009/03/img_3823-300x225.jpg "stanley_programming"
-  [![image][2]]: /images/2009/03/img_3823.jpg
   [3]: /images/2009/03/img_3824-300x225.jpg "stanley_reading"
-  [![image][3]]: /images/2009/03/img_3824.jpg
   [4]: /images/2009/03/img_3826-300x225.jpg "stanley_sleeping"
-  [![image][4]]: /images/2009/03/img_3826.jpg
   [5]: /images/2009/03/img_3829-300x225.jpg "stanley_torrentphobe"
-  [![image][5]]: /images/2009/03/img_3829.jpg
   [6]: /images/2009/03/img_3832-300x225.jpg "stanley_envelope"
-  [![image][6]]: /images/2009/03/img_3832.jpg

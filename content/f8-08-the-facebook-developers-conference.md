@@ -12,7 +12,7 @@ person in the area, and I asked him if he had change for a $20. He did not,
 but he was very generous and handed me $2. I made it clear that I was very
 thankful and then took care of my parking fee.
 
-[![F8 08][]][]
+[![F8 08][]](/images/2008/07/img_3543.jpg)
 
 This was my first train ride, so it was kind of exciting, but other than that,
 there wasn't too much to it other than speaking briefly with three traveling
@@ -87,7 +87,7 @@ that his parents were there to share the experience with him. After our brief
 chat Mark played [Rock Band][] with his family and I returned to talking with
 the Zimride people.
 
-[![Mark and I][]][]
+[![Mark and I][]](/images/2008/07/img_3560.jpg)
 
 Shortly after I rode the train back with one of the Zimride guys, Kylan, and we
 chatted it up for nearly an hour. Oh and the Egypt hotties from earlier,
@@ -99,10 +99,8 @@ one of the most awesome days this summer, despite now needing a new pair of
 jeans and continuously worrying that I smell like espresso.
 
   [F8 08]: /images/2008/07/img_3543-300x225.jpg "F8 08"
-  [![F8 08][]]: /images/2008/07/img_3543.jpg
   [Terrible, Horrible, No Good, Very Bad Day]: http://en.wikipedia.org/wiki/Alexander_and_the_Terrible,_Horrible,_No_Good,_Very_Bad_Day
   [Zimride]: http://www.zimride.com/home.php
   [Mark Zuckerberg]: http://en.wikipedia.org/wiki/Mark_Zuckerberg
   [Rock Band]: http://en.wikipedia.org/wiki/Rock_Band_(video_game)
   [Mark and I]: /images/2008/07/img_3560-300x225.jpg "Mark and I"
-  [![Mark and I][]]: /images/2008/07/img_3560.jpg
