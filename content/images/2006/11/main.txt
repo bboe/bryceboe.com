@@ -1,0 +1,7 @@
+#!/bin/sh
+start=`date +%s`
+./phpPart1.php | ./python.py | ./phpPart2.php
+finish=`date +%s`
+
+echo 'Completion Time:' `expr $finish - $start`s
+

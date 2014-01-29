@@ -1,0 +1,10 @@
+#!/usr/bin/php
+<?php
+//do php stuff and result is a list of ids we want to pass
+$result = array();
+for ($i = 0; $i < 3000; $i++) {
+	$results[] = md5($i);
+}
+//Output information to stdout
+foreach ($results as $result) print $result."\n";
+?>

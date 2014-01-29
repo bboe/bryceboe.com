@@ -1,0 +1,10 @@
+#!/usr/bin/php
+<?php
+//do stuff
+$valid = true;
+while (fscanf(STDIN,"%s\t%d\n",$hash,$id)) {
+	if (md5($id) != $hash) exit('Falied'."\n");
+}
+print "Completed!\n";
+
+?>
