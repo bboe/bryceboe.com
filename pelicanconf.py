@@ -38,11 +38,12 @@ LINKS = (('Adam Doupé', 'http://adamdoupe.com/'),
          ('Julie Bifano', 'http://juliebifano.com/'))
 
 # Social widget
-SOCIAL = (('+BryceBoe', 'https://plus.google.com/+BryceBoe'),
+SOCIAL = (('bboe', 'https://github.com/bboe'),
+          ('Bryce Boe', 'http://www.linkedin.com/in/bbzbryce'),
+          ('+BryceBoe', 'https://plus.google.com/+BryceBoe'),
           ('@bboe', 'https://twitter.com/bboe'),
-          ('bboe', 'https://github.com/bboe'),
-          ('bbzbryce', 'http://www.last.fm/user/bbzbryce'),
-          ('/u/bboe', 'http://www.reddit.com/user/bboe'))
+          ('/u/bboe', 'http://www.reddit.com/user/bboe'),
+          ('bbzbryce', 'http://www.last.fm/user/bbzbryce'))
 
 # Static files (.htaccess, robots.txt)
 STATIC_PATHS = ['extra/robots.txt', 'images']
