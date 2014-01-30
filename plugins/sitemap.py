@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 '''
 Sitemap
 -------
@@ -188,7 +188,7 @@ class SitemapGenerator(object):
         self.set_url_wrappers_modification_date(self.context['categories'])
         self.set_url_wrappers_modification_date(self.context['tags'])
         self.set_url_wrappers_modification_date(self.context['authors'])
-                
+
         for article in self.context['articles']:
             pages += article.translations
 
@@ -206,9 +206,9 @@ class SitemapGenerator(object):
                                                'date',
                                                'url'])
 
-            for standard_page_url in ['index.html',
-                                      'archives.html',
-                                      'tags.html',
+            for standard_page_url in ['',
+                                      'archives/',
+                                      'tags/',
                                       'categories.html']:
                 fake = FakePage(status='published',
                                 date=self.now,
