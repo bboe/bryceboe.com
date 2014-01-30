@@ -44,8 +44,9 @@ SOCIAL = (('github', 'https://github.com/bboe'),
           ('twitter', 'https://twitter.com/bboe'))
 
 # Static files (.htaccess, robots.txt)
-STATIC_PATHS = ['extra/robots.txt', 'images']
-EXTRA_PATH_METADATA = {'extra/robots.txt': {'path': 'robots.txt'}}
+STATIC_PATHS = ['extra/.htaccess', 'extra/robots.txt', 'images']
+EXTRA_PATH_METADATA = {'extra/.htaccess': {'path': '.htaccess'},
+                       'extra/robots.txt': {'path': 'robots.txt'}}
 
 # Sitemap
 SITEMAP = {'format': 'xml',
