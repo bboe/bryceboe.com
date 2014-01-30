@@ -26,6 +26,7 @@ encountered in my analysis code.
 
 As usual, I have provided some code demonstrating the problem and a solution.
 
+    :::python
     #!/usr/bin/env python
     import multiprocessing, Queue
 

@@ -21,6 +21,7 @@ uploading the file if necessary. The following script is loosely based off the
 API examples, and contains modified code from [this snippet][] that was already
 required to run the scan file example.
 
+    :::python
     #!/usr/bin/env python
     import hashlib, httplib, mimetypes, os, pprint, simplejson, sys, urlparse
 

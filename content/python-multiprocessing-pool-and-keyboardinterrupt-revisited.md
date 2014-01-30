@@ -32,6 +32,7 @@ your own pool functionality is the best solution I am aware of.
 
 Below is a verbatim copy of my original solution for your convenience:
 
+    :::python
     #!/usr/bin/env python
     import multiprocessing, os, signal, time, Queue
 

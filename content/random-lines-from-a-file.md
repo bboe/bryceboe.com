@@ -42,6 +42,7 @@ Edited: Added prev so that the first line would be included, and replaced
 file.readline()[:-1] with file.readline().strip() to remove trailing whitespace
 properly.</ins>
 
+    :::python
     #!/usr/bin/env python
     import os, random, sys
 

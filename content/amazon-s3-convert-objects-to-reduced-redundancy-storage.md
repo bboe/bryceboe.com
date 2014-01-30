@@ -40,6 +40,7 @@ Note that you may alternatively put your aws\_access\_key\_id and
 aws\_secret\_access\_key into the environment variables AWS\_ACCESS\_KEY\_ID
 and AWS\_SECRET\_ACCESS\_KEY respectively.
 
+    :::python
     #!/usr/bin/env python
     import os, sys
 

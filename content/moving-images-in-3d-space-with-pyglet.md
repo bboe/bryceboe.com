@@ -54,6 +54,7 @@ place whatever images you want in that folder and then run the following script
 ([download animator.py][]). Note: If you want to run this script on 64-bit OS X
 you'll need to run it via: `VERSIONER_PYTHON_PREFER_32_BIT=yes ./animator.py`
 
+    :::python
     #!/usr/bin/env python
     import math, os, pyglet, sys
     from pyglet.gl import *

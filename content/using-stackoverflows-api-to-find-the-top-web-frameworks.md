@@ -1,7 +1,7 @@
 Title: Using StackOverflow's API to Find the Top Web Frameworks
 Date: 2011-02-21 18:09
 Category: all
-Tags: EAR
+Tags: EAR, python
 Slug: using-stackoverflows-api-to-find-the-top-web-frameworks
 
 <ins datetime="2011-02-23T19:02:00+00:00">
@@ -149,28 +149,29 @@ The data for the above chart was extracted using the following script. The
 script requires the python package [py-stackexchange][] in order to run and can
 be easily modified to add additional tags or change the filtering methods.
 
-    #!/usr/bin/env python                                                           
+    :::python
+    #!/usr/bin/env python
     import datetime, sys, time
     from stackexchange import Site, StackOverflow
 
-    frameworks = [# php                                                             
+    frameworks = [# php
                   'zend-framework', 'cakephp', 'symfony', 'codeigniter', 'seagull',
                   'prado', 'solar', 'ezcomponents', 'kohana', 'jelix', 'flow3',
-              'modx', 'sapphire', 'yii', 'limonade', 'tekuna', 'doophp',
+                  'modx', 'sapphire', 'yii', 'limonade', 'tekuna', 'doophp',
                   'fat-free', 'akelos', 'php-on-trax', 'atk',
-              # ruby                                                            
+                  # ruby
                   'ruby-on-rails', 'merb', 'ramaze', 'halcyon', 'sinatra', 'webby',
                   'sass',
-              # perl                                                            
+                  # perl
                   'catalyst', 'interchange', 'mason', 'cgi-application', 'jifty',
                   'gantry', 'dancer', 'mojolicious',
-                  # java                                                            
-              'struts', 'hibernate', 'spring', 'wicket', 'play', 'stripes',
-              # python                                                          
-              'django', 'pylons', 'grok', 'turbogears', 'web2py', 'cherrypy',
-              # coldfusion                                                      
+                  # java
+                  'struts', 'hibernate', 'spring', 'wicket', 'play', 'stripes',
+                  # python
+                  'django', 'pylons', 'grok', 'turbogears', 'web2py', 'cherrypy',
+                  # coldfusion
                   'cfwheels', 'coldspring', 'model-glue',
-                  # asp.net                                                         
+                  # asp.net
                   'asp.net-mvc', 'dotnetnuke', 'monorail', 'vici']
 
     class TagStats(object):
@@ -240,7 +241,7 @@ be easily modified to add additional tags or change the filtering methods.
             start_week = 0
         tag_stats = TagStats(frameworks)
         tag_stats.get_tags(100)
-        #tag_stats.output_counts(html=True)                                         
+        #tag_stats.output_counts(html=True)
         tag_stats.output_stats_by_week(start_week)
 
     if __name__ == '__main__':

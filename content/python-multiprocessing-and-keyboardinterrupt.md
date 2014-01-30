@@ -39,6 +39,7 @@ the **KeyboardInterrupt** and call **sys.exit**, these processes persist and
 thus receive future tasks. Second, the **KeyboardInterrupt** is not delivered
 to the parent process until all jobs are completed.
 
+    :::python
     #!/usr/bin/env python
     import multiprocessing, os, time
 
@@ -82,6 +83,7 @@ by pressing ctrl+c (on Linux) it'll kill the currently running child processes,
 however the next job will simply take its place until there are no remaining
 jobs.
 
+    :::python
     #!/usr/bin/env python
     import multiprocessing, os, signal, time, Queue
 
@@ -149,7 +151,8 @@ in a case similar to what was done above. The below code demonstrates the
 approach from the stackoverflow response by Glenn Maynard to call the get
 function with a timeout.
 
-    #!/usr/bin/env python                                                           
+    :::python
+    #!/usr/bin/env python
     import multiprocessing, os, time
 
     def do_work(i):
