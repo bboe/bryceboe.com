@@ -1,7 +1,7 @@
 title: Hello Pelican World
 Date: 2014-01-25 14:19
-Category: Website
-Tags: python, pelican
+Category: all
+Tags: python, pelican, website
 
 This is my first pelican post using markdown. I have yet to import all my old
 blog entries as I first need to make sure I can make it work from scratch.

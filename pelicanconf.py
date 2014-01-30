@@ -62,12 +62,12 @@ SITEMAP = {'format': 'xml',
                            'pages': 'monthly'}}
 
 # pelican-bootstrap3 settings
-ADDTHIS_PROFILE = 'ra-52ea977465521a04'
+#ADDTHIS_PROFILE = 'ra-52ea977465521a04'
 BOOTSTRAP_THEME = 'cerulean'
 DISPLAY_CATEGORIES_ON_SIDEBAR = False
 DISPLAY_RECENT_POSTS_ON_SIDEBAR = True
 DISPLAY_TAGS_ON_SIDEBAR = True
-PYGMENTS_STYLE = 'solarizeddark'
+PYGMENTS_STYLE = 'solarizedlight'
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
