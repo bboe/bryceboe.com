@@ -13,6 +13,8 @@ ARCHIVES_SAVE_AS = 'archives/index.html'
 ARCHIVES_URL = 'archives/'
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+PAGE_SAVE_AS = 'pages/{slug}/index.html'
+PAGE_URL = 'pages/{slug}'
 TAG_SAVE_AS = 'tag/{slug}/index.html'
 TAG_URL = 'tag/{slug}/'
 TAGS_SAVE_AS = 'tags/index.html'
@@ -67,6 +69,7 @@ BOOTSTRAP_THEME = 'cerulean'
 DISPLAY_CATEGORIES_ON_SIDEBAR = False
 DISPLAY_RECENT_POSTS_ON_SIDEBAR = True
 DISPLAY_TAGS_ON_SIDEBAR = True
+DISQUS_NO_ID = True
 PYGMENTS_STYLE = 'solarizedlight'
 
 # Uncomment following line if you want document-relative URLs when developing
