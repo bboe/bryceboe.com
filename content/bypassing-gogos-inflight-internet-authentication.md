@@ -189,7 +189,7 @@ Happy "free" surfing, for now anyway :)
 
   [SIGCSE 2012]: http://www.sigcse.org/sigcse2012/
   [Gogo's Inflight Internet]: http://www.gogoair.com/
-  [Living Social]: livingsocial.com
+  [Living Social]: http://livingsocial.com
   [Eventful]: http://eventful.com/
   [TCP-over-ICMP]: http://www.cs.uit.no/~daniels/PingTunnel/
   [TCP-over-DNS]: http://analogbit.com/tcp-over-dns_howto
