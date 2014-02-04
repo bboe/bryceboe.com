@@ -4,6 +4,10 @@ Options -Indexes
 Header set Cache-Control "max-age=290304000, public"
 </FilesMatch>
 
+<FilesMatch \.py$>
+SetHandler default-handler
+</FilesMatch>
+
 RewriteEngine on
 
 # Redirect index in any directory to root of that directory
