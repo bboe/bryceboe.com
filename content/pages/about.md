@@ -1,8 +1,9 @@
 Title: About
 
-Bryce Boe is a software developer, teacher, and reseracher (in that order). He
-is currently finishing up his Ph.D. in Computer Science at the University of
-California Santa Barbara.
+Bryce Boe is currently a Senior Software Engineer at
+[AppFolio](http://www.appfolio.com/). He recevied is Ph.D. in Computer Science
+from UCSB in September 2014. In some of his spare time Bryce maintains
+[PRAW](https://praw.readthedocs.org), the Python Reddit API Wrapper.
 
 ![Bryce 2011][]
 
