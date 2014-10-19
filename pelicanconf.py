@@ -49,7 +49,7 @@ LINKS = (('Adam Doupé', 'http://adamdoupe.com/'),
 SOCIAL = (('github', 'https://github.com/bboe'),
           ('stack-overflow', 'http://stackoverflow.com/users/176978/bboe'),
           ('linkedin', 'http://www.linkedin.com/in/bbzbryce'),
-          ('google+', 'https://plus.google.com/+BryceBoe'),
+          ('google+', 'https://plus.google.com/+BryceBoe?rel=author'),
           ('twitter', 'https://twitter.com/bboe'))
 
 # Static files (.htaccess, robots.txt)
