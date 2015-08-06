@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>Time Zones in Python and Date/Time Representations - Bryce Boe</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- Open Graph tags -->
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Time Zones in Python and Date/Time Representations"/>
+            <meta property="og:url" content="http://bryceboe.com/2012/11/05/time-zones-in-python-and-datetime-representations/"/>
+            <meta property="og:description" content="Early yesterday morning many people gained an extra hour by repeating the second hour of the day. Those people in time zones that were previously on daylight saving time switched back to standard time and thus may have observed their digital devices record the following sequence of times: 2012-11-04 01 ..."/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://bryceboe.com/theme/css/bootstrap.cerulean.min.css" type="text/css"/>
+    <link href="http://bryceboe.com/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://bryceboe.com/theme/css/pygments/solarizedlight.css" rel="stylesheet">
+        <link href="http://bryceboe.com/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://bryceboe.com/theme/css/style.css" type="text/css"/>
+
+        <link href="http://bryceboe.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Bryce Boe ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://bryceboe.com/" class="navbar-brand">
+Bryce Boe            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="http://bryceboe.com/pages/about">
+                             About
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://bryceboe.com/archives/"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://bryceboe.com/2012/11/05/time-zones-in-python-and-datetime-representations/"
+                       rel="bookmark"
+                       title="Permalink to Time Zones in Python and Date/Time Representations">
+                        Time Zones in Python and Date/Time&nbsp;Representations
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2012-11-05T01:57:00-08:00"> Mon 05 November 2012</time>
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://bryceboe.com/tag/python/">python</a>
+        /
+	<a href="http://bryceboe.com/tag/time-zones/">time zones</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Early yesterday morning many people gained an extra hour by repeating the
+second hour of the day. Those people in time zones that were previously on
+<a href="http://en.wikipedia.org/wiki/Daylight_saving_time">daylight saving time</a> switched back to standard time and thus may have
+observed their digital devices record the following sequence of&nbsp;times:</p>
+<div class="highlight"><pre>2012-11-04 01:59:58
+2012-11-04 01:59:59
+2012-11-04 01:00:00
+2012-11-04 01:00:01
+</pre></div>
+
+
+<p>The written timestamps make it appear as if time went back one hour, when of
+course time continued to proceed linearly. This perceived repetition of an hour
+can be a problem for computer systems that output dates in localized formats.
+For instance, python&#8217;s logging package produces log entries using a
+human-readable time. However, by <a href="http://docs.python.org/2/library/logging.html#logging.Formatter.formatTime">default</a>, these human readable times are in
+localized formats. That means an event could be logged as happening before a
+preceding event when the localized time zone experiences a change in daylight
+saving&nbsp;time.</p>
+<p>An obvious solution to this problem is to not take into consideration daylight
+saving time when working with time. For people in the pacific time zone, that
+could mean always using pacific standard time (<a href="http://en.wikipedia.org/wiki/Pacific_Time_Zone"><span class="caps">PST</span></a>). Likewise for people in
+the eastern time zone, they could always use eastern standard time (<a href="http://en.wikipedia.org/wiki/Eastern_Time_Zone"><span class="caps">EST</span></a>).
+Continuing with the log file example, this means all events in a log files will
+appear linearly. The trade-off is anyone looking at log entries during daylight
+saving time needs to keep in mind the one hour difference when determining how
+long ago a logged event actually&nbsp;occurred.</p>
+<p>A separate issue has to do with keeping track of dates and times between
+machines in different time zones. For simplicity, we&#8217;ll ignore the problem of
+clock synchronization and assume all the machines have the correct time set.
+The issue is that even when using standard times (non daylight saving times) on
+respective machines, dates and times on different machines cannot be compared
+in a human readable format without including time zone specific&nbsp;information.</p>
+<p>Fortunately computers need not use a human readable format to store dates and
+times. In fact, most computers already internally keep track of time using
+<a href="http://en.wikipedia.org/wiki/Unix_time">unix timestamps</a> that store dates and times as the number of seconds since
+an agreed upon date and time in coordinated universal time (<a href="http://en.wikipedia.org/wiki/Coordinated_Universal_Time"><span class="caps">UTC</span></a>). In spite
+of this solution to synchronize dates and times from different time zones,
+issues such as the logging problem still occur. In the remainder of this
+article we will look at a few causes of those problems and how to solve them in
+the context of&nbsp;python.</p>
+<p>Within python there are two primary ways to store date and time information.
+The first, is the unix timestamp, which was previously discussed. Although unix
+timestamps are time zone agnostic, the major problem is that it is not simple
+for a human to determine properties about a unix timestamp without first
+converting to another format. For instance, what day of the month does the unix
+timestamp <code>1325448000</code> represent? And, how many years does the previous unix
+timestamp differ from <code>473414400</code>? To help answer such questions, programming
+languages usually have a date and time representation that can be created from
+unix timestamps. In python, this representation is accomplished through the
+<a href="http://docs.python.org/2/library/datetime.html#datetime-objects">datetime</a>&nbsp;object:</p>
+<div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">1325448000</span><span class="p">))</span>
+<span class="go">2012-01-01 12:00:00</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">473414400</span><span class="p">))</span>
+<span class="go">1985-01-01 00:00:00</span>
+</pre></div>
+
+
+<p>Using the datetime representation you should be able to more easily answer the
+previous questions. If you execute the above code, some of you might wonder why
+<code>print(datetime.fromtimestamp(1325448000))</code> does not produce the same result on
+your computer. The difference is due to the fact that datetime objects are
+created in the context of the local time zone by default. On my system, the
+local time zone is &#8220;America/Los_Angeles&#8221;, which corresponds to either <span class="caps">PST</span> or
+<span class="caps">PDT</span> depending on the time of year. With that in mind let&#8217;s look at instances of
+datetime around the end of daylight savings time&nbsp;2012.</p>
+<div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">1352019599</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">1352019600</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">((</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+<span class="go">-3599.0</span>
+</pre></div>
+
+
+<p>Although the timestamp for <em>a</em> is one second less than the timestamp for <em>b</em>,
+it appears as if <em>b</em> represents a time 3599 seconds (one second less than one
+hour) prior to <em>a</em>. The reason is that, in addition to datetime objects using
+the localized time zone by default, they do not maintain the time zone
+information by default. Thus, naïve datetime objects, that is, those without
+time zone information, are only compared by their values. Below are the values
+for <em>a</em> and <em>b</em> from the previous&nbsp;example:</p>
+<div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">2012-11-04 01:59:59</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="go">2012-11-04 01:00:00</span>
+</pre></div>
+
+
+<p>While these values are correct, we should also be able to compare them
+correctly. Fortunately python&#8217;s datetime objects allow us to also associate
+time zone information. Unfortunately, the easiest way is through the
+non-standard package <a href="http://pytz.sourceforge.net/">pytz</a>. With pytz we can easily create time zone
+specific datetime objects. Doing so will solve the comparison&nbsp;problem:</p>
+<div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pytz</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">1352019599</span><span class="p">,</span> <span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="s">&#39;America/Los_Angeles&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">1352019600</span><span class="p">,</span> <span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="s">&#39;America/Los_Angeles&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">((</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+<span class="go">1.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">2012-11-04 01:59:59-07:00</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="go">2012-11-04 01:00:00-08:00</span>
+</pre></div>
+
+
+<p>In the previous example we get a <a href="http://docs.python.org/2/library/datetime.html#datetime.tzinfo">tzinfo</a> object by calling
+<code>pytz.timezone('America/Los_Angeles')</code> and use that in creating the datetime
+object. Note that the time zone selected only affects how the datetime object
+is represented. Observe that the following two datetime objects are the same
+despite their different&nbsp;representation:</p>
+<div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">1352019599</span><span class="p">,</span> <span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="s">&#39;America/Los_Angeles&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">1352019599</span><span class="p">,</span> <span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="s">&#39;America/New_York&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">2012-11-04 01:59:59-07:00</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="go">2012-11-04 03:59:59-05:00</span>
+</pre></div>
+
+
+<p>It should now be obvious that it is always a good idea to create datetime
+objects with time zone information included. Two other common ways of creating
+datetime objects with time zone information are
+<code>datetime.now(pytz.timezone('America/Los_Angeles'))</code> to create a datetime
+object of the current date and time and
+<code>datetime(2012, 11, 4, 1, 0, tzinfo=pytz.timezone('America/Los_Angeles'))</code> to
+create a datetime object for a specific date and&nbsp;time.</p>
+<p>With time zone specific datetime objects, it&#8217;s trivial to get a localized
+representation for any time zone through the <a href="http://docs.python.org/2/library/datetime.html#datetime.datetime.astimezone">astimezone</a>&nbsp;function:</p>
+<div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">2012-11-04 01:59:59-07:00</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="s">&#39;America/New_York&#39;</span><span class="p">)))</span>
+<span class="go">2012-11-04 03:59:59-05:00</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">pytz</span><span class="o">.</span><span class="n">UTC</span><span class="p">))</span>
+<span class="go">2012-11-04 08:59:59+00:00</span>
+</pre></div>
+
+
+<p>Thus far we&#8217;ve shown that using unix timestamps is great for date and time
+consistency between machines at the cost of not being human readable. We then
+gave a brief overview of datetime objects, including how to create them from
+unix timestamps. Most importantly we showed that datetime objects are time zone
+agnostic by default. We then showed how to include time zone information in
+datetime objects and how to convert between various local datetime
+representations. We will now show how to correctly convert from datetime
+objects back to the correct unix&nbsp;timestamp.</p>
+<p>In the python standard library there is nothing that directly converts from
+datetime objects to unix timestamps. However, there are two functions,
+<a href="http://docs.python.org/2/library/time.html#time.mktime">time.mktime</a>, and <a href="http://docs.python.org/2/library/calendar.html#calendar.timegm">calendar.timegm</a> that will create timestamps from
+<a href="http://docs.python.org/2/library/time.html#time.struct_time">struct_time</a> objects. These functions, in combination with the datetime
+<a href="http://docs.python.org/2/library/datetime.html#datetime.date.timetuple">timetuple</a> functions, allow for the conversion. The primary difference
+between <strong>time.mktime</strong> and <strong>calendar.timegm</strong> is that <strong>time.mktime</strong> expects
+the struct_time object to store the date and time information in the system
+localized time zone, whereas <strong>calendar.timegm</strong> expects the date and time
+information to be stored in <span class="caps">UTC</span>.</p>
+<p>Making no assumptions about the time zone the datetime object is currently
+represented in, the following shows how to convert a datetime object to a unix
+timestamp using <strong>time.mktime</strong>:</p>
+<div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">time</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pytz.reference</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">1352019599</span><span class="p">,</span> <span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="s">&#39;America/New_York&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">time</span><span class="o">.</span><span class="n">mktime</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">pytz</span><span class="o">.</span><span class="n">reference</span><span class="o">.</span><span class="n">LocalTimezone</span><span class="p">())</span><span class="o">.</span><span class="n">timetuple</span><span class="p">())</span>
+<span class="go">1352019599.0</span>
+</pre></div>
+
+
+<p>Notice that we must first convert the datetime object, <em>a</em>, into its identical
+representation in our localized time zone before calling timetuple. The
+<code>pytz.reference.LocalTimezone()</code> code prevents us from needing to hard-code our
+localized time&nbsp;zone.</p>
+<p>The second approach to convert from a datetime object to a unix timestamp is to
+first convert to <span class="caps">UTC</span> and then use <strong>calendar.timegm</strong>:</p>
+<div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">calendar</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">calendar</span><span class="o">.</span><span class="n">timegm</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">utctimetuple</span><span class="p">())</span>
+<span class="go">1352019599</span>
+</pre></div>
+
+
+<p>When using <strong>calendar.timegm</strong> we can conveniently use the datetime
+<a href="http://docs.python.org/2/library/datetime.html#datetime.datetime.utctimetuple">utctimetuple</a> function rather than using the astimezone&nbsp;function.</p>
+<p>At this point you should have a decent grasp on converting between unix
+timestamps and time zone sensitive datetime objects in the context of python
+applications. If you are anything like me, you will now <em>always</em> create
+datetime objects with time zone information and ponder why that is not the
+python library&nbsp;default.</p>
+<p>In a future blog post (if I ever get around to it) I will look at storing and
+retrieving datetime objects in databases using sqlalchemy. A few questions I
+have&nbsp;are:</p>
+<ul>
+<li>When the python application and the database are in different time zones,
+    how are the datetime objects&nbsp;represented?</li>
+<li>What happens when either the database or the python application changes
+    time&nbsp;zones?</li>
+</ul>
+<p>That&#8217;s all for now. Happy&nbsp;coding!</p>
+<p><ins datetime="2012-11-06T20:14:01+00:00">
+Update</ins>: I just discovered that python 3.3 now has a <code>datetime.timestamp</code>
+function which handles the conversion from datetime objects to unix timestamps
+(<a href="http://docs.python.org/dev/library/datetime.html#datetime.datetime.timestamp">source</a>).</p>
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="http://bryceboe.com/2011/10/08/moving-images-in-3d-space-with-pyglet/">Moving Images in 3D Space with&nbsp;Pyglet</a></li>
+        <li><a href="http://bryceboe.com/2012/02/20/process-based-job-management-in-c-and-python/">Process-Based Job Management in C and&nbsp;Python</a></li>
+        <li><a href="http://bryceboe.com/2011/02/21/using-stackoverflows-api-to-find-the-top-web-frameworks/">Using StackOverflow&#8217;s <span class="caps">API</span> to Find the Top Web&nbsp;Frameworks</a></li>
+        <li><a href="http://bryceboe.com/2009/12/06/ictf09-–-ucsbs-international-capture-the-flag-competition/">iCTF09: <span class="caps">UCSB</span>&#8217;s International Capture the Flag&nbsp;Competition</a></li>
+        <li><a href="http://bryceboe.com/2010/09/01/submitting-binaries-to-virustotal/">Submitting Binaries to&nbsp;VirusTotal</a></li>
+    </ul>
+</section>
+    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'bboe'; // required: replace example with your forum shortname
+            var disqus_url = 'http://bryceboe.com/2012/11/05/time-zones-in-python-and-datetime-representations/';
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3 well well-sm" id="sidebar">
+
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+                  <ul class="list-group" id="social">
+                    <li class="list-group-item">
+                      <a href="https://github.com/bboe"><i class="fa fa-github fa-lg"></i></a>
+                      <a href="https://github.com/bboe">github</a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="http://stackoverflow.com/users/176978/bboe"><i class="fa fa-stack-overflow fa-lg"></i></a>
+                      <a href="http://stackoverflow.com/users/176978/bboe">stack-overflow</a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="http://www.linkedin.com/in/bbzbryce"><i class="fa fa-linkedin fa-lg"></i></a>
+                      <a href="http://www.linkedin.com/in/bbzbryce">linkedin</a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="https://plus.google.com/+BryceBoe?rel=author"><i class="fa fa-google-plus fa-lg"></i></a>
+                      <a href="https://plus.google.com/+BryceBoe?rel=author">google+</a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="https://twitter.com/bboe"><i class="fa fa-twitter fa-lg"></i></a>
+                      <a href="https://twitter.com/bboe">twitter</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                    <ul class="list-group" id="recentposts">
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2014/03/27/daniel-boe-march-27-1988-february-28-2014/">
+                                Daniel Boe: March 27, 1988 - February 28,&nbsp;2014
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2014/01/25/hello-pelican-world/">
+                                Hello Pelican&nbsp;World
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2013/05/29/ph-d-proposal-announcement/">
+                                Ph.D. Proposal&nbsp;Announcement
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2013/05/12/mothers-day/">
+                                Mother&#8217;s&nbsp;Day
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2012/11/05/time-zones-in-python-and-datetime-representations/">
+                                Time Zones in Python and Date/Time&nbsp;Representations
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="list-group-item"><a href="http://bryceboe.com/tags/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                    <ul class="list-group" id="tags">
+                    </ul>
+                </li>    
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://adamdoupe.com/" target="_blank">
+                Adam Doupé
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://juliebifano.com/" target="_blank">
+                Julie Bifano
+            </a>
+        </li>
+      </ul>
+    </li>
+
+        </ul>
+    </section>
+
+</aside>        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014 Bryce Boe
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://bryceboe.com/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://bryceboe.com/theme/js/respond.min.js"></script>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'bboe'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-510348-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</body>
+</html>

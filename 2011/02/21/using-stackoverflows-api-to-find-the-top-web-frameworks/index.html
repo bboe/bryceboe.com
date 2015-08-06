@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>Using StackOverflow’s API to Find the Top Web Frameworks - Bryce Boe</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- Open Graph tags -->
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Using StackOverflow’s API to Find the Top Web Frameworks"/>
+            <meta property="og:url" content="http://bryceboe.com/2011/02/21/using-stackoverflows-api-to-find-the-top-web-frameworks/"/>
+            <meta property="og:description" content="Update 2011/02/23 11:02 PST Added the lift tag and updated the list. Update 2011/02/22 13:19 PST Added the jsf tag (java server faces) and updated the total question count for each item on the list. Update 2011/02/22 11:14 PST Adding spring-mvc ..."/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://bryceboe.com/theme/css/bootstrap.cerulean.min.css" type="text/css"/>
+    <link href="http://bryceboe.com/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://bryceboe.com/theme/css/pygments/solarizedlight.css" rel="stylesheet">
+        <link href="http://bryceboe.com/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://bryceboe.com/theme/css/style.css" type="text/css"/>
+
+        <link href="http://bryceboe.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Bryce Boe ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://bryceboe.com/" class="navbar-brand">
+Bryce Boe            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="http://bryceboe.com/pages/about">
+                             About
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://bryceboe.com/archives/"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://bryceboe.com/2011/02/21/using-stackoverflows-api-to-find-the-top-web-frameworks/"
+                       rel="bookmark"
+                       title="Permalink to Using StackOverflow’s API to Find the Top Web Frameworks">
+                        Using StackOverflow&#8217;s <span class="caps">API</span> to Find the Top Web&nbsp;Frameworks
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2011-02-21T18:09:00-08:00"> Mon 21 February 2011</time>
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://bryceboe.com/tag/ear/">EAR</a>
+        /
+	<a href="http://bryceboe.com/tag/python/">python</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p><ins datetime="2011-02-23T19:02:00+00:00">
+<strong>Update 2011/02/23 11:02 <span class="caps">PST</span></strong><br />
+Added the lift tag and updated the list.</ins></p>
+<p><ins datetime="2011-02-22T21:18:48+00:00">
+<strong>Update 2011/02/22 13:19 <span class="caps">PST</span></strong><br />
+Added the jsf tag (java server faces) and updated the total question count for
+each item on the list.</ins></p>
+<p><ins datetime="2011-02-22T19:13:29+00:00">
+<strong>Update 2011/02/22 11:14 <span class="caps">PST</span></strong><br />
+Adding spring-mvc as that was what I originally was originally supposed to
+have.</ins></p>
+<p><ins datetime="2011-02-22T18:31:36+00:00">
+<strong>Update 2011/02/22 10:36 <span class="caps">PST</span></strong><br />
+For the interested, <a href="https://spreadsheets0.google.com/pub?key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&amp;output=html">here is the table</a> used to generate the graph.</ins></p>
+<p><ins datetime="2011-02-22T18:05:43+00:00">
+<strong>Update 2011/02/22 10:05 <span class="caps">PST</span></strong><br />
+As per comments on this post, I updated the list by removing hibernate, spring,
+and sass and added gwt and grails. I also updated the chart reflecting this
+information, and created an additional chart which plots the frameworks as a
+percentage of the questions asked each week to hide stackoverflows&#8217;s growing
+popularity.</ins></p>
+<p><a href="http://adamdoupe.com/">Adam</a> and I are currently in the process of working on our research about
+the Execution After Redirect, or <span class="caps">EAR</span>, Vulnerability which I previously
+discussed in my blog post about the <a href="/2010/12/09/ucsbs-international-capture-the-flag-competition-2010-challenge-6-fear-the-ear/">2010 iCTF</a>. While Adam is working on a
+static analyzer to detect EARs in <a href="http://rubyonrails.org/">ruby on rails</a> projects, I am testing how
+simple it is for a developer to introduce an <span class="caps">EAR</span> vulnerability in several
+popular web frameworks. In order to do that, I first needed to come up with a
+mostly unbiased list of popular web&nbsp;frameworks.</p>
+<p>My first thought was to perform a search on the top web frameworks hoping that
+the information I seek may already be available. This search provided a few
+interesting results, such as the site, <a href="http://www.bestwebframeworks.com/">Best Web-Frameworks</a> as well as the
+page <a href="http://trends.builtwith.com/framework">Framework Usage Statistics</a> by the group BuiltWith. The Best
+Web-Frameworks page lists and compares various web frameworks by language,
+however it offers no means to compare the adoption of each. The Framework Usage
+Statistics page caught my eye as its usage statistics are generated by crawling
+and fingerprinting various websites in order to determine what frameworks are
+in use. Their fingerprinting technique, however, is too generic in some cases
+thus resulting in the labeling of languages like php and perl as frameworks.
+While these results were a step in the right direction, what I was really
+hoping to find was a list of top web frameworks that follow the <a href="http://en.wikipedia.org/wiki/Model%E2%80%93View%E2%80%93Controller">model, view,
+controller</a>, or <span class="caps">MVC</span>,&nbsp;architecture.</p>
+<p>After a bit more consideration I realized it wouldn&#8217;t be very simple to get a
+list of frameworks by usage, thus I had to consider alternative metrics. I
+thought how I could measure the popularity of the framework by either the
+number of developers using or at least interested in the framework. It was this
+train of thought that lead me to both <a href="http://www.google.com/trends">Google Trends</a> and <a href="http://stackoverflow.com/">StackOverflow</a>.
+Google Trends allows one to perform a direct comparison of various search
+queries over time, such as <a href="http://www.google.com/trends?q=ruby+on+rails,+python">ruby on rails compared to python</a>. The problem,
+as evidenced by the former link, is that some of the search queries don&#8217;t
+directly apply to the web framework; in this case not all the people searching
+for django are looking for the web framework. Because of this problem, I
+decided a more direct approach was&nbsp;needed.</p>
+<p>StackOverflow is a website geared towards developers where they can go to ask
+questions about various programing languages, development environments,
+algorithms, and, yes, even web frameworks. When someone asks a question, they
+can add tags to the question to help guide it to the right community. Thus if I
+had a question about redirects in ruby on rails, I might add the tag
+ruby-on-rails. Furthermore if I was interested in questions other people had
+about ruby on rails I might follow the ruby-on-rails&nbsp;tag.</p>
+<p>Between the number of questions per tag, the number of answers per tag, and the
+number of followers per tag, StackOverflow provides a few metrics for measuring
+the relative level of developer interest in various web frameworks. Success!
+The next step was to extract these numbers for the tags of various frameworks.
+For this, I attempted to find StackOverflow tags corresponding to all the
+frameworks listed on the Best Web-Frameworks site I previously found. I skipped
+the framework languages <span class="caps">CSS</span> and Javascript as they aren&#8217;t server side
+frameworks. I then narrowed the list down to the frameworks which had at least
+100 questions&nbsp;asked.</p>
+<p>This produced the following frameworks sorted by total number of questions&nbsp;asked:</p>
+<ol>
+<li>(31156) <a href="http://stackoverflow.com/tags/ruby-on-rails">ruby-on-rails</a></li>
+<li>(20587) <a href="http://stackoverflow.com/tags/asp.net-mvc">asp.net-mvc</a></li>
+<li>(14951) <a href="http://stackoverflow.com/tags/django">django</a></li>
+<li>(4726) <a href="http://stackoverflow.com/tags/zend-framework">zend-framework</a></li>
+<li>(3510) <a href="http://stackoverflow.com/tags/jsf">jsf</a></li>
+<li>(3336) <a href="http://stackoverflow.com/tags/gwt">gwt</a></li>
+<li>(3296) <a href="http://stackoverflow.com/tags/cakephp">cakephp</a></li>
+<li>(3127) <a href="http://stackoverflow.com/tags/codeigniter">codeigniter</a></li>
+<li>(2731) <a href="http://stackoverflow.com/tags/grails">grails</a></li>
+<li>(1976) <a href="http://stackoverflow.com/tags/spring-mvc">spring-mvc</a></li>
+<li>(1603) <a href="http://stackoverflow.com/tags/symfony">symfony</a></li>
+<li>(912) <a href="http://stackoverflow.com/tags/struts">struts</a></li>
+<li>(538) <a href="http://stackoverflow.com/tags/kohana">kohana</a></li>
+<li>(515) <a href="http://stackoverflow.com/tags/pylons">pylons</a></li>
+<li>(514) <a href="http://stackoverflow.com/tags/sinatra">sinatra</a></li>
+<li>(506) <a href="http://stackoverflow.com/tags/dotnetnuke">dotnetnuke</a></li>
+<li>(420) <a href="http://stackoverflow.com/tags/wicket">wicket</a></li>
+<li>(227) <a href="http://stackoverflow.com/tags/lift">lift</a></li>
+<li>(194) <a href="http://stackoverflow.com/tags/yii">yii</a></li>
+<li>(163) <a href="http://stackoverflow.com/tags/cherrypy">cherrypy</a></li>
+<li>(126) <a href="http://stackoverflow.com/tags/web2py">web2py</a></li>
+<li>(106) <a href="http://stackoverflow.com/tags/catalyst">catalyst</a></li>
+</ol>
+<p>The following were originally included but are not web&nbsp;frameworks:</p>
+<ul>
+<li>(6609) <a href="http://stackoverflow.com/tags/hibernate">hibernate</a></li>
+<li>(5765) <a href="http://stackoverflow.com/tags/spring">spring</a></li>
+<li>(178) <a href="http://stackoverflow.com/tags/sass">sass</a></li>
+</ul>
+<p>This list alone seems to work fairly well, however, I wanted to take it one
+step further which was to see the number of questions asked on a per week basis
+since the start of StackOverflow. Using the <a href="http://api.stackoverflow.com/">StackOverflow <span class="caps">API</span></a> (I used the
+<span class="caps">API</span> to generate the previous list too) I wrote a script to generate a <span class="caps">CSV</span> file
+containing this information. The information is depicted in the interactive
+chart below for the top 10 frameworks according to total number of
+StackOverflow questions. Each point in the chart represents the number of
+questions asked in a one week period starting on the date of the data point
+(protip: hover over chart to get the exact&nbsp;values).</p>
+<p>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js"> {"chartType":"AreaChart","chartName":"Top 10 Web Frameworks","dataSourceUrl":"//spreadsheets0.google.com/tq?key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&range=A1%3AK134&gid=0&transpose=0&headers=1&pub=1","options":{"displayAnnotations":true,"showTip":true,"reverseCategories":false,"titleY":"# of stack over flow questions","dataMode":"markers","titleX":"week starting on","maxAlternation":1,"pointSize":"0","colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395"],"smoothLine":false,"lineWidth":"2","labelPosition":"right","is3D":false,"logScale":false,"hasLabelsColumn":true,"wmode":"opaque","title":"Top 10 Web Frameworks","legend":"right","allowCollapse":true,"reverseAxis":false,"isStacked":false,"mapType":"hybrid","width":600,"height":400},"refreshInterval":60} </script>
+</p>
+
+<p>Note: if the above graph doesn&#8217;t load, try <a href="https://spreadsheets0.google.com/oimg?key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&amp;oid=12&amp;zx=vn515z2t7lj8">this static image</a>.</p>
+<p>The data confirms my previous suspicion that ruby on rails is the number one
+<span class="caps">MVC</span> and that django and cakePHP would also appear in the top 10. I must admit
+that I had never before heard of asp.net <span class="caps">MVC</span>, however considering that
+stackoverflow and all other stackexchange sites run on asp.net <span class="caps">MVC</span>, it makes
+sense that it would rank quite&nbsp;high.</p>
+<p><ins datetime="2011-02-22T18:50:07+00:00">
+I added the below chart to show the relative percentage of questions per tag
+over time as per Big Dave&#8217;s Gusset&#8217;s comment. This hides the growing popularity
+of stackoverflow.</ins></p>
+<p><img alt="image" src="https://spreadsheets1.google.com/oimg?key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&amp;oid=14&amp;zx=1n411uq4n9w4" /><br />
+(<a href="https://spreadsheets1.google.com/pub?hl=en&amp;key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&amp;hl=en&amp;gid=11">Interactive version</a>)</p>
+<p>The data for the above chart was extracted using the following script. The
+script requires the python package <a href="http://stackapps.com/questions/198/py-stackexchange-an-api-wrapper-for-python">py-stackexchange</a> in order to run and can
+be easily modified to add additional tags or change the filtering&nbsp;methods.</p>
+<div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<span class="kn">import</span> <span class="nn">datetime</span><span class="o">,</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">stackexchange</span> <span class="kn">import</span> <span class="n">Site</span><span class="p">,</span> <span class="n">StackOverflow</span>
+
+<span class="n">frameworks</span> <span class="o">=</span> <span class="p">[</span><span class="c"># php</span>
+              <span class="s">&#39;zend-framework&#39;</span><span class="p">,</span> <span class="s">&#39;cakephp&#39;</span><span class="p">,</span> <span class="s">&#39;symfony&#39;</span><span class="p">,</span> <span class="s">&#39;codeigniter&#39;</span><span class="p">,</span> <span class="s">&#39;seagull&#39;</span><span class="p">,</span>
+              <span class="s">&#39;prado&#39;</span><span class="p">,</span> <span class="s">&#39;solar&#39;</span><span class="p">,</span> <span class="s">&#39;ezcomponents&#39;</span><span class="p">,</span> <span class="s">&#39;kohana&#39;</span><span class="p">,</span> <span class="s">&#39;jelix&#39;</span><span class="p">,</span> <span class="s">&#39;flow3&#39;</span><span class="p">,</span>
+              <span class="s">&#39;modx&#39;</span><span class="p">,</span> <span class="s">&#39;sapphire&#39;</span><span class="p">,</span> <span class="s">&#39;yii&#39;</span><span class="p">,</span> <span class="s">&#39;limonade&#39;</span><span class="p">,</span> <span class="s">&#39;tekuna&#39;</span><span class="p">,</span> <span class="s">&#39;doophp&#39;</span><span class="p">,</span>
+              <span class="s">&#39;fat-free&#39;</span><span class="p">,</span> <span class="s">&#39;akelos&#39;</span><span class="p">,</span> <span class="s">&#39;php-on-trax&#39;</span><span class="p">,</span> <span class="s">&#39;atk&#39;</span><span class="p">,</span>
+              <span class="c"># ruby</span>
+              <span class="s">&#39;ruby-on-rails&#39;</span><span class="p">,</span> <span class="s">&#39;merb&#39;</span><span class="p">,</span> <span class="s">&#39;ramaze&#39;</span><span class="p">,</span> <span class="s">&#39;halcyon&#39;</span><span class="p">,</span> <span class="s">&#39;sinatra&#39;</span><span class="p">,</span> <span class="s">&#39;webby&#39;</span><span class="p">,</span>
+              <span class="s">&#39;sass&#39;</span><span class="p">,</span>
+              <span class="c"># perl</span>
+              <span class="s">&#39;catalyst&#39;</span><span class="p">,</span> <span class="s">&#39;interchange&#39;</span><span class="p">,</span> <span class="s">&#39;mason&#39;</span><span class="p">,</span> <span class="s">&#39;cgi-application&#39;</span><span class="p">,</span> <span class="s">&#39;jifty&#39;</span><span class="p">,</span>
+              <span class="s">&#39;gantry&#39;</span><span class="p">,</span> <span class="s">&#39;dancer&#39;</span><span class="p">,</span> <span class="s">&#39;mojolicious&#39;</span><span class="p">,</span>
+              <span class="c"># java</span>
+              <span class="s">&#39;struts&#39;</span><span class="p">,</span> <span class="s">&#39;hibernate&#39;</span><span class="p">,</span> <span class="s">&#39;spring&#39;</span><span class="p">,</span> <span class="s">&#39;wicket&#39;</span><span class="p">,</span> <span class="s">&#39;play&#39;</span><span class="p">,</span> <span class="s">&#39;stripes&#39;</span><span class="p">,</span>
+              <span class="c"># python</span>
+              <span class="s">&#39;django&#39;</span><span class="p">,</span> <span class="s">&#39;pylons&#39;</span><span class="p">,</span> <span class="s">&#39;grok&#39;</span><span class="p">,</span> <span class="s">&#39;turbogears&#39;</span><span class="p">,</span> <span class="s">&#39;web2py&#39;</span><span class="p">,</span> <span class="s">&#39;cherrypy&#39;</span><span class="p">,</span>
+              <span class="c"># coldfusion</span>
+              <span class="s">&#39;cfwheels&#39;</span><span class="p">,</span> <span class="s">&#39;coldspring&#39;</span><span class="p">,</span> <span class="s">&#39;model-glue&#39;</span><span class="p">,</span>
+              <span class="c"># asp.net</span>
+              <span class="s">&#39;asp.net-mvc&#39;</span><span class="p">,</span> <span class="s">&#39;dotnetnuke&#39;</span><span class="p">,</span> <span class="s">&#39;monorail&#39;</span><span class="p">,</span> <span class="s">&#39;vici&#39;</span><span class="p">]</span>
+
+<span class="k">class</span> <span class="nc">TagStats</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">DATE_START</span> <span class="o">=</span> <span class="mi">1217540572</span>
+    <span class="n">WEEK_SECONDS</span> <span class="o">=</span> <span class="mi">604800</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag_names</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">so</span> <span class="o">=</span> <span class="n">Site</span><span class="p">(</span><span class="n">StackOverflow</span><span class="p">,</span> <span class="s">&#39;LzYJwh19o0WCIvXK9q6k6g&#39;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">tag_names</span> <span class="o">=</span> <span class="n">tag_names</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stats</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">def</span> <span class="nf">output_counts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">html</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+        <span class="n">tmp</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">.</span><span class="n">count</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+            <span class="n">tmp</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">tag</span><span class="o">.</span><span class="n">count</span><span class="p">,</span> <span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">html</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s">&#39;&#39;</span>
+            <span class="k">for</span> <span class="n">count</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">tmp</span><span class="p">:</span>
+                <span class="k">print</span> <span class="p">(</span><span class="s">&#39;(</span><span class="si">%d</span><span class="s">) &#39;</span>
+                       <span class="s">&#39;</span><span class="si">%s</span><span class="s">&#39;</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+            <span class="k">print</span> <span class="s">&#39;&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s">&#39;</span><span class="si">%8d</span><span class="s"> </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">tmp</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">get_tags</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_size</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tag_names</span><span class="p">:</span>
+            <span class="n">query</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">so</span><span class="o">.</span><span class="n">tags</span><span class="p">(</span><span class="nb">filter</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">tmp</span> <span class="ow">in</span> <span class="n">query</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="n">tmp</span><span class="o">.</span><span class="n">name</span><span class="p">:</span>
+                    <span class="k">break</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;Not found: </span><span class="si">%s</span><span class="se">\n</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">tmp</span><span class="o">.</span><span class="n">count</span> <span class="o">&lt;</span> <span class="n">min_size</span><span class="p">:</span>
+                <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;Too few questions: </span><span class="si">%s</span><span class="se">\n</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stats</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">],</span>
+                              <span class="p">[[]]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">)))</span>
+
+    <span class="k">def</span> <span class="nf">output_stats_by_week</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_week</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="n">now</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%s</span><span class="s">&#39;</span><span class="p">))</span>
+        <span class="n">num_weeks</span> <span class="o">=</span> <span class="p">(</span><span class="n">now</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">DATE_START</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">WEEK_SECONDS</span>
+        <span class="k">print</span> <span class="s">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start_week</span><span class="p">,</span> <span class="n">num_weeks</span><span class="p">):</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">DATE_START</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">WEEK_SECONDS</span>
+            <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">DATE_START</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">WEEK_SECONDS</span>
+            <span class="n">counts</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">count</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">so</span><span class="o">.</span><span class="n">questions</span><span class="p">(</span><span class="n">tagged</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">),</span>
+                                              <span class="n">fromdate</span><span class="o">=</span><span class="n">start</span><span class="p">,</span>
+                                              <span class="n">todate</span><span class="o">=</span><span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">total</span>
+                <span class="k">except</span> <span class="ne">Exception</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+                    <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;Stopped at week </span><span class="si">%d</span><span class="se">\n</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
+                    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+                <span class="n">counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">count</span><span class="p">))</span>
+            <span class="k">print</span> <span class="s">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">start_week</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+        <span class="n">start_week</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">tag_stats</span> <span class="o">=</span> <span class="n">TagStats</span><span class="p">(</span><span class="n">frameworks</span><span class="p">)</span>
+    <span class="n">tag_stats</span><span class="o">.</span><span class="n">get_tags</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="c">#tag_stats.output_counts(html=True)</span>
+    <span class="n">tag_stats</span><span class="o">.</span><span class="n">output_stats_by_week</span><span class="p">(</span><span class="n">start_week</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</pre></div>
+
+
+<p>Happy web-framework&nbsp;coding!</p>
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="http://bryceboe.com/2010/12/09/ucsbs-international-capture-the-flag-competition-2010-challenge-6-fear-the-ear/"><span class="caps">UCSB</span>&#8217;s International Capture The Flag Competition 2010 Challenge 6: Fear The <span class="caps">EAR</span></a></li>
+        <li><a href="http://bryceboe.com/2011/10/08/moving-images-in-3d-space-with-pyglet/">Moving Images in 3D Space with&nbsp;Pyglet</a></li>
+        <li><a href="http://bryceboe.com/2012/02/20/process-based-job-management-in-c-and-python/">Process-Based Job Management in C and&nbsp;Python</a></li>
+        <li><a href="http://bryceboe.com/2009/12/06/ictf09-–-ucsbs-international-capture-the-flag-competition/">iCTF09: <span class="caps">UCSB</span>&#8217;s International Capture the Flag&nbsp;Competition</a></li>
+        <li><a href="http://bryceboe.com/2010/09/01/submitting-binaries-to-virustotal/">Submitting Binaries to&nbsp;VirusTotal</a></li>
+    </ul>
+</section>
+    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'bboe'; // required: replace example with your forum shortname
+            var disqus_url = 'http://bryceboe.com/2011/02/21/using-stackoverflows-api-to-find-the-top-web-frameworks/';
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3 well well-sm" id="sidebar">
+
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+                  <ul class="list-group" id="social">
+                    <li class="list-group-item">
+                      <a href="https://github.com/bboe"><i class="fa fa-github fa-lg"></i></a>
+                      <a href="https://github.com/bboe">github</a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="http://stackoverflow.com/users/176978/bboe"><i class="fa fa-stack-overflow fa-lg"></i></a>
+                      <a href="http://stackoverflow.com/users/176978/bboe">stack-overflow</a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="http://www.linkedin.com/in/bbzbryce"><i class="fa fa-linkedin fa-lg"></i></a>
+                      <a href="http://www.linkedin.com/in/bbzbryce">linkedin</a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="https://plus.google.com/+BryceBoe?rel=author"><i class="fa fa-google-plus fa-lg"></i></a>
+                      <a href="https://plus.google.com/+BryceBoe?rel=author">google+</a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="https://twitter.com/bboe"><i class="fa fa-twitter fa-lg"></i></a>
+                      <a href="https://twitter.com/bboe">twitter</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                    <ul class="list-group" id="recentposts">
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2014/03/27/daniel-boe-march-27-1988-february-28-2014/">
+                                Daniel Boe: March 27, 1988 - February 28,&nbsp;2014
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2014/01/25/hello-pelican-world/">
+                                Hello Pelican&nbsp;World
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2013/05/29/ph-d-proposal-announcement/">
+                                Ph.D. Proposal&nbsp;Announcement
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2013/05/12/mothers-day/">
+                                Mother&#8217;s&nbsp;Day
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2012/11/05/time-zones-in-python-and-datetime-representations/">
+                                Time Zones in Python and Date/Time&nbsp;Representations
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="list-group-item"><a href="http://bryceboe.com/tags/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                    <ul class="list-group" id="tags">
+                    </ul>
+                </li>    
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://adamdoupe.com/" target="_blank">
+                Adam Doupé
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://juliebifano.com/" target="_blank">
+                Julie Bifano
+            </a>
+        </li>
+      </ul>
+    </li>
+
+        </ul>
+    </section>
+
+</aside>        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014 Bryce Boe
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://bryceboe.com/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://bryceboe.com/theme/js/respond.min.js"></script>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'bboe'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-510348-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</body>
+</html>

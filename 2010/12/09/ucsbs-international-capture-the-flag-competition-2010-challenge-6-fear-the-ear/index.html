@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>UCSB’s International Capture The Flag Competition 2010 Challenge 6: Fear The EAR - Bryce Boe</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- Open Graph tags -->
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="UCSB’s International Capture The Flag Competition 2010 Challenge 6: Fear The EAR"/>
+            <meta property="og:url" content="http://bryceboe.com/2010/12/09/ucsbs-international-capture-the-flag-competition-2010-challenge-6-fear-the-ear/"/>
+            <meta property="og:description" content="Each year the Security Lab at UCSB hosts the International Capture the Flag competition, an approximately eight-hour security competition pitting security groups at various universities around the world against each other. Last year I had the privilege of contributing significantly to the setup on the iCTF, and later publishing and ..."/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://bryceboe.com/theme/css/bootstrap.cerulean.min.css" type="text/css"/>
+    <link href="http://bryceboe.com/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://bryceboe.com/theme/css/pygments/solarizedlight.css" rel="stylesheet">
+        <link href="http://bryceboe.com/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://bryceboe.com/theme/css/style.css" type="text/css"/>
+
+        <link href="http://bryceboe.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Bryce Boe ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://bryceboe.com/" class="navbar-brand">
+Bryce Boe            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="http://bryceboe.com/pages/about">
+                             About
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://bryceboe.com/archives/"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://bryceboe.com/2010/12/09/ucsbs-international-capture-the-flag-competition-2010-challenge-6-fear-the-ear/"
+                       rel="bookmark"
+                       title="Permalink to UCSB’s International Capture The Flag Competition 2010 Challenge 6: Fear The EAR">
+                        <span class="caps">UCSB</span>&#8217;s International Capture The Flag Competition 2010 Challenge 6: Fear The <span class="caps">EAR</span>
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2010-12-09T15:34:00-08:00"> Thu 09 December 2010</time>
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://bryceboe.com/tag/ear/">EAR</a>
+        /
+	<a href="http://bryceboe.com/tag/hacking/">hacking</a>
+        /
+	<a href="http://bryceboe.com/tag/python/">python</a>
+        /
+	<a href="http://bryceboe.com/tag/security/">security</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Each year the Security Lab at <span class="caps">UCSB</span> hosts the <a href="http://ictf.cs.ucsb.edu/">International Capture the Flag</a>
+competition, an approximately eight-hour security competition pitting <a href="http://ictf.cs.ucsb.edu/ictf10/participants.php">security
+groups at various universities</a> around the world against each other. Last
+year I had the privilege of <a href="/2009/12/06/ictf09-%E2%80%93-ucsbs-international-capture-the-flag-competition/">contributing significantly</a> to the setup on the
+iCTF, and later publishing and presenting a paper, &#8220;<a href="http://portal.acm.org/citation.cfm?id=1884859">Organizing Large Scale
+Hacking Competitions</a>&#8221; at <a href="http://dimva2010.fkie.fraunhofer.de/program.html"><span class="caps">DIMVA</span> 2010</a>. This year, I finally had an
+opportunity to take Giovanni Vigna&#8217;s security course, thus allowing me to
+participate in the competition. I led the team, &#8220;Tr0llF4ce Pwns You&#8221;, and we
+did decently well considering this was the first hacking competition for many
+on our&nbsp;team.</p>
+<p>Despite my participation, I was still able to contribute a challenge to the
+competition, which ended up being the 800 point challenge 6 in the competition.
+The primary reason for the challenge was to draw attention to a previously
+unpublicized web vulnerability that we are calling the <strong>Execution After
+Redirect</strong>, or <strong><span class="caps">EAR</span> Vulnerability</strong>. This vulnerability is exactly as the name
+states, however to be a bit more precise our exact definition of the
+vulnerability is, &#8220;code that executes after the developer&#8217;s intended
+termination point&#8221;. The developer&#8217;s intended termination point is often
+indicated by a server-initiated redirect, or more precisely an <span class="caps">HTTP</span> <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.2">301</a>,
+<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.3">302</a>, <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.4">303</a>, or <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.8">307</a> status code along with an <span class="caps">HTTP</span> Location header. It
+is important to note that there are cases in which the developer intends server
+side code to continue executing following a redirect. Such cases are not <span class="caps">EAR</span>&nbsp;vulnerabilities.</p>
+<p><a href="http://adamdoupe.com/">Adam Doupé</a> and I are in the process of writing a paper describing the
+complete details of the <span class="caps">EAR</span> vulnerability. For the purpose of understanding
+this challenge, you need only know that when a modern browser receives the
+redirect, any data sent in conjunction with the server-initiated redirect will
+not be displayed as the browser automatically fetches the resource indicated by
+the redirect. Furthermore, tools such as wget, curl and python&#8217;s urllib, among
+others, also automatically handle the redirect in their default configuration
+thus making the <span class="caps">EAR</span> vulnerability that much more difficult to&nbsp;detect.</p>
+<p>With that said, the following is a complete walkthrough of solving my iCTF 2010&nbsp;challege:</p>
+<p>Teams were presented with the message, &#8220;Obey the error messages and find the
+secret at http://10.15.3.1:8000.&#8221; Upon visiting the <span class="caps">URL</span> teams would see the
+title, &#8220;User Administration&#8221; <a href="http://www.archive.org/download/MannyCanard_USCSpeedRemix/MannyCanardH264.ogv">this video</a> playing immediately, and a simple
+file upload submission form. The video was mostly an annoying red herring,
+however, some of the keywords in the video happened to be valid user names that
+could be beneficial. The submission form contained an upload field called
+<em>control</em> and a hidden field called <em>csrf</em> whose value was a randomly generated
+integer valid for 30 seconds that could only be used once to indicate a valid&nbsp;form</p>
+<p>The first real part of the challenge required discovering the control file
+format. This part was not meant to be difficult, thus the server intentionally
+leaked a plethora of information through error messages that were delivered to
+the user via a cookie along with a server-initiated redirect to the same page.
+When a <span class="caps">GET</span> request was issued containing the error message cookie, the error
+message was simply displayed to the user on the page. While the code to handle
+the error message did contain an <a href="http://en.wikipedia.org/wiki/Cross-site_scripting"><span class="caps">XSS</span> vulnerability</a>, it was irrelevant to
+the challenge. Sending error messages through cookies followed by redirects was
+my hint to teams to investigate what else was sent in the first server&nbsp;response.</p>
+<p>The specific error messages allowed teams to quickly discover the file had to
+be three lines and less than 40 characters where the first line was for the
+username, and the second for the password. At this point, teams had to guess
+usernames and passwords, however this process was pretty trivial due to error
+messages indicating that usernames could be at most 6 characters a-z, and the
+password could be at most two numerical digits. The passwords could be easily
+brute forced, however the username space was 27<sup>6</sup>-1 in size which is
+not feasible to brute force. Thus, I populated the database with many guessable
+usernames such as, &#8216;user&#8217;, &#8216;ictf&#8217;, &#8216;a&#8217;, &#8216;admin&#8217;, &#8216;root&#8217;, &#8216;dev&#8217;, &#8216;test&#8217;, as well
+as some keywords from the annoying video. Further error messages indicated
+invalid usernames, incorrect passwords, inactive accounts, and
+non-administrator accounts allowing teams to guess valid username and password
+combinations in a minimal amount of&nbsp;time.</p>
+<p>The service contained two types of users: <em>administrators</em>, and <em>regular</em>
+users. Both types of users could be either in an <em>active</em> or <em>inactive</em> state.
+In this challenge, all guessable administrator accounts were inactive, and all
+regular users were active. The second part of the challenge was to discover the
+Execution After Redirect Vulnerability. More specifically, teams needed to
+discover that upon logging in with a regular user account the administrator
+console view was sent in the response along with the redirect and cookie
+containing the error message stating that regular users could not send
+commands. As previously mentioned, the detection of the <span class="caps">EAR</span> vulnerability is
+not trivial thus this process required teams to do something special in order
+to view the raw&nbsp;response.</p>
+<p>Once the vulnerability was discovered, teams learned, via an error message,
+that they could send the command &#8220;help&#8221; to list all the administrator commands,
+thus informing them about the other commands, &#8220;add&#8221;, &#8220;info&#8221;, and &#8220;list&#8221;. The
+add command simply exposed the information that the <span class="caps">SQLITE</span> database was read
+only, the info command listed the info field for the specified user, and the
+list command listed all the active users in the system along with their info
+field. The teams could use the info command to discover the special admin
+account that allowed them to successfully view the administrator console
+without exploiting the <span class="caps">EAR</span> vulnerability. The list command also told the teams
+that there were five disabled&nbsp;users.</p>
+<p>The third and final part of the challenge was to discover and exploit the <a href="http://en.wikipedia.org/wiki/SQL_injection"><span class="caps">SQL</span>
+injection vulnerability</a> in the info command. Two caveats of this part were
+that the <span class="caps">SQL</span> injection vulnerability had to be performed without standard
+whitespace, and the teams had to get the info field for the user secret.
+Neither of these proved difficult for the teams that made it this&nbsp;far.</p>
+<p>During the competition, 69 of the 72 teams attempted to solve my challenge, of
+which 44 teams were able to submit valid control files. 34 of those teams,
+successfully guessed regular user accounts, thus exposing them to the Execution
+After Redirect Vulnerability. However, as indicated by the teams who
+successfully ran the &#8220;help&#8221; command, of these 34 teams, only 12 of them
+discovered the <span class="caps">EAR</span> vulnerability. Finally of those 12 teams, 7 successfully
+exploited the <span class="caps">SQL</span> injection vulnerability that provided them with:<br />
+The secret is:
+<a href="http://hackiswack.com/videos/viewvideo/23/hack-is-wack/blocka-blocka">http://hackiswack.com/videos/viewvideo/23/hack-is-wack/blocka-blocka</a></p>
+<p>The 8 successful control files sent over the course of the competition&nbsp;were:</p>
+<div class="highlight"><pre>a\n50\ninfo &#39;OR(1)LIMIT/**/5,1--\n
+zzyzx\n83\ninfo &#39;/**/OR/**/pass&lt;83;/*\n
+a\n50\ninfo 0&#39;/**/or/**/pass=&#39;66\n
+zzyzx\n83\ninfo root&#39;OR&#39;1&#39;=&#39;1&#39;LIMIT&#39;5&#39;,&#39;1\n
+user\n50\ninfo ab&#39;or/**/oid=6;--\n
+a\n50\ninfo &#39;/**/or/**/oid=6;--\n
+zzyzx\n83\ninfo &#39;/**/or/**/user/**/like&#39;s%
+zzyzx\n83\ninfo &#39;OR(user=&#39;secret&#39;)--\n
+</pre></div>
+
+
+<p>My own control file used in&nbsp;testing:</p>
+<div class="highlight"><pre>a\n50\ninfo z&#39;or&quot;user&quot;=&#39;secret
+</pre></div>
+
+
+<p>I think the fact that just over one third of the teams in our hacking
+competition discovered this vulnerability shows how dangerous it can be, and
+hence the title, Fear the <span class="caps">EAR</span>.</p>
+<div class="highlight"><pre><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">DATABASE</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&#39;select * from users where user=?&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">user</span><span class="p">,))</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">result</span><span class="p">:</span>
+<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">send_redirect</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="s">&#39;nonexist&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">user</span><span class="p">)</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">user_pswd</span><span class="p">,</span> <span class="n">info</span><span class="p">,</span> <span class="n">is_admin</span><span class="p">,</span> <span class="n">is_active</span> <span class="o">=</span> <span class="n">result</span>
+    <span class="k">if</span> <span class="n">pswd</span> <span class="o">!=</span> <span class="n">user_pswd</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">send_redirect</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="s">&#39;mismatch&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">user</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">is_active</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">send_redirect</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="s">&#39;inactive&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">user</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">is_admin</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">send_redirect</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="s">&#39;admin&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">user</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">process_command</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="o">*</span><span class="n">cmd</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">))</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+
+<p>You can find the complete source code for this challenge <a href="http://cs.ucsb.edu/~bboe/public/src/ictf2010_challenge6.tar.gz">here</a>. It simply
+requires running a single python file. The bug in the code that produces the
+vulnerability occurs on line 413 (line 13 above) in which I neglected to return
+from the function when I called send_redirect as in all other&nbsp;instances.</p>
+<p>If you worked on this challenge in the competition let me know what you
+thought. As always I appreciate all feedback, and challenge related feedback
+will help me create better challenges for next year&#8217;s&nbsp;iCTF.</p>
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="http://bryceboe.com/2011/02/21/using-stackoverflows-api-to-find-the-top-web-frameworks/">Using StackOverflow&#8217;s <span class="caps">API</span> to Find the Top Web&nbsp;Frameworks</a></li>
+        <li><a href="http://bryceboe.com/2011/06/05/defcon-19-quals-forensics-100-and-forensics-300-solution/">Defcon 19 Quals Forensics 100 and Forensics 300&nbsp;Solution</a></li>
+        <li><a href="http://bryceboe.com/2010/09/01/submitting-binaries-to-virustotal/">Submitting Binaries to&nbsp;VirusTotal</a></li>
+        <li><a href="http://bryceboe.com/2010/05/25/defcon-18-quals-forensics-200-write-up/">Defcon 18 Quals Forensics 200 Write&nbsp;up</a></li>
+        <li><a href="http://bryceboe.com/2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/">Bye Bye Facebook: A Guide to Leaving&nbsp;Facebook</a></li>
+    </ul>
+</section>
+    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'bboe'; // required: replace example with your forum shortname
+            var disqus_url = 'http://bryceboe.com/2010/12/09/ucsbs-international-capture-the-flag-competition-2010-challenge-6-fear-the-ear/';
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3 well well-sm" id="sidebar">
+
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+                  <ul class="list-group" id="social">
+                    <li class="list-group-item">
+                      <a href="https://github.com/bboe"><i class="fa fa-github fa-lg"></i></a>
+                      <a href="https://github.com/bboe">github</a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="http://stackoverflow.com/users/176978/bboe"><i class="fa fa-stack-overflow fa-lg"></i></a>
+                      <a href="http://stackoverflow.com/users/176978/bboe">stack-overflow</a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="http://www.linkedin.com/in/bbzbryce"><i class="fa fa-linkedin fa-lg"></i></a>
+                      <a href="http://www.linkedin.com/in/bbzbryce">linkedin</a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="https://plus.google.com/+BryceBoe?rel=author"><i class="fa fa-google-plus fa-lg"></i></a>
+                      <a href="https://plus.google.com/+BryceBoe?rel=author">google+</a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="https://twitter.com/bboe"><i class="fa fa-twitter fa-lg"></i></a>
+                      <a href="https://twitter.com/bboe">twitter</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                    <ul class="list-group" id="recentposts">
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2014/03/27/daniel-boe-march-27-1988-february-28-2014/">
+                                Daniel Boe: March 27, 1988 - February 28,&nbsp;2014
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2014/01/25/hello-pelican-world/">
+                                Hello Pelican&nbsp;World
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2013/05/29/ph-d-proposal-announcement/">
+                                Ph.D. Proposal&nbsp;Announcement
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2013/05/12/mothers-day/">
+                                Mother&#8217;s&nbsp;Day
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2012/11/05/time-zones-in-python-and-datetime-representations/">
+                                Time Zones in Python and Date/Time&nbsp;Representations
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="list-group-item"><a href="http://bryceboe.com/tags/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                    <ul class="list-group" id="tags">
+                    </ul>
+                </li>    
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://adamdoupe.com/" target="_blank">
+                Adam Doupé
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://juliebifano.com/" target="_blank">
+                Julie Bifano
+            </a>
+        </li>
+      </ul>
+    </li>
+
+        </ul>
+    </section>
+
+</aside>        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014 Bryce Boe
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://bryceboe.com/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://bryceboe.com/theme/js/respond.min.js"></script>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'bboe'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-510348-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</body>
+</html>

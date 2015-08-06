@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>Properly Handling the Keyboard Interrupt Exception (SIGINT) within a Python C Module - Bryce Boe</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- Open Graph tags -->
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Properly Handling the Keyboard Interrupt Exception (SIGINT) within a Python C Module"/>
+            <meta property="og:url" content="http://bryceboe.com/2010/09/14/properly-handling-the-keyboard-interrupt-exception-sigint-within-a-python-c-module/"/>
+            <meta property="og:description" content="Recently I’ve done a lot of work requiring heavy computation on large datasets. While python is not a great choice for speed, it can be extended by modules written in C for those speed critical moments. For such moments I always try to find solutions written as C modules ..."/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://bryceboe.com/theme/css/bootstrap.cerulean.min.css" type="text/css"/>
+    <link href="http://bryceboe.com/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://bryceboe.com/theme/css/pygments/solarizedlight.css" rel="stylesheet">
+        <link href="http://bryceboe.com/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://bryceboe.com/theme/css/style.css" type="text/css"/>
+
+        <link href="http://bryceboe.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Bryce Boe ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://bryceboe.com/" class="navbar-brand">
+Bryce Boe            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="http://bryceboe.com/pages/about">
+                             About
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://bryceboe.com/archives/"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://bryceboe.com/2010/09/14/properly-handling-the-keyboard-interrupt-exception-sigint-within-a-python-c-module/"
+                       rel="bookmark"
+                       title="Permalink to Properly Handling the Keyboard Interrupt Exception (SIGINT) within a Python C Module">
+                        Properly Handling the Keyboard Interrupt Exception (<span class="caps">SIGINT</span>) within a Python C&nbsp;Module
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2010-09-14T23:54:00-07:00"> Tue 14 September 2010</time>
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://bryceboe.com/tag/c/">C</a>
+        /
+	<a href="http://bryceboe.com/tag/python/">python</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Recently I&#8217;ve done a lot of work requiring heavy computation on large datasets.
+While python is not a great choice for speed, it can be extended by modules
+written in C for those speed critical moments. For such moments I always try to
+find solutions written as C modules. This approach works very well save for one
+major caveat that seems to be common across many of the existing C modules.
+This caveat has to do with the nonexistent handling of <a href="http://en.wikipedia.org/wiki/SIGINT_(POSIX)"><span class="caps">SIGINT</span></a>, or the
+KeyboardInterrupt exception, within the C&nbsp;module.</p>
+<p>On linux, the <span class="caps">SIGINT</span> interrupt occurs when the user wishes to <em>cancel</em> a
+command by pressing <strong>ctrl+c</strong>. Python properly receives this interrupt and
+internally converts it to a <a href="http://docs.python.org/library/exceptions.html#exceptions.KeyboardInterrupt">KeyboardInterrupt exception,</a> thus in many cases
+it&#8217;s not necessary for the C module to handle <span class="caps">SIGINT</span> itself. However, in cases
+where the C module function requires a significant amount of time, python will
+not be able to handle the interrupt until the function call returns. Thus if
+you are writing a C module with long running functions I suggest you implement
+some sort of the following. One thing I want to mention: while this should
+serve as a good example for those who want to write a python C module, please
+do not think of this as a&nbsp;tutorial.</p>
+<p>Let&#8217;s start with a simple C program that computes the nth <a href="http://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci</a> number
+using naïve recursion. This approach has an exponential running time and
+therefore is perfect for demonstrating the want to end the process. You&#8217;ll
+notice in the code below that I have already added the <span class="caps">SIGINT</span> interrupt
+handler. This handler normally would be redundant as C will terminate by
+default when it receives <span class="caps">SIGINT</span>, however I added a simple print statement in
+the interrupt handler to distinguish it from the default operation. I
+acknowledge that it is a <a href="http://linux.die.net/man/2/signal">bad practice</a> to use printf in a signal handler,
+however I am neglecting that concern for demonstration&nbsp;purposes.</p>
+<div class="highlight"><pre><span class="cp">#include </span>
+<span class="cp">#include</span>
+
+<span class="k">volatile</span> <span class="kt">sig_atomic_t</span> <span class="n">kb_interrupt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">kb_interrupt_handler</span><span class="p">(</span><span class="kt">int</span> <span class="n">sig</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Received kb interrupt</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="n">kb_interrupt</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">fibo</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">kb_interrupt</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">((</span><span class="n">a</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">((</span><span class="n">b</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+  <span class="k">else</span> <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+  <span class="n">signal</span><span class="p">(</span><span class="n">SIGINT</span><span class="p">,</span> <span class="n">kb_interrupt_handler</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Number: &quot;</span><span class="p">);</span>
+  <span class="n">fflush</span><span class="p">(</span><span class="n">stdout</span><span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Fibo(%d) = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Now let&#8217;s convert this to something that python can use. In the code below,
+you&#8217;ll notice I eliminated the main function and the include statements as they
+are no longer needed. All code that was added was needed to call the function
+<strong>fibo</strong> from the python C module <strong>bboe</strong>.</p>
+<div class="highlight"><pre><span class="cp">#include</span>
+
+<span class="k">volatile</span> <span class="kt">sig_atomic_t</span> <span class="n">kb_interrupt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">kb_interrupt_handler</span><span class="p">(</span><span class="kt">int</span> <span class="n">sig</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Received kb interrupt</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="n">kb_interrupt</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">fibo</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">kb_interrupt</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">((</span><span class="n">a</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">((</span><span class="n">b</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+  <span class="k">else</span> <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">PyObject</span> <span class="o">*</span><span class="nf">bboe_fibo</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">__sighandler_t</span> <span class="n">prev</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">result</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;i&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+  <span class="n">prev</span> <span class="o">=</span> <span class="n">signal</span><span class="p">(</span><span class="n">SIGINT</span><span class="p">,</span> <span class="n">kb_interrupt_handler</span><span class="p">);</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+  <span class="n">signal</span><span class="p">(</span><span class="n">SIGINT</span><span class="p">,</span> <span class="n">prev</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">result</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">PyErr_SetObject</span><span class="p">(</span><span class="n">PyExc_KeyboardInterrupt</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">Py_BuildValue</span><span class="p">(</span><span class="s">&quot;i&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">PyMethodDef</span> <span class="n">bboe_methods</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">{</span><span class="s">&quot;fibo&quot;</span><span class="p">,</span> <span class="n">bboe_fibo</span><span class="p">,</span> <span class="n">METH_VARARGS</span><span class="p">,</span> <span class="s">&quot;Compute the nth Fibonacci number.&quot;</span><span class="p">},</span>
+  <span class="p">{</span><span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="n">PyMODINIT_FUNC</span> <span class="nf">initbboe</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">Py_InitModule</span><span class="p">(</span><span class="s">&quot;bboe&quot;</span><span class="p">,</span> <span class="n">bboe_methods</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>The proper distutils setup.py script for this C module is shown&nbsp;below.</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">Extension</span>
+
+<span class="n">setup</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#39;BBoe&#39;</span><span class="p">,</span>
+      <span class="n">version</span> <span class="o">=</span> <span class="s">&#39;1.0&#39;</span><span class="p">,</span>
+      <span class="n">ext_modules</span> <span class="o">=</span> <span class="p">[</span><span class="n">Extension</span><span class="p">(</span><span class="s">&#39;bboe&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;bboemodule.c&#39;</span><span class="p">])])</span>
+</pre></div>
+
+
+<p>Finally to reproduce the functionality of the C program I&#8217;ve written the
+following. While you can copy and paste this code, you can also grab <a href="/images/2010/09/bboe_module.tgz">this
+tarball</a> that contains all the code listed here, as well as a Makefile which
+builds both the C and python parts. Simply run <strong>make</strong> followed by
+<strong>./fibo_prog</strong> for the C version, or <strong>./fibo_prog.py</strong> for the python&nbsp;version.</p>
+<div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<span class="kn">import</span> <span class="nn">bboe</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">&#39;Number: &#39;</span><span class="p">))</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">bboe</span><span class="o">.</span><span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">print</span> <span class="s">&#39;Fibo(</span><span class="si">%d</span><span class="s">) = </span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+
+<p>One last thing I want to mention is to ensure the signal handler is only
+changed in your C module when required. In my first iteration of this code, I
+had my call to <strong>signal</strong> in the <strong>initbboe</strong> method which had the negative
+effect of using my <strong>kb_interrupt_handler</strong> whenever the <strong>bboe</strong> module was
+loaded. The fix was to only have my signal handler in place whilst code from my
+module was running. Lines 24 and 26 accomplish this&nbsp;properly.</p>
+<p>Happy python C module&nbsp;coding!</p>
+<p><ins datetime="2010-09-15T22:13:25+00:00">
+Edit 2010-09-15</ins><br />
+I wanted to test the speed between a pure C implementation, a python C module
+implementation, and a pure python implementation. Thus I have updated <a href="/images/2010/09/bboe_module.tgz">the
+source tarball</a> to include the following python file as well as a
+script to generate the timing results which are also shown&nbsp;below.</p>
+<div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+
+<span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span> <span class="k">return</span> <span class="n">n</span>
+    <span class="k">return</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">&#39;Number: &#39;</span><span class="p">))</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">print</span> <span class="s">&#39;Fibo(</span><span class="si">%d</span><span class="s">) = </span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Results:</p>
+<div class="highlight"><pre>fibo(00) pure c: 0.002s c module: 0.016s pure python: 00.015s
+fibo(02) pure c: 0.002s c module: 0.014s pure python: 00.015s
+fibo(04) pure c: 0.002s c module: 0.014s pure python: 00.014s
+fibo(06) pure c: 0.002s c module: 0.015s pure python: 00.015s
+fibo(08) pure c: 0.002s c module: 0.015s pure python: 00.013s
+fibo(10) pure c: 0.002s c module: 0.017s pure python: 00.016s
+fibo(12) pure c: 0.002s c module: 0.013s pure python: 00.014s
+fibo(14) pure c: 0.002s c module: 0.015s pure python: 00.016s
+fibo(16) pure c: 0.002s c module: 0.014s pure python: 00.015s
+fibo(18) pure c: 0.002s c module: 0.014s pure python: 00.017s
+fibo(20) pure c: 0.002s c module: 0.014s pure python: 00.018s
+fibo(22) pure c: 0.002s c module: 0.012s pure python: 00.021s
+fibo(24) pure c: 0.003s c module: 0.013s pure python: 00.037s
+fibo(26) pure c: 0.004s c module: 0.017s pure python: 00.074s
+fibo(28) pure c: 0.008s c module: 0.020s pure python: 00.167s
+fibo(30) pure c: 0.018s c module: 0.027s pure python: 00.406s
+fibo(32) pure c: 0.034s c module: 0.040s pure python: 01.061s
+fibo(34) pure c: 0.067s c module: 0.080s pure python: 02.716s
+fibo(36) pure c: 0.167s c module: 0.183s pure python: 07.121s
+fibo(38) pure c: 0.425s c module: 0.450s pure python: 18.722s
+fibo(40) pure c: 1.099s c module: 1.153s pure python: 49.901s
+</pre></div>
+
+
+<p>These results show first that there is much to be gained by writing a C module
+for <span class="caps">CPU</span> intensive tasks, and second that a pure C implementation doesn&#8217;t gain
+you much in this particular&nbsp;case.</p>
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="http://bryceboe.com/2012/02/23/implementation-of-a-process-based-job-management-system-in-c/">Implementation of a Process-Based Job Management System in&nbsp;C</a></li>
+        <li><a href="http://bryceboe.com/2012/02/20/process-based-job-management-in-c-and-python/">Process-Based Job Management in C and&nbsp;Python</a></li>
+        <li><a href="http://bryceboe.com/2011/10/08/moving-images-in-3d-space-with-pyglet/">Moving Images in 3D Space with&nbsp;Pyglet</a></li>
+        <li><a href="http://bryceboe.com/2011/02/21/using-stackoverflows-api-to-find-the-top-web-frameworks/">Using StackOverflow&#8217;s <span class="caps">API</span> to Find the Top Web&nbsp;Frameworks</a></li>
+        <li><a href="http://bryceboe.com/2009/12/06/ictf09-–-ucsbs-international-capture-the-flag-competition/">iCTF09: <span class="caps">UCSB</span>&#8217;s International Capture the Flag&nbsp;Competition</a></li>
+    </ul>
+</section>
+    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'bboe'; // required: replace example with your forum shortname
+            var disqus_url = 'http://bryceboe.com/2010/09/14/properly-handling-the-keyboard-interrupt-exception-sigint-within-a-python-c-module/';
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3 well well-sm" id="sidebar">
+
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+                  <ul class="list-group" id="social">
+                    <li class="list-group-item">
+                      <a href="https://github.com/bboe"><i class="fa fa-github fa-lg"></i></a>
+                      <a href="https://github.com/bboe">github</a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="http://stackoverflow.com/users/176978/bboe"><i class="fa fa-stack-overflow fa-lg"></i></a>
+                      <a href="http://stackoverflow.com/users/176978/bboe">stack-overflow</a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="http://www.linkedin.com/in/bbzbryce"><i class="fa fa-linkedin fa-lg"></i></a>
+                      <a href="http://www.linkedin.com/in/bbzbryce">linkedin</a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="https://plus.google.com/+BryceBoe?rel=author"><i class="fa fa-google-plus fa-lg"></i></a>
+                      <a href="https://plus.google.com/+BryceBoe?rel=author">google+</a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="https://twitter.com/bboe"><i class="fa fa-twitter fa-lg"></i></a>
+                      <a href="https://twitter.com/bboe">twitter</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                    <ul class="list-group" id="recentposts">
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2014/03/27/daniel-boe-march-27-1988-february-28-2014/">
+                                Daniel Boe: March 27, 1988 - February 28,&nbsp;2014
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2014/01/25/hello-pelican-world/">
+                                Hello Pelican&nbsp;World
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2013/05/29/ph-d-proposal-announcement/">
+                                Ph.D. Proposal&nbsp;Announcement
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2013/05/12/mothers-day/">
+                                Mother&#8217;s&nbsp;Day
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://bryceboe.com/2012/11/05/time-zones-in-python-and-datetime-representations/">
+                                Time Zones in Python and Date/Time&nbsp;Representations
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="list-group-item"><a href="http://bryceboe.com/tags/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                    <ul class="list-group" id="tags">
+                    </ul>
+                </li>    
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://adamdoupe.com/" target="_blank">
+                Adam Doupé
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://juliebifano.com/" target="_blank">
+                Julie Bifano
+            </a>
+        </li>
+      </ul>
+    </li>
+
+        </ul>
+    </section>
+
+</aside>        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014 Bryce Boe
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://bryceboe.com/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://bryceboe.com/theme/js/respond.min.js"></script>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'bboe'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-510348-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</body>
+</html>
