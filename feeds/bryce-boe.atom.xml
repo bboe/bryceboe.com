@@ -5854,7 +5854,7 @@ brilliant&amp;nbsp;plan.&lt;/p&gt;
 &lt;a href="http://www.socalcontest.org/prev_probs/2006.zip"&gt;Problem&amp;nbsp;Set&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>Combining PHP and Python</title><link href="http://bryceboe.com/2006/11/07/combining-php-and-python/" rel="alternate"></link><updated>2006-11-07T13:32:00-08:00</updated><author><name>Bryce Boe</name></author><id>tag:bryceboe.com,2006-11-07:2006/11/07/combining-php-and-python/</id><summary type="html">&lt;p&gt;I&amp;#8217;ve been writing code in &lt;a href="http://php.net"&gt;php&lt;/a&gt; for three years now, and within the last year
 discovered the &lt;a href="http://python.org"&gt;python&lt;/a&gt; language. Without going into much detail I find
 myself utilizing python more so than php. I do have things I dislike about
-python (mainly its &lt;a href="http://docs.python.org/lib/lib.html"&gt;documentation&lt;/a&gt; as compared to &lt;a href="http://www.php.net/manual/en/"&gt;php&amp;#8217;s&lt;/a&gt;) but for the most
+python (mainly its &lt;a href="https://docs.python.org/2/library/"&gt;documentation&lt;/a&gt; as compared to &lt;a href="http://www.php.net/manual/en/"&gt;php&amp;#8217;s&lt;/a&gt;) but for the most
 part it appears superior to php for command line scripting. I guess there
 weren&amp;#8217;t any doubts about that since php is used mostly as an apache&amp;nbsp;module.&lt;/p&gt;
 &lt;p&gt;Making priceTrackr&amp;#8217;s update scripts run faster has presented me with a problem.
@@ -5896,7 +5896,7 @@ printed out on its own&amp;nbsp;line.&lt;/p&gt;
 make a &lt;span class="caps"&gt;URL&lt;/span&gt; connection and then process the page. In this example the script
 brute forces each hash to get the original number. The final output is each
 hash followed by a tab followed by the number the hash&amp;nbsp;represents.&lt;/p&gt;
-&lt;p&gt;This file makes use of python&amp;#8217;s &lt;a href="http://docs.python.org/lib/module-Queue.html"&gt;Queue&lt;/a&gt; class for blocking purposes. I
+&lt;p&gt;This file makes use of python&amp;#8217;s &lt;a href="https://docs.python.org/2/library/queue.html"&gt;Queue&lt;/a&gt; class for blocking purposes. I
 commented the code so it should be fairly easy to understand and simple enough
 to modify for your python threading&amp;nbsp;needs.&lt;/p&gt;
 &lt;p&gt;view &lt;a href="/images/2006/11/python.py"&gt;python.py&lt;/a&gt;&lt;/p&gt;
