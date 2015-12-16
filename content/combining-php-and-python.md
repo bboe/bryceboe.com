@@ -84,12 +84,12 @@ The whole package with proper extensions can be downloaded:
 
   [php]: http://php.net
   [python]: http://python.org
-  [documentation]: http://docs.python.org/lib/lib.html
+  [documentation]: https://docs.python.org/2/library/
   [php's]: http://www.php.net/manual/en/
   [mysql-python]: http://sourceforge.net/project/showfiles.php?group_id=22307
   [main.sh]: /images/2006/11/main.txt
   [phpPart1.php]: /images/2006/11/phppart1.txt
-  [Queue]: http://docs.python.org/lib/module-Queue.html
+  [Queue]: https://docs.python.org/2/library/queue.html
   [python.py]: /images/2006/11/python.py
   [phpPart2.php]: /images/2006/11/phppart2.txt
   [phpPython]: /images/2006/11/phppython.tgz
