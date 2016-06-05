@@ -117,19 +117,19 @@ After some simple experimentation I noticed two key things with the
 the <strong>KeyboardInterrupt</strong> and call <strong>sys.exit</strong>, these processes persist and
 thus receive future tasks. Second, the <strong>KeyboardInterrupt</strong> is not delivered
 to the parent process until all jobs are&nbsp;completed.</p>
-<div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">multiprocessing</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">time</span>
 
 <span class="k">def</span> <span class="nf">do_work</span><span class="p">():</span>
-    <span class="k">print</span> <span class="s">&#39;Work Started: </span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">()</span>
+    <span class="k">print</span> <span class="s1">&#39;Work Started: </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">()</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">return</span> <span class="s">&#39;Success&#39;</span>
+    <span class="k">return</span> <span class="s1">&#39;Success&#39;</span>
 
 <span class="k">def</span> <span class="nf">pool_function</span><span class="p">():</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">do_work</span><span class="p">()</span>
     <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s">&#39;KeyboardException&#39;</span>
+        <span class="k">return</span> <span class="s1">&#39;KeyboardException&#39;</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">pool</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -140,16 +140,16 @@ to the parent process until all jobs are&nbsp;completed.</p>
         <span class="n">pool</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
         <span class="n">pool</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
     <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s">&#39;parent received control-c&#39;</span>
+        <span class="k">print</span> <span class="s1">&#39;parent received control-c&#39;</span>
         <span class="n">pool</span><span class="o">.</span><span class="n">terminate</span><span class="p">()</span>
 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">jobs</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">i</span><span class="o">.</span><span class="n">successful</span><span class="p">():</span>
             <span class="k">print</span> <span class="n">i</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">print</span> <span class="s">&#39;Job failed: </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">_value</span><span class="p">),</span> <span class="n">i</span><span class="o">.</span><span class="n">_value</span><span class="p">)</span>
+            <span class="k">print</span> <span class="s1">&#39;Job failed: </span><span class="si">%s</span><span class="s1"> </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">_value</span><span class="p">),</span> <span class="n">i</span><span class="o">.</span><span class="n">_value</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 
@@ -160,13 +160,13 @@ job is very simple: display a message, sleep for two seconds and return a
 message to the parent. You&#8217;ll notice that when you send a <strong>KeyboardInterrupt</strong>
 by pressing ctrl+c (on Linux) it&#8217;ll kill the currently running child processes,
 however the next job will simply take its place until there are no remaining&nbsp;jobs.</p>
-<div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">multiprocessing</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">signal</span><span class="o">,</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">Queue</span>
 
 <span class="k">def</span> <span class="nf">do_work</span><span class="p">():</span>
-    <span class="k">print</span> <span class="s">&#39;Work Started: </span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">()</span>
+    <span class="k">print</span> <span class="s1">&#39;Work Started: </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">()</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">return</span> <span class="s">&#39;Success&#39;</span>
+    <span class="k">return</span> <span class="s1">&#39;Success&#39;</span>
 
 <span class="k">def</span> <span class="nf">manual_function</span><span class="p">(</span><span class="n">job_queue</span><span class="p">,</span> <span class="n">result_queue</span><span class="p">):</span>
     <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGINT</span><span class="p">,</span> <span class="n">signal</span><span class="o">.</span><span class="n">SIG_IGN</span><span class="p">)</span>
@@ -176,7 +176,7 @@ however the next job will simply take its place until there are no remaining&nbs
             <span class="n">result_queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">do_work</span><span class="p">())</span>
         <span class="k">except</span> <span class="n">Queue</span><span class="o">.</span><span class="n">Empty</span><span class="p">:</span>
             <span class="k">pass</span>
-        <span class="c">#except KeyboardInterrupt: pass</span>
+        <span class="c1">#except KeyboardInterrupt: pass</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">job_queue</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>
@@ -196,7 +196,7 @@ however the next job will simply take its place until there are no remaining&nbs
         <span class="k">for</span> <span class="n">worker</span> <span class="ow">in</span> <span class="n">workers</span><span class="p">:</span>
             <span class="n">worker</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
     <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s">&#39;parent received ctrl-c&#39;</span>
+        <span class="k">print</span> <span class="s1">&#39;parent received ctrl-c&#39;</span>
         <span class="k">for</span> <span class="n">worker</span> <span class="ow">in</span> <span class="n">workers</span><span class="p">:</span>
             <span class="n">worker</span><span class="o">.</span><span class="n">terminate</span><span class="p">()</span>
             <span class="n">worker</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
@@ -204,7 +204,7 @@ however the next job will simply take its place until there are no remaining&nbs
     <span class="k">while</span> <span class="ow">not</span> <span class="n">result_queue</span><span class="o">.</span><span class="n">empty</span><span class="p">():</span>
         <span class="k">print</span> <span class="n">result_queue</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 
@@ -225,14 +225,14 @@ In response to Georges comment I wanted to see how such an approach would work
 in a case similar to what was done above. The below code demonstrates the
 approach from the stackoverflow response by Glenn Maynard to call the get
 function with a&nbsp;timeout.</p>
-<div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">multiprocessing</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">time</span>
 
 <span class="k">def</span> <span class="nf">do_work</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s">&#39;Work Started: </span><span class="si">%d</span><span class="s"> </span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">(),</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">print</span> <span class="s1">&#39;Work Started: </span><span class="si">%d</span><span class="s1"> </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">(),</span> <span class="n">i</span><span class="p">)</span>
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-        <span class="k">return</span> <span class="s">&#39;Success&#39;</span>
+        <span class="k">return</span> <span class="s1">&#39;Success&#39;</span>
     <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
         <span class="k">pass</span>
 
@@ -242,13 +242,13 @@ function with a&nbsp;timeout.</p>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">results</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mh">0xFFFF</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s">&#39;parent received control-c&#39;</span>
+        <span class="k">print</span> <span class="s1">&#39;parent received control-c&#39;</span>
         <span class="k">return</span>
 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
         <span class="k">print</span> <span class="n">i</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 
@@ -263,11 +263,11 @@ Thanks for bringing the solution to my attention&nbsp;Georges.</p>
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
-        <li><a href="http://bryceboe.com/2010/05/25/defcon-18-quals-forensics-200-write-up/">Defcon 18 Quals Forensics 200 Write&nbsp;up</a></li>
-        <li><a href="http://bryceboe.com/2011/02/21/using-stackoverflows-api-to-find-the-top-web-frameworks/">Using StackOverflow&#8217;s <span class="caps">API</span> to Find the Top Web&nbsp;Frameworks</a></li>
+        <li><a href="http://bryceboe.com/2006/10/23/line-segment-intersection-algorithm/">Line Segment Intersection&nbsp;Algorithm</a></li>
         <li><a href="http://bryceboe.com/2012/02/23/implementation-of-a-process-based-job-management-system-in-c/">Implementation of a Process-Based Job Management System in&nbsp;C</a></li>
-        <li><a href="http://bryceboe.com/2010/09/01/submitting-binaries-to-virustotal/">Submitting Binaries to&nbsp;VirusTotal</a></li>
-        <li><a href="http://bryceboe.com/2007/04/22/django/">Django</a></li>
+        <li><a href="http://bryceboe.com/2012/02/14/python-multiprocessing-pool-and-keyboardinterrupt-revisited/">Python Multiprocessing Pool and KeyboardInterrupt&nbsp;Revisited</a></li>
+        <li><a href="http://bryceboe.com/2012/02/20/process-based-job-management-in-c-and-python/">Process-Based Job Management in C and&nbsp;Python</a></li>
+        <li><a href="http://bryceboe.com/2014/01/25/hello-pelican-world/">Hello Pelican&nbsp;World</a></li>
     </ul>
 </section>
     <hr />

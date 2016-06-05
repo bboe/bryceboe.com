@@ -106,16 +106,16 @@ members had about the blue offset pixels that occur at regular intervals. Our
 first attempt at wrapping the image at the blue pixel boundaries (every 450
 pixels) <a href="/images/2011/06/f100_solution.png">resulted in success</a>! The key &#8220;thankYouSirPleasemayIhaveAnother&#8221;
 appeared and worked. The following is my simple python solution for Forensics&nbsp;100:</p>
-<div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">Image</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">orig</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;f100.png&#39;</span><span class="p">)</span>
-    <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s">&#39;RGBA&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">450</span><span class="p">,</span> <span class="mi">43</span><span class="p">))</span>
+    <span class="n">orig</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;f100.png&#39;</span><span class="p">)</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;RGBA&#39;</span><span class="p">,</span> <span class="p">(</span><span class="mi">450</span><span class="p">,</span> <span class="mi">43</span><span class="p">))</span>
     <span class="n">img</span><span class="o">.</span><span class="n">putdata</span><span class="p">(</span><span class="n">orig</span><span class="o">.</span><span class="n">getdata</span><span class="p">())</span>
     <span class="n">img</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </pre></div>
 
@@ -149,16 +149,16 @@ location is called Ross Island. From that point we simply attempted different
 &#8220;places&#8221; listed <a href="http://en.wikipedia.org/wiki/Ross_Island">Ross Island&#8217;s wikpiedia page</a> until &#8220;McMurdo Station&#8221;
 submitted successfully. Below is the script I used to find the coordinates from
 the <a href="/images/2011/06/consolidated.db">consolodated.db input file</a>:</p>
-<div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s">&#39;sqlite3 consolidated.db &quot;select Latitude, Longitude &#39;</span>
-              <span class="s">&#39;from CellLocation;&quot; &gt; tmp&#39;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;sqlite3 consolidated.db &quot;select Latitude, Longitude &#39;</span>
+              <span class="s1">&#39;from CellLocation;&quot; &gt; tmp&#39;</span><span class="p">)</span>
 
     <span class="n">uniq</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;tmp&#39;</span><span class="p">):</span>
-        <span class="n">pos</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%.3f</span><span class="s">&#39;</span> <span class="o">%</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;|&#39;</span><span class="p">)[:</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;tmp&#39;</span><span class="p">):</span>
+        <span class="n">pos</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">)[:</span><span class="mi">2</span><span class="p">])</span>
         <span class="k">if</span> <span class="n">pos</span> <span class="ow">in</span> <span class="n">uniq</span><span class="p">:</span>
             <span class="n">uniq</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="k">else</span><span class="p">:</span>
@@ -167,7 +167,7 @@ the <a href="/images/2011/06/consolidated.db">consolodated.db input file</a>:</p
     <span class="k">for</span> <span class="n">pos</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">uniq</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
         <span class="k">print</span> <span class="n">count</span><span class="p">,</span> <span class="n">pos</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </pre></div>
 
@@ -179,11 +179,11 @@ following locations: <a href="http://rogunix.com/defconquals19.html">Rogunix</a>
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
-        <li><a href="http://bryceboe.com/2010/05/25/defcon-18-quals-forensics-200-write-up/">Defcon 18 Quals Forensics 200 Write&nbsp;up</a></li>
-        <li><a href="http://bryceboe.com/2010/12/09/ucsbs-international-capture-the-flag-competition-2010-challenge-6-fear-the-ear/"><span class="caps">UCSB</span>&#8217;s International Capture The Flag Competition 2010 Challenge 6: Fear The <span class="caps">EAR</span></a></li>
         <li><a href="http://bryceboe.com/2009/12/06/ictf09-–-ucsbs-international-capture-the-flag-competition/">iCTF09: <span class="caps">UCSB</span>&#8217;s International Capture the Flag&nbsp;Competition</a></li>
         <li><a href="http://bryceboe.com/2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/">Bye Bye Facebook: A Guide to Leaving&nbsp;Facebook</a></li>
-        <li><a href="http://bryceboe.com/2010/08/26/python-multiprocessing-and-keyboardinterrupt/">Python Multiprocessing and&nbsp;KeyboardInterrupt</a></li>
+        <li><a href="http://bryceboe.com/2010/05/25/defcon-18-quals-forensics-200-write-up/">Defcon 18 Quals Forensics 200 Write&nbsp;up</a></li>
+        <li><a href="http://bryceboe.com/2010/12/09/ucsbs-international-capture-the-flag-competition-2010-challenge-6-fear-the-ear/"><span class="caps">UCSB</span>&#8217;s International Capture The Flag Competition 2010 Challenge 6: Fear The <span class="caps">EAR</span></a></li>
+        <li><a href="http://bryceboe.com/2012/02/23/implementation-of-a-process-based-job-management-system-in-c/">Implementation of a Process-Based Job Management System in&nbsp;C</a></li>
     </ul>
 </section>
     <hr />

@@ -190,7 +190,7 @@ exploited the <span class="caps">SQL</span> injection vulnerability that provide
 The secret is:
 <a href="http://hackiswack.com/videos/viewvideo/23/hack-is-wack/blocka-blocka">http://hackiswack.com/videos/viewvideo/23/hack-is-wack/blocka-blocka</a></p>
 <p>The 8 successful control files sent over the course of the competition&nbsp;were:</p>
-<div class="highlight"><pre>a\n50\ninfo &#39;OR(1)LIMIT/**/5,1--\n
+<div class="highlight"><pre><span></span>a\n50\ninfo &#39;OR(1)LIMIT/**/5,1--\n
 zzyzx\n83\ninfo &#39;/**/OR/**/pass&lt;83;/*\n
 a\n50\ninfo 0&#39;/**/or/**/pass=&#39;66\n
 zzyzx\n83\ninfo root&#39;OR&#39;1&#39;=&#39;1&#39;LIMIT&#39;5&#39;,&#39;1\n
@@ -202,27 +202,27 @@ zzyzx\n83\ninfo &#39;OR(user=&#39;secret&#39;)--\n
 
 
 <p>My own control file used in&nbsp;testing:</p>
-<div class="highlight"><pre>a\n50\ninfo z&#39;or&quot;user&quot;=&#39;secret
+<div class="highlight"><pre><span></span>a\n50\ninfo z&#39;or&quot;user&quot;=&#39;secret
 </pre></div>
 
 
 <p>I think the fact that just over one third of the teams in our hacking
 competition discovered this vulnerability shows how dangerous it can be, and
 hence the title, Fear the <span class="caps">EAR</span>.</p>
-<div class="highlight"><pre><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">DATABASE</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">DATABASE</span><span class="p">)</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&#39;select * from users where user=?&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">user</span><span class="p">,))</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;select * from users where user=?&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">user</span><span class="p">,))</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span><span class="p">:</span>
-<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">send_redirect</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="s">&#39;nonexist&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">user</span><span class="p">)</span>
+<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">send_redirect</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="s1">&#39;nonexist&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">user</span><span class="p">)</span>
     <span class="n">_</span><span class="p">,</span> <span class="n">user_pswd</span><span class="p">,</span> <span class="n">info</span><span class="p">,</span> <span class="n">is_admin</span><span class="p">,</span> <span class="n">is_active</span> <span class="o">=</span> <span class="n">result</span>
     <span class="k">if</span> <span class="n">pswd</span> <span class="o">!=</span> <span class="n">user_pswd</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">send_redirect</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="s">&#39;mismatch&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">user</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">send_redirect</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="s1">&#39;mismatch&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">user</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">is_active</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">send_redirect</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="s">&#39;inactive&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">user</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">send_redirect</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="s1">&#39;inactive&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">user</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">is_admin</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">send_redirect</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="s">&#39;admin&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">user</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">process_command</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="o">*</span><span class="n">cmd</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">send_redirect</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="s1">&#39;admin&#39;</span><span class="p">]</span> <span class="o">%</span> <span class="n">user</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">process_command</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="o">*</span><span class="n">cmd</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
 <span class="k">finally</span><span class="p">:</span>
     <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
@@ -240,11 +240,11 @@ will help me create better challenges for next year&#8217;s&nbsp;iCTF.</p>
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
+        <li><a href="http://bryceboe.com/2011/02/21/using-stackoverflows-api-to-find-the-top-web-frameworks/">Using StackOverflow&#8217;s <span class="caps">API</span> to Find the Top Web&nbsp;Frameworks</a></li>
+        <li><a href="http://bryceboe.com/2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/">Bye Bye Facebook: A Guide to Leaving&nbsp;Facebook</a></li>
         <li><a href="http://bryceboe.com/2010/09/01/submitting-binaries-to-virustotal/">Submitting Binaries to&nbsp;VirusTotal</a></li>
         <li><a href="http://bryceboe.com/2010/05/25/defcon-18-quals-forensics-200-write-up/">Defcon 18 Quals Forensics 200 Write&nbsp;up</a></li>
-        <li><a href="http://bryceboe.com/2011/02/21/using-stackoverflows-api-to-find-the-top-web-frameworks/">Using StackOverflow&#8217;s <span class="caps">API</span> to Find the Top Web&nbsp;Frameworks</a></li>
         <li><a href="http://bryceboe.com/2009/12/06/ictf09-–-ucsbs-international-capture-the-flag-competition/">iCTF09: <span class="caps">UCSB</span>&#8217;s International Capture the Flag&nbsp;Competition</a></li>
-        <li><a href="http://bryceboe.com/2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/">Bye Bye Facebook: A Guide to Leaving&nbsp;Facebook</a></li>
     </ul>
 </section>
     <hr />

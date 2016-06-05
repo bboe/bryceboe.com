@@ -216,35 +216,35 @@ of stackoverflow.</ins></p>
 <p>The data for the above chart was extracted using the following script. The
 script requires the python package <a href="http://stackapps.com/questions/198/py-stackexchange-an-api-wrapper-for-python">py-stackexchange</a> in order to run and can
 be easily modified to add additional tags or change the filtering&nbsp;methods.</p>
-<div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">datetime</span><span class="o">,</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">time</span>
 <span class="kn">from</span> <span class="nn">stackexchange</span> <span class="kn">import</span> <span class="n">Site</span><span class="p">,</span> <span class="n">StackOverflow</span>
 
-<span class="n">frameworks</span> <span class="o">=</span> <span class="p">[</span><span class="c"># php</span>
-              <span class="s">&#39;zend-framework&#39;</span><span class="p">,</span> <span class="s">&#39;cakephp&#39;</span><span class="p">,</span> <span class="s">&#39;symfony&#39;</span><span class="p">,</span> <span class="s">&#39;codeigniter&#39;</span><span class="p">,</span> <span class="s">&#39;seagull&#39;</span><span class="p">,</span>
-              <span class="s">&#39;prado&#39;</span><span class="p">,</span> <span class="s">&#39;solar&#39;</span><span class="p">,</span> <span class="s">&#39;ezcomponents&#39;</span><span class="p">,</span> <span class="s">&#39;kohana&#39;</span><span class="p">,</span> <span class="s">&#39;jelix&#39;</span><span class="p">,</span> <span class="s">&#39;flow3&#39;</span><span class="p">,</span>
-              <span class="s">&#39;modx&#39;</span><span class="p">,</span> <span class="s">&#39;sapphire&#39;</span><span class="p">,</span> <span class="s">&#39;yii&#39;</span><span class="p">,</span> <span class="s">&#39;limonade&#39;</span><span class="p">,</span> <span class="s">&#39;tekuna&#39;</span><span class="p">,</span> <span class="s">&#39;doophp&#39;</span><span class="p">,</span>
-              <span class="s">&#39;fat-free&#39;</span><span class="p">,</span> <span class="s">&#39;akelos&#39;</span><span class="p">,</span> <span class="s">&#39;php-on-trax&#39;</span><span class="p">,</span> <span class="s">&#39;atk&#39;</span><span class="p">,</span>
-              <span class="c"># ruby</span>
-              <span class="s">&#39;ruby-on-rails&#39;</span><span class="p">,</span> <span class="s">&#39;merb&#39;</span><span class="p">,</span> <span class="s">&#39;ramaze&#39;</span><span class="p">,</span> <span class="s">&#39;halcyon&#39;</span><span class="p">,</span> <span class="s">&#39;sinatra&#39;</span><span class="p">,</span> <span class="s">&#39;webby&#39;</span><span class="p">,</span>
-              <span class="s">&#39;sass&#39;</span><span class="p">,</span>
-              <span class="c"># perl</span>
-              <span class="s">&#39;catalyst&#39;</span><span class="p">,</span> <span class="s">&#39;interchange&#39;</span><span class="p">,</span> <span class="s">&#39;mason&#39;</span><span class="p">,</span> <span class="s">&#39;cgi-application&#39;</span><span class="p">,</span> <span class="s">&#39;jifty&#39;</span><span class="p">,</span>
-              <span class="s">&#39;gantry&#39;</span><span class="p">,</span> <span class="s">&#39;dancer&#39;</span><span class="p">,</span> <span class="s">&#39;mojolicious&#39;</span><span class="p">,</span>
-              <span class="c"># java</span>
-              <span class="s">&#39;struts&#39;</span><span class="p">,</span> <span class="s">&#39;hibernate&#39;</span><span class="p">,</span> <span class="s">&#39;spring&#39;</span><span class="p">,</span> <span class="s">&#39;wicket&#39;</span><span class="p">,</span> <span class="s">&#39;play&#39;</span><span class="p">,</span> <span class="s">&#39;stripes&#39;</span><span class="p">,</span>
-              <span class="c"># python</span>
-              <span class="s">&#39;django&#39;</span><span class="p">,</span> <span class="s">&#39;pylons&#39;</span><span class="p">,</span> <span class="s">&#39;grok&#39;</span><span class="p">,</span> <span class="s">&#39;turbogears&#39;</span><span class="p">,</span> <span class="s">&#39;web2py&#39;</span><span class="p">,</span> <span class="s">&#39;cherrypy&#39;</span><span class="p">,</span>
-              <span class="c"># coldfusion</span>
-              <span class="s">&#39;cfwheels&#39;</span><span class="p">,</span> <span class="s">&#39;coldspring&#39;</span><span class="p">,</span> <span class="s">&#39;model-glue&#39;</span><span class="p">,</span>
-              <span class="c"># asp.net</span>
-              <span class="s">&#39;asp.net-mvc&#39;</span><span class="p">,</span> <span class="s">&#39;dotnetnuke&#39;</span><span class="p">,</span> <span class="s">&#39;monorail&#39;</span><span class="p">,</span> <span class="s">&#39;vici&#39;</span><span class="p">]</span>
+<span class="n">frameworks</span> <span class="o">=</span> <span class="p">[</span><span class="c1"># php</span>
+              <span class="s1">&#39;zend-framework&#39;</span><span class="p">,</span> <span class="s1">&#39;cakephp&#39;</span><span class="p">,</span> <span class="s1">&#39;symfony&#39;</span><span class="p">,</span> <span class="s1">&#39;codeigniter&#39;</span><span class="p">,</span> <span class="s1">&#39;seagull&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;prado&#39;</span><span class="p">,</span> <span class="s1">&#39;solar&#39;</span><span class="p">,</span> <span class="s1">&#39;ezcomponents&#39;</span><span class="p">,</span> <span class="s1">&#39;kohana&#39;</span><span class="p">,</span> <span class="s1">&#39;jelix&#39;</span><span class="p">,</span> <span class="s1">&#39;flow3&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;modx&#39;</span><span class="p">,</span> <span class="s1">&#39;sapphire&#39;</span><span class="p">,</span> <span class="s1">&#39;yii&#39;</span><span class="p">,</span> <span class="s1">&#39;limonade&#39;</span><span class="p">,</span> <span class="s1">&#39;tekuna&#39;</span><span class="p">,</span> <span class="s1">&#39;doophp&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;fat-free&#39;</span><span class="p">,</span> <span class="s1">&#39;akelos&#39;</span><span class="p">,</span> <span class="s1">&#39;php-on-trax&#39;</span><span class="p">,</span> <span class="s1">&#39;atk&#39;</span><span class="p">,</span>
+              <span class="c1"># ruby</span>
+              <span class="s1">&#39;ruby-on-rails&#39;</span><span class="p">,</span> <span class="s1">&#39;merb&#39;</span><span class="p">,</span> <span class="s1">&#39;ramaze&#39;</span><span class="p">,</span> <span class="s1">&#39;halcyon&#39;</span><span class="p">,</span> <span class="s1">&#39;sinatra&#39;</span><span class="p">,</span> <span class="s1">&#39;webby&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;sass&#39;</span><span class="p">,</span>
+              <span class="c1"># perl</span>
+              <span class="s1">&#39;catalyst&#39;</span><span class="p">,</span> <span class="s1">&#39;interchange&#39;</span><span class="p">,</span> <span class="s1">&#39;mason&#39;</span><span class="p">,</span> <span class="s1">&#39;cgi-application&#39;</span><span class="p">,</span> <span class="s1">&#39;jifty&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;gantry&#39;</span><span class="p">,</span> <span class="s1">&#39;dancer&#39;</span><span class="p">,</span> <span class="s1">&#39;mojolicious&#39;</span><span class="p">,</span>
+              <span class="c1"># java</span>
+              <span class="s1">&#39;struts&#39;</span><span class="p">,</span> <span class="s1">&#39;hibernate&#39;</span><span class="p">,</span> <span class="s1">&#39;spring&#39;</span><span class="p">,</span> <span class="s1">&#39;wicket&#39;</span><span class="p">,</span> <span class="s1">&#39;play&#39;</span><span class="p">,</span> <span class="s1">&#39;stripes&#39;</span><span class="p">,</span>
+              <span class="c1"># python</span>
+              <span class="s1">&#39;django&#39;</span><span class="p">,</span> <span class="s1">&#39;pylons&#39;</span><span class="p">,</span> <span class="s1">&#39;grok&#39;</span><span class="p">,</span> <span class="s1">&#39;turbogears&#39;</span><span class="p">,</span> <span class="s1">&#39;web2py&#39;</span><span class="p">,</span> <span class="s1">&#39;cherrypy&#39;</span><span class="p">,</span>
+              <span class="c1"># coldfusion</span>
+              <span class="s1">&#39;cfwheels&#39;</span><span class="p">,</span> <span class="s1">&#39;coldspring&#39;</span><span class="p">,</span> <span class="s1">&#39;model-glue&#39;</span><span class="p">,</span>
+              <span class="c1"># asp.net</span>
+              <span class="s1">&#39;asp.net-mvc&#39;</span><span class="p">,</span> <span class="s1">&#39;dotnetnuke&#39;</span><span class="p">,</span> <span class="s1">&#39;monorail&#39;</span><span class="p">,</span> <span class="s1">&#39;vici&#39;</span><span class="p">]</span>
 
 <span class="k">class</span> <span class="nc">TagStats</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">DATE_START</span> <span class="o">=</span> <span class="mi">1217540572</span>
     <span class="n">WEEK_SECONDS</span> <span class="o">=</span> <span class="mi">604800</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag_names</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">so</span> <span class="o">=</span> <span class="n">Site</span><span class="p">(</span><span class="n">StackOverflow</span><span class="p">,</span> <span class="s">&#39;LzYJwh19o0WCIvXK9q6k6g&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">so</span> <span class="o">=</span> <span class="n">Site</span><span class="p">(</span><span class="n">StackOverflow</span><span class="p">,</span> <span class="s1">&#39;LzYJwh19o0WCIvXK9q6k6g&#39;</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">tag_names</span> <span class="o">=</span> <span class="n">tag_names</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">stats</span> <span class="o">=</span> <span class="p">{}</span>
@@ -254,13 +254,13 @@ be easily modified to add additional tags or change the filtering&nbsp;methods.<
     <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">.</span><span class="n">count</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
             <span class="n">tmp</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">tag</span><span class="o">.</span><span class="n">count</span><span class="p">,</span> <span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
         <span class="k">if</span> <span class="n">html</span><span class="p">:</span>
-            <span class="k">print</span> <span class="s">&#39;&#39;</span>
+            <span class="k">print</span> <span class="s1">&#39;&#39;</span>
             <span class="k">for</span> <span class="n">count</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">tmp</span><span class="p">:</span>
-                <span class="k">print</span> <span class="p">(</span><span class="s">&#39;(</span><span class="si">%d</span><span class="s">) &#39;</span>
-                       <span class="s">&#39;</span><span class="si">%s</span><span class="s">&#39;</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-            <span class="k">print</span> <span class="s">&#39;&#39;</span>
+                <span class="k">print</span> <span class="p">(</span><span class="s1">&#39;(</span><span class="si">%d</span><span class="s1">) &#39;</span>
+                       <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+            <span class="k">print</span> <span class="s1">&#39;&#39;</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">print</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s">&#39;</span><span class="si">%8d</span><span class="s"> </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">tmp</span><span class="p">])</span>
+            <span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;</span><span class="si">%8d</span><span class="s1"> </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">tmp</span><span class="p">])</span>
 
     <span class="k">def</span> <span class="nf">get_tags</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_size</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tag_names</span><span class="p">:</span>
@@ -269,19 +269,19 @@ be easily modified to add additional tags or change the filtering&nbsp;methods.<
                 <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="n">tmp</span><span class="o">.</span><span class="n">name</span><span class="p">:</span>
                     <span class="k">break</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;Not found: </span><span class="si">%s</span><span class="se">\n</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
+                <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Not found: </span><span class="si">%s</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
                 <span class="k">continue</span>
             <span class="k">if</span> <span class="n">tmp</span><span class="o">.</span><span class="n">count</span> <span class="o">&lt;</span> <span class="n">min_size</span><span class="p">:</span>
-                <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;Too few questions: </span><span class="si">%s</span><span class="se">\n</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
+                <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Too few questions: </span><span class="si">%s</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">stats</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">],</span>
                               <span class="p">[[]]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">)))</span>
 
     <span class="k">def</span> <span class="nf">output_stats_by_week</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_week</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        <span class="n">now</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">&#39;</span><span class="si">%s</span><span class="s">&#39;</span><span class="p">))</span>
+        <span class="n">now</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">))</span>
         <span class="n">num_weeks</span> <span class="o">=</span> <span class="p">(</span><span class="n">now</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">DATE_START</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">WEEK_SECONDS</span>
-        <span class="k">print</span> <span class="s">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">)</span>
+        <span class="k">print</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start_week</span><span class="p">,</span> <span class="n">num_weeks</span><span class="p">):</span>
             <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
             <span class="n">start</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">DATE_START</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">WEEK_SECONDS</span>
@@ -293,11 +293,11 @@ be easily modified to add additional tags or change the filtering&nbsp;methods.<
                                               <span class="n">fromdate</span><span class="o">=</span><span class="n">start</span><span class="p">,</span>
                                               <span class="n">todate</span><span class="o">=</span><span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">total</span>
                 <span class="k">except</span> <span class="ne">Exception</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
-                    <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;Stopped at week </span><span class="si">%d</span><span class="se">\n</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
+                    <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Stopped at week </span><span class="si">%d</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
                     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
                 <span class="n">counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">count</span><span class="p">))</span>
-            <span class="k">print</span> <span class="s">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+            <span class="k">print</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
@@ -307,10 +307,10 @@ be easily modified to add additional tags or change the filtering&nbsp;methods.<
         <span class="n">start_week</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">tag_stats</span> <span class="o">=</span> <span class="n">TagStats</span><span class="p">(</span><span class="n">frameworks</span><span class="p">)</span>
     <span class="n">tag_stats</span><span class="o">.</span><span class="n">get_tags</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-    <span class="c">#tag_stats.output_counts(html=True)</span>
+    <span class="c1">#tag_stats.output_counts(html=True)</span>
     <span class="n">tag_stats</span><span class="o">.</span><span class="n">output_stats_by_week</span><span class="p">(</span><span class="n">start_week</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </pre></div>
 
@@ -322,10 +322,10 @@ be easily modified to add additional tags or change the filtering&nbsp;methods.<
     <h4>Related Posts:</h4>
     <ul>
         <li><a href="http://bryceboe.com/2010/12/09/ucsbs-international-capture-the-flag-competition-2010-challenge-6-fear-the-ear/"><span class="caps">UCSB</span>&#8217;s International Capture The Flag Competition 2010 Challenge 6: Fear The <span class="caps">EAR</span></a></li>
-        <li><a href="http://bryceboe.com/2010/08/26/python-multiprocessing-and-keyboardinterrupt/">Python Multiprocessing and&nbsp;KeyboardInterrupt</a></li>
-        <li><a href="http://bryceboe.com/2010/05/25/defcon-18-quals-forensics-200-write-up/">Defcon 18 Quals Forensics 200 Write&nbsp;up</a></li>
+        <li><a href="http://bryceboe.com/2009/12/06/ictf09-–-ucsbs-international-capture-the-flag-competition/">iCTF09: <span class="caps">UCSB</span>&#8217;s International Capture the Flag&nbsp;Competition</a></li>
         <li><a href="http://bryceboe.com/2012/02/23/implementation-of-a-process-based-job-management-system-in-c/">Implementation of a Process-Based Job Management System in&nbsp;C</a></li>
-        <li><a href="http://bryceboe.com/2010/09/01/submitting-binaries-to-virustotal/">Submitting Binaries to&nbsp;VirusTotal</a></li>
+        <li><a href="http://bryceboe.com/2012/02/14/python-multiprocessing-pool-and-keyboardinterrupt-revisited/">Python Multiprocessing Pool and KeyboardInterrupt&nbsp;Revisited</a></li>
+        <li><a href="http://bryceboe.com/2014/01/25/hello-pelican-world/">Hello Pelican&nbsp;World</a></li>
     </ul>
 </section>
     <hr />

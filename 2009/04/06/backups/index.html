@@ -109,7 +109,7 @@ there should be no&nbsp;issues.</p>
 <p>Also on a semi-related note, if you want to run <strong>make clean</strong> on any folder
 under your current one which contains a makefile for archiving purposes try the
 following&nbsp;command:</p>
-<div class="highlight"><pre>find . -iname Makefile -exec dirname <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> <span class="k">while</span> <span class="nb">read </span>i<span class="p">;</span> <span class="k">do</span> make clean -C <span class="nv">$i</span><span class="p">;</span> <span class="k">done</span>
+<div class="highlight"><pre><span></span>find . -iname Makefile -exec dirname <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> i<span class="p">;</span> <span class="k">do</span> make clean -C <span class="nv">$i</span><span class="p">;</span> <span class="k">done</span>
 </pre></div>
             </div>
             <!-- /.entry-content -->

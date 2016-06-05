@@ -104,7 +104,7 @@ linked to this file:</ins> <a href="http://cs.ucsb.edu/~bboe/public/bin/f200_02b
 however fortunately the lzma extension was useful to identify that this
 possibly be uncompressed with 7zip (<a href="http://lmgtfy.com/?q=lzma+file&amp;l=1">lmgtfy lzma file</a>). On ubuntu there is a
 package called p7zip&nbsp;thus:</p>
-<div class="highlight"><pre><span class="gp">bryce@sarek:f200$</span> mv f200_02b7b50f575759cff7.tar.lzma f200_02b7b50f575759cff7.tar.7z
+<div class="highlight"><pre><span></span><span class="gp">bryce@sarek:f200$</span> mv f200_02b7b50f575759cff7.tar.lzma f200_02b7b50f575759cff7.tar.7z
 <span class="gp">bryce@sarek:f200$</span> p7zip -d f200_02b7b50f575759cff7.tar.7z
 
 <span class="go">7-Zip (A) 9.04 beta  Copyright (c) 1999-2009 Igor Pavlov  2009-05-30</span>
@@ -123,7 +123,7 @@ package called p7zip&nbsp;thus:</p>
 
 
 <p>This extracts 1121 png image&nbsp;files.</p>
-<div class="highlight"><pre><span class="gp">bryce@sarek:f200$</span> ls <span class="p">|</span> head
+<div class="highlight"><pre><span></span><span class="gp">bryce@sarek:f200$</span> ls <span class="p">|</span> head
 <span class="go">f200_02b7b50f575759cff7.tar</span>
 <span class="go">IMG_0001.png</span>
 <span class="go">IMG_0002.png</span>
@@ -142,23 +142,23 @@ attributes (width, height, bitdepth, channels, etc.). Using manual image
 inspection we see a mostly transparent image with some white and black pixels.
 Thus using <a href="http://www.pythonware.com/products/pil/">python&#8217;s imaging library</a> (<span class="caps">PIL</span>) we simply write a quick program
 that will combine all the images into&nbsp;one:</p>
-<div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">Image</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">new</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;IMG_0001.png&#39;</span><span class="p">)</span>
+    <span class="n">new</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;IMG_0001.png&#39;</span><span class="p">)</span>
     <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">new</span><span class="o">.</span><span class="n">size</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1122</span><span class="p">):</span>
-        <span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#39;IMG_</span><span class="si">%04d</span><span class="s">.png&#39;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
+        <span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;IMG_</span><span class="si">%04d</span><span class="s1">.png&#39;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">pixel</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">im</span><span class="o">.</span><span class="n">getdata</span><span class="p">()):</span>
-            <span class="k">if</span> <span class="n">value</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span> <span class="c"># not transparent</span>
+            <span class="k">if</span> <span class="n">value</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># not transparent</span>
                 <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">pixel</span> <span class="o">%</span> <span class="n">w</span><span class="p">,</span> <span class="n">pixel</span> <span class="o">*</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">w</span><span class="p">)</span>
                 <span class="n">new</span><span class="o">.</span><span class="n">putpixel</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">value</span><span class="p">)</span>
-    <span class="n">new</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&#39;f200_result.png&#39;</span><span class="p">)</span>
+    <span class="n">new</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;f200_result.png&#39;</span><span class="p">)</span>
     <span class="n">new</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 
@@ -171,11 +171,11 @@ that will combine all the images into&nbsp;one:</p>
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
-        <li><a href="http://bryceboe.com/2010/12/09/ucsbs-international-capture-the-flag-competition-2010-challenge-6-fear-the-ear/"><span class="caps">UCSB</span>&#8217;s International Capture The Flag Competition 2010 Challenge 6: Fear The <span class="caps">EAR</span></a></li>
         <li><a href="http://bryceboe.com/2009/12/06/ictf09-–-ucsbs-international-capture-the-flag-competition/">iCTF09: <span class="caps">UCSB</span>&#8217;s International Capture the Flag&nbsp;Competition</a></li>
         <li><a href="http://bryceboe.com/2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/">Bye Bye Facebook: A Guide to Leaving&nbsp;Facebook</a></li>
+        <li><a href="http://bryceboe.com/2010/12/09/ucsbs-international-capture-the-flag-competition-2010-challenge-6-fear-the-ear/"><span class="caps">UCSB</span>&#8217;s International Capture The Flag Competition 2010 Challenge 6: Fear The <span class="caps">EAR</span></a></li>
         <li><a href="http://bryceboe.com/2011/06/05/defcon-19-quals-forensics-100-and-forensics-300-solution/">Defcon 19 Quals Forensics 100 and Forensics 300&nbsp;Solution</a></li>
-        <li><a href="http://bryceboe.com/2010/08/26/python-multiprocessing-and-keyboardinterrupt/">Python Multiprocessing and&nbsp;KeyboardInterrupt</a></li>
+        <li><a href="http://bryceboe.com/2012/02/23/implementation-of-a-process-based-job-management-system-in-c/">Implementation of a Process-Based Job Management System in&nbsp;C</a></li>
     </ul>
 </section>
     <hr />

@@ -104,18 +104,18 @@ contained python script which retrieves a VirusTotal report for a given binary,
 uploading the file if necessary. The following script is loosely based off the
 <span class="caps">API</span> examples, and contains modified code from <a href="http://code.activestate.com/recipes/146306/">this snippet</a> that was already
 required to run the scan file&nbsp;example.</p>
-<div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">hashlib</span><span class="o">,</span> <span class="nn">httplib</span><span class="o">,</span> <span class="nn">mimetypes</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">pprint</span><span class="o">,</span> <span class="nn">simplejson</span><span class="o">,</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">urlparse</span>
 
-<span class="n">DEFAULT_TYPE</span> <span class="o">=</span> <span class="s">&#39;application/octet-stream&#39;</span>
+<span class="n">DEFAULT_TYPE</span> <span class="o">=</span> <span class="s1">&#39;application/octet-stream&#39;</span>
 
-<span class="n">REPORT_URL</span> <span class="o">=</span> <span class="s">&#39;https://www.virustotal.com/api/get_file_report.json&#39;</span>
-<span class="n">SCAN_URL</span> <span class="o">=</span> <span class="s">&#39;https://www.virustotal.com/api/scan_file.json&#39;</span>
+<span class="n">REPORT_URL</span> <span class="o">=</span> <span class="s1">&#39;https://www.virustotal.com/api/get_file_report.json&#39;</span>
+<span class="n">SCAN_URL</span> <span class="o">=</span> <span class="s1">&#39;https://www.virustotal.com/api/scan_file.json&#39;</span>
 
-<span class="n">API_KEY</span> <span class="o">=</span> <span class="s">&#39;YOUR KEY HERE&#39;</span>
+<span class="n">API_KEY</span> <span class="o">=</span> <span class="s1">&#39;YOUR KEY HERE&#39;</span>
 
-<span class="c"># The following function is modified from the snippet at:</span>
-<span class="c"># http://code.activestate.com/recipes/146306/</span>
+<span class="c1"># The following function is modified from the snippet at:</span>
+<span class="c1"># http://code.activestate.com/recipes/146306/</span>
 <span class="k">def</span> <span class="nf">encode_multipart_formdata</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="p">()):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    fields is a dictionary of name to value for regular form fields.</span>
@@ -123,26 +123,26 @@ required to run the scan file&nbsp;example.</p>
 <span class="sd">    uploaded as files.</span>
 <span class="sd">    Return (content_type, body) ready for httplib.HTTP instance</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">BOUNDARY</span> <span class="o">=</span> <span class="s">&#39;----------ThIs_Is_tHe_bouNdaRY_$&#39;</span>
-    <span class="n">CRLF</span> <span class="o">=</span> <span class="s">&#39;</span><span class="se">\r\n</span><span class="s">&#39;</span>
+    <span class="n">BOUNDARY</span> <span class="o">=</span> <span class="s1">&#39;----------ThIs_Is_tHe_bouNdaRY_$&#39;</span>
+    <span class="n">CRLF</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\r\n</span><span class="s1">&#39;</span>
     <span class="n">L</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">fields</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;--&#39;</span> <span class="o">+</span> <span class="n">BOUNDARY</span><span class="p">)</span>
-        <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;Content-Disposition: form-data; name=&quot;</span><span class="si">%s</span><span class="s">&quot;&#39;</span> <span class="o">%</span> <span class="n">key</span><span class="p">)</span>
-        <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+        <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;--&#39;</span> <span class="o">+</span> <span class="n">BOUNDARY</span><span class="p">)</span>
+        <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Content-Disposition: form-data; name=&quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">key</span><span class="p">)</span>
+        <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
         <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
     <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-        <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;--&#39;</span> <span class="o">+</span> <span class="n">BOUNDARY</span><span class="p">)</span>
-        <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;Content-Disposition: form-data; name=&quot;</span><span class="si">%s</span><span class="s">&quot;; filename=&quot;</span><span class="si">%s</span><span class="s">&quot;&#39;</span> <span class="o">%</span>
+        <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;--&#39;</span> <span class="o">+</span> <span class="n">BOUNDARY</span><span class="p">)</span>
+        <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Content-Disposition: form-data; name=&quot;</span><span class="si">%s</span><span class="s1">&quot;; filename=&quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span>
                  <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">filename</span><span class="p">))</span>
         <span class="n">content_type</span> <span class="o">=</span> <span class="n">mimetypes</span><span class="o">.</span><span class="n">guess_type</span><span class="p">(</span><span class="n">filename</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">or</span> <span class="n">DEFAULT_TYPE</span>
-        <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;Content-Type: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">content_type</span><span class="p">)</span>
-        <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+        <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Content-Type: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">content_type</span><span class="p">)</span>
+        <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
         <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-    <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;--&#39;</span> <span class="o">+</span> <span class="n">BOUNDARY</span> <span class="o">+</span> <span class="s">&#39;--&#39;</span><span class="p">)</span>
-    <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+    <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;--&#39;</span> <span class="o">+</span> <span class="n">BOUNDARY</span> <span class="o">+</span> <span class="s1">&#39;--&#39;</span><span class="p">)</span>
+    <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
     <span class="n">body</span> <span class="o">=</span> <span class="n">CRLF</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
-    <span class="n">content_type</span> <span class="o">=</span> <span class="s">&#39;multipart/form-data; boundary=</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">BOUNDARY</span>
+    <span class="n">content_type</span> <span class="o">=</span> <span class="s1">&#39;multipart/form-data; boundary=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">BOUNDARY</span>
     <span class="k">return</span> <span class="n">content_type</span><span class="p">,</span> <span class="n">body</span>
 
 <span class="k">def</span> <span class="nf">post_multipart</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="p">()):</span>
@@ -155,46 +155,46 @@ required to run the scan file&nbsp;example.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">content_type</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">encode_multipart_formdata</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span> <span class="n">files</span><span class="p">)</span>
     <span class="n">url_parts</span> <span class="o">=</span> <span class="n">urlparse</span><span class="o">.</span><span class="n">urlparse</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">url_parts</span><span class="o">.</span><span class="n">scheme</span> <span class="o">==</span> <span class="s">&#39;http&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">url_parts</span><span class="o">.</span><span class="n">scheme</span> <span class="o">==</span> <span class="s1">&#39;http&#39;</span><span class="p">:</span>
         <span class="n">h</span> <span class="o">=</span> <span class="n">httplib</span><span class="o">.</span><span class="n">HTTPConnection</span><span class="p">(</span><span class="n">url_parts</span><span class="o">.</span><span class="n">netloc</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">url_parts</span><span class="o">.</span><span class="n">scheme</span> <span class="o">==</span> <span class="s">&#39;https&#39;</span><span class="p">:</span>
+    <span class="k">elif</span> <span class="n">url_parts</span><span class="o">.</span><span class="n">scheme</span> <span class="o">==</span> <span class="s1">&#39;https&#39;</span><span class="p">:</span>
         <span class="n">h</span> <span class="o">=</span> <span class="n">httplib</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="n">url_parts</span><span class="o">.</span><span class="n">netloc</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s">&#39;Unsupported URL scheme&#39;</span><span class="p">)</span>
-    <span class="n">path</span> <span class="o">=</span> <span class="n">urlparse</span><span class="o">.</span><span class="n">urlunparse</span><span class="p">((</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">url_parts</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
-    <span class="n">h</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">&#39;POST&#39;</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;content-type&#39;</span><span class="p">:</span><span class="n">content_type</span><span class="p">})</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;Unsupported URL scheme&#39;</span><span class="p">)</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">urlparse</span><span class="o">.</span><span class="n">urlunparse</span><span class="p">((</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">url_parts</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
+    <span class="n">h</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;content-type&#39;</span><span class="p">:</span><span class="n">content_type</span><span class="p">})</span>
     <span class="k">return</span> <span class="n">h</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">scan_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-    <span class="n">files</span> <span class="o">=</span> <span class="p">[(</span><span class="s">&#39;file&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s">&#39;rb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())]</span>
-    <span class="n">json</span> <span class="o">=</span> <span class="n">post_multipart</span><span class="p">(</span><span class="n">SCAN_URL</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;key&#39;</span><span class="p">:</span><span class="n">API_KEY</span><span class="p">},</span> <span class="n">files</span><span class="p">)</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;file&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())]</span>
+    <span class="n">json</span> <span class="o">=</span> <span class="n">post_multipart</span><span class="p">(</span><span class="n">SCAN_URL</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span><span class="n">API_KEY</span><span class="p">},</span> <span class="n">files</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">simplejson</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">get_report</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-    <span class="n">md5sum</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s">&#39;rb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
-    <span class="n">json</span> <span class="o">=</span> <span class="n">post_multipart</span><span class="p">(</span><span class="n">REPORT_URL</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;resource&#39;</span><span class="p">:</span><span class="n">md5sum</span><span class="p">,</span> <span class="s">&#39;key&#39;</span><span class="p">:</span><span class="n">API_KEY</span><span class="p">})</span>
+    <span class="n">md5sum</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+    <span class="n">json</span> <span class="o">=</span> <span class="n">post_multipart</span><span class="p">(</span><span class="n">REPORT_URL</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;resource&#39;</span><span class="p">:</span><span class="n">md5sum</span><span class="p">,</span> <span class="s1">&#39;key&#39;</span><span class="p">:</span><span class="n">API_KEY</span><span class="p">})</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">simplejson</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s">&#39;result&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s">&#39;Result not found, submitting file.&#39;</span>
+    <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s1">&#39;Result not found, submitting file.&#39;</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">scan_file</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s">&#39;result&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="k">print</span> <span class="s">&#39;Submit successful.&#39;</span>
-            <span class="k">print</span> <span class="s">&#39;Please wait a few minutes and try again to receive report.&#39;</span>
+        <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s1">&#39;Submit successful.&#39;</span>
+            <span class="k">print</span> <span class="s1">&#39;Please wait a few minutes and try again to receive report.&#39;</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">print</span> <span class="s">&#39;Submit failed.&#39;</span>
+            <span class="k">print</span> <span class="s1">&#39;Submit failed.&#39;</span>
             <span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;report&#39;</span><span class="p">])</span>
+        <span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;report&#39;</span><span class="p">])</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s">&#39;Usage: </span><span class="si">%s</span><span class="s"> filename&#39;</span> <span class="o">%</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">print</span> <span class="s1">&#39;Usage: </span><span class="si">%s</span><span class="s1"> filename&#39;</span> <span class="o">%</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
     <span class="n">filename</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s"> is not a valid file&#39;</span> <span class="o">%</span> <span class="n">filename</span>
+        <span class="k">print</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> is not a valid file&#39;</span> <span class="o">%</span> <span class="n">filename</span>
         <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
     <span class="n">get_report</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
@@ -209,10 +209,10 @@ key. The entire script can be <a href="/images/2010/09/virustotal_report.py">dow
     <h4>Related Posts:</h4>
     <ul>
         <li><a href="http://bryceboe.com/2010/12/09/ucsbs-international-capture-the-flag-competition-2010-challenge-6-fear-the-ear/"><span class="caps">UCSB</span>&#8217;s International Capture The Flag Competition 2010 Challenge 6: Fear The <span class="caps">EAR</span></a></li>
-        <li><a href="http://bryceboe.com/2010/08/26/python-multiprocessing-and-keyboardinterrupt/">Python Multiprocessing and&nbsp;KeyboardInterrupt</a></li>
-        <li><a href="http://bryceboe.com/2010/05/25/defcon-18-quals-forensics-200-write-up/">Defcon 18 Quals Forensics 200 Write&nbsp;up</a></li>
-        <li><a href="http://bryceboe.com/2011/02/21/using-stackoverflows-api-to-find-the-top-web-frameworks/">Using StackOverflow&#8217;s <span class="caps">API</span> to Find the Top Web&nbsp;Frameworks</a></li>
+        <li><a href="http://bryceboe.com/2006/10/23/line-segment-intersection-algorithm/">Line Segment Intersection&nbsp;Algorithm</a></li>
         <li><a href="http://bryceboe.com/2012/02/23/implementation-of-a-process-based-job-management-system-in-c/">Implementation of a Process-Based Job Management System in&nbsp;C</a></li>
+        <li><a href="http://bryceboe.com/2012/02/14/python-multiprocessing-pool-and-keyboardinterrupt-revisited/">Python Multiprocessing Pool and KeyboardInterrupt&nbsp;Revisited</a></li>
+        <li><a href="http://bryceboe.com/2012/02/20/process-based-job-management-in-c-and-python/">Process-Based Job Management in C and&nbsp;Python</a></li>
     </ul>
 </section>
     <hr />

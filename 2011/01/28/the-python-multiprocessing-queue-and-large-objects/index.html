@@ -106,7 +106,7 @@ function is made. This delay explains why such a non-blocking call to
 <strong>queue.get</strong> may return a <strong>Queue.Empty</strong> error and is the exact problem I
 encountered in my analysis&nbsp;code.</p>
 <p>As usual, I have provided some code demonstrating the problem and a&nbsp;solution.</p>
-<div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">multiprocessing</span><span class="o">,</span> <span class="nn">Queue</span>
 
 <span class="k">def</span> <span class="nf">worker_bad</span><span class="p">(</span><span class="n">jobs</span><span class="p">):</span>
@@ -141,7 +141,7 @@ encountered in my analysis&nbsp;code.</p>
         <span class="n">worker</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">jobs</span><span class="o">.</span><span class="n">empty</span><span class="p">()</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">workers</span> <span class="o">=</span> <span class="mi">4</span>
     <span class="n">items</span> <span class="o">=</span> <span class="n">workers</span> <span class="o">*</span> <span class="mi">2</span>
     <span class="n">size</span> <span class="o">=</span> <span class="mi">10000</span>
@@ -150,7 +150,7 @@ encountered in my analysis&nbsp;code.</p>
         <span class="n">passed</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
             <span class="n">passed</span> <span class="o">+=</span> <span class="n">main</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">workers</span><span class="p">,</span> <span class="n">good_test</span><span class="o">=</span><span class="n">good_test</span><span class="p">)</span>
-        <span class="k">print</span> <span class="s">&#39;</span><span class="si">%d%%</span><span class="s"> passed (Good Test: </span><span class="si">%s</span><span class="s">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">passed</span><span class="p">,</span> <span class="n">good_test</span><span class="p">)</span>
+        <span class="k">print</span> <span class="s1">&#39;</span><span class="si">%d%%</span><span class="s1"> passed (Good Test: </span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">passed</span><span class="p">,</span> <span class="n">good_test</span><span class="p">)</span>
 </pre></div>
 
 
@@ -184,11 +184,11 @@ default, is for cases when the queue has a maximum&nbsp;size.</p>
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
-        <li><a href="http://bryceboe.com/2010/08/26/python-multiprocessing-and-keyboardinterrupt/">Python Multiprocessing and&nbsp;KeyboardInterrupt</a></li>
-        <li><a href="http://bryceboe.com/2010/05/25/defcon-18-quals-forensics-200-write-up/">Defcon 18 Quals Forensics 200 Write&nbsp;up</a></li>
-        <li><a href="http://bryceboe.com/2011/02/21/using-stackoverflows-api-to-find-the-top-web-frameworks/">Using StackOverflow&#8217;s <span class="caps">API</span> to Find the Top Web&nbsp;Frameworks</a></li>
+        <li><a href="http://bryceboe.com/2006/10/23/line-segment-intersection-algorithm/">Line Segment Intersection&nbsp;Algorithm</a></li>
         <li><a href="http://bryceboe.com/2012/02/23/implementation-of-a-process-based-job-management-system-in-c/">Implementation of a Process-Based Job Management System in&nbsp;C</a></li>
-        <li><a href="http://bryceboe.com/2010/09/01/submitting-binaries-to-virustotal/">Submitting Binaries to&nbsp;VirusTotal</a></li>
+        <li><a href="http://bryceboe.com/2012/02/14/python-multiprocessing-pool-and-keyboardinterrupt-revisited/">Python Multiprocessing Pool and KeyboardInterrupt&nbsp;Revisited</a></li>
+        <li><a href="http://bryceboe.com/2012/02/20/process-based-job-management-in-c-and-python/">Process-Based Job Management in C and&nbsp;Python</a></li>
+        <li><a href="http://bryceboe.com/2014/01/25/hello-pelican-world/">Hello Pelican&nbsp;World</a></li>
     </ul>
 </section>
     <hr />

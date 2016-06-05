@@ -121,7 +121,7 @@ compiled via <code>gcc main.c job_management.c</code> and the test program can b
 function prototypes whereas <strong>job_management.c</strong> contains the implementation.
 The entire library functionality is exposed through three functions:
 <code>manager_init</code>, <code>manager_run_jobs</code>, and <code>manager_destruct</code>.</p>
-<div class="highlight"><pre><span class="kt">void</span> <span class="nf">manager_init</span><span class="p">(</span><span class="k">struct</span> <span class="n">manager</span> <span class="o">*</span><span class="n">manager</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num_workers</span><span class="p">,</span>
+<div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">manager_init</span><span class="p">(</span><span class="k">struct</span> <span class="n">manager</span> <span class="o">*</span><span class="n">manager</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num_workers</span><span class="p">,</span>
           <span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">input_callback</span><span class="p">)(</span><span class="kt">char</span> <span class="o">*</span><span class="p">),</span>
           <span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">output_callback</span><span class="p">)(</span><span class="kt">char</span> <span class="o">*</span><span class="p">),</span>
           <span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">work_function</span><span class="p">)(</span><span class="kt">char</span> <span class="o">*</span><span class="p">));</span>
@@ -147,7 +147,7 @@ and worker process. On return, the buffer should contain the job output which
 will then be sent back to the master process. The <em>output_callback</em> function
 is called by the master process as each job is completed. In this case, the
 buffer contains the output of a completed&nbsp;job.</p>
-<div class="highlight"><pre><span class="kt">int</span> <span class="nf">manager_run_jobs</span><span class="p">(</span><span class="k">struct</span> <span class="n">manager</span> <span class="o">*</span><span class="n">manager</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num_jobs</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">manager_run_jobs</span><span class="p">(</span><span class="k">struct</span> <span class="n">manager</span> <span class="o">*</span><span class="n">manager</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num_jobs</span><span class="p">);</span>
 </pre></div>
 
 
@@ -168,7 +168,7 @@ function handles the desired behavior through the combination of a global
 <a href="http://en.wikipedia.org/wiki/Volatile_variable">volatile</a> value that&#8217;s periodically checked within this function&#8217;s primary
 loop, and a <span class="caps">SIGINT</span> handler function that updates the value. Worker processes
 are unaffected by <span class="caps">SIGINT</span> as they are set to ignore&nbsp;it.</p>
-<div class="highlight"><pre><span class="kt">void</span> <span class="nf">manager_destruct</span><span class="p">(</span><span class="k">struct</span> <span class="n">manager</span> <span class="o">*</span><span class="n">manager</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">manager_destruct</span><span class="p">(</span><span class="k">struct</span> <span class="n">manager</span> <span class="o">*</span><span class="n">manager</span><span class="p">);</span>
 </pre></div>
 
 
@@ -246,11 +246,11 @@ int main(int argc, char *argv[]) {
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
-        <li><a href="http://bryceboe.com/2010/09/14/properly-handling-the-keyboard-interrupt-exception-sigint-within-a-python-c-module/">Properly Handling the Keyboard Interrupt Exception (<span class="caps">SIGINT</span>) within a Python C&nbsp;Module</a></li>
         <li><a href="http://bryceboe.com/2012/02/20/process-based-job-management-in-c-and-python/">Process-Based Job Management in C and&nbsp;Python</a></li>
-        <li><a href="http://bryceboe.com/2010/08/26/python-multiprocessing-and-keyboardinterrupt/">Python Multiprocessing and&nbsp;KeyboardInterrupt</a></li>
-        <li><a href="http://bryceboe.com/2010/05/25/defcon-18-quals-forensics-200-write-up/">Defcon 18 Quals Forensics 200 Write&nbsp;up</a></li>
-        <li><a href="http://bryceboe.com/2011/02/21/using-stackoverflows-api-to-find-the-top-web-frameworks/">Using StackOverflow&#8217;s <span class="caps">API</span> to Find the Top Web&nbsp;Frameworks</a></li>
+        <li><a href="http://bryceboe.com/2010/09/14/properly-handling-the-keyboard-interrupt-exception-sigint-within-a-python-c-module/">Properly Handling the Keyboard Interrupt Exception (<span class="caps">SIGINT</span>) within a Python C&nbsp;Module</a></li>
+        <li><a href="http://bryceboe.com/2009/12/06/ictf09-–-ucsbs-international-capture-the-flag-competition/">iCTF09: <span class="caps">UCSB</span>&#8217;s International Capture the Flag&nbsp;Competition</a></li>
+        <li><a href="http://bryceboe.com/2012/02/14/python-multiprocessing-pool-and-keyboardinterrupt-revisited/">Python Multiprocessing Pool and KeyboardInterrupt&nbsp;Revisited</a></li>
+        <li><a href="http://bryceboe.com/2014/01/25/hello-pelican-world/">Hello Pelican&nbsp;World</a></li>
     </ul>
 </section>
     <hr />

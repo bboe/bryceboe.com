@@ -115,8 +115,8 @@ default when it receives <span class="caps">SIGINT</span>, however I added a sim
 the interrupt handler to distinguish it from the default operation. I
 acknowledge that it is a <a href="http://linux.die.net/man/2/signal">bad practice</a> to use printf in a signal handler,
 however I am neglecting that concern for demonstration&nbsp;purposes.</p>
-<div class="highlight"><pre><span class="cp">#include </span>
-<span class="cp">#include</span>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> 
+<span class="cpf">#include</span><span class="cp"></span>
 
 <span class="k">volatile</span> <span class="kt">sig_atomic_t</span> <span class="n">kb_interrupt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
@@ -149,9 +149,9 @@ however I am neglecting that concern for demonstration&nbsp;purposes.</p>
 you&#8217;ll notice I eliminated the main function and the include statements as they
 are no longer needed. All code that was added was needed to call the function
 <strong>fibo</strong> from the python C module <strong>bboe</strong>.</p>
-<div class="highlight"><pre><span class="cp">#include</span>
+<div class="highlight"><pre><span></span><span class="cp">#include</span>
 
-<span class="k">volatile</span> <span class="kt">sig_atomic_t</span> <span class="n">kb_interrupt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="cpf">volatile sig_atomic_t kb_interrupt = 0;</span><span class="cp"></span>
 
 <span class="kt">void</span> <span class="nf">kb_interrupt_handler</span><span class="p">(</span><span class="kt">int</span> <span class="n">sig</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Received kb interrupt</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
@@ -168,7 +168,7 @@ are no longer needed. All code that was added was needed to call the function
 <span class="p">}</span>
 
 <span class="n">PyObject</span> <span class="o">*</span><span class="nf">bboe_fibo</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kt">__sighandler_t</span> <span class="n">prev</span><span class="p">;</span>
+  <span class="n">__sighandler_t</span> <span class="n">prev</span><span class="p">;</span>
   <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">result</span><span class="p">;</span>
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;i&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">))</span>
     <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
@@ -194,11 +194,11 @@ are no longer needed. All code that was added was needed to call the function
 
 
 <p>The proper distutils setup.py script for this C module is shown&nbsp;below.</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">Extension</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">Extension</span>
 
-<span class="n">setup</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#39;BBoe&#39;</span><span class="p">,</span>
-      <span class="n">version</span> <span class="o">=</span> <span class="s">&#39;1.0&#39;</span><span class="p">,</span>
-      <span class="n">ext_modules</span> <span class="o">=</span> <span class="p">[</span><span class="n">Extension</span><span class="p">(</span><span class="s">&#39;bboe&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;bboemodule.c&#39;</span><span class="p">])])</span>
+<span class="n">setup</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;BBoe&#39;</span><span class="p">,</span>
+      <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;1.0&#39;</span><span class="p">,</span>
+      <span class="n">ext_modules</span> <span class="o">=</span> <span class="p">[</span><span class="n">Extension</span><span class="p">(</span><span class="s1">&#39;bboe&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;bboemodule.c&#39;</span><span class="p">])])</span>
 </pre></div>
 
 
@@ -207,21 +207,21 @@ following. While you can copy and paste this code, you can also grab <a href="/i
 tarball</a> that contains all the code listed here, as well as a Makefile which
 builds both the C and python parts. Simply run <strong>make</strong> followed by
 <strong>./fibo_prog</strong> for the C version, or <strong>./fibo_prog.py</strong> for the python&nbsp;version.</p>
-<div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">bboe</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">&#39;Number: &#39;</span><span class="p">))</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s1">&#39;Number: &#39;</span><span class="p">))</span>
     <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
         <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">res</span> <span class="o">=</span> <span class="n">bboe</span><span class="o">.</span><span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
         <span class="n">res</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-    <span class="k">print</span> <span class="s">&#39;Fibo(</span><span class="si">%d</span><span class="s">) = </span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+    <span class="k">print</span> <span class="s1">&#39;Fibo(</span><span class="si">%d</span><span class="s1">) = </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 
@@ -239,7 +239,7 @@ I wanted to test the speed between a pure C implementation, a python C module
 implementation, and a pure python implementation. Thus I have updated <a href="/images/2010/09/bboe_module.tgz">the
 source tarball</a> to include the following python file as well as a
 script to generate the timing results which are also shown&nbsp;below.</p>
-<div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 
 <span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span> <span class="k">return</span> <span class="n">n</span>
@@ -247,22 +247,22 @@ script to generate the timing results which are also shown&nbsp;below.</p>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">&#39;Number: &#39;</span><span class="p">))</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s1">&#39;Number: &#39;</span><span class="p">))</span>
     <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
         <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">res</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
         <span class="n">res</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-    <span class="k">print</span> <span class="s">&#39;Fibo(</span><span class="si">%d</span><span class="s">) = </span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+    <span class="k">print</span> <span class="s1">&#39;Fibo(</span><span class="si">%d</span><span class="s1">) = </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 
 
 <p>Results:</p>
-<div class="highlight"><pre>fibo(00) pure c: 0.002s c module: 0.016s pure python: 00.015s
+<div class="highlight"><pre><span></span>fibo(00) pure c: 0.002s c module: 0.016s pure python: 00.015s
 fibo(02) pure c: 0.002s c module: 0.014s pure python: 00.015s
 fibo(04) pure c: 0.002s c module: 0.014s pure python: 00.014s
 fibo(06) pure c: 0.002s c module: 0.015s pure python: 00.015s
@@ -296,9 +296,9 @@ you much in this particular&nbsp;case.</p>
     <ul>
         <li><a href="http://bryceboe.com/2012/02/23/implementation-of-a-process-based-job-management-system-in-c/">Implementation of a Process-Based Job Management System in&nbsp;C</a></li>
         <li><a href="http://bryceboe.com/2012/02/20/process-based-job-management-in-c-and-python/">Process-Based Job Management in C and&nbsp;Python</a></li>
-        <li><a href="http://bryceboe.com/2010/08/26/python-multiprocessing-and-keyboardinterrupt/">Python Multiprocessing and&nbsp;KeyboardInterrupt</a></li>
-        <li><a href="http://bryceboe.com/2010/05/25/defcon-18-quals-forensics-200-write-up/">Defcon 18 Quals Forensics 200 Write&nbsp;up</a></li>
-        <li><a href="http://bryceboe.com/2011/02/21/using-stackoverflows-api-to-find-the-top-web-frameworks/">Using StackOverflow&#8217;s <span class="caps">API</span> to Find the Top Web&nbsp;Frameworks</a></li>
+        <li><a href="http://bryceboe.com/2009/12/06/ictf09-–-ucsbs-international-capture-the-flag-competition/">iCTF09: <span class="caps">UCSB</span>&#8217;s International Capture the Flag&nbsp;Competition</a></li>
+        <li><a href="http://bryceboe.com/2012/02/14/python-multiprocessing-pool-and-keyboardinterrupt-revisited/">Python Multiprocessing Pool and KeyboardInterrupt&nbsp;Revisited</a></li>
+        <li><a href="http://bryceboe.com/2014/01/25/hello-pelican-world/">Hello Pelican&nbsp;World</a></li>
     </ul>
 </section>
     <hr />

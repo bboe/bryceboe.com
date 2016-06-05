@@ -109,8 +109,8 @@ the following will get you up and running with the script, which can be
 downloaded <a href="/images/2010/07/convert_to_rrs.py">here</a>. Running the script concurrent times will take
 significantly much less time, therefore stopping the script midway through is
 of minor&nbsp;consequence.</p>
-<div class="highlight"><pre>svn checkout http://boto.googlecode.com/svn/trunk/@1595 boto-read-only
-<span class="nb">cd </span>boto-read-only  <span class="c"># (as root)</span>
+<div class="highlight"><pre><span></span>svn checkout http://boto.googlecode.com/svn/trunk/@1595 boto-read-only
+<span class="nb">cd</span> boto-read-only  <span class="c1"># (as root)</span>
 python setup.py install
 <span class="nb">cd</span> ..
 rm -rf boto-read-only
@@ -121,64 +121,64 @@ rm -rf boto-read-only
 <p>Note that you may alternatively put your aws_access_key_id and
 aws_secret_access_key into the environment variables AWS_ACCESS_KEY_ID
 and AWS_SECRET_ACCESS_KEY&nbsp;respectively.</p>
-<div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
 
 <span class="k">try</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">boto.s3</span>
     <span class="n">boto</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">Key</span><span class="o">.</span><span class="n">change_storage_class</span>
 <span class="k">except</span> <span class="ne">ImportError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;Package boto (svn rev. &gt;= 1595) must be installed.</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Package boto (svn rev. &gt;= 1595) must be installed.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;Invalid version of boto. Required svn rev. &gt;= 1595.</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Invalid version of boto. Required svn rev. &gt;= 1595.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">aws_id</span><span class="p">,</span> <span class="n">aws_key</span><span class="p">):</span>
     <span class="n">s3</span> <span class="o">=</span> <span class="n">boto</span><span class="o">.</span><span class="n">connect_s3</span><span class="p">(</span><span class="n">aws_id</span><span class="p">,</span> <span class="n">aws_key</span><span class="p">)</span>
     <span class="n">bucket</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">bucket</span><span class="p">:</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;Invalid authentication, or bucketname. Try again.</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Invalid authentication, or bucketname. Try again.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
         <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="k">print</span> <span class="s">&#39;Found bucket: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">bucket_name</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;Converting: &#39;</span><span class="p">)</span>
+    <span class="k">print</span> <span class="s1">&#39;Found bucket: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">bucket_name</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Converting: &#39;</span><span class="p">)</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
     <span class="n">found</span> <span class="o">=</span> <span class="n">converted</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">bucket</span><span class="o">.</span><span class="n">list</span><span class="p">():</span>
             <span class="n">found</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="k">if</span> <span class="n">key</span><span class="o">.</span><span class="n">storage_class</span> <span class="o">!=</span> <span class="s">&#39;REDUCED_REDUNDANCY&#39;</span><span class="p">:</span>
-                <span class="n">key</span><span class="o">.</span><span class="n">change_storage_class</span><span class="p">(</span><span class="s">&#39;REDUCED_REDUNDANCY&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">key</span><span class="o">.</span><span class="n">storage_class</span> <span class="o">!=</span> <span class="s1">&#39;REDUCED_REDUNDANCY&#39;</span><span class="p">:</span>
+                <span class="n">key</span><span class="o">.</span><span class="n">change_storage_class</span><span class="p">(</span><span class="s1">&#39;REDUCED_REDUNDANCY&#39;</span><span class="p">)</span>
                 <span class="n">converted</span> <span class="o">+=</span> <span class="mi">1</span>
             <span class="k">if</span> <span class="n">found</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;.&#39;</span><span class="p">)</span>
+                <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
                 <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
     <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span> <span class="k">pass</span>
 
-    <span class="k">print</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">Converted </span><span class="si">%d</span><span class="s"> items out of </span><span class="si">%d</span><span class="s"> to reduced redundancy storage.&#39;</span> <span class="o">%</span>   
+    <span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Converted </span><span class="si">%d</span><span class="s1"> items out of </span><span class="si">%d</span><span class="s1"> to reduced redundancy storage.&#39;</span> <span class="o">%</span>   
        <span class="p">(</span><span class="n">converted</span><span class="p">,</span> <span class="n">found</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="k">def</span> <span class="nf">usage</span><span class="p">(</span><span class="n">msg</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">msg</span><span class="p">:</span>
-            <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n\n</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">msg</span><span class="p">)</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s">&#39;Usage: </span><span class="si">%s</span><span class="s"> bucket [aws_access_key_id &#39;</span><span class="p">,</span>
-                                  <span class="s">&#39;aws_secret_access_key]</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">])</span> <span class="o">%</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">msg</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;Usage: </span><span class="si">%s</span><span class="s1"> bucket [aws_access_key_id &#39;</span><span class="p">,</span>
+                                  <span class="s1">&#39;aws_secret_access_key]</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">])</span> <span class="o">%</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
         <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
         <span class="n">bucket</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
-        <span class="k">if</span> <span class="s">&#39;AWS_ACCESS_KEY_ID&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
-            <span class="n">aws_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s">&#39;AWS_ACCESS_KEY_ID&#39;</span><span class="p">]</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">if</span> <span class="s1">&#39;AWS_ACCESS_KEY_ID&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
+            <span class="n">aws_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;AWS_ACCESS_KEY_ID&#39;</span><span class="p">]</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">msg</span> <span class="o">+=</span> <span class="s">&#39;Environment does not contain AWS_ACCESS_KEY_ID.</span><span class="se">\n</span><span class="s">&#39;</span>
-        <span class="k">if</span> <span class="s">&#39;AWS_SECRET_ACCESS_KEY&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
-            <span class="n">aws_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s">&#39;AWS_SECRET_ACCESS_KEY&#39;</span><span class="p">]</span>
+            <span class="n">msg</span> <span class="o">+=</span> <span class="s1">&#39;Environment does not contain AWS_ACCESS_KEY_ID.</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">if</span> <span class="s1">&#39;AWS_SECRET_ACCESS_KEY&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
+            <span class="n">aws_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;AWS_SECRET_ACCESS_KEY&#39;</span><span class="p">]</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">msg</span> <span class="o">+=</span> <span class="s">&#39;Environment does not contain AWS_SECRET_ACCESS_KEY.</span><span class="se">\n</span><span class="s">&#39;</span>
+            <span class="n">msg</span> <span class="o">+=</span> <span class="s1">&#39;Environment does not contain AWS_SECRET_ACCESS_KEY.</span><span class="se">\n</span><span class="s1">&#39;</span>
         <span class="k">if</span> <span class="n">msg</span><span class="p">:</span>
-            <span class="n">usage</span><span class="p">(</span><span class="n">msg</span> <span class="o">+</span> <span class="s">&#39;Please set values in environment or pass them in.&#39;</span><span class="p">)</span>
+            <span class="n">usage</span><span class="p">(</span><span class="n">msg</span> <span class="o">+</span> <span class="s1">&#39;Please set values in environment or pass them in.&#39;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
         <span class="n">bucket</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
         <span class="n">aws_id</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
@@ -188,7 +188,7 @@ and AWS_SECRET_ACCESS_KEY&nbsp;respectively.</p>
 
     <span class="n">convert</span><span class="p">(</span><span class="n">bucket</span><span class="p">,</span> <span class="n">aws_id</span><span class="p">,</span> <span class="n">aws_key</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
             </div>
@@ -196,11 +196,11 @@ and AWS_SECRET_ACCESS_KEY&nbsp;respectively.</p>
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
-        <li><a href="http://bryceboe.com/2010/08/26/python-multiprocessing-and-keyboardinterrupt/">Python Multiprocessing and&nbsp;KeyboardInterrupt</a></li>
-        <li><a href="http://bryceboe.com/2010/09/01/submitting-binaries-to-virustotal/">Submitting Binaries to&nbsp;VirusTotal</a></li>
-        <li><a href="http://bryceboe.com/2010/05/25/defcon-18-quals-forensics-200-write-up/">Defcon 18 Quals Forensics 200 Write&nbsp;up</a></li>
-        <li><a href="http://bryceboe.com/2011/02/21/using-stackoverflows-api-to-find-the-top-web-frameworks/">Using StackOverflow&#8217;s <span class="caps">API</span> to Find the Top Web&nbsp;Frameworks</a></li>
+        <li><a href="http://bryceboe.com/2006/10/23/line-segment-intersection-algorithm/">Line Segment Intersection&nbsp;Algorithm</a></li>
         <li><a href="http://bryceboe.com/2012/02/23/implementation-of-a-process-based-job-management-system-in-c/">Implementation of a Process-Based Job Management System in&nbsp;C</a></li>
+        <li><a href="http://bryceboe.com/2012/02/14/python-multiprocessing-pool-and-keyboardinterrupt-revisited/">Python Multiprocessing Pool and KeyboardInterrupt&nbsp;Revisited</a></li>
+        <li><a href="http://bryceboe.com/2012/02/20/process-based-job-management-in-c-and-python/">Process-Based Job Management in C and&nbsp;Python</a></li>
+        <li><a href="http://bryceboe.com/2014/01/25/hello-pelican-world/">Hello Pelican&nbsp;World</a></li>
     </ul>
 </section>
     <hr />

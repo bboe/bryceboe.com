@@ -101,7 +101,7 @@ and thus I came up with&nbsp;BTimer.</p>
 worry about the details of the setTimeout function or setInterval. This is
 particularly useful in cases where a page has different <span class="caps">AJAX</span> portions that need
 to be updated at different&nbsp;rates.</p>
-<div class="highlight"><pre><span class="c1">// Bryce Boe</span>
+<div class="highlight"><pre><span></span><span class="c1">// Bryce Boe</span>
 <span class="c1">// http://www.bryceboe.com/2007/04/11/btimer-class-a-javascript-timer-class/</span>
 <span class="kd">function</span> <span class="nx">BTimer</span><span class="p">(</span><span class="nx">interval</span><span class="p">,</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">interval</span><span class="p">,</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">);</span>
@@ -229,7 +229,7 @@ Status Area
 <p><strong>Note</strong>: Clicking on reset does not update the count to&nbsp;0.</p>
 <hr />
 <p>The extra needed javascript functions for this are the&nbsp;following:</p>
-<div class="highlight"><pre><span class="kd">function</span> <span class="nx">BTimerMyStart0</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">BTimerMyStart0</span><span class="p">()</span> <span class="p">{</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerPause0&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerReset0&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerStart0&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
@@ -264,7 +264,7 @@ Status Area
 
 
 <p>And the accompanying&nbsp;html:</p>
-<div class="highlight"><pre><span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">&quot;BTimerStatus0&quot;</span> <span class="na">style=</span><span class="s">&quot;width:200px;height:150px;&quot;</span><span class="nt">&gt;</span>Status Area<span class="nt">&lt;/textarea&gt;</span>
+<div class="highlight"><pre><span></span><span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">&quot;BTimerStatus0&quot;</span> <span class="na">style=</span><span class="s">&quot;width:200px;height:150px;&quot;</span><span class="nt">&gt;</span>Status Area<span class="nt">&lt;/textarea&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;BTimerDynamic0&quot;</span><span class="nt">&gt;</span>Count: 0<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">value=</span><span class="s">&quot;Start&quot;</span> <span class="na">id=</span><span class="s">&quot;BTimerStart0&quot;</span> <span class="na">onclick=</span><span class="s">&quot;BTimerMyStart0();&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">value=</span><span class="s">&quot;Pause&quot;</span> <span class="na">id=</span><span class="s">&quot;BTimerPause0&quot;</span>
