@@ -52,9 +52,11 @@ SOCIAL = (('github', 'https://github.com/bboe'),
           ('google+', 'https://plus.google.com/+BryceBoe?rel=author'),
           ('twitter', 'https://twitter.com/bboe'))
 
-# Static files (.htaccess, robots.txt)
-STATIC_PATHS = ['extra/CNAME', 'extra/robots.txt', 'images']
+# Static files (robots.txt)
+STATIC_PATHS = ['extra/CNAME', 'extra/keybase.txt', 'extra/robots.txt',
+                'images']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
+                       'extra/keybase.txt': {'path': 'keybase.txt'},
                        'extra/robots.txt': {'path': 'robots.txt'}}
 
 # Sitemap
