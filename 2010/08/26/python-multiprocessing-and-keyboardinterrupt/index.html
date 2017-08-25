@@ -14,7 +14,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Python Multiprocessing and KeyboardInterrupt"/>
             <meta property="og:url" content="http://bryceboe.com/2010/08/26/python-multiprocessing-and-keyboardinterrupt/"/>
-            <meta property="og:description" content="Update 2012/02/14: Added post: Python Multiprocessing Pool and KeyboardInterrupt Revisited Update 2011/02/03: Added commentary regarding Georges’s comment about this stackoverflow thread. Update 2011/01/28: There is an issue with this code when passing large objects through the queue. While the code listed below will ..."/>
+            <meta property="og:description" content="Update 2012/02/14: Added post: Python Multiprocessing Pool and KeyboardInterrupt Revisited Update 2011/02/03: Added commentary regarding Georges’s comment about this stackoverflow thread. Update 2011/01/28: There is an issue with this code when passing large objects through the queue. While the code listed below will …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="http://bryceboe.com/theme/css/bootstrap.cerulean.min.css" type="text/css"/>
@@ -44,9 +44,6 @@ Bryce Boe            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="http://bryceboe.com/pages/about">
-                             About
-                          </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="http://bryceboe.com/archives/"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
@@ -149,7 +146,7 @@ to the parent process until all jobs are&nbsp;completed.</p>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">print</span> <span class="s1">&#39;Job failed: </span><span class="si">%s</span><span class="s1"> </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">_value</span><span class="p">),</span> <span class="n">i</span><span class="o">.</span><span class="n">_value</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 
@@ -204,7 +201,7 @@ however the next job will simply take its place until there are no remaining&nbs
     <span class="k">while</span> <span class="ow">not</span> <span class="n">result_queue</span><span class="o">.</span><span class="n">empty</span><span class="p">():</span>
         <span class="k">print</span> <span class="n">result_queue</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 
@@ -220,7 +217,7 @@ KeyboardInterrupts in the child completely by using the <strong>signal</strong> 
 functionality could additionally be accomplished with the except statement
 commented out on line&nbsp;17.</p>
 <p>On a separate note, I would like to say that this is my 100th blog post.&nbsp;Awesome!</p>
-<p><a name="georges"></a><strong>Response to Georges comment on 2011/02/03</strong><br />
+<p><a name="georges"></a><strong>Response to Georges comment on 2011/02/03</strong><br>
 In response to Georges comment I wanted to see how such an approach would work
 in a case similar to what was done above. The below code demonstrates the
 approach from the stackoverflow response by Glenn Maynard to call the get
@@ -248,7 +245,7 @@ function with a&nbsp;timeout.</p>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
         <span class="k">print</span> <span class="n">i</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 
@@ -263,11 +260,11 @@ Thanks for bringing the solution to my attention&nbsp;Georges.</p>
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
-        <li><a href="http://bryceboe.com/2009/12/06/ictf09-–-ucsbs-international-capture-the-flag-competition/">iCTF09: <span class="caps">UCSB</span>&#8217;s International Capture the Flag&nbsp;Competition</a></li>
-        <li><a href="http://bryceboe.com/2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/">Bye Bye Facebook: A Guide to Leaving&nbsp;Facebook</a></li>
         <li><a href="http://bryceboe.com/2014/01/25/hello-pelican-world/">Hello Pelican&nbsp;World</a></li>
-        <li><a href="http://bryceboe.com/2009/11/04/dynamic-programming-–-coin-change-problem-in-python/">Dynamic Programming - Coin Change Problem in&nbsp;Python</a></li>
-        <li><a href="http://bryceboe.com/2010/09/01/submitting-binaries-to-virustotal/">Submitting Binaries to&nbsp;VirusTotal</a></li>
+        <li><a href="http://bryceboe.com/2012/11/05/time-zones-in-python-and-datetime-representations/">Time Zones in Python and Date/Time&nbsp;Representations</a></li>
+        <li><a href="http://bryceboe.com/2012/02/23/implementation-of-a-process-based-job-management-system-in-c/">Implementation of a Process-Based Job Management System in&nbsp;C</a></li>
+        <li><a href="http://bryceboe.com/2012/02/20/process-based-job-management-in-c-and-python/">Process-Based Job Management in C and&nbsp;Python</a></li>
+        <li><a href="http://bryceboe.com/2012/02/14/python-multiprocessing-pool-and-keyboardinterrupt-revisited/">Python Multiprocessing Pool and KeyboardInterrupt&nbsp;Revisited</a></li>
     </ul>
 </section>
     <hr />

@@ -14,7 +14,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="BTimer Class: A Javascript Timer Class"/>
             <meta property="og:url" content="http://bryceboe.com/2007/04/11/btimer-class-a-javascript-timer-class/"/>
-            <meta property="og:description" content="Note: I just found out this doesn’t work in Internet Explorer. If you happen to use Internet Explorer I’m sorry; I’m sorry that you haven’t been shown a better browser sooner. Get Firefox. In continuing my CS162 project I decided my previous timer wasn’t all ..."/>
+            <meta property="og:description" content="Note: I just found out this doesn’t work in Internet Explorer. If you happen to use Internet Explorer I’m sorry; I’m sorry that you haven’t been shown a better browser sooner. Get Firefox. In continuing my CS162 project I decided my previous timer wasn’t all …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="http://bryceboe.com/theme/css/bootstrap.cerulean.min.css" type="text/css"/>
@@ -44,9 +44,6 @@ Bryce Boe            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="http://bryceboe.com/pages/about">
-                             About
-                          </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="http://bryceboe.com/archives/"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
@@ -210,7 +207,7 @@ interval to be 5 seconds. The 5 second interval wont take place until the one
 minute timer has&nbsp;expired.</p>
 <p>Finally the getCount() function returns the timer&nbsp;count.</p>
 <p>To demonstrate BTimer in action check out the&nbsp;following:</p>
-<hr />
+<hr>
 <script type="text/javascript" src="/images/2007/04/btimer0.js"></script>
 
 <p><textarea id="BTimerStatus0" style="width:200px;height:150px;">
@@ -227,7 +224,7 @@ Status Area
 <input type="radio" id="BTimerRadio20" name="BTimertimeout" onclick="BTimerMyTimer0.setInterval(5000);BTimerOther0('selected 5 seconds');" disabled></input>
 5&nbsp;seconds</p>
 <p><strong>Note</strong>: Clicking on reset does not update the count to&nbsp;0.</p>
-<hr />
+<hr>
 <p>The extra needed javascript functions for this are the&nbsp;following:</p>
 <div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">BTimerMyStart0</span><span class="p">()</span> <span class="p">{</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerPause0&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>

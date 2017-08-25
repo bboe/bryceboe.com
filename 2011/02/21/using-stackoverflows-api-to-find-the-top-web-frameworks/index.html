@@ -14,7 +14,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Using StackOverflow’s API to Find the Top Web Frameworks"/>
             <meta property="og:url" content="http://bryceboe.com/2011/02/21/using-stackoverflows-api-to-find-the-top-web-frameworks/"/>
-            <meta property="og:description" content="Update 2011/02/23 11:02 PST Added the lift tag and updated the list. Update 2011/02/22 13:19 PST Added the jsf tag (java server faces) and updated the total question count for each item on the list. Update 2011/02/22 11:14 PST Adding spring-mvc ..."/>
+            <meta property="og:description" content="Update 2011/02/23 11:02 PST Added the lift tag and updated the list. Update 2011/02/22 13:19 PST Added the jsf tag (java server faces) and updated the total question count for each item on the list. Update 2011/02/22 11:14 PST Adding spring-mvc …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="http://bryceboe.com/theme/css/bootstrap.cerulean.min.css" type="text/css"/>
@@ -44,9 +44,6 @@ Bryce Boe            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="http://bryceboe.com/pages/about">
-                             About
-                          </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="http://bryceboe.com/archives/"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
@@ -90,21 +87,21 @@ Bryce Boe            </a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
                 <p><ins datetime="2011-02-23T19:02:00+00:00">
-<strong>Update 2011/02/23 11:02 <span class="caps">PST</span></strong><br />
+<strong>Update 2011/02/23 11:02 <span class="caps">PST</span></strong><br>
 Added the lift tag and updated the list.</ins></p>
 <p><ins datetime="2011-02-22T21:18:48+00:00">
-<strong>Update 2011/02/22 13:19 <span class="caps">PST</span></strong><br />
+<strong>Update 2011/02/22 13:19 <span class="caps">PST</span></strong><br>
 Added the jsf tag (java server faces) and updated the total question count for
 each item on the list.</ins></p>
 <p><ins datetime="2011-02-22T19:13:29+00:00">
-<strong>Update 2011/02/22 11:14 <span class="caps">PST</span></strong><br />
+<strong>Update 2011/02/22 11:14 <span class="caps">PST</span></strong><br>
 Adding spring-mvc as that was what I originally was originally supposed to
 have.</ins></p>
 <p><ins datetime="2011-02-22T18:31:36+00:00">
-<strong>Update 2011/02/22 10:36 <span class="caps">PST</span></strong><br />
+<strong>Update 2011/02/22 10:36 <span class="caps">PST</span></strong><br>
 For the interested, <a href="https://spreadsheets0.google.com/pub?key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&amp;output=html">here is the table</a> used to generate the graph.</ins></p>
 <p><ins datetime="2011-02-22T18:05:43+00:00">
-<strong>Update 2011/02/22 10:05 <span class="caps">PST</span></strong><br />
+<strong>Update 2011/02/22 10:05 <span class="caps">PST</span></strong><br>
 As per comments on this post, I updated the list by removing hibernate, spring,
 and sass and added gwt and grails. I also updated the chart reflecting this
 information, and created an additional chart which plots the frameworks as a
@@ -211,7 +208,7 @@ sense that it would rank quite&nbsp;high.</p>
 I added the below chart to show the relative percentage of questions per tag
 over time as per Big Dave&#8217;s Gusset&#8217;s comment. This hides the growing popularity
 of stackoverflow.</ins></p>
-<p><img alt="image" src="https://spreadsheets1.google.com/oimg?key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&amp;oid=14&amp;zx=1n411uq4n9w4" /><br />
+<p><img alt="image" src="https://spreadsheets1.google.com/oimg?key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&amp;oid=14&amp;zx=1n411uq4n9w4"><br>
 (<a href="https://spreadsheets1.google.com/pub?hl=en&amp;key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&amp;hl=en&amp;gid=11">Interactive version</a>)</p>
 <p>The data for the above chart was extracted using the following script. The
 script requires the python package <a href="http://stackapps.com/questions/198/py-stackexchange-an-api-wrapper-for-python">py-stackexchange</a> in order to run and can
@@ -243,7 +240,7 @@ be easily modified to add additional tags or change the filtering&nbsp;methods.<
 <span class="k">class</span> <span class="nc">TagStats</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">DATE_START</span> <span class="o">=</span> <span class="mi">1217540572</span>
     <span class="n">WEEK_SECONDS</span> <span class="o">=</span> <span class="mi">604800</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag_names</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tag_names</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">so</span> <span class="o">=</span> <span class="n">Site</span><span class="p">(</span><span class="n">StackOverflow</span><span class="p">,</span> <span class="s1">&#39;LzYJwh19o0WCIvXK9q6k6g&#39;</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">tag_names</span> <span class="o">=</span> <span class="n">tag_names</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="p">[]</span>
@@ -310,7 +307,7 @@ be easily modified to add additional tags or change the filtering&nbsp;methods.<
     <span class="c1">#tag_stats.output_counts(html=True)</span>
     <span class="n">tag_stats</span><span class="o">.</span><span class="n">output_stats_by_week</span><span class="p">(</span><span class="n">start_week</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </pre></div>
 
@@ -322,10 +319,10 @@ be easily modified to add additional tags or change the filtering&nbsp;methods.<
     <h4>Related Posts:</h4>
     <ul>
         <li><a href="http://bryceboe.com/2010/12/09/ucsbs-international-capture-the-flag-competition-2010-challenge-6-fear-the-ear/"><span class="caps">UCSB</span>&#8217;s International Capture The Flag Competition 2010 Challenge 6: Fear The <span class="caps">EAR</span></a></li>
-        <li><a href="http://bryceboe.com/2012/02/14/python-multiprocessing-pool-and-keyboardinterrupt-revisited/">Python Multiprocessing Pool and KeyboardInterrupt&nbsp;Revisited</a></li>
-        <li><a href="http://bryceboe.com/2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/">Bye Bye Facebook: A Guide to Leaving&nbsp;Facebook</a></li>
+        <li><a href="http://bryceboe.com/2011/04/21/more-on-the-execution-after-redirect-vulnerability/">More on the Execution After Redirect&nbsp;Vulnerability</a></li>
         <li><a href="http://bryceboe.com/2014/01/25/hello-pelican-world/">Hello Pelican&nbsp;World</a></li>
-        <li><a href="http://bryceboe.com/2009/11/04/dynamic-programming-–-coin-change-problem-in-python/">Dynamic Programming - Coin Change Problem in&nbsp;Python</a></li>
+        <li><a href="http://bryceboe.com/2012/11/05/time-zones-in-python-and-datetime-representations/">Time Zones in Python and Date/Time&nbsp;Representations</a></li>
+        <li><a href="http://bryceboe.com/2012/02/23/implementation-of-a-process-based-job-management-system-in-c/">Implementation of a Process-Based Job Management System in&nbsp;C</a></li>
     </ul>
 </section>
     <hr />

@@ -14,7 +14,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Properly Handling the Keyboard Interrupt Exception (SIGINT) within a Python C Module"/>
             <meta property="og:url" content="http://bryceboe.com/2010/09/14/properly-handling-the-keyboard-interrupt-exception-sigint-within-a-python-c-module/"/>
-            <meta property="og:description" content="Recently I’ve done a lot of work requiring heavy computation on large datasets. While python is not a great choice for speed, it can be extended by modules written in C for those speed critical moments. For such moments I always try to find solutions written as C modules ..."/>
+            <meta property="og:description" content="Recently I’ve done a lot of work requiring heavy computation on large datasets. While python is not a great choice for speed, it can be extended by modules written in C for those speed critical moments. For such moments I always try to find solutions written as C modules …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="http://bryceboe.com/theme/css/bootstrap.cerulean.min.css" type="text/css"/>
@@ -44,9 +44,6 @@ Bryce Boe            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="http://bryceboe.com/pages/about">
-                             About
-                          </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="http://bryceboe.com/archives/"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
@@ -115,8 +112,8 @@ default when it receives <span class="caps">SIGINT</span>, however I added a sim
 the interrupt handler to distinguish it from the default operation. I
 acknowledge that it is a <a href="http://linux.die.net/man/2/signal">bad practice</a> to use printf in a signal handler,
 however I am neglecting that concern for demonstration&nbsp;purposes.</p>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> 
-<span class="cpf">#include</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;signal.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="k">volatile</span> <span class="kt">sig_atomic_t</span> <span class="n">kb_interrupt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
@@ -149,9 +146,9 @@ however I am neglecting that concern for demonstration&nbsp;purposes.</p>
 you&#8217;ll notice I eliminated the main function and the include statements as they
 are no longer needed. All code that was added was needed to call the function
 <strong>fibo</strong> from the python C module <strong>bboe</strong>.</p>
-<div class="highlight"><pre><span></span><span class="cp">#include</span>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;Python.h&gt;</span><span class="cp"></span>
 
-<span class="cpf">volatile sig_atomic_t kb_interrupt = 0;</span><span class="cp"></span>
+<span class="k">volatile</span> <span class="kt">sig_atomic_t</span> <span class="n">kb_interrupt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
 <span class="kt">void</span> <span class="nf">kb_interrupt_handler</span><span class="p">(</span><span class="kt">int</span> <span class="n">sig</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Received kb interrupt</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
@@ -221,7 +218,7 @@ builds both the C and python parts. Simply run <strong>make</strong> followed by
         <span class="n">res</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
     <span class="k">print</span> <span class="s1">&#39;Fibo(</span><span class="si">%d</span><span class="s1">) = </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 
@@ -234,7 +231,7 @@ loaded. The fix was to only have my signal handler in place whilst code from my
 module was running. Lines 24 and 26 accomplish this&nbsp;properly.</p>
 <p>Happy python C module&nbsp;coding!</p>
 <p><ins datetime="2010-09-15T22:13:25+00:00">
-Edit 2010-09-15</ins><br />
+Edit 2010-09-15</ins><br>
 I wanted to test the speed between a pure C implementation, a python C module
 implementation, and a pure python implementation. Thus I have updated <a href="/images/2010/09/bboe_module.tgz">the
 source tarball</a> to include the following python file as well as a
@@ -256,7 +253,7 @@ script to generate the timing results which are also shown&nbsp;below.</p>
         <span class="n">res</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
     <span class="k">print</span> <span class="s1">&#39;Fibo(</span><span class="si">%d</span><span class="s1">) = </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
 
@@ -296,8 +293,8 @@ you much in this particular&nbsp;case.</p>
     <ul>
         <li><a href="http://bryceboe.com/2012/02/23/implementation-of-a-process-based-job-management-system-in-c/">Implementation of a Process-Based Job Management System in&nbsp;C</a></li>
         <li><a href="http://bryceboe.com/2012/02/20/process-based-job-management-in-c-and-python/">Process-Based Job Management in C and&nbsp;Python</a></li>
-        <li><a href="http://bryceboe.com/2012/02/14/python-multiprocessing-pool-and-keyboardinterrupt-revisited/">Python Multiprocessing Pool and KeyboardInterrupt&nbsp;Revisited</a></li>
-        <li><a href="http://bryceboe.com/2010/05/25/defcon-18-quals-forensics-200-write-up/">Defcon 18 Quals Forensics 200 Write&nbsp;up</a></li>
+        <li><a href="http://bryceboe.com/2007/09/22/telnet-like-client/">Telnet-like&nbsp;client</a></li>
+        <li><a href="http://bryceboe.com/2007/09/02/signal-handling-and-select-in-c/">Signal Handling and Select in&nbsp;C</a></li>
         <li><a href="http://bryceboe.com/2014/01/25/hello-pelican-world/">Hello Pelican&nbsp;World</a></li>
     </ul>
 </section>

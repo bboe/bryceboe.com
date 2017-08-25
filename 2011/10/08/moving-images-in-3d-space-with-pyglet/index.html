@@ -14,7 +14,7 @@
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Moving Images in 3D Space with Pyglet"/>
             <meta property="og:url" content="http://bryceboe.com/2011/10/08/moving-images-in-3d-space-with-pyglet/"/>
-            <meta property="og:description" content="Yesterday, October 7, 2011, the graduate students of UCSB’s Computer Science department, including myself, hosted the 6th annual Graduate Student Workshop on Computing (GSWC). The workshop is a great opportunity for other students, faculty, and industry professionals to get an overview of the work performed by our department. Part ..."/>
+            <meta property="og:description" content="Yesterday, October 7, 2011, the graduate students of UCSB’s Computer Science department, including myself, hosted the 6th annual Graduate Student Workshop on Computing (GSWC). The workshop is a great opportunity for other students, faculty, and industry professionals to get an overview of the work performed by our department. Part …"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="http://bryceboe.com/theme/css/bootstrap.cerulean.min.css" type="text/css"/>
@@ -44,9 +44,6 @@ Bryce Boe            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="http://bryceboe.com/pages/about">
-                             About
-                          </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="http://bryceboe.com/archives/"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
@@ -112,10 +109,10 @@ construct 3D environments in python. Using Vizard I was able to quickly create
 a 3D logo display in which the logos follow a circular path along the z-axis,
 as shown in the following photos. While this worked well, Vizard unfortunately
 only works on Windows and thus could not be run easily from my Mac&nbsp;laptop.</p>
-<p><a href="/images/2011/10/animator0.png"><img alt="image" src="/images/2011/10/animator0-150x150.png" title="animator0" /></a>
-<a href="/images/2011/10/animator1.png"><img alt="image" src="/images/2011/10/animator1-150x150.png" title="animator1" /></a>
-<a href="/images/2011/10/animator2.png"><img alt="image" src="/images/2011/10/animator2-150x150.png" title="animator2" /></a>
-<a href="/images/2011/10/animator4.png"><img alt="image" src="/images/2011/10/animator4-150x150.png" title="animator4" /></a></p>
+<p><a href="/images/2011/10/animator0.png"><img alt="image" src="/images/2011/10/animator0-150x150.png" title="animator0"></a>
+<a href="/images/2011/10/animator1.png"><img alt="image" src="/images/2011/10/animator1-150x150.png" title="animator1"></a>
+<a href="/images/2011/10/animator2.png"><img alt="image" src="/images/2011/10/animator2-150x150.png" title="animator2"></a>
+<a href="/images/2011/10/animator4.png"><img alt="image" src="/images/2011/10/animator4-150x150.png" title="animator4"></a></p>
 <p>We wanted to use the same display for this year&#8217;s <span class="caps">GSWC</span> so I sought to rewrite
 the display in a cross platform and free manor. While I have some previous
 opengl experience in C, I really wanted to write the display in python so I
@@ -138,9 +135,9 @@ you&#8217;ll need to run it via: <code>VERSIONER_PYTHON_PREFER_32_BIT=yes ./anim
 <span class="kn">from</span> <span class="nn">pyglet.gl</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="k">class</span> <span class="nc">World</span><span class="p">(</span><span class="n">pyglet</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">center_pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">15</span><span class="p">),</span> <span class="n">speed</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">center_pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">15</span><span class="p">),</span> <span class="n">speed</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
                  <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">World</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">World</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="n">scale</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">center_pos</span> <span class="o">=</span> <span class="n">center_pos</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="n">speed</span>
@@ -222,7 +219,7 @@ you&#8217;ll need to run it via: <code>VERSIONER_PYTHON_PREFER_32_BIT=yes ./anim
         <span class="n">glMatrixMode</span><span class="p">(</span><span class="n">GL_MODELVIEW</span><span class="p">)</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">window</span> <span class="o">=</span> <span class="n">World</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
     <span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
@@ -231,11 +228,11 @@ you&#8217;ll need to run it via: <code>VERSIONER_PYTHON_PREFER_32_BIT=yes ./anim
 <section class="well" id="related-posts">
     <h4>Related Posts:</h4>
     <ul>
-        <li><a href="http://bryceboe.com/2012/02/14/python-multiprocessing-pool-and-keyboardinterrupt-revisited/">Python Multiprocessing Pool and KeyboardInterrupt&nbsp;Revisited</a></li>
-        <li><a href="http://bryceboe.com/2010/05/25/defcon-18-quals-forensics-200-write-up/">Defcon 18 Quals Forensics 200 Write&nbsp;up</a></li>
         <li><a href="http://bryceboe.com/2014/01/25/hello-pelican-world/">Hello Pelican&nbsp;World</a></li>
-        <li><a href="http://bryceboe.com/2009/11/04/dynamic-programming-–-coin-change-problem-in-python/">Dynamic Programming - Coin Change Problem in&nbsp;Python</a></li>
-        <li><a href="http://bryceboe.com/2006/10/23/line-segment-intersection-algorithm/">Line Segment Intersection&nbsp;Algorithm</a></li>
+        <li><a href="http://bryceboe.com/2012/11/05/time-zones-in-python-and-datetime-representations/">Time Zones in Python and Date/Time&nbsp;Representations</a></li>
+        <li><a href="http://bryceboe.com/2012/02/23/implementation-of-a-process-based-job-management-system-in-c/">Implementation of a Process-Based Job Management System in&nbsp;C</a></li>
+        <li><a href="http://bryceboe.com/2012/02/20/process-based-job-management-in-c-and-python/">Process-Based Job Management in C and&nbsp;Python</a></li>
+        <li><a href="http://bryceboe.com/2012/02/14/python-multiprocessing-pool-and-keyboardinterrupt-revisited/">Python Multiprocessing Pool and KeyboardInterrupt&nbsp;Revisited</a></li>
     </ul>
 </section>
     <hr />
