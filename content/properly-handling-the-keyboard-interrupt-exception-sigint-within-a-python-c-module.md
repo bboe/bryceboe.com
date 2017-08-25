@@ -34,8 +34,8 @@ acknowledge that it is a [bad practice][] to use printf in a signal handler,
 however I am neglecting that concern for demonstration purposes.
 
     :::c
-    #include 
-    #include 
+    #include <signal.h>
+    #include <stdio.h>
 
     volatile sig_atomic_t kb_interrupt = 0;
 
@@ -68,7 +68,7 @@ are no longer needed. All code that was added was needed to call the function
 **fibo** from the python C module **bboe**.
 
     :::c
-    #include 
+    #include <Python.h>
 
     volatile sig_atomic_t kb_interrupt = 0;
 

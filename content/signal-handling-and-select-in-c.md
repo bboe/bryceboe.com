@@ -27,11 +27,11 @@ create a very simple program to demonstrate and that is what the following is.
 The program when compiled will echo everything typed after *enter* has been
 pressed. When closing the program via ctrl+c it will print the message "Exit!".
 
-    #include   // printf
-    #include   // FD_ functions
-    #include  // sig functions
-    #include  // exit
-    #include  // STDIN_FILENO
+    #include <stdio.h>  // printf
+    #include <fcntl.h>  // FD_ functions
+    #include <signal.h> // sig functions
+    #include <stdlib.h> // exit
+    #include <unistd.h> // STDIN_FILENO
 
     void exit_error(char* msg) {
       perror(msg);

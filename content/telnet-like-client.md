@@ -9,14 +9,14 @@ be used to communicate with any type of text based server such as mail and web
 servers. The following isn't 100% perfect as it doesn't handle early returns
 from [send][] as I wasn't able to properly test this behavior.
 
-    #include   // perror,printf
-    #include  // exit
-    #include  // strerror
-    #include   // gethostbyname
-    #include 
-    #include   // FD_ functions
-    #include  // sig functions
-    #include  // STDIN_FILENO
+    #include <stdio.h>  // perror,printf
+    #include <stdlib.h> // exit
+    #include <string.h> // strerror
+    #include <netdb.h>  // gethostbyname
+    #include <sys/socket.h>
+    #include <fcntl.h>  // FD_ functions
+    #include <signal.h> // sig functions
+    #include <unistd.h> // STDIN_FILENO
 
     int client_socket;
 
