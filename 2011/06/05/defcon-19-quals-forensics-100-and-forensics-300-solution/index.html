@@ -151,7 +151,7 @@ the <a href="/images/2011/06/consolidated.db">consolodated.db input file</a>:</p
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;sqlite3 consolidated.db &quot;select Latitude, Longitude &#39;</span>
-              <span class="s1">&#39;from CellLocation;&quot; &gt; tmp&#39;</span><span class="p">)</span>
+              <span class="s1">&#39;from CellLocation;&quot; &amp;gt; tmp&#39;</span><span class="p">)</span>
 
     <span class="n">uniq</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;tmp&#39;</span><span class="p">):</span>

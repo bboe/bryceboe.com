@@ -194,11 +194,7 @@ chart below for the top 10 frameworks according to total number of
 StackOverflow questions. Each point in the chart represents the number of
 questions asked in a one week period starting on the date of the data point
 (protip: hover over chart to get the exact&nbsp;values).</p>
-<p>
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js"> {"chartType":"AreaChart","chartName":"Top 10 Web Frameworks","dataSourceUrl":"//spreadsheets0.google.com/tq?key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&range=A1%3AK134&gid=0&transpose=0&headers=1&pub=1","options":{"displayAnnotations":true,"showTip":true,"reverseCategories":false,"titleY":"# of stack over flow questions","dataMode":"markers","titleX":"week starting on","maxAlternation":1,"pointSize":"0","colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395"],"smoothLine":false,"lineWidth":"2","labelPosition":"right","is3D":false,"logScale":false,"hasLabelsColumn":true,"wmode":"opaque","title":"Top 10 Web Frameworks","legend":"right","allowCollapse":true,"reverseAxis":false,"isStacked":false,"mapType":"hybrid","width":600,"height":400},"refreshInterval":60} </script>
-</p>
-
-<p>Note: if the above graph doesn&#8217;t load, try <a href="https://spreadsheets0.google.com/oimg?key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&amp;oid=12&amp;zx=vn515z2t7lj8">this static image</a>.</p>
+<p><img alt="top10" src="/images/2011/02/top10.png"></p>
 <p>The data confirms my previous suspicion that ruby on rails is the number one
 <span class="caps">MVC</span> and that django and cakePHP would also appear in the top 10. I must admit
 that I had never before heard of asp.net <span class="caps">MVC</span>, however considering that
@@ -208,8 +204,7 @@ sense that it would rank quite&nbsp;high.</p>
 I added the below chart to show the relative percentage of questions per tag
 over time as per Big Dave&#8217;s Gusset&#8217;s comment. This hides the growing popularity
 of stackoverflow.</ins></p>
-<p><img alt="image" src="https://spreadsheets1.google.com/oimg?key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&amp;oid=14&amp;zx=1n411uq4n9w4"><br>
-(<a href="https://spreadsheets1.google.com/pub?hl=en&amp;key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&amp;hl=en&amp;gid=11">Interactive version</a>)</p>
+<p><img alt="normalized_top10" src="/images/2011/02/normalized_top10.png"></p>
 <p>The data for the above chart was extracted using the following script. The
 script requires the python package <a href="http://stackapps.com/questions/198/py-stackexchange-an-api-wrapper-for-python">py-stackexchange</a> in order to run and can
 be easily modified to add additional tags or change the filtering&nbsp;methods.</p>
@@ -268,7 +263,7 @@ be easily modified to add additional tags or change the filtering&nbsp;methods.<
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Not found: </span><span class="si">%s</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
                 <span class="k">continue</span>
-            <span class="k">if</span> <span class="n">tmp</span><span class="o">.</span><span class="n">count</span> <span class="o">&lt;</span> <span class="n">min_size</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">tmp</span><span class="o">.</span><span class="n">count</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="n">min_size</span><span class="p">:</span>
                 <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Too few questions: </span><span class="si">%s</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>

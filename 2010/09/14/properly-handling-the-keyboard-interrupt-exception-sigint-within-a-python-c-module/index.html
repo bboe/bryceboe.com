@@ -112,8 +112,8 @@ default when it receives <span class="caps">SIGINT</span>, however I added a sim
 the interrupt handler to distinguish it from the default operation. I
 acknowledge that it is a <a href="http://linux.die.net/man/2/signal">bad practice</a> to use printf in a signal handler,
 however I am neglecting that concern for demonstration&nbsp;purposes.</p>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;signal.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&amp;lt;signal.h&amp;gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&amp;lt;stdio.h&amp;gt;</span><span class="cp"></span>
 
 <span class="k">volatile</span> <span class="kt">sig_atomic_t</span> <span class="n">kb_interrupt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
@@ -125,9 +125,9 @@ however I am neglecting that concern for demonstration&nbsp;purposes.</p>
 <span class="kt">int</span> <span class="nf">fibo</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
   <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">kb_interrupt</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
-  <span class="k">else</span> <span class="k">if</span> <span class="p">((</span><span class="n">a</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-  <span class="k">else</span> <span class="k">if</span> <span class="p">((</span><span class="n">b</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="mi">2</span><span class="p">)</span> <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">((</span><span class="n">a</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">((</span><span class="n">b</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">))</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
   <span class="k">else</span> <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -136,7 +136,7 @@ however I am neglecting that concern for demonstration&nbsp;purposes.</p>
   <span class="n">signal</span><span class="p">(</span><span class="n">SIGINT</span><span class="p">,</span> <span class="n">kb_interrupt_handler</span><span class="p">);</span>
   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Number: &quot;</span><span class="p">);</span>
   <span class="n">fflush</span><span class="p">(</span><span class="n">stdout</span><span class="p">);</span>
-  <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">n</span><span class="p">);</span>
   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Fibo(%d) = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">));</span>
 <span class="p">}</span>
 </pre></div>
@@ -146,7 +146,7 @@ however I am neglecting that concern for demonstration&nbsp;purposes.</p>
 you&#8217;ll notice I eliminated the main function and the include statements as they
 are no longer needed. All code that was added was needed to call the function
 <strong>fibo</strong> from the python C module <strong>bboe</strong>.</p>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;Python.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&amp;lt;Python.h&amp;gt;</span><span class="cp"></span>
 
 <span class="k">volatile</span> <span class="kt">sig_atomic_t</span> <span class="n">kb_interrupt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
@@ -158,21 +158,21 @@ are no longer needed. All code that was added was needed to call the function
 <span class="kt">int</span> <span class="nf">fibo</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
   <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">kb_interrupt</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
-  <span class="k">else</span> <span class="k">if</span> <span class="p">((</span><span class="n">a</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-  <span class="k">else</span> <span class="k">if</span> <span class="p">((</span><span class="n">b</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="mi">2</span><span class="p">)</span> <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">((</span><span class="n">a</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">((</span><span class="n">b</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">))</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
   <span class="k">else</span> <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="n">PyObject</span> <span class="o">*</span><span class="nf">bboe_fibo</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">self</span><span class="p">,</span> <span class="n">PyObject</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">__sighandler_t</span> <span class="n">prev</span><span class="p">;</span>
   <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">result</span><span class="p">;</span>
-  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;i&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">n</span><span class="p">))</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&quot;i&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">n</span><span class="p">))</span>
     <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
   <span class="n">prev</span> <span class="o">=</span> <span class="n">signal</span><span class="p">(</span><span class="n">SIGINT</span><span class="p">,</span> <span class="n">kb_interrupt_handler</span><span class="p">);</span>
   <span class="n">result</span> <span class="o">=</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
   <span class="n">signal</span><span class="p">(</span><span class="n">SIGINT</span><span class="p">,</span> <span class="n">prev</span><span class="p">);</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">result</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">result</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">PyErr_SetObject</span><span class="p">(</span><span class="n">PyExc_KeyboardInterrupt</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
     <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
   <span class="p">}</span>
@@ -239,7 +239,7 @@ script to generate the timing results which are also shown&nbsp;below.</p>
 <div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
 
 <span class="k">def</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span> <span class="k">return</span> <span class="n">n</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="mi">2</span><span class="p">:</span> <span class="k">return</span> <span class="n">n</span>
     <span class="k">return</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibo</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>

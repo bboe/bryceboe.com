@@ -88,112 +88,112 @@ Bryce Boe            </a>
 be used to communicate with any type of text based server such as mail and web
 servers. The following isn&#8217;t 100% perfect as it doesn&#8217;t handle early returns
 from <a href="http://www.opengroup.org/onlinepubs/009695399/functions/send.html">send</a> as I wasn&#8217;t able to properly test this&nbsp;behavior.</p>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;  // perror,printf</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt; // exit</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;string.h&gt; // strerror</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;netdb.h&gt;  // gethostbyname</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;fcntl.h&gt;  // FD_ functions</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;signal.h&gt; // sig functions</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;unistd.h&gt; // STDIN_FILENO</span><span class="cp"></span>
+<div class="highlight"><pre><span></span>#include &amp;lt;stdio.h&amp;gt;  // perror,printf
+#include &amp;lt;stdlib.h&amp;gt; // exit
+#include &amp;lt;string.h&amp;gt; // strerror
+#include &amp;lt;netdb.h&amp;gt;  // gethostbyname
+#include &amp;lt;sys/socket.h&amp;gt;
+#include &amp;lt;fcntl.h&amp;gt;  // FD_ functions
+#include &amp;lt;signal.h&amp;gt; // sig functions
+#include &amp;lt;unistd.h&amp;gt; // STDIN_FILENO
 
-<span class="kt">int</span> <span class="n">client_socket</span><span class="p">;</span>
+int client_socket;
 
-<span class="kt">void</span> <span class="nf">exit_error</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span> <span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">perror</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
-  <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="p">}</span>
+void exit_error(char* msg) {
+  perror(msg);
+  exit(1);
+}
 
-<span class="kt">void</span> <span class="nf">exit_close</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span> <span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">close</span><span class="p">(</span><span class="n">client_socket</span><span class="p">);</span>
-  <span class="n">exit_error</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
-<span class="p">}</span>
+void exit_close(char* msg) {
+  close(client_socket);
+  exit_error(msg);
+}
 
-<span class="kt">void</span> <span class="nf">KBInterrupt</span><span class="p">(</span><span class="kt">int</span> <span class="n">sig</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">close</span><span class="p">(</span><span class="n">client_socket</span><span class="p">);</span>
-  <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<span class="p">}</span>
+void KBInterrupt(int sig) {
+  close(client_socket);
+  exit(0);
+}
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
-  <span class="cm">/* Variables */</span>
-  <span class="k">struct</span> <span class="n">hostent</span> <span class="o">*</span><span class="n">server_host</span><span class="p">;</span>
-  <span class="k">struct</span> <span class="n">sockaddr_in</span> <span class="n">server_addr</span><span class="p">;</span>
-  <span class="n">fd_set</span> <span class="n">fd</span><span class="p">;</span>
-  <span class="kt">int</span> <span class="n">charsRead</span><span class="p">,</span> <span class="n">charsWritten</span><span class="p">;</span>
-  <span class="kt">int</span> <span class="n">char_buff_size</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
-  <span class="kt">char</span> <span class="n">char_buffer</span><span class="p">[</span><span class="n">char_buff_size</span><span class="p">];</span>
-  <span class="k">struct</span> <span class="n">sigaction</span> <span class="n">handler</span><span class="p">;</span>
+int main(int argc, char* argv[]) {
+  /* Variables */
+  struct hostent *server_host;
+  struct sockaddr_in server_addr;
+  fd_set fd;
+  int charsRead, charsWritten;
+  int char_buff_size = 1024;
+  char char_buffer[char_buff_size];
+  struct sigaction handler;
 
-  <span class="cm">/* Verify arguments */</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span><span class="s">&quot;usage %s hostname port</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
-    <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-  <span class="p">}</span>
+  /* Verify arguments */
+  if (argc &amp;lt; 3) {
+    fprintf(stderr,&quot;usage %s hostname port\n&quot;,argv[0]);
+    exit(0);
+  }
 
-  <span class="cm">/* Setup Action Handler */</span>
-  <span class="n">handler</span><span class="p">.</span><span class="n">sa_handler</span> <span class="o">=</span> <span class="n">KBInterrupt</span><span class="p">;</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">sigfillset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">handler</span><span class="p">.</span><span class="n">sa_mask</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="n">exit_error</span><span class="p">(</span><span class="s">&quot;sigfillset failed&quot;</span><span class="p">);</span>
-  <span class="n">handler</span><span class="p">.</span><span class="n">sa_flags</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">sigaction</span><span class="p">(</span><span class="n">SIGINT</span><span class="p">,</span><span class="o">&amp;</span><span class="n">handler</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="n">exit_error</span><span class="p">(</span><span class="s">&quot;sigaction failed&quot;</span><span class="p">);</span>
+  /* Setup Action Handler */
+  handler.sa_handler = KBInterrupt;
+  if (sigfillset(&amp;amp;handler.sa_mask) &amp;lt; 0)
+    exit_error(&quot;sigfillset failed&quot;);
+  handler.sa_flags = 0;
+  if (sigaction(SIGINT,&amp;amp;handler,0) &amp;lt; 0)
+    exit_error(&quot;sigaction failed&quot;);
 
-  <span class="cm">/* Create TCP socket */</span>
-  <span class="k">if</span><span class="p">((</span><span class="n">client_socket</span> <span class="o">=</span> <span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span><span class="n">SOCK_STREAM</span><span class="p">,</span><span class="n">IPPROTO_TCP</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="n">exit_error</span><span class="p">(</span><span class="s">&quot;Could not create socket&quot;</span><span class="p">);</span>
+  /* Create TCP socket */
+  if((client_socket = socket(AF_INET,SOCK_STREAM,IPPROTO_TCP)) &amp;lt; 0)
+    exit_error(&quot;Could not create socket&quot;);
 
-  <span class="cm">/* Get host information. This takes a fqdn or IP address */</span>
-  <span class="k">if</span> <span class="p">((</span><span class="n">server_host</span> <span class="o">=</span> <span class="n">gethostbyname</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">herror</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-  <span class="p">}</span>
+  /* Get host information. This takes a fqdn or IP address */
+  if ((server_host = gethostbyname(argv[1])) == NULL) {
+    herror(argv[1]);
+    exit(1);
+  }
 
-  <span class="cm">/* Setup and fill in values for server_addr */</span>
-  <span class="n">bzero</span><span class="p">((</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">server_addr</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">server_addr</span><span class="p">));</span>
-  <span class="n">server_addr</span><span class="p">.</span><span class="n">sin_family</span> <span class="o">=</span> <span class="n">server_host</span><span class="o">-&gt;</span><span class="n">h_addrtype</span><span class="p">;</span>
-  <span class="n">bcopy</span><span class="p">((</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">server_host</span><span class="o">-&gt;</span><span class="n">h_addr</span><span class="p">,</span>
-    <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">server_addr</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">.</span><span class="n">s_addr</span><span class="p">,</span>
-    <span class="n">server_host</span><span class="o">-&gt;</span><span class="n">h_length</span><span class="p">);</span>
-  <span class="n">server_addr</span><span class="p">.</span><span class="n">sin_port</span> <span class="o">=</span> <span class="n">htons</span><span class="p">(</span><span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]));</span>
+  /* Setup and fill in values for server_addr */
+  bzero((char*)&amp;amp;server_addr,sizeof(server_addr));
+  server_addr.sin_family = server_host-&amp;gt;h_addrtype;
+  bcopy((char*)server_host-&amp;gt;h_addr,
+    (char*)&amp;amp;server_addr.sin_addr.s_addr,
+    server_host-&amp;gt;h_length);
+  server_addr.sin_port = htons(atoi(argv[2]));
 
-  <span class="cm">/* Connect */</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">connect</span><span class="p">(</span><span class="n">client_socket</span><span class="p">,(</span><span class="k">struct</span> <span class="n">sockaddr</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">server_addr</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">server_addr</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="n">exit_error</span><span class="p">(</span><span class="s">&quot;ERROR connecting&quot;</span><span class="p">);</span>
+  /* Connect */
+  if (connect(client_socket,(struct sockaddr*)&amp;amp;server_addr,sizeof(server_addr)) &amp;lt; 0)
+    exit_error(&quot;ERROR connecting&quot;);
 
-  <span class="cm">/* The Main part of the program */</span>
-  <span class="k">for</span><span class="p">(;;)</span> <span class="p">{</span>
-    <span class="cm">/* Setup file descriptors */</span>
-    <span class="n">FD_ZERO</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fd</span><span class="p">);</span>
-    <span class="n">FD_SET</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="p">,</span><span class="o">&amp;</span><span class="n">fd</span><span class="p">);</span>
-    <span class="n">FD_SET</span><span class="p">(</span><span class="n">client_socket</span><span class="p">,</span><span class="o">&amp;</span><span class="n">fd</span><span class="p">);</span>
+  /* The Main part of the program */
+  for(;;) {
+    /* Setup file descriptors */
+    FD_ZERO(&amp;amp;fd);
+    FD_SET(STDIN_FILENO,&amp;amp;fd);
+    FD_SET(client_socket,&amp;amp;fd);
 
-    <span class="cm">/* Wait for input via keyboard or socket */</span>
-    <span class="n">select</span><span class="p">(</span><span class="n">client_socket</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="o">&amp;</span><span class="n">fd</span><span class="p">,</span><span class="nb">NULL</span><span class="p">,</span><span class="nb">NULL</span><span class="p">,</span><span class="nb">NULL</span><span class="p">);</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">FD_ISSET</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="p">,</span><span class="o">&amp;</span><span class="n">fd</span><span class="p">))</span> <span class="p">{</span> <span class="cm">/* Keyboard input */</span>
-      <span class="k">if</span> <span class="p">((</span><span class="n">charsRead</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="p">,</span><span class="n">char_buffer</span><span class="p">,</span><span class="n">char_buff_size</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="n">exit_close</span><span class="p">(</span><span class="s">&quot;ERROR reading from STDIN&quot;</span><span class="p">);</span>
-      <span class="k">if</span> <span class="p">((</span><span class="n">charsWritten</span> <span class="o">=</span> <span class="n">send</span><span class="p">(</span><span class="n">client_socket</span><span class="p">,</span><span class="n">char_buffer</span><span class="p">,</span><span class="n">charsRead</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span> <span class="o">!=</span> <span class="n">charsRead</span><span class="p">)</span>
-      <span class="n">exit_close</span><span class="p">(</span><span class="s">&quot;Did not write enough</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">FD_ISSET</span><span class="p">(</span><span class="n">client_socket</span><span class="p">,</span><span class="o">&amp;</span><span class="n">fd</span><span class="p">))</span> <span class="p">{</span> <span class="cm">/* Socket input */</span>
-      <span class="k">if</span> <span class="p">((</span><span class="n">charsRead</span> <span class="o">=</span> <span class="n">recv</span><span class="p">(</span><span class="n">client_socket</span><span class="p">,</span><span class="n">char_buffer</span><span class="p">,</span><span class="n">char_buff_size</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="n">exit_close</span><span class="p">(</span><span class="s">&quot;ERROR reading from socket&quot;</span><span class="p">);</span>
-      <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">charsRead</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="n">exit_close</span><span class="p">(</span><span class="s">&quot;Connection closed&quot;</span><span class="p">);</span>
+    /* Wait for input via keyboard or socket */
+    select(client_socket+1,&amp;amp;fd,NULL,NULL,NULL);
+    if(FD_ISSET(STDIN_FILENO,&amp;amp;fd)) { /* Keyboard input */
+      if ((charsRead = read(STDIN_FILENO,char_buffer,char_buff_size)) &amp;lt; 0)
+    exit_close(&quot;ERROR reading from STDIN&quot;);
+      if ((charsWritten = send(client_socket,char_buffer,charsRead,0)) != charsRead)
+      exit_close(&quot;Did not write enough\n&quot;);
+    }
+    if(FD_ISSET(client_socket,&amp;amp;fd)) { /* Socket input */
+      if ((charsRead = recv(client_socket,char_buffer,char_buff_size,0)) &amp;lt; 0)
+    exit_close(&quot;ERROR reading from socket&quot;);
+      else if (charsRead == 0)
+    exit_close(&quot;Connection closed&quot;);
 
-      <span class="cm">/* Output to screen */</span>
-      <span class="n">charsWritten</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-      <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-      <span class="k">while</span> <span class="p">((</span><span class="n">temp</span> <span class="o">=</span> <span class="n">write</span><span class="p">(</span><span class="n">STDOUT_FILENO</span><span class="p">,</span><span class="o">&amp;</span><span class="n">char_buffer</span><span class="p">[</span><span class="n">charsWritten</span><span class="p">],</span><span class="n">charsRead</span><span class="o">-</span><span class="n">charsWritten</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="n">charsWritten</span> <span class="o">+=</span> <span class="n">temp</span><span class="p">;</span>
-      <span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
-      <span class="n">exit_close</span><span class="p">(</span><span class="s">&quot;ERROR writing to screen&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
+      /* Output to screen */
+      charsWritten = 0;
+      int temp = 0;
+      while ((temp = write(STDOUT_FILENO,&amp;amp;char_buffer[charsWritten],charsRead-charsWritten)) &amp;gt; 0)
+    charsWritten += temp;
+      if (temp &amp;lt; 0)
+      exit_close(&quot;ERROR writing to screen&quot;);
+    }
+  }
 
-  <span class="cm">/* Unreachable */</span>
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+  /* Unreachable */
+  return 0;
+}
 </pre></div>
 
 

@@ -125,10 +125,10 @@ and AWS_SECRET_ACCESS_KEY&nbsp;respectively.</p>
     <span class="kn">import</span> <span class="nn">boto.s3</span>
     <span class="n">boto</span><span class="o">.</span><span class="n">s3</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">Key</span><span class="o">.</span><span class="n">change_storage_class</span>
 <span class="k">except</span> <span class="ne">ImportError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Package boto (svn rev. &gt;= 1595) must be installed.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Package boto (svn rev. &amp;gt;= 1595) must be installed.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Invalid version of boto. Required svn rev. &gt;= 1595.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Invalid version of boto. Required svn rev. &amp;gt;= 1595.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">aws_id</span><span class="p">,</span> <span class="n">aws_key</span><span class="p">):</span>

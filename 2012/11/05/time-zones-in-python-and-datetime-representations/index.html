@@ -137,10 +137,10 @@ timestamp differ from <code>473414400</code>? To help answer such questions, pro
 languages usually have a date and time representation that can be created from
 unix timestamps. In python, this representation is accomplished through the
 <a href="http://docs.python.org/2/library/datetime.html#datetime-objects">datetime</a>&nbsp;object:</p>
-<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">1325448000</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><span class="go">&amp;gt;&amp;gt;&amp;gt; from datetime import datetime</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; print(datetime.fromtimestamp(1325448000))</span>
 <span class="go">2012-01-01 12:00:00</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">473414400</span><span class="p">))</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; print(datetime.fromtimestamp(473414400))</span>
 <span class="go">1985-01-01 00:00:00</span>
 </pre></div>
 
@@ -153,9 +153,9 @@ created in the context of the local time zone by default. On my system, the
 local time zone is &#8220;America/Los_Angeles&#8221;, which corresponds to either <span class="caps">PST</span> or
 <span class="caps">PDT</span> depending on the time of year. With that in mind let&#8217;s look at instances of
 datetime around the end of daylight savings time&nbsp;2012.</p>
-<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">1352019599</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">1352019600</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">((</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><span class="go">&amp;gt;&amp;gt;&amp;gt; a = datetime.fromtimestamp(1352019599)</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; b = datetime.fromtimestamp(1352019600)</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; print((b - a).total_seconds())</span>
 <span class="go">-3599.0</span>
 </pre></div>
 
@@ -167,9 +167,9 @@ the localized time zone by default, they do not maintain the time zone
 information by default. Thus, naïve datetime objects, that is, those without
 time zone information, are only compared by their values. Below are the values
 for <em>a</em> and <em>b</em> from the previous&nbsp;example:</p>
-<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="go">&amp;gt;&amp;gt;&amp;gt; print(a)</span>
 <span class="go">2012-11-04 01:59:59</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; print(b)</span>
 <span class="go">2012-11-04 01:00:00</span>
 </pre></div>
 
@@ -179,14 +179,14 @@ correctly. Fortunately python&#8217;s datetime objects allow us to also associat
 time zone information. Unfortunately, the easiest way is through the
 non-standard package <a href="http://pytz.sourceforge.net/">pytz</a>. With pytz we can easily create time zone
 specific datetime objects. Doing so will solve the comparison&nbsp;problem:</p>
-<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pytz</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">1352019599</span><span class="p">,</span> <span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="s1">&#39;America/Los_Angeles&#39;</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">1352019600</span><span class="p">,</span> <span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="s1">&#39;America/Los_Angeles&#39;</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">((</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><span class="go">&amp;gt;&amp;gt;&amp;gt; import pytz</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; a = datetime.fromtimestamp(1352019599, pytz.timezone(&#39;America/Los_Angeles&#39;))</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; b = datetime.fromtimestamp(1352019600, pytz.timezone(&#39;America/Los_Angeles&#39;))</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; print((b - a).total_seconds())</span>
 <span class="go">1.0</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; print(a)</span>
 <span class="go">2012-11-04 01:59:59-07:00</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; print(b)</span>
 <span class="go">2012-11-04 01:00:00-08:00</span>
 </pre></div>
 
@@ -196,13 +196,13 @@ specific datetime objects. Doing so will solve the comparison&nbsp;problem:</p>
 object. Note that the time zone selected only affects how the datetime object
 is represented. Observe that the following two datetime objects are the same
 despite their different&nbsp;representation:</p>
-<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">1352019599</span><span class="p">,</span> <span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="s1">&#39;America/Los_Angeles&#39;</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">1352019599</span><span class="p">,</span> <span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="s1">&#39;America/New_York&#39;</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
+<div class="highlight"><pre><span></span><span class="go">&amp;gt;&amp;gt;&amp;gt; a = datetime.fromtimestamp(1352019599, pytz.timezone(&#39;America/Los_Angeles&#39;))</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; b = datetime.fromtimestamp(1352019599, pytz.timezone(&#39;America/New_York&#39;))</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; a == b</span>
 <span class="go">True</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; print(a)</span>
 <span class="go">2012-11-04 01:59:59-07:00</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; print(b)</span>
 <span class="go">2012-11-04 03:59:59-05:00</span>
 </pre></div>
 
@@ -216,11 +216,11 @@ object of the current date and time and
 create a datetime object for a specific date and&nbsp;time.</p>
 <p>With time zone specific datetime objects, it&#8217;s trivial to get a localized
 representation for any time zone through the <a href="http://docs.python.org/2/library/datetime.html#datetime.datetime.astimezone">astimezone</a>&nbsp;function:</p>
-<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="go">&amp;gt;&amp;gt;&amp;gt; print(a)</span>
 <span class="go">2012-11-04 01:59:59-07:00</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="s1">&#39;America/New_York&#39;</span><span class="p">)))</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; print(a.astimezone(pytz.timezone(&#39;America/New_York&#39;)))</span>
 <span class="go">2012-11-04 03:59:59-05:00</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">pytz</span><span class="o">.</span><span class="n">UTC</span><span class="p">))</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; print(a.astimezone(pytz.UTC))</span>
 <span class="go">2012-11-04 08:59:59+00:00</span>
 </pre></div>
 
@@ -245,10 +245,10 @@ information to be stored in <span class="caps">UTC</span>.</p>
 <p>Making no assumptions about the time zone the datetime object is currently
 represented in, the following shows how to convert a datetime object to a unix
 timestamp using <strong>time.mktime</strong>:</p>
-<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">time</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pytz.reference</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">1352019599</span><span class="p">,</span> <span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="s1">&#39;America/New_York&#39;</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">time</span><span class="o">.</span><span class="n">mktime</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">pytz</span><span class="o">.</span><span class="n">reference</span><span class="o">.</span><span class="n">LocalTimezone</span><span class="p">())</span><span class="o">.</span><span class="n">timetuple</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><span class="go">&amp;gt;&amp;gt;&amp;gt; import time</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; import pytz.reference</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; a = datetime.fromtimestamp(1352019599, pytz.timezone(&#39;America/New_York&#39;))</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; time.mktime(a.astimezone(pytz.reference.LocalTimezone()).timetuple())</span>
 <span class="go">1352019599.0</span>
 </pre></div>
 
@@ -259,8 +259,8 @@ representation in our localized time zone before calling timetuple. The
 localized time&nbsp;zone.</p>
 <p>The second approach to convert from a datetime object to a unix timestamp is to
 first convert to <span class="caps">UTC</span> and then use <strong>calendar.timegm</strong>:</p>
-<div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">calendar</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">calendar</span><span class="o">.</span><span class="n">timegm</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">utctimetuple</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><span class="go">&amp;gt;&amp;gt;&amp;gt; import calendar</span>
+<span class="go">&amp;gt;&amp;gt;&amp;gt; calendar.timegm(a.utctimetuple())</span>
 <span class="go">1352019599</span>
 </pre></div>
 
