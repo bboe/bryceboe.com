@@ -126,10 +126,7 @@ StackOverflow questions. Each point in the chart represents the number of
 questions asked in a one week period starting on the date of the data point
 (protip: hover over chart to get the exact values).
 
-<p>
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js"> {"chartType":"AreaChart","chartName":"Top 10 Web Frameworks","dataSourceUrl":"//spreadsheets0.google.com/tq?key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&range=A1%3AK134&gid=0&transpose=0&headers=1&pub=1","options":{"displayAnnotations":true,"showTip":true,"reverseCategories":false,"titleY":"# of stack over flow questions","dataMode":"markers","titleX":"week starting on","maxAlternation":1,"pointSize":"0","colors":["#3366CC","#DC3912","#FF9900","#109618","#990099","#0099C6","#DD4477","#66AA00","#B82E2E","#316395"],"smoothLine":false,"lineWidth":"2","labelPosition":"right","is3D":false,"logScale":false,"hasLabelsColumn":true,"wmode":"opaque","title":"Top 10 Web Frameworks","legend":"right","allowCollapse":true,"reverseAxis":false,"isStacked":false,"mapType":"hybrid","width":600,"height":400},"refreshInterval":60} </script>
-</p>
-Note: if the above graph doesn't load, try [this static image][].
+![top10][]
 
 The data confirms my previous suspicion that ruby on rails is the number one
 MVC and that django and cakePHP would also appear in the top 10. I must admit
@@ -142,8 +139,7 @@ I added the below chart to show the relative percentage of questions per tag
 over time as per Big Dave's Gusset's comment. This hides the growing popularity
 of stackoverflow.</ins>
 
-![image][]  
-([Interactive version][])
+![normalized_top10][]
 
 The data for the above chart was extracted using the following script. The
 script requires the python package [py-stackexchange][] in order to run and can
@@ -285,7 +281,7 @@ Happy web-framework coding!
   [spring]: http://stackoverflow.com/tags/spring
   [sass]: http://stackoverflow.com/tags/sass
   [StackOverflow API]: http://api.stackoverflow.com/
-  [this static image]: https://spreadsheets0.google.com/oimg?key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&oid=12&zx=vn515z2t7lj8
-  [image]: https://spreadsheets1.google.com/oimg?key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&oid=14&zx=1n411uq4n9w4
+  [top10]: /images/2011/02/top10.png
+  [normalized_top10]: /images/2011/02/normalized_top10.png
   [Interactive version]: https://spreadsheets1.google.com/pub?hl=en&key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&hl=en&gid=11
   [py-stackexchange]: http://stackapps.com/questions/198/py-stackexchange-an-api-wrapper-for-python
