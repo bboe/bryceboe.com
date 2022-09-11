@@ -98,7 +98,7 @@ and thus I came up with&nbsp;BTimer.</p>
 worry about the details of the setTimeout function or setInterval. This is
 particularly useful in cases where a page has different <span class="caps">AJAX</span> portions that need
 to be updated at different&nbsp;rates.</p>
-<div class="highlight"><pre><span></span><span class="c1">// Bryce Boe</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Bryce Boe</span>
 <span class="c1">// http://www.bryceboe.com/2007/04/11/btimer-class-a-javascript-timer-class/</span>
 <span class="kd">function</span> <span class="nx">BTimer</span><span class="p">(</span><span class="nx">interval</span><span class="p">,</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">interval</span><span class="p">,</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">);</span>
@@ -111,12 +111,12 @@ to be updated at different&nbsp;rates.</p>
         <span class="k">this</span><span class="p">.</span><span class="nx">setResetFunction</span><span class="p">(</span><span class="kc">null</span><span class="p">,[]);</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">running</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">ms</span> <span class="o">=</span> <span class="nx">interval</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">count</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">limit</span> <span class="o">=</span> <span class="kc">Infinity</span><span class="p">;</span>
     <span class="p">},</span>
     <span class="nx">_run</span><span class="o">:</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">running</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="o">=</span><span class="k">this</span><span class="p">.</span><span class="nx">limit</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="o">&gt;=</span><span class="k">this</span><span class="p">.</span><span class="nx">limit</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">this</span><span class="p">.</span><span class="nx">stop</span><span class="p">();</span>
             <span class="k">return</span><span class="p">;</span>
         <span class="p">}</span>
@@ -140,7 +140,7 @@ to be updated at different&nbsp;rates.</p>
         <span class="p">}</span>
     <span class="p">},</span>
     <span class="nx">reset</span><span class="o">:</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">count</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
         <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">resetFunc</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="k">this</span><span class="p">.</span><span class="nx">resetFunc</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">resetArgs</span><span class="p">);</span>
     <span class="p">},</span>
     <span class="nx">setUpdateFunction</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
@@ -169,8 +169,7 @@ to be updated at different&nbsp;rates.</p>
         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>The init function is the constructor for the BTimer class and called
 automatically when one writes: &#8220;new BTimer(someFunc,someList)&#8221;. The constructor
@@ -209,12 +208,11 @@ minute timer has&nbsp;expired.</p>
 <p>To demonstrate BTimer in action check out the&nbsp;following:</p>
 <hr>
 <script type="text/javascript" src="/images/2007/04/btimer0.js"></script>
-
-<p><textarea id="BTimerStatus0" style="width:200px;height:150px;">
+<textarea id="BTimerStatus0" style="width:200px;height:150px;">
 Status Area
 </textarea>
 <div id="BTimerDynamic0">Count: 0</div>
-<input type="button" value="Start" id="BTimerStart0" onclick="BTimerMyStart0();"></input>
+<p><input type="button" value="Start" id="BTimerStart0" onclick="BTimerMyStart0();"></input>
 <input type="button" value="Pause" id="BTimerPause0" onclick="BTimerMyTimer0.stop();" disabled></input>
 <input type="button" value="Reset" id="BTimerReset0" onclick="BTimerMyTimer0.reset();" disabled></input>  </p>
 <p><input type="radio" id="BTimerRadio00" name="BTimertimeout" onclick="BTimerMyTimer0.setInterval(300);BTimerOther0('selected .3 second');" checked disabled></input>
@@ -226,16 +224,16 @@ Status Area
 <p><strong>Note</strong>: Clicking on reset does not update the count to&nbsp;0.</p>
 <hr>
 <p>The extra needed javascript functions for this are the&nbsp;following:</p>
-<div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">BTimerMyStart0</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">BTimerMyStart0</span><span class="p">()</span> <span class="p">{</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerPause0&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerReset0&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerStart0&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerRadio00&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerRadio10&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerRadio20&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">BTimerMyTimer0</span> <span class="o">==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">BTimerMyTimer0</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BTimer</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="nx">BTimerMyUpdate0</span><span class="p">,[]);</span>
-        <span class="nx">BTimerMyTimer0</span><span class="p">.</span><span class="nx">setLimit</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="ow">typeof</span> <span class="nx">BTimerMyTimer0</span> <span class="o">==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">BTimerMyTimer0</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">BTimer</span><span class="p">(</span><span class="mf">300</span><span class="p">,</span><span class="nx">BTimerMyUpdate0</span><span class="p">,[]);</span>
+        <span class="nx">BTimerMyTimer0</span><span class="p">.</span><span class="nx">setLimit</span><span class="p">(</span><span class="mf">50</span><span class="p">);</span>
         <span class="nx">BTimerMyTimer0</span><span class="p">.</span><span class="nx">setStopFunction</span><span class="p">(</span><span class="nx">BTimerMyPause0</span><span class="p">,[]);</span>
         <span class="nx">BTimerMyTimer0</span><span class="p">.</span><span class="nx">setResetFunction</span><span class="p">(</span><span class="nx">BTimerOther0</span><span class="p">,[</span><span class="s1">&#39;called reset&#39;</span><span class="p">]);</span>
         <span class="nx">BTimerMyTimer0</span><span class="p">.</span><span class="nx">setStartFunction</span><span class="p">(</span><span class="nx">BTimerOther0</span><span class="p">,[</span><span class="s1">&#39;called start&#39;</span><span class="p">]);</span>
@@ -252,34 +250,32 @@ Status Area
     <span class="nx">BTimerOther0</span><span class="p">(</span><span class="s1">&#39;called pause&#39;</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="kd">function</span> <span class="nx">BTimerOther0</span><span class="p">(</span><span class="nx">string</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">BTimerMyStatusCount0</span> <span class="o">==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="nx">BTimerMyStatusCount0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="ow">typeof</span> <span class="nx">BTimerMyStatusCount0</span> <span class="o">==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="nx">BTimerMyStatusCount0</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerStatus0&#39;</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">BTimerMyStatusCount0</span><span class="o">++</span>
         <span class="o">+</span><span class="s2">&quot;: &quot;</span> <span class="o">+</span> <span class="nx">string</span> <span class="o">+</span> <span class="s2">&quot;\n&quot;</span>
         <span class="o">+</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerStatus0&#39;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>And the accompanying&nbsp;html:</p>
-<div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">textarea</span> <span class="nt">id</span><span class="o">=</span><span class="s2">&quot;BTimerStatus0&quot;</span> <span class="nt">style</span><span class="o">=</span><span class="s2">&quot;width:200px;height:150px;&quot;</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;</span><span class="nt">Status</span> <span class="nt">Area</span><span class="o">&amp;</span><span class="nt">lt</span><span class="o">;/</span><span class="nt">textarea</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;</span>
-<span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">div</span> <span class="nt">id</span><span class="o">=</span><span class="s2">&quot;BTimerDynamic0&quot;</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;</span><span class="nt">Count</span><span class="o">:</span> <span class="nt">0</span><span class="o">&amp;</span><span class="nt">lt</span><span class="o">;/</span><span class="nt">div</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;</span>
-<span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">input</span> <span class="nt">type</span><span class="o">=</span><span class="s2">&quot;button&quot;</span> <span class="nt">value</span><span class="o">=</span><span class="s2">&quot;Start&quot;</span> <span class="nt">id</span><span class="o">=</span><span class="s2">&quot;BTimerStart0&quot;</span> <span class="nt">onclick</span><span class="o">=</span><span class="s2">&quot;BTimerMyStart0();&quot;</span> <span class="o">/&amp;</span><span class="nt">gt</span><span class="o">;</span>
-<span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">input</span> <span class="nt">type</span><span class="o">=</span><span class="s2">&quot;button&quot;</span> <span class="nt">value</span><span class="o">=</span><span class="s2">&quot;Pause&quot;</span> <span class="nt">id</span><span class="o">=</span><span class="s2">&quot;BTimerPause0&quot;</span>
-       <span class="nt">onclick</span><span class="o">=</span><span class="s2">&quot;BTimerMyTimer0.stop();&quot;</span> <span class="nt">DISABLED</span> <span class="o">/&amp;</span><span class="nt">gt</span><span class="o">;</span>
-<span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">input</span> <span class="nt">type</span><span class="o">=</span><span class="s2">&quot;button&quot;</span> <span class="nt">value</span><span class="o">=</span><span class="s2">&quot;Reset&quot;</span> <span class="nt">id</span><span class="o">=</span><span class="s2">&quot;BTimerReset0&quot;</span>
-       <span class="nt">onclick</span><span class="o">=</span><span class="s2">&quot;BTimerMyTimer0.reset();&quot;</span> <span class="nt">DISABLED</span> <span class="o">/&amp;</span><span class="nt">gt</span><span class="o">;</span>
-<span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">br</span><span class="o">/&amp;</span><span class="nt">gt</span><span class="o">;&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">br</span><span class="o">/&amp;</span><span class="nt">gt</span><span class="o">;</span>
-<span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">input</span> <span class="nt">type</span><span class="o">=</span><span class="s2">&quot;radio&quot;</span> <span class="nt">id</span><span class="o">=</span><span class="s2">&quot;BTimerRadio00&quot;</span> <span class="nt">name</span><span class="o">=</span><span class="s2">&quot;BTimertimeout&quot;</span>
-       <span class="nt">onclick</span><span class="o">=</span><span class="s2">&quot;BTimerMyTimer0.setInterval(300);</span>
-<span class="s2">       BTimerOther0(&#39;selected .3 second&#39;);&quot;</span> <span class="nt">CHECKED</span> <span class="nt">DISABLED</span><span class="o">/&amp;</span><span class="nt">gt</span><span class="o">;</span> <span class="nt">0</span><span class="p">.</span><span class="nc">3</span> <span class="nt">second</span><span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">br</span><span class="o">/&amp;</span><span class="nt">gt</span><span class="o">;</span>
-<span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">input</span> <span class="nt">type</span><span class="o">=</span><span class="s2">&quot;radio&quot;</span> <span class="nt">id</span><span class="o">=</span><span class="s2">&quot;BTimerRadio10&quot;</span> <span class="nt">name</span><span class="o">=</span><span class="s2">&quot;BTimertimeout&quot;</span>
-       <span class="nt">onclick</span><span class="o">=</span><span class="s2">&quot;BTimerMyTimer0.setInterval(1000);</span>
-<span class="s2">       BTimerOther0(&#39;selected 1 second&#39;);&quot;</span> <span class="nt">DISABLED</span><span class="o">/&amp;</span><span class="nt">gt</span><span class="o">;</span> <span class="nt">1</span> <span class="nt">second</span><span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">br</span><span class="o">/&amp;</span><span class="nt">gt</span><span class="o">;</span>
-<span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">input</span> <span class="nt">type</span><span class="o">=</span><span class="s2">&quot;radio&quot;</span> <span class="nt">id</span><span class="o">=</span><span class="s2">&quot;BTimerRadio20&quot;</span> <span class="nt">name</span><span class="o">=</span><span class="s2">&quot;BTimertimeout&quot;</span>
-       <span class="nt">onclick</span><span class="o">=</span><span class="s2">&quot;BTimerMyTimer0.setInterval(5000);</span>
-<span class="s2">       BTimerOther0(&#39;selected 5 seconds&#39;);&quot;</span> <span class="nt">DISABLED</span><span class="o">/&amp;</span><span class="nt">gt</span><span class="o">;</span> <span class="nt">5</span> <span class="nt">seconds</span><span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">br</span><span class="o">/&amp;</span><span class="nt">gt</span><span class="o">;</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">&quot;BTimerStatus0&quot;</span> <span class="na">style=</span><span class="s">&quot;width:200px;height:150px;&quot;</span><span class="nt">&gt;</span>Status Area<span class="nt">&lt;/textarea&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;BTimerDynamic0&quot;</span><span class="nt">&gt;</span>Count: 0<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">value=</span><span class="s">&quot;Start&quot;</span> <span class="na">id=</span><span class="s">&quot;BTimerStart0&quot;</span> <span class="na">onclick=</span><span class="s">&quot;BTimerMyStart0();&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">value=</span><span class="s">&quot;Pause&quot;</span> <span class="na">id=</span><span class="s">&quot;BTimerPause0&quot;</span>
+       <span class="na">onclick=</span><span class="s">&quot;BTimerMyTimer0.stop();&quot;</span> <span class="err">DISABLED</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">value=</span><span class="s">&quot;Reset&quot;</span> <span class="na">id=</span><span class="s">&quot;BTimerReset0&quot;</span>
+       <span class="na">onclick=</span><span class="s">&quot;BTimerMyTimer0.reset();&quot;</span> <span class="err">DISABLED</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;br/&gt;&lt;br/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">id=</span><span class="s">&quot;BTimerRadio00&quot;</span> <span class="na">name=</span><span class="s">&quot;BTimertimeout&quot;</span>
+       <span class="na">onclick=</span><span class="s">&quot;BTimerMyTimer0.setInterval(300);</span>
+<span class="s">       BTimerOther0(&#39;selected .3 second&#39;);&quot;</span> <span class="err">CHECKED</span> <span class="err">DISABLED</span><span class="nt">/&gt;</span> 0.3 second<span class="nt">&lt;br/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">id=</span><span class="s">&quot;BTimerRadio10&quot;</span> <span class="na">name=</span><span class="s">&quot;BTimertimeout&quot;</span>
+       <span class="na">onclick=</span><span class="s">&quot;BTimerMyTimer0.setInterval(1000);</span>
+<span class="s">       BTimerOther0(&#39;selected 1 second&#39;);&quot;</span> <span class="err">DISABLED</span><span class="nt">/&gt;</span> 1 second<span class="nt">&lt;br/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">id=</span><span class="s">&quot;BTimerRadio20&quot;</span> <span class="na">name=</span><span class="s">&quot;BTimertimeout&quot;</span>
+       <span class="na">onclick=</span><span class="s">&quot;BTimerMyTimer0.setInterval(5000);</span>
+<span class="s">       BTimerOther0(&#39;selected 5 seconds&#39;);&quot;</span> <span class="err">DISABLED</span><span class="nt">/&gt;</span> 5 seconds<span class="nt">&lt;br/&gt;</span>
+</code></pre></div>
 
 <p>This javascript code is fairly self explanatory with the exception of
 BTimerMyStart0. Since I want to create my timer the first time I call start it
@@ -354,10 +350,6 @@ lines of comments so that one may have access to this post for support on the&nb
                       <a href="http://www.linkedin.com/in/bbzbryce">linkedin</a>
                     </li>
                     <li class="list-group-item">
-                      <a href="https://plus.google.com/+BryceBoe?rel=author"><i class="fa fa-google-plus fa-lg"></i></a>
-                      <a href="https://plus.google.com/+BryceBoe?rel=author">google+</a>
-                    </li>
-                    <li class="list-group-item">
                       <a href="https://twitter.com/bboe"><i class="fa fa-twitter fa-lg"></i></a>
                       <a href="https://twitter.com/bboe">twitter</a>
                     </li>
@@ -404,11 +396,6 @@ lines of comments so that one may have access to this post for support on the&nb
         <li class="list-group-item">
             <a href="http://adamdoupe.com/" target="_blank">
                 Adam Doupé
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://juliebifano.com/" target="_blank">
-                Julie Bifano
             </a>
         </li>
       </ul>

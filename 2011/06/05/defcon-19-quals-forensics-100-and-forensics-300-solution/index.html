@@ -103,7 +103,7 @@ members had about the blue offset pixels that occur at regular intervals. Our
 first attempt at wrapping the image at the blue pixel boundaries (every 450
 pixels) <a href="/images/2011/06/f100_solution.png">resulted in success</a>! The key &#8220;thankYouSirPleasemayIhaveAnother&#8221;
 appeared and worked. The following is my simple python solution for Forensics&nbsp;100:</p>
-<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">Image</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
@@ -114,8 +114,7 @@ appeared and worked. The following is my simple python solution for Forensics&nb
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
-</pre></div>
-
+</code></pre></div>
 
 <h2>Forensics&nbsp;300</h2>
 <p>Forensics 300 was quite an interesting challenge. I don&#8217;t have the original
@@ -146,12 +145,12 @@ location is called Ross Island. From that point we simply attempted different
 &#8220;places&#8221; listed <a href="http://en.wikipedia.org/wiki/Ross_Island">Ross Island&#8217;s wikpiedia page</a> until &#8220;McMurdo Station&#8221;
 submitted successfully. Below is the script I used to find the coordinates from
 the <a href="/images/2011/06/consolidated.db">consolodated.db input file</a>:</p>
-<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;sqlite3 consolidated.db &quot;select Latitude, Longitude &#39;</span>
-              <span class="s1">&#39;from CellLocation;&quot; &amp;gt; tmp&#39;</span><span class="p">)</span>
+              <span class="s1">&#39;from CellLocation;&quot; &gt; tmp&#39;</span><span class="p">)</span>
 
     <span class="n">uniq</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;tmp&#39;</span><span class="p">):</span>
@@ -162,12 +161,11 @@ the <a href="/images/2011/06/consolidated.db">consolodated.db input file</a>:</p
             <span class="n">uniq</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
 
     <span class="k">for</span> <span class="n">pos</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">uniq</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
-        <span class="k">print</span> <span class="n">count</span><span class="p">,</span> <span class="n">pos</span>
+        <span class="nb">print</span> <span class="n">count</span><span class="p">,</span> <span class="n">pos</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>You can find links to solutions to other Defcon 19 Quals challenges at the
 following locations: <a href="http://rogunix.com/defconquals19.html">Rogunix</a>, <a href="http://t.negativefoo.org/post/6235620215/dc19-ctf-quals-writeups">negative foo</a>, <a href="http://www.vnsecurity.net/2011/05/defcon-19-ctf-quals-writeups-collection/">VNSecurity site</a>.</p>
@@ -233,10 +231,6 @@ following locations: <a href="http://rogunix.com/defconquals19.html">Rogunix</a>
                       <a href="http://www.linkedin.com/in/bbzbryce">linkedin</a>
                     </li>
                     <li class="list-group-item">
-                      <a href="https://plus.google.com/+BryceBoe?rel=author"><i class="fa fa-google-plus fa-lg"></i></a>
-                      <a href="https://plus.google.com/+BryceBoe?rel=author">google+</a>
-                    </li>
-                    <li class="list-group-item">
                       <a href="https://twitter.com/bboe"><i class="fa fa-twitter fa-lg"></i></a>
                       <a href="https://twitter.com/bboe">twitter</a>
                     </li>
@@ -283,11 +277,6 @@ following locations: <a href="http://rogunix.com/defconquals19.html">Rogunix</a>
         <li class="list-group-item">
             <a href="http://adamdoupe.com/" target="_blank">
                 Adam Doupé
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://juliebifano.com/" target="_blank">
-                Julie Bifano
             </a>
         </li>
       </ul>

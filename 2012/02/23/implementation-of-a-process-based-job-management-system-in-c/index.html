@@ -118,12 +118,11 @@ compiled via <code>gcc main.c job_management.c</code> and the test program can b
 function prototypes whereas <strong>job_management.c</strong> contains the implementation.
 The entire library functionality is exposed through three functions:
 <code>manager_init</code>, <code>manager_run_jobs</code>, and <code>manager_destruct</code>.</p>
-<div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">manager_init</span><span class="p">(</span><span class="k">struct</span> <span class="n">manager</span> <span class="o">*</span><span class="n">manager</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num_workers</span><span class="p">,</span>
-          <span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">input_callback</span><span class="p">)(</span><span class="kt">char</span> <span class="o">*</span><span class="p">),</span>
-          <span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">output_callback</span><span class="p">)(</span><span class="kt">char</span> <span class="o">*</span><span class="p">),</span>
-          <span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">work_function</span><span class="p">)(</span><span class="kt">char</span> <span class="o">*</span><span class="p">));</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">manager_init</span><span class="p">(</span><span class="k">struct</span> <span class="nc">manager</span><span class="w"> </span><span class="o">*</span><span class="n">manager</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num_workers</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">input_callback</span><span class="p">)(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">),</span><span class="w"></span>
+<span class="w">          </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">output_callback</span><span class="p">)(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">),</span><span class="w"></span>
+<span class="w">          </span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">work_function</span><span class="p">)(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
 
 <p>Aside from the pre-allocated <em>manager</em> structure that all the functions require
 as their first parameter, the <code>manager_init</code> function requires four other
@@ -144,9 +143,8 @@ and worker process. On return, the buffer should contain the job output which
 will then be sent back to the master process. The <em>output_callback</em> function
 is called by the master process as each job is completed. In this case, the
 buffer contains the output of a completed&nbsp;job.</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">manager_run_jobs</span><span class="p">(</span><span class="k">struct</span> <span class="n">manager</span> <span class="o">*</span><span class="n">manager</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num_jobs</span><span class="p">);</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">manager_run_jobs</span><span class="p">(</span><span class="k">struct</span> <span class="nc">manager</span><span class="w"> </span><span class="o">*</span><span class="n">manager</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num_jobs</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
 
 <p>Once the manager has been properly set up, a number of jobs can be started via
 <code>manager_run_jobs</code> which takes one additional argument, <em>num_jobs</em>.
@@ -165,9 +163,8 @@ function handles the desired behavior through the combination of a global
 <a href="http://en.wikipedia.org/wiki/Volatile_variable">volatile</a> value that&#8217;s periodically checked within this function&#8217;s primary
 loop, and a <span class="caps">SIGINT</span> handler function that updates the value. Worker processes
 are unaffected by <span class="caps">SIGINT</span> as they are set to ignore&nbsp;it.</p>
-<div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">manager_destruct</span><span class="p">(</span><span class="k">struct</span> <span class="n">manager</span> <span class="o">*</span><span class="n">manager</span><span class="p">);</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">manager_destruct</span><span class="p">(</span><span class="k">struct</span> <span class="nc">manager</span><span class="w"> </span><span class="o">*</span><span class="n">manager</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
 
 <p>The last function, <code>manager_destruct</code>, conveniently frees the contents of the
 <em>manager</em> structure. It is important to note that this function is also called
@@ -300,10 +297,6 @@ int main(int argc, char *argv[]) {
                       <a href="http://www.linkedin.com/in/bbzbryce">linkedin</a>
                     </li>
                     <li class="list-group-item">
-                      <a href="https://plus.google.com/+BryceBoe?rel=author"><i class="fa fa-google-plus fa-lg"></i></a>
-                      <a href="https://plus.google.com/+BryceBoe?rel=author">google+</a>
-                    </li>
-                    <li class="list-group-item">
                       <a href="https://twitter.com/bboe"><i class="fa fa-twitter fa-lg"></i></a>
                       <a href="https://twitter.com/bboe">twitter</a>
                     </li>
@@ -350,11 +343,6 @@ int main(int argc, char *argv[]) {
         <li class="list-group-item">
             <a href="http://adamdoupe.com/" target="_blank">
                 Adam Doupé
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://juliebifano.com/" target="_blank">
-                Julie Bifano
             </a>
         </li>
       </ul>

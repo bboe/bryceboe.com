@@ -96,13 +96,13 @@ weekend. Below is my write up for the Forensics 200&nbsp;challenge.</p>
 I don&#8217;t recall the phrasing they gave (if you remember it please let me know),
 however this was the file they provided:</del>
 <ins datetime="2010-05-26T03:34:43+00:00">The caption read, &#8220;find the key&#8221; and
-linked to this file:</ins> <a href="http://cs.ucsb.edu/~bboe/public/bin/f200_02b7b50f575759cff7.tar">f200_02b7b50f575759cff7.tar.lzma</a></p>
+linked to this file:</ins> <a href="/public/f200_02b7b50f575759cff7.tar">f200_02b7b50f575759cff7.tar.lzma</a></p>
 <p>Running <em>file</em> on f200_02b7b50f575759cff7.tar.lzma simply returned <strong>data</strong>
 however fortunately the lzma extension was useful to identify that this
 possibly be uncompressed with 7zip (<a href="http://lmgtfy.com/?q=lzma+file&amp;l=1">lmgtfy lzma file</a>). On ubuntu there is a
 package called p7zip&nbsp;thus:</p>
-<div class="highlight"><pre><span></span><span class="gp">bryce@sarek:f200$</span> mv f200_02b7b50f575759cff7.tar.lzma f200_02b7b50f575759cff7.tar.7z
-<span class="gp">bryce@sarek:f200$</span> p7zip -d f200_02b7b50f575759cff7.tar.7z
+<div class="highlight"><pre><span></span><code><span class="gp">bryce@sarek:f200$ </span>mv f200_02b7b50f575759cff7.tar.lzma f200_02b7b50f575759cff7.tar.7z
+<span class="gp">bryce@sarek:f200$ </span>p7zip -d f200_02b7b50f575759cff7.tar.7z
 
 <span class="go">7-Zip (A) 9.04 beta  Copyright (c) 1999-2009 Igor Pavlov  2009-05-30</span>
 <span class="go">p7zip Version 9.04 (locale=en_US.UTF-8,Utf16=on,HugeFiles=on,8 CPUs)</span>
@@ -115,12 +115,11 @@ package called p7zip&nbsp;thus:</p>
 
 <span class="go">Size:       1730560</span>
 <span class="go">Compressed: 487746</span>
-<span class="gp">bryce@sarek:f200$</span> tar -xf f200_02b7b50f575759cff7.tar
-</pre></div>
-
+<span class="gp">bryce@sarek:f200$ </span>tar -xf f200_02b7b50f575759cff7.tar
+</code></pre></div>
 
 <p>This extracts 1121 png image&nbsp;files.</p>
-<div class="highlight"><pre><span></span><span class="gp">bryce@sarek:f200$</span> ls <span class="p">|</span> head
+<div class="highlight"><pre><span></span><code><span class="gp">bryce@sarek:f200$ </span>ls <span class="p">|</span> head
 <span class="go">f200_02b7b50f575759cff7.tar</span>
 <span class="go">IMG_0001.png</span>
 <span class="go">IMG_0002.png</span>
@@ -131,15 +130,14 @@ package called p7zip&nbsp;thus:</p>
 <span class="go">IMG_0007.png</span>
 <span class="go">IMG_0008.png</span>
 <span class="go">IMG_0009.png</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Using <em>pnginfo</em> one can verify that each image is similar with respect to its
 attributes (width, height, bitdepth, channels, etc.). Using manual image
 inspection we see a mostly transparent image with some white and black pixels.
 Thus using <a href="http://www.pythonware.com/products/pil/">python&#8217;s imaging library</a> (<span class="caps">PIL</span>) we simply write a quick program
 that will combine all the images into&nbsp;one:</p>
-<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">Image</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
@@ -157,8 +155,7 @@ that will combine all the images into&nbsp;one:</p>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Running this eventually produces the following image, from which the is.gd url
 <a href="http://is.gd/ced7F">http://is.gd/ced7F</a> is the key. Yeah Sexy <span class="caps">CPR</span>.</p>
@@ -225,10 +222,6 @@ that will combine all the images into&nbsp;one:</p>
                       <a href="http://www.linkedin.com/in/bbzbryce">linkedin</a>
                     </li>
                     <li class="list-group-item">
-                      <a href="https://plus.google.com/+BryceBoe?rel=author"><i class="fa fa-google-plus fa-lg"></i></a>
-                      <a href="https://plus.google.com/+BryceBoe?rel=author">google+</a>
-                    </li>
-                    <li class="list-group-item">
                       <a href="https://twitter.com/bboe"><i class="fa fa-twitter fa-lg"></i></a>
                       <a href="https://twitter.com/bboe">twitter</a>
                     </li>
@@ -275,11 +268,6 @@ that will combine all the images into&nbsp;one:</p>
         <li class="list-group-item">
             <a href="http://adamdoupe.com/" target="_blank">
                 Adam Doupé
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://juliebifano.com/" target="_blank">
-                Julie Bifano
             </a>
         </li>
       </ul>

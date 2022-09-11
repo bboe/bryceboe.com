@@ -105,53 +105,52 @@ and finally how to use signals. As I do with most things when I learn them I
 create a very simple program to demonstrate and that is what the following is.
 The program when compiled will echo everything typed after <em>enter</em> has been
 pressed. When closing the program via ctrl+c it will print the message&nbsp;&#8220;Exit!&#8221;.</p>
-<div class="highlight"><pre><span></span>#include &amp;lt;stdio.h&amp;gt;  // printf
-#include &amp;lt;fcntl.h&amp;gt;  // FD_ functions
-#include &amp;lt;signal.h&amp;gt; // sig functions
-#include &amp;lt;stdlib.h&amp;gt; // exit
-#include &amp;lt;unistd.h&amp;gt; // STDIN_FILENO
+<div class="highlight"><pre><span></span><code><span class="c1">#include &lt;stdio.h&gt;  // printf</span>
+<span class="c1">#include &lt;fcntl.h&gt;  // FD_ functions</span>
+<span class="c1">#include &lt;signal.h&gt; // sig functions</span>
+<span class="c1">#include &lt;stdlib.h&gt; // exit</span>
+<span class="c1">#include &lt;unistd.h&gt; // STDIN_FILENO</span>
 
-void exit_error(char* msg) {
-  perror(msg);
-  exit(1);
-}
+<span class="n">void</span> <span class="n">exit_error</span><span class="p">(</span><span class="nb">char</span><span class="o">*</span> <span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">perror</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+  <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
 
-void KBInterrupt(int sig) {
-  printf(&quot;Exit!\n&quot;);
-  exit(1);
-}
+<span class="n">void</span> <span class="n">KBInterrupt</span><span class="p">(</span><span class="nb nb-Type">int</span> <span class="n">sig</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Exit!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+  <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
 
-int main() {
-  // Variables
-  fd_set fd;
-  int charsRead;
-  char buff[256];
-  struct sigaction handler;
+<span class="nb nb-Type">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="o">//</span> <span class="n">Variables</span>
+  <span class="n">fd_set</span> <span class="n">fd</span><span class="p">;</span>
+  <span class="nb nb-Type">int</span> <span class="n">charsRead</span><span class="p">;</span>
+  <span class="nb">char</span> <span class="n">buff</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span>
+  <span class="n">struct</span> <span class="n">sigaction</span> <span class="n">handler</span><span class="p">;</span>
 
-  // Setup Action Handler
-  handler.sa_handler = KBInterrupt; // Function to call
-  if (sigfillset(&amp;amp;handler.sa_mask) &amp;lt; 0)
-    exit_error(&quot;sigfillset failed&quot;);
-  handler.sa_flags=0;
-  if (sigaction(SIGINT,&amp;amp;handler,0) &amp;lt; 0) // Setup signal
-    exit_error(&quot;sigaction failed&quot;);
+  <span class="o">//</span> <span class="n">Setup</span> <span class="n">Action</span> <span class="n">Handler</span>
+  <span class="n">handler</span><span class="o">.</span><span class="n">sa_handler</span> <span class="o">=</span> <span class="n">KBInterrupt</span><span class="p">;</span> <span class="o">//</span> <span class="n">Function</span> <span class="n">to</span> <span class="n">call</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">sigfillset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">handler</span><span class="o">.</span><span class="n">sa_mask</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">exit_error</span><span class="p">(</span><span class="s2">&quot;sigfillset failed&quot;</span><span class="p">);</span>
+  <span class="n">handler</span><span class="o">.</span><span class="n">sa_flags</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">sigaction</span><span class="p">(</span><span class="n">SIGINT</span><span class="p">,</span><span class="o">&amp;</span><span class="n">handler</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">//</span> <span class="n">Setup</span> <span class="k">signal</span>
+    <span class="n">exit_error</span><span class="p">(</span><span class="s2">&quot;sigaction failed&quot;</span><span class="p">);</span>
 
-  // Setup file descriptors
-  FD_ZERO(&amp;amp;fd);
-  FD_SET(STDIN_FILENO,&amp;amp;fd);
+  <span class="o">//</span> <span class="n">Setup</span> <span class="n">file</span> <span class="n">descriptors</span>
+  <span class="n">FD_ZERO</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fd</span><span class="p">);</span>
+  <span class="n">FD_SET</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="p">,</span><span class="o">&amp;</span><span class="n">fd</span><span class="p">);</span>
 
-  // The main part of the program
-  for (;;) {
-    select(STDIN_FILENO+1,&amp;amp;fd,NULL,NULL,NULL);
-    if(FD_ISSET(STDIN_FILENO,&amp;amp;fd)) { // Checks if enter has been pressed
-      charsRead = read(STDIN_FILENO,buff,255);
-      write(STDOUT_FILENO,buff,charsRead);
-    }
-  }
-  return 0;
-}
-</pre></div>
-
+  <span class="o">//</span> <span class="n">The</span> <span class="n">main</span> <span class="n">part</span> <span class="n">of</span> <span class="n">the</span> <span class="n">program</span>
+  <span class="k">for</span> <span class="p">(;;)</span> <span class="p">{</span>
+    <span class="n">select</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="o">&amp;</span><span class="n">fd</span><span class="p">,</span><span class="n">NULL</span><span class="p">,</span><span class="n">NULL</span><span class="p">,</span><span class="n">NULL</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">FD_ISSET</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="p">,</span><span class="o">&amp;</span><span class="n">fd</span><span class="p">))</span> <span class="p">{</span> <span class="o">//</span> <span class="n">Checks</span> <span class="k">if</span> <span class="n">enter</span> <span class="n">has</span> <span class="n">been</span> <span class="n">pressed</span>
+      <span class="n">charsRead</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="p">,</span><span class="n">buff</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span>
+      <span class="n">write</span><span class="p">(</span><span class="n">STDOUT_FILENO</span><span class="p">,</span><span class="n">buff</span><span class="p">,</span><span class="n">charsRead</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <p>When Adam and I wrote gauchoShare in Java we were not aware of I/O multiplexing
 and thus we created a new thread to handle keyboard input from the user. This
@@ -219,10 +218,6 @@ interrupt signal sent by ctrl+c in&nbsp;linux.</p>
                       <a href="http://www.linkedin.com/in/bbzbryce">linkedin</a>
                     </li>
                     <li class="list-group-item">
-                      <a href="https://plus.google.com/+BryceBoe?rel=author"><i class="fa fa-google-plus fa-lg"></i></a>
-                      <a href="https://plus.google.com/+BryceBoe?rel=author">google+</a>
-                    </li>
-                    <li class="list-group-item">
                       <a href="https://twitter.com/bboe"><i class="fa fa-twitter fa-lg"></i></a>
                       <a href="https://twitter.com/bboe">twitter</a>
                     </li>
@@ -269,11 +264,6 @@ interrupt signal sent by ctrl+c in&nbsp;linux.</p>
         <li class="list-group-item">
             <a href="http://adamdoupe.com/" target="_blank">
                 Adam Doupé
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://juliebifano.com/" target="_blank">
-                Julie Bifano
             </a>
         </li>
       </ul>

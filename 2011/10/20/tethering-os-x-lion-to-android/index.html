@@ -116,9 +116,8 @@ to provide the Internet with an update to that shell script. Please note that
 everything else mentioned on the blog post currently works as&nbsp;described.</p>
 <p>The fix to the shell script is actually really simple, just replace the line
 shown in the first block of code below, with the line shown in the&nbsp;second:</p>
-<div class="highlight"><pre><span></span><span class="go">sudo /Applications/Tunnelblick.app/Contents/Resources/openvpn --dev tun \    sudo /Applications/Tunnelblick.app/Contents/Resources/openvpn/openvpn-2.2.1/openvpn --dev tun \</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="go">sudo /Applications/Tunnelblick.app/Contents/Resources/openvpn --dev tun \    sudo /Applications/Tunnelblick.app/Contents/Resources/openvpn/openvpn-2.2.1/openvpn --dev tun \</span>
+</code></pre></div>
 
 <p>Finally for your convenience, I created a github gist with the updated shell
 script. Observant readers will notice that I updated some of the comments in
@@ -251,10 +250,6 @@ esac</code></pre>
                       <a href="http://www.linkedin.com/in/bbzbryce">linkedin</a>
                     </li>
                     <li class="list-group-item">
-                      <a href="https://plus.google.com/+BryceBoe?rel=author"><i class="fa fa-google-plus fa-lg"></i></a>
-                      <a href="https://plus.google.com/+BryceBoe?rel=author">google+</a>
-                    </li>
-                    <li class="list-group-item">
                       <a href="https://twitter.com/bboe"><i class="fa fa-twitter fa-lg"></i></a>
                       <a href="https://twitter.com/bboe">twitter</a>
                     </li>
@@ -301,11 +296,6 @@ esac</code></pre>
         <li class="list-group-item">
             <a href="http://adamdoupe.com/" target="_blank">
                 Adam Doupé
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://juliebifano.com/" target="_blank">
-                Julie Bifano
             </a>
         </li>
       </ul>

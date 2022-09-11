@@ -101,7 +101,7 @@ contained python script which retrieves a VirusTotal report for a given binary,
 uploading the file if necessary. The following script is loosely based off the
 <span class="caps">API</span> examples, and contains modified code from <a href="http://code.activestate.com/recipes/146306/">this snippet</a> that was already
 required to run the scan file&nbsp;example.</p>
-<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">hashlib</span><span class="o">,</span> <span class="nn">httplib</span><span class="o">,</span> <span class="nn">mimetypes</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">pprint</span><span class="o">,</span> <span class="nn">simplejson</span><span class="o">,</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">urlparse</span>
 
 <span class="n">DEFAULT_TYPE</span> <span class="o">=</span> <span class="s1">&#39;application/octet-stream&#39;</span>
@@ -172,13 +172,13 @@ required to run the scan file&nbsp;example.</p>
     <span class="n">json</span> <span class="o">=</span> <span class="n">post_multipart</span><span class="p">(</span><span class="n">REPORT_URL</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;resource&#39;</span><span class="p">:</span><span class="n">md5sum</span><span class="p">,</span> <span class="s1">&#39;key&#39;</span><span class="p">:</span><span class="n">API_KEY</span><span class="p">})</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">simplejson</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s1">&#39;Result not found, submitting file.&#39;</span>
+        <span class="nb">print</span> <span class="s1">&#39;Result not found, submitting file.&#39;</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">scan_file</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="k">print</span> <span class="s1">&#39;Submit successful.&#39;</span>
-            <span class="k">print</span> <span class="s1">&#39;Please wait a few minutes and try again to receive report.&#39;</span>
+            <span class="nb">print</span> <span class="s1">&#39;Submit successful.&#39;</span>
+            <span class="nb">print</span> <span class="s1">&#39;Please wait a few minutes and try again to receive report.&#39;</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">print</span> <span class="s1">&#39;Submit failed.&#39;</span>
+            <span class="nb">print</span> <span class="s1">&#39;Submit failed.&#39;</span>
             <span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;report&#39;</span><span class="p">])</span>
@@ -186,17 +186,16 @@ required to run the scan file&nbsp;example.</p>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s1">&#39;Usage: </span><span class="si">%s</span><span class="s1"> filename&#39;</span> <span class="o">%</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="nb">print</span> <span class="s1">&#39;Usage: </span><span class="si">%s</span><span class="s1"> filename&#39;</span> <span class="o">%</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
     <span class="n">filename</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> is not a valid file&#39;</span> <span class="o">%</span> <span class="n">filename</span>
+        <span class="nb">print</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> is not a valid file&#39;</span> <span class="o">%</span> <span class="n">filename</span>
         <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
     <span class="n">get_report</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Be sure to change the API_KEY value on line 8 to reflect your VirusTotal <span class="caps">API</span>
 key. The entire script can be <a href="/images/2010/09/virustotal_report.py">downloaded here</a> to save you a copy and&nbsp;paste.</p>
@@ -262,10 +261,6 @@ key. The entire script can be <a href="/images/2010/09/virustotal_report.py">dow
                       <a href="http://www.linkedin.com/in/bbzbryce">linkedin</a>
                     </li>
                     <li class="list-group-item">
-                      <a href="https://plus.google.com/+BryceBoe?rel=author"><i class="fa fa-google-plus fa-lg"></i></a>
-                      <a href="https://plus.google.com/+BryceBoe?rel=author">google+</a>
-                    </li>
-                    <li class="list-group-item">
                       <a href="https://twitter.com/bboe"><i class="fa fa-twitter fa-lg"></i></a>
                       <a href="https://twitter.com/bboe">twitter</a>
                     </li>
@@ -312,11 +307,6 @@ key. The entire script can be <a href="/images/2010/09/virustotal_report.py">dow
         <li class="list-group-item">
             <a href="http://adamdoupe.com/" target="_blank">
                 Adam Doupé
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://juliebifano.com/" target="_blank">
-                Julie Bifano
             </a>
         </li>
       </ul>

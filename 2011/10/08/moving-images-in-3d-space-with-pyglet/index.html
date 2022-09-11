@@ -130,7 +130,7 @@ required libraries (an exercise left to the reader), create a folder &#8220;imgs
 place whatever images you want in that folder and then run the following script
 (<a href="/images/2011/10/animator.py">download animator.py</a>). Note: If you want to run this script on 64-bit <span class="caps">OS</span> X
 you&#8217;ll need to run it via: <code>VERSIONER_PYTHON_PREFER_32_BIT=yes ./animator.py</code></p>
-<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">math</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">pyglet</span><span class="o">,</span> <span class="nn">sys</span>
 <span class="kn">from</span> <span class="nn">pyglet.gl</span> <span class="kn">import</span> <span class="o">*</span>
 
@@ -152,14 +152,14 @@ you&#8217;ll need to run it via: <code>VERSIONER_PYTHON_PREFER_32_BIT=yes ./anim
         <span class="n">img_dir</span> <span class="o">=</span> <span class="s1">&#39;imgs&#39;</span>
         <span class="n">textures</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">img_dir</span><span class="p">):</span>
-            <span class="k">print</span> <span class="s1">&#39;Could not find directory &quot;</span><span class="si">%s</span><span class="s1">&quot; under &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">img_dir</span><span class="p">,</span>
+            <span class="nb">print</span> <span class="s1">&#39;Could not find directory &quot;</span><span class="si">%s</span><span class="s1">&quot; under &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">img_dir</span><span class="p">,</span>
                                                                 <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">img_dir</span><span class="p">):</span>
             <span class="k">try</span><span class="p">:</span>
                 <span class="n">image</span> <span class="o">=</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">img_dir</span><span class="p">,</span> <span class="n">image</span><span class="p">))</span>
             <span class="k">except</span> <span class="n">pyglet</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">codecs</span><span class="o">.</span><span class="n">dds</span><span class="o">.</span><span class="n">DDSException</span><span class="p">:</span>
-                <span class="k">print</span> <span class="s1">&#39;&quot;</span><span class="si">%s</span><span class="s1">&quot; is not a valid image file&#39;</span> <span class="o">%</span> <span class="n">image</span>
+                <span class="nb">print</span> <span class="s1">&#39;&quot;</span><span class="si">%s</span><span class="s1">&quot; is not a valid image file&#39;</span> <span class="o">%</span> <span class="n">image</span>
                 <span class="k">continue</span>
             <span class="n">textures</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">get_texture</span><span class="p">())</span>
 
@@ -170,13 +170,13 @@ you&#8217;ll need to run it via: <code>VERSIONER_PYTHON_PREFER_32_BIT=yes ./anim
                          <span class="n">image</span><span class="o">.</span><span class="n">get_image_data</span><span class="p">()</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="s1">&#39;RGBA&#39;</span><span class="p">,</span>
                                                          <span class="n">image</span><span class="o">.</span><span class="n">width</span> <span class="o">*</span> <span class="mi">4</span><span class="p">))</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">textures</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">print</span> <span class="s1">&#39;Found no textures to load. Exiting&#39;</span>
+            <span class="nb">print</span> <span class="s1">&#39;Found no textures to load. Exiting&#39;</span>
             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">textures</span>
 
     <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">on_draw</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">clock</span> <span class="o">+=</span> <span class="o">.</span><span class="mo">01</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clock</span> <span class="o">+=</span> <span class="mf">.01</span>
 
     <span class="k">def</span> <span class="nf">on_draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">glClear</span><span class="p">(</span><span class="n">GL_COLOR_BUFFER_BIT</span> <span class="o">|</span> <span class="n">GL_DEPTH_BUFFER_BIT</span><span class="p">)</span>
@@ -192,7 +192,7 @@ you&#8217;ll need to run it via: <code>VERSIONER_PYTHON_PREFER_32_BIT=yes ./anim
             <span class="n">dx</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span>
             <span class="n">dz</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span>
 
-            <span class="k">if</span> <span class="n">texture</span><span class="o">.</span><span class="n">width</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">texture</span><span class="o">.</span><span class="n">height</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">texture</span><span class="o">.</span><span class="n">width</span> <span class="o">&gt;</span> <span class="n">texture</span><span class="o">.</span><span class="n">height</span><span class="p">:</span>
                 <span class="n">rect_w</span> <span class="o">=</span> <span class="n">texture</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">texture</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
                 <span class="n">rect_h</span> <span class="o">=</span> <span class="mi">1</span>
             <span class="k">else</span><span class="p">:</span>
@@ -222,7 +222,7 @@ you&#8217;ll need to run it via: <code>VERSIONER_PYTHON_PREFER_32_BIT=yes ./anim
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">window</span> <span class="o">=</span> <span class="n">World</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
     <span class="n">pyglet</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-</pre></div>
+</code></pre></div>
             </div>
             <!-- /.entry-content -->
 <section class="well" id="related-posts">
@@ -285,10 +285,6 @@ you&#8217;ll need to run it via: <code>VERSIONER_PYTHON_PREFER_32_BIT=yes ./anim
                       <a href="http://www.linkedin.com/in/bbzbryce">linkedin</a>
                     </li>
                     <li class="list-group-item">
-                      <a href="https://plus.google.com/+BryceBoe?rel=author"><i class="fa fa-google-plus fa-lg"></i></a>
-                      <a href="https://plus.google.com/+BryceBoe?rel=author">google+</a>
-                    </li>
-                    <li class="list-group-item">
                       <a href="https://twitter.com/bboe"><i class="fa fa-twitter fa-lg"></i></a>
                       <a href="https://twitter.com/bboe">twitter</a>
                     </li>
@@ -335,11 +331,6 @@ you&#8217;ll need to run it via: <code>VERSIONER_PYTHON_PREFER_32_BIT=yes ./anim
         <li class="list-group-item">
             <a href="http://adamdoupe.com/" target="_blank">
                 Adam Doupé
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://juliebifano.com/" target="_blank">
-                Julie Bifano
             </a>
         </li>
       </ul>

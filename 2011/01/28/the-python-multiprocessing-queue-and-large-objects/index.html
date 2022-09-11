@@ -103,20 +103,20 @@ function is made. This delay explains why such a non-blocking call to
 <strong>queue.get</strong> may return a <strong>Queue.Empty</strong> error and is the exact problem I
 encountered in my analysis&nbsp;code.</p>
 <p>As usual, I have provided some code demonstrating the problem and a&nbsp;solution.</p>
-<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">multiprocessing</span><span class="o">,</span> <span class="nn">Queue</span>
 
 <span class="k">def</span> <span class="nf">worker_bad</span><span class="p">(</span><span class="n">jobs</span><span class="p">):</span>
-    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
         <span class="k">try</span><span class="p">:</span>
-            <span class="n">tmp</span> <span class="o">=</span> <span class="n">jobs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+            <span class="n">tmp</span> <span class="o">=</span> <span class="n">jobs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
         <span class="k">except</span> <span class="n">Queue</span><span class="o">.</span><span class="n">Empty</span><span class="p">:</span>
             <span class="k">break</span>
 
 <span class="k">def</span> <span class="nf">worker_good</span><span class="p">(</span><span class="n">jobs</span><span class="p">):</span>
-    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
         <span class="n">tmp</span> <span class="o">=</span> <span class="n">jobs</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">tmp</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">tmp</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">break</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">num_workers</span><span class="p">,</span> <span class="n">good_test</span><span class="p">):</span>
@@ -130,7 +130,7 @@ encountered in my analysis&nbsp;code.</p>
     <span class="n">workers</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_workers</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">good_test</span><span class="p">:</span>
-            <span class="n">jobs</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+            <span class="n">jobs</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
         <span class="n">tmp</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">func</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">jobs</span><span class="p">,))</span>
         <span class="n">tmp</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
         <span class="n">workers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
@@ -143,13 +143,12 @@ encountered in my analysis&nbsp;code.</p>
     <span class="n">items</span> <span class="o">=</span> <span class="n">workers</span> <span class="o">*</span> <span class="mi">2</span>
     <span class="n">size</span> <span class="o">=</span> <span class="mi">10000</span>
 
-    <span class="k">for</span> <span class="n">good_test</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">good_test</span> <span class="ow">in</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">]:</span>
         <span class="n">passed</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
             <span class="n">passed</span> <span class="o">+=</span> <span class="n">main</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">workers</span><span class="p">,</span> <span class="n">good_test</span><span class="o">=</span><span class="n">good_test</span><span class="p">)</span>
-        <span class="k">print</span> <span class="s1">&#39;</span><span class="si">%d%%</span><span class="s1"> passed (Good Test: </span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">passed</span><span class="p">,</span> <span class="n">good_test</span><span class="p">)</span>
-</pre></div>
-
+        <span class="nb">print</span> <span class="s1">&#39;</span><span class="si">%d%%</span><span class="s1"> passed (Good Test: </span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">passed</span><span class="p">,</span> <span class="n">good_test</span><span class="p">)</span>
+</code></pre></div>
 
 <p>This code provides a simple test framework to compare two methods for
 completing tasks in a job queue. The actual workers are virtually identical as
@@ -238,10 +237,6 @@ default, is for cases when the queue has a maximum&nbsp;size.</p>
                       <a href="http://www.linkedin.com/in/bbzbryce">linkedin</a>
                     </li>
                     <li class="list-group-item">
-                      <a href="https://plus.google.com/+BryceBoe?rel=author"><i class="fa fa-google-plus fa-lg"></i></a>
-                      <a href="https://plus.google.com/+BryceBoe?rel=author">google+</a>
-                    </li>
-                    <li class="list-group-item">
                       <a href="https://twitter.com/bboe"><i class="fa fa-twitter fa-lg"></i></a>
                       <a href="https://twitter.com/bboe">twitter</a>
                     </li>
@@ -288,11 +283,6 @@ default, is for cases when the queue has a maximum&nbsp;size.</p>
         <li class="list-group-item">
             <a href="http://adamdoupe.com/" target="_blank">
                 Adam Doupé
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="http://juliebifano.com/" target="_blank">
-                Julie Bifano
             </a>
         </li>
       </ul>
