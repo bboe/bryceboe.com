@@ -176,4 +176,4 @@ will help me create better challenges for next year's iCTF.
   [this video]: http://www.archive.org/download/MannyCanard_USCSpeedRemix/MannyCanardH264.ogv
   [XSS vulnerability]: http://en.wikipedia.org/wiki/Cross-site_scripting
   [SQL injection vulnerability]: http://en.wikipedia.org/wiki/SQL_injection
-  [here]: http://cs.ucsb.edu/~bboe/public/src/ictf2010_challenge6.tar.gz
+  [here]: /public/ictf2010_challenge6.tar.gz
