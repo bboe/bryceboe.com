@@ -87,7 +87,7 @@ Running this eventually produces the following image, from which the is.gd url
 [![Defcon 18 Forensics 200 Result][]](/images/2010/05/f200_result.png)
 
   [vnSecurity site]: http://www.vnsecurity.net/2010/05/defcon-18-quals-writeups-collection/
-  [f200_02b7b50f575759cff7.tar.lzma]: http://cs.ucsb.edu/~bboe/public/bin/f200_02b7b50f575759cff7.tar
+  [f200_02b7b50f575759cff7.tar.lzma]: /public/f200_02b7b50f575759cff7.tar
   [lmgtfy lzma file]: http://lmgtfy.com/?q=lzma+file&l=1
   [python's imaging library]: http://www.pythonware.com/products/pil/
   [Defcon 18 Forensics 200 Result]: /images/2010/05/f200_result-43x300.png

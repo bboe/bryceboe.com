@@ -1,11 +1,14 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
+import logging
+
+LOG_FILTER = [
+    (logging.WARN, 'AUTHOR_SAVE_AS is set to False'),
+    (logging.WARN, 'CATEGORY_SAVE_AS is set to False')
+]
 
 # Site info
 AUTHOR = 'Bryce Boe'
 SITENAME = 'Bryce Boe'
-SITEURL = ''
+SITEURL = 'https://bryceboe.com'
 SITESUBTITLE = 'The Adventures of a UCSB Computer Science Ph.D. Student'
 
 # Site paths / urls
@@ -19,6 +22,8 @@ TAG_SAVE_AS = 'tag/{slug}/index.html'
 TAG_URL = 'tag/{slug}/'
 TAGS_SAVE_AS = 'tags/index.html'
 TAGS_URL = 'tags/'
+
+RELATIVE_URLS = True
 
 # General Settings
 DEFAULT_LANG = 'en'
@@ -42,19 +47,17 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS = (('Adam Doupé', 'http://adamdoupe.com/'),
-         ('Julie Bifano', 'http://juliebifano.com/'))
+LINKS = (('Adam Doupé', 'http://adamdoupe.com/'),)
 
 # Social widget
 SOCIAL = (('github', 'https://github.com/bboe'),
           ('stack-overflow', 'http://stackoverflow.com/users/176978/bboe'),
           ('linkedin', 'http://www.linkedin.com/in/bbzbryce'),
-          ('google+', 'https://plus.google.com/+BryceBoe?rel=author'),
           ('twitter', 'https://twitter.com/bboe'))
 
 # Static files (robots.txt)
 STATIC_PATHS = ['extra/CNAME', 'extra/keybase.txt', 'extra/robots.txt',
-                'images']
+                'images', 'public']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
                        'extra/keybase.txt': {'path': 'keybase.txt'},
                        'extra/robots.txt': {'path': 'robots.txt'}}
@@ -66,13 +69,9 @@ SITEMAP = {'format': 'xml',
                            'pages': 'monthly'}}
 
 # pelican-bootstrap3 settings
-#ADDTHIS_PROFILE = 'ra-52ea977465521a04'
 BOOTSTRAP_THEME = 'cerulean'
 DISPLAY_CATEGORIES_ON_SIDEBAR = False
 DISPLAY_RECENT_POSTS_ON_SIDEBAR = True
 DISPLAY_TAGS_ON_SIDEBAR = True
 DISQUS_NO_ID = True
 PYGMENTS_STYLE = 'solarizedlight'
-
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
