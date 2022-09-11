@@ -1646,7 +1646,7 @@ hence the title, Fear the &lt;span class="caps"&gt;EAR&lt;/span&gt;.&lt;/p&gt;
     &lt;span class="n"&gt;conn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;You can find the complete source code for this challenge &lt;a href="http://cs.ucsb.edu/~bboe/public/src/ictf2010_challenge6.tar.gz"&gt;here&lt;/a&gt;. It simply
+&lt;p&gt;You can find the complete source code for this challenge &lt;a href="/public/ictf2010_challenge6.tar.gz"&gt;here&lt;/a&gt;. It simply
 requires running a single python file. The bug in the code that produces the
 vulnerability occurs on line 413 (line 13 above) in which I neglected to return
 from the function when I called send_redirect as in all other&amp;nbsp;instances.&lt;/p&gt;
