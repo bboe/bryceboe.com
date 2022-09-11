@@ -26,6 +26,7 @@ use without my information please email me.
 
 First the code for those that just want to use it:
 
+    :::javascript
     // Bryce Boe
     // Originally posted: http://www.bryceboe.com/2007/04/06/javascript-timer/
     //
@@ -38,19 +39,63 @@ First the code for those that just want to use it:
     // negative value specifies to repeat forever.
     function timer(interval,count,someFunction) {
         args = [];
-        for (i=3;i 0) tCount = count-1;
+        for (i=3;i<arguments.length;i++) args[i-3]=arguments[i];
+        someFunction.apply(this,args);
+        if (count > 0) tCount = count-1;
         else tCount = -1;
         command='timer('+interval+','+tCount+','+someFunction+',';
-        for (i=3;i
-    Now what does this do? This function allows you to call any other function at a specified interval, and the key part is that the function you are calling can have any number of any type of arguments and still be passed through this function. This works by passing the function as an argument to another function in javascript.
-    Myself being a big python fan I was somewhat disappointed as the **kw functionality wasn't easily available but in looking at line 13 one can see how I implemented this. This uses the javascript arguments array to get the undeclared parameters which are then passed into the function we wish to call by using the javascript apply function. This is essentially a trick because apply is used so that we can pass an array as the arguments to the function rather than using apply to modify the meaning of the keyword this in the callee as I understand apply is really used for.
-    Lines 17-24 recreate the same call we used to get into the timer function with the counter decremented by one if it is positive. Perhaps there is a better way to do this however this works as we need to have a string to pass to the setTimeout function. Also note on lines 19 and 20 I handled a special case for a string as an argument because otherwise the string will be evaluated rather before being passed. For other object types this may also need to be done to work properly.
-    A very simple demonstration of this script is a counter function that has a min value, max value, step size and default starting location. In my example I use -25 as the min, 25 as the max -25 as the default start and .5 as the step size with a time interval of .3 seconds. By entering in a value in the text field before running the start point can be adjusted.
+        for (i=3;i<arguments.length;i++) {
+            if (typeof arguments[i]=='string')
+                command+='\''+arguments[i]+'\'';
+            else command+=arguments[i];
+            if(i+1<arguments.length) command+=',';
+        }
+        command+=')';
+        if (tCount != 0) setTimeout(command,interval);
+    }
+
+Now what does this do? This function allows you to call any other function at a
+specified interval, and the key part is that the function you are calling can
+have any number of any type of arguments and still be passed through this
+function. This works by passing the function as an argument to another function
+in javascript.
+
+Myself being a big python fan I was somewhat disappointed as the `**kw`
+functionality wasn't easily available but in looking at line 13 one can see how
+I implemented this. This uses the javascript arguments array to get the
+undeclared parameters which are then passed into the function we wish to call
+by using the javascript apply function. This is essentially a trick because
+apply is used so that we can pass an array as the arguments to the function
+rather than using apply to modify the meaning of the keyword this in the callee
+as I understand apply is really used for.
+
+Lines 17-24 recreate the same call we used to get into the timer function with
+the counter decremented by one if it is positive. Perhaps there is a better way
+to do this however this works as we need to have a string to pass to the
+setTimeout function. Also note on lines 19 and 20 I handled a special case for
+a string as an argument because otherwise the string will be evaluated rather
+before being passed. For other object types this may also need to be done to
+work properly.
+
+A very simple demonstration of this script is a counter function that has a min
+value, max value, step size and default starting location. In my example I use
+-25 as the min, 25 as the max -25 as the default start and .5 as the step size
+with a time interval of .3 seconds. By entering in a value in the text field
+before running the start point can be adjusted.
+
+---
+
+<script type="text/javascript" src="/images/2007/04/simpletimer.js"></script>
+
+<input type="text" id="jsTimerText1" value="">
+<input type="button" onclick="timer(300,100,myCounter,-25,25,-25,0.5,'jsTimerText1');" value="start timer">
+
+---
 
 
+Here is the code of the timer function:
 
-    Here is the code of the timer function:
-
+    :::javascript
     function myCounter(min,max,start,step,id) {
         curr = parseFloat(document.getElementById(id).value);
         if (isNaN(curr)) curr = start
@@ -61,6 +106,10 @@ First the code for those that just want to use it:
     }
 
 And the code used to start the timer:
+
+    <input type="text" id="jsText1" value=""/>
+    <input type="button" value="start timer"
+    onclick="timer(300,100,myCounter,-25,25,-25,0.5,'jsText1');" />
 
 Notice how I wrote the function to be passed the field which I wish to modify.
 This easily allows for more robustness as I can easily change my timer function
