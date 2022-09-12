@@ -1,0 +1,461 @@
+Index: downloader.py
+===================================================================
+--- downloader.py	(revision 38)
++++ downloader.py	(working copy)
+@@ -1,50 +1,226 @@
+-from facebook import Facebook
+-import os, urllib,urllib2
+ from threading import Thread
++import os, re, sys, time, urllib, urllib2
+ 
++def retry_function(max_retries, function, *args, **kw):
++    while True:
++        try:
++            return function(*args, **kw)
++        except Exception, e:
++            if max_retries:
++                #print 'retrying: %d' % max_retries
++                max_retries -= 1
++            else:
++                raise
++
++
+ class FBDownloader(Thread):
++    REPLACE_RE = re.compile(r'\*|:|<|>|\?|\\|/|\|,| ')
++    QMAX = 25
++    CAPTION = -1
++    DESCRIPTION = -2
++    LOCATION = -3
+ 
+-    def __init__ (self, photos_path, uid, facebook, update_callback, error_callback):
++    def __init__ (self, photos_path, uid, friends, full_album, facebook,
++                  update_callback, error_callback, exit_callback):
+         Thread.__init__(self)
+         self.photos_path = photos_path
+         self.uid = uid
++        self.friends = friends
++        self.full_album = full_album
+         self.facebook = facebook
+         self.update = update_callback
+         self.error = error_callback
++        self.exit = exit_callback
++        self._thread_terminated = False
++        
++        self.index = self.total = 0
+ 
+-    def run(self):
+-        index = 0
+-        total = 0
+-        try:
+-            # photos = self.facebook.photos.get(self.facebook.uid)
+-            photos = self.facebook.fql.query("SELECT pid, aid, src_big FROM photo WHERE pid IN (SELECT pid FROM photo_tag WHERE subject=" + str(self.uid) + ")")
++    def exit_if_terminated(self):
++        if self._thread_terminated:
++            #print 'DL thread exiting'
++            self.exit()
++            sys.exit(1)
+ 
+-            # some helpful variables
+-            dirName = self.photos_path + '/'
++    def friend_name(self, uid):
++        if uid not in self.friends:
++            q = 'SELECT name from profile where id=%s'
++            res = self.facebook.fql.query(q % uid)
++            if res:
++                self.friends[uid] = res[0]['name']
++            else:
++                self.friends[uid] = None
++        return self.friends[uid]
+ 
+-            # used by update
+-            index = 0
+-            total = len(photos)
++    def write_comments(self, filename, comments):
++        fp = open(filename, 'wb')
++        for comment in sorted(comments, key=lambda x:x['time']):
++            if comment['fromid'] == self.CAPTION:
++                fp.write('Photo Caption\n')
++            elif comment['fromid'] == self.DESCRIPTION:
++                fp.write('Album Description\n')
++            elif comment['fromid'] == self.LOCATION:
++                fp.write('Album Location\n')
++            else:
++                friend = self.friend_name(comment['fromid'])
++                if not friend:
++                    friend = 'Unknown User: %s' % comment['fromid']
++                fp.write('%s ' % time.ctime(int(comment['time'])))
++                fp.write('%s\n' % friend.encode('utf-8'))
++            fp.write('%s\n\n' % comment['text'].encode('utf-8'))
++        fp.close()
++        os.utime(filename, (int(comment['time']),) * 2)
+ 
+-            # download each photo
+-            for photo in photos:
+-                pid = photo['pid']
+-                url = photo['src_big']
++    def write_tags(self, filename, tags, file_time):
++        fp = open(filename, 'wb')
++        for tag in sorted(tags, key=lambda x:(float(x['xcoord']),
++                                              float(x['ycoord']))):
++            fp.write('%9.5f %9.5f %s\n' % (tag['xcoord'], tag['ycoord'],
++                                           tag['text'].encode('utf-8')))
++        fp.close()
++        os.utime(filename, (file_time,) * 2)
+ 
+-                if not os.path.isfile(dirName + pid + '.jpg'):
+-                    if not os.path.isdir(dirName):
+-                        os.mkdir(dirName)
++        
++    def tagged_album_list(self):
++        """Get all albums user is tagged in"""
++        albums = {}
++        q = ''.join(['SELECT aid FROM photo WHERE pid IN (SELECT ',
++                     'pid FROM photo_tag WHERE subject="%s")']) % self.uid
++        album_ids = self.facebook.fql.query(q)
++        album_ids = tuple(set('"%s"' % x['aid'] for x in album_ids))
++        q = ''.join(['SELECT aid, owner, name, modified, description, ',
++                     'location, object_id FROM album where aid in (%s)'])
++        for item in self.facebook.fql.query(q % ','.join(album_ids)):
++            item['photos'] = {}
++            albums[item['aid']] = item
++        # Query in groups of 25 (query limit 5000)
++        for i in range(len(album_ids) / self.QMAX + 1):
++            self.exit_if_terminated()
++            aids = ','.join(album_ids[i * self.QMAX:(i + 1) * self.QMAX])
++            q = ''.join(['SELECT pid, aid, src_big, caption, ',
++                         'created, object_id FROM photo WHERE aid in (%s)'])
++            for photo in self.facebook.fql.query(q % aids):
++                albums[photo['aid']]['photos'][photo['pid']] = photo
++        return albums
+ 
+-                    picout = open(dirName + pid + '.jpg', "wb")
+-                    picPageFile = (urllib2.urlopen(urllib2.Request(url))).read()
+-                    picout.write(picPageFile)
+-                    picout.close()
++    def tagged_photo_list(self):
++        """Get only photos user is tagged in"""
++        q = ''.join(['SELECT pid, src_big, caption, created, object_id FROM ',
++                     'photo WHERE pid IN (SELECT pid FROM photo_tag WHERE ',
++                     'subject="%s")'])
++        photos = self.facebook.fql.query(q % self.uid)
++        photos = dict((x['pid'], x) for x in photos)
++                                               
++        return {0:{'name':None, 'modified':None, 'photos':photos}}
+ 
+-                # update progressbar
+-                index = index + 1
+-                self.update(index, total)
++    def save_album(self, album):
++        self.exit_if_terminated()
+ 
++        # Get album* and photo comments -- *only if full album download
++        q = ''.join(['SELECT object_id, fromid, time, text FROM comment ',
++                     'where object_id in (%s)'])
++        o2pid = {}
++        oids = []
++        album_comments = []
++        for photo in album['photos'].values():
++            o2pid[photo['object_id']] = photo['pid']
++            oids.append('"%s"' % photo['object_id'])
++            if photo['caption']:
++                photo['comments'] = [{'fromid':self.CAPTION,
++                                      'text':photo['caption'], 'time':0}]
++        if self.full_album:
++            oids.append('"%s"' % album['object_id'])
++            if album['description']:
++                album_comments.append({'fromid':self.DESCRIPTION, 'time':0,
++                                       'text':album['description']})
++            if album['location']:
++                album_comments.append({'fromid':self.LOCATION, 'time':1,
++                                       'text':album['location']})
++
++        for item in self.facebook.fql.query(q % ','.join(oids)):
++            oid = item['object_id']
++            if oid in o2pid: # photo comment
++                clist = album['photos'][o2pid[oid]].setdefault('comments', [])
++                clist.append(item)
++            else: # album comment
++                album_comments.append(item)
++
++        # Get photo tags
++        q = ''.join(['SELECT pid, text, xcoord, ycoord FROM ',
++                     'photo_tag WHERE pid in (%s)'])
++        pids = ['"%s"' % x for x in album['photos'].keys()]
++        for item in self.facebook.fql.query(q % ','.join(pids)):
++            tag_list = album['photos'][item['pid']].setdefault('tags', [])
++            tag_list.append(item)
++
++        if self.full_album:
++            username = self.friend_name(album['owner'])
++            if not username:
++                username = 'uid_%s' % album['owner']
++            album_folder = self.REPLACE_RE.sub(
++                '_', '%s-%s' % (username, album['name']))
++            album_path = os.path.join(self.photos_path, album_folder)
++
++            # Create album directory if it doesn't exist
++            if not os.path.isdir(album_path):
++                os.mkdir(album_path)
++
++            # Save comments
++            if album_comments:
++                meta_path = os.path.join(album_path, 'ALBUM_COMMENTS.txt')
++                self.write_comments(meta_path, album_comments)
++        else:
++            album_path = self.photos_path
++
++        for photo in album['photos'].items():
++            # update progressbar
++            self.update(self.index, self.total)
++            self.index += 1
++            self.save_photo(album_path, *photo)
++
++        # Reset modify time after adding files
++        if self.full_album:
++            os.utime(album_path, (int(album['modified']),) * 2)
++
++    def save_photo(self, album_path, pid, photo):
++        self.exit_if_terminated()
++
++        # If file already exists don't download
++        filename = os.path.join(album_path, '%s.jpg' % pid)
++        if 'comments' in photo:
++            meta_name = os.path.join(album_path, '%s_comments.txt' % pid)
++            self.write_comments(meta_name, photo['comments'])
++
++        if 'tags' in photo:
++            meta_name = os.path.join(album_path, '%s_tags.txt' % pid)
++            self.write_tags(meta_name, photo['tags'], int(photo['created']))
++
++        if os.path.isfile(filename): return
++        picout = open(filename, "wb")
++        handler = urllib2.Request(photo['src_big'])
++        data = retry_function(10, urllib2.urlopen, handler)
++        picout.write(data.read())
++        picout.close()
++        os.utime(filename, (int(photo['created']),) * 2)
++
++    def run(self):
++        try:
++            if self.full_album:
++                albums = self.tagged_album_list()
++            else:
++                albums = self.tagged_photo_list()
++            self.total = sum(len(album['photos']) for album in albums.values())
++
++            # Create Download Directory
++            if not os.path.isdir(self.photos_path):
++                os.mkdir(self.photos_path)
++
++            for album in albums.values():
++                self.save_album(album)
+         except Exception, e:
++            self.exit_if_terminated()
++            #print 'DL caught exception', e
+             self.error(e)
+-        finally:
+-            self.update(index,total)
++            sys.exit(1)
++        
++        self.update(self.index, self.total)
++
+Index: pg.py
+===================================================================
+--- pg.py	(revision 38)
++++ pg.py	(working copy)
+@@ -4,15 +4,20 @@
+ from facebook import Facebook
+ import tkDirectoryChooser
+ import downloader
+-import sys
++import sys, traceback
+ 
+ class Application(Frame):
+-    def __init__(self, master=None):
++    def __init__(self, master=None, debug=False):
+         Frame.__init__(self, master)
++        self.master.protocol("WM_DELETE_WINDOW", self.quit_wrapper)
+         self.pack(fill=BOTH, expand=1)
++        self.master.title("PhotoGrabber")
++        self.master.resizable(width=FALSE, height=FALSE)
+         if sys.platform == 'win32':
+             self.master.iconbitmap(default='img/pg.ico')
+         self.createWidgets()
++        self.debug = debug
++        self.dl = None
+ 
+     def createWidgets(self):
+         # menubar
+@@ -22,7 +27,7 @@
+         filemenu=Menu(mb,tearoff=0)
+         mb.add_cascade(label="File", menu=filemenu)
+         filemenu.add_command(label="About", command=self.aboutmsg)
+-        filemenu.add_command(label="Quit", command=self.quit)
++        filemenu.add_command(label="Quit", command=self.quit_wrapper)
+ 
+         # login button
+         imglogin = PhotoImage(file="img/login.ppm")
+@@ -30,14 +35,19 @@
+         self.bLogin.image = imglogin
+         self.bLogin.pack()
+ 
+-        # logged in button & list
++        # logged in button & list, and full album checkbox
+         imgcreep = PhotoImage(file="img/creepon.ppm")
+         self.bCreep = Button(self, image=imgcreep, command=self.creep)
+         self.bCreep.image = imgcreep
+         self.pFrame = Frame(self)
+         self.sb = Scrollbar(self.pFrame, orient=VERTICAL)
+-        self.lbPeople = Listbox(self.pFrame, yscrollcommand=self.sb.set, selectmode=SINGLE)
++        self.lbPeople = Listbox(self.pFrame, yscrollcommand=self.sb.set,
++                                selectmode=SINGLE)
+         self.sb.config(command=self.lbPeople.yview)
++        self.full_album = BooleanVar()
++        self.full_cb = Checkbutton(self.pFrame, text="Download Entire Album",
++                                   var=self.full_album)
++        self.full_cb.pack(fill=X)
+         self.sb.pack(side=RIGHT, fill=Y)
+         self.lbPeople.pack(side=RIGHT, fill=BOTH, expand=1)
+ 
+@@ -54,19 +64,20 @@
+         self.bQuit = Button(self, image=imgquit, command=self.do_quit)
+         self.bQuit.image = imgquit
+ 
+-
+     # display about information
+     def aboutmsg(self):
+         showinfo("About PhotoGrabber", "Developed by Tommy Murphy:\n"
+-            + "eat.ourbunny.com\n\n"
+-            + "Facebook API:\ngithub.com/sciyoshi/pyfacebook\n\n"
+-            + "Icons:\neveraldo.com/crystal")
++                 + "eat.ourbunny.com\n\n"
++                 + "modified by Bryce Boe:\n"
++                 + "bryceboe.com\n\n"
++                 + "Facebook API:\ngithub.com/sciyoshi/pyfacebook\n\n"
++                 + "Icons:\neveraldo.com/crystal")
+ 
+     # login button event
+     def fblogin(self):
+-        #api_key and secret_key
+         try:
+-            self.facebook = Facebook('227fe70470173eca69e4b38b6518fbfd', '6831060776f620cc2588fd053250cabb')
++            self.facebook = Facebook('227fe70470173eca69e4b38b6518fbfd',
++                                     '6831060776f620cc2588fd053250cabb')
+             self.facebook.auth.createToken()
+             self.facebook.login()
+         except Exception, e:
+@@ -81,12 +92,14 @@
+     def creep(self):
+         try:
+             self.facebook.auth.getSession()
+-            self.people = self.facebook.fql.query("SELECT uid, name FROM user WHERE uid IN (SELECT uid2 FROM friend WHERE uid1 = " + str(self.facebook.uid) +  ")")
++            q = ''.join(['SELECT uid, name FROM user WHERE uid IN (SELECT uid',
++                         '2 FROM friend WHERE uid1 = %s)']) % self.facebook.uid
++            self.people = self.facebook.fql.query(q)
+ 
+             me = dict(uid=self.facebook.uid,name="Myself")
+             self.people.sort()
+ 
+-            for person in self.people :
++            for person in self.people:
+                 name = person['name']
+                 self.lbPeople.insert(END, name)
+ 
+@@ -94,11 +107,11 @@
+             self.people.insert(0,me)
+ 
+             self.pFrame.pack(fill=X)
+-
+         except Exception, e:
+             self.error(e)
+ 
+         self.bCreep["state"]=DISABLED
++        self.bCreep.pack_forget()
+         self.bDownload.pack()
+ 
+ 
+@@ -112,6 +125,7 @@
+         # show the fb login button
+         if self.directory != "":
+             self.lbPeople["state"]=DISABLED
++            self.full_cb["state"]=DISABLED
+ 
+             # check listbox selection
+             if len(item) == 1:
+@@ -122,9 +136,16 @@
+                 self.dl_name = "Myself"
+ 
+             # download
+-            dl = downloader.FBDownloader(self.directory, uid, self.facebook,
+-                    self.update_status, self.error)
+-            dl.start()
++            friends = dict((x['uid'], x['name']) for x in self.people)
++            name = self.facebook.users.getInfo([self.facebook.uid],
++                                               ['name'])[0]['name']
++            friends[self.facebook.uid] = name
++            self.dl = downloader.FBDownloader(self.directory, uid, friends,
++                                              self.full_album.get(),
++                                              self.facebook,
++                                              self.update_status, self.error,
++                                              self.remote_exit)
++            self.dl.start()
+ 
+             self.bDownload["state"] = DISABLED
+             self.lDownload["text"] = "Beginning Download..."
+@@ -132,19 +153,36 @@
+ 
+     # update download status function
+     def update_status(self, index, total):
+-        self.lDownload["text"] = str(index) + " of " + str(total)
++        self.lDownload["text"] = '%s of %s' % (index, total)
+         self.lDownload.pack()
+ 
+         if index==total:
+             self.bQuit.pack()
+             self.dl_total = str(total)
+ 
++    def remote_exit(self):
++        self.quit()
++
+     # oops an error happened!
+     def error(self, e):
++        if self.debug:
++            traceback.print_exc()
+         showinfo("OH NOES ERROR!", "There was a problem, please try again!\n\n"
+                 + str(e))
+         self.quit()
+ 
++    def quit_wrapper(self):
++        if self.dl:
++            self.dl._thread_terminated = True
++            if self.debug:
++                sys.stderr.write('Waiting for download thread to terminate\n')
++            while self.dl.isAlive():
++                sys.stderr.write('.')
++                sys.stderr.flush()
++                self.dl.join(1)
++            self.dl = None
++        self.quit()
++
+     # quit button event
+     def do_quit(self):
+         self.bQuit["state"] = DISABLED
+@@ -164,7 +202,14 @@
+         except Exception, e:
+             self.error(e)
+ 
+-app = Application()
+-app.master.title("PhotoGrabber")
+-app.master.resizable(width=FALSE, height=FALSE)
+-app.mainloop()
++def main(debug=False):
++    app = Application(debug=debug)
++    try:
++        app.mainloop()
++    except KeyboardInterrupt:
++        if app.dl: app.dl._thread_terminated = True
++    if app.dl: app.dl.join()
++        
++
++if __name__ == '__main__':
++    main(debug = len(sys.argv) > 1)

@@ -133,28 +133,28 @@ Well that's all. Feel free to post alternative methods to accomplish these
 tasks, or other tasks, in the comments. Bye bye Facebook!
 
   [Facebook Photograbber Updates]: /2010/05/27/facebook-photograbber-updates/
-  [Facebook]: http://www.facebook.com/
-  [June 24]: http://web.archive.org/web/20040624152328/http://thefacebook.com/
-  [later removed]: http://blog.facebook.com/blog.php?post=4314497130
-  [developer API]: http://developers.facebook.com/
-  [Microsoft]: http://www.microsoft.com
-  [Pandora]: http://www.pandora.com/
-  [yelp]: http://www.yelp.com/
-  [Al Franken]: http://en.wikipedia.org/wiki/Al_Franken
-  [include instructions on his website]: http://franken.senate.gov/press/?page=news_single&news_item=Facebook_Privacy_Instructions
-  [Facebook's Gone Rogue; It's Time for an Open Alternative]: http://www.wired.com/epicenter/2010/05/facebook-rogue/
-  [the straw that broke the camel's back]: http://en.wikipedia.org/wiki/The_last_straw
-  [delete button]: http://www.facebook.com/help/contact.php?show_form=delete_account
+  [Facebook]: https://www.facebook.com/
+  [June 24]: https://web.archive.org/web/20040624152328/http://thefacebook.com/
+  [later removed]: https://blog.facebook.com/blog.php?post=4314497130
+  [developer API]: https://developers.facebook.com/
+  [Microsoft]: https://www.microsoft.com
+  [Pandora]: https://www.pandora.com/
+  [yelp]: https://www.yelp.com/
+  [Al Franken]: https://en.wikipedia.org/wiki/Al_Franken
+  [include instructions on his website]: https://franken.senate.gov/press/?page=news_single&news_item=Facebook_Privacy_Instructions
+  [Facebook's Gone Rogue; It's Time for an Open Alternative]: https://www.wired.com/epicenter/2010/05/facebook-rogue/
+  [the straw that broke the camel's back]: https://en.wikipedia.org/wiki/The_last_straw
+  [delete button]: https://www.facebook.com/help/contact.php?show_form=delete_account
   [link to this blog posting]: /2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/
   [facePAD]: https://addons.mozilla.org/en-US/firefox/addon/8442/
-  [photograbber]: http://code.google.com/p/photograbber/
+  [photograbber]: https://code.google.com/p/photograbber/
   [facePAD Usage]: /images/2010/05/facepad.jpg "facePAD Usage"
-  [revision 38]: http://code.google.com/p/photograbber/source/detail?r=38
-  [patch]: http://cs.ucsb.edu/~bboe/public/patches/photograbber-r38+bboe.patch
-  [download]: http://cs.ucsb.edu/~bboe/public/bin/PhotoGrabber-OSX-r38+bboe.zip
-  [zip file]: http://cs.ucsb.edu/~bboe/public/bin/PhotoGrabber-WIN-r38+bboe.zip
-  [first result]: http://www.google.com/support/forum/p/gmail/thread?tid=058dc912c433f1b8&hl=en
-  [phaceboogle]: http://phaceboogle.bisounours.net/
-  [Facebook Connect]: http://developers.facebook.com/blog/post/108
-  [Google's OAuth]: http://code.google.com/apis/accounts/docs/OAuth.html
-  [See section 'More']: http://www.google.com/support/calendar/bin/answer.py?hl=en&answer=37098
+  [revision 38]: https://code.google.com/p/photograbber/source/detail?r=38
+  [patch]: /public/photograbber/photograbber-r38+bboe.patch
+  [download]: /public/photograbber/PhotoGrabber-OSX-r38+bboe.zip
+  [zip file]: /public/photograbber/PhotoGrabber-WIN-r38+bboe.zip
+  [first result]: https://www.google.com/support/forum/p/gmail/thread?tid=058dc912c433f1b8&hl=en
+  [phaceboogle]: https://phaceboogle.bisounours.net/
+  [Facebook Connect]: https://developers.facebook.com/blog/post/108
+  [Google's OAuth]: https://code.google.com/apis/accounts/docs/OAuth.html
+  [See section 'More']: https://www.google.com/support/calendar/bin/answer.py?hl=en&answer=37098

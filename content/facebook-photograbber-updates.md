@@ -60,10 +60,10 @@ modified version of photograbber via:
 
     svn checkout http://photograbber.googlecode.com/svn/trunk/ photograbber-read-only -r38
     cd photograbber-read-only/
-    wget -qO - http://cs.ucsb.edu/~bboe/public/patches/photograbber-r38+bboe.patch | patch -p0
+    wget -qO - https://bryceboe.com/public/photograbber/photograbber-r38+bboe.patch | patch -p0
     echo "Run via: python pg.py"
     python pg.py
 
   [previously wrote]: /2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/
   [photograbber]: http://code.google.com/p/photograbber/
-  [here]: http://cs.ucsb.edu/~bboe/public/patches/photograbber-r38+bboe.patch
+  [here]: /public/photograbber/photograbber-r38+bboe.patch
