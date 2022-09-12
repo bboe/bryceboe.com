@@ -116,26 +116,26 @@ let me know what you thought and how long you spent on them. I recall someone
 in the chat yesterday saying they were losing their sanity trying to solve "The
 Difference"; that gave me a good laugh :)
 
-  [iCTF]: http://ictf.cs.ucsb.edu/
-  [drive-by downloads]: http://en.wikipedia.org/wiki/Drive-by_download
-  [Pareto distribution]: http://en.wikipedia.org/wiki/Pareto_distribution
-  [search engine code]: http://cs.ucsb.edu/~bboe/public/ictf09/search_engine.tar.gz
-  [xkcd]: http://xkcd.com/
-  [The Difference]: http://xkcd.com/242/
+  [iCTF]: https://ictf.cs.ucsb.edu/
+  [drive-by downloads]: https://en.wikipedia.org/wiki/Drive-by_download
+  [Pareto distribution]: https://en.wikipedia.org/wiki/Pareto_distribution
+  [search engine code]: /public/ictf09/search_engine.tar.gz
+  [xkcd]: https://xkcd.com/
+  [The Difference]: https://xkcd.com/242/
   [1]: /images/2009/12/the_difference-159x300.png "The Difference"
-  [the_difference_values.txt]: http://cs.ucsb.edu/~bboe/public/ictf09/the_difference_values.txt
-  [ASCII]: http://en.wikipedia.org/wiki/ASCII
-  [generate]: http://cs.ucsb.edu/~bboe/public/ictf09/the_difference_maker.py
-  [verify]: http://cs.ucsb.edu/~bboe/public/ictf09/the_difference_checker.py
-  [text file]: http://cs.ucsb.edu/~bboe/public/ictf09/theparagraphs.txt
-  [one-time pad]: http://en.wikipedia.org/wiki/One-time_pad
-  [XOR]: http://en.wikipedia.org/wiki/Exclusive_or
-  [code to generate]: http://cs.ucsb.edu/~bboe/public/ictf09/otp_creator.py
-  [original text]: http://cs.ucsb.edu/~bboe/public/ictf09/otp_text.txt
-  [Joyce's]: http://en.wikipedia.org/wiki/James_Joyce
-  [Dubliners]: http://en.wikipedia.org/wiki/Dubliners
-  [how goes it]: http://www.urbandictionary.com/define.php?term=how+goes+it
-  [binary file]: http://cs.ucsb.edu/~bboe/public/ictf09/0xDEAFBABE.mid
-  [midi note number]: http://www.midi.org/techspecs/midimessages.php
-  [2]: http://cs.ucsb.edu/~bboe/public/ictf09/midi_generation.py
-  [3]: http://cs.ucsb.edu/~bboe/public/ictf09/midi_checker.py
+  [the_difference_values.txt]: /public/ictf09/the_difference_values.txt
+  [ASCII]: https://en.wikipedia.org/wiki/ASCII
+  [generate]: /public/ictf09/the_difference_maker.py
+  [verify]: /public/ictf09/the_difference_checker.py
+  [text file]: /public/ictf09/theparagraphs.txt
+  [one-time pad]: https://en.wikipedia.org/wiki/One-time_pad
+  [XOR]: https://en.wikipedia.org/wiki/Exclusive_or
+  [code to generate]: /public/ictf09/otp_creator.py
+  [original text]: /public/ictf09/otp_text.txt
+  [Joyce's]: https://en.wikipedia.org/wiki/James_Joyce
+  [Dubliners]: https://en.wikipedia.org/wiki/Dubliners
+  [how goes it]: https://www.urbandictionary.com/define.php?term=how+goes+it
+  [binary file]: /public/ictf09/0xDEAFBABE.mid
+  [midi note number]: https://www.midi.org/techspecs/midimessages.php
+  [2]: /public/ictf09/midi_generation.py
+  [3]: /public/ictf09/midi_checker.py
