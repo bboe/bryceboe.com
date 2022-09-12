@@ -87,16 +87,16 @@ Bryce Boe            </a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
                 <p>As a member of the Security Lab at <span class="caps">UCSB</span> I had the privilege to help create and
-run this year&#8217;s <a href="http://ictf.cs.ucsb.edu/">iCTF</a> Hacking Competition. The six-year-old competition was
+run this year&#8217;s <a href="https://ictf.cs.ucsb.edu/">iCTF</a> Hacking Competition. The six-year-old competition was
 very unique this year. Unlike CTFs seen before in which teams try to protect
 their services whilst attacking other teams&#8217; services, our competition had
-teams deliver <a href="http://en.wikipedia.org/wiki/Drive-by_download">drive-by downloads</a> to users for the purpose of stealing money
+teams deliver <a href="https://en.wikipedia.org/wiki/Drive-by_download">drive-by downloads</a> to users for the purpose of stealing money
 from the users&#8217; bank&nbsp;accounts.</p>
 <p>In order to deliver drive-by downloads, the teams had to bring users to their
 webpage by boosting their search result on the search server for desired search
 terms. The users&#8217; browsing pattern was they would search for a random word from
 a news site and then visit one of the resulting pages chosen according a
-<a href="http://en.wikipedia.org/wiki/Pareto_distribution">Pareto distribution</a>, meaning the top search result would have the highest
+<a href="https://en.wikipedia.org/wiki/Pareto_distribution">Pareto distribution</a>, meaning the top search result would have the highest
 probability of being picked with the last result the&nbsp;lowest.</p>
 <p>The challenge there was to figure out how to boost the search results for
 particular keywords, unfortunately most of the teams simply duplicated the news
@@ -104,12 +104,12 @@ site; this definitely was the safest strategy though slightly disappointing to
 me as I wrote the search engine code. I can claim that neither the search
 engine, nor the index server broke during the competition. The crawler had a
 few issues with some team&#8217;s pages, which I quickly fixed. I have made the
-<a href="http://cs.ucsb.edu/~bboe/public/ictf09/search_engine.tar.gz">search engine code</a> available that was used in&nbsp;iCTF09.</p>
+<a href="/public/ictf09/search_engine.tar.gz">search engine code</a> available that was used in&nbsp;iCTF09.</p>
 <p>In addition to writing the search engine, I wrote three challenges for the
 competition. The first challenge I wrote was called &#8220;The Difference&#8221;, or
 Forensics 4. The only information people were given was the title and the
 following image. The first step to solve this challenge is recognizing the
-image is the <a href="http://xkcd.com/">xkcd</a> comic &#8220;<a href="http://xkcd.com/242/">The Difference</a>&#8220;.</p>
+image is the <a href="https://xkcd.com/">xkcd</a> comic &#8220;<a href="https://xkcd.com/242/">The Difference</a>&#8220;.</p>
 <p><a href="/images/2009/12/the_difference.png"><img alt="The Difference" src="/images/2009/12/the_difference-159x300.png" title="The Difference"></a></p>
 <p>After downloading the original image one should notice
 the two files are different sizes with the original being <span class="caps">32KB</span> and my image
@@ -117,11 +117,11 @@ the two files are different sizes with the original being <span class="caps">32K
 60 of the pixels differ and the values of the differing pixels are always
 larger in my image. This is where &#8220;The Difference&#8221; first comes into play by
 subtracting the value in my image from that of the&nbsp;original.</p>
-<p>Doing so produces the results shown in <a href="http://cs.ucsb.edu/~bboe/public/ictf09/the_difference_values.txt">the_difference_values.txt</a>. Each
+<p>Doing so produces the results shown in <a href="/public/ictf09/the_difference_values.txt">the_difference_values.txt</a>. Each
 line contains the difference value and the index of the pixel. The values in
 this list range from 33 to 41 with exceptions 10, 12 and 15. Additionally the
 numbers appear in groups of three where last number in the group is sometimes
-larger. After a bit of pondering the realization sets in that <a href="http://en.wikipedia.org/wiki/ASCII"><span class="caps">ASCII</span></a>
+larger. After a bit of pondering the realization sets in that <a href="https://en.wikipedia.org/wiki/ASCII"><span class="caps">ASCII</span></a>
 lowercase values range from 97 to 122 with space being 32 and hyphen 45. It
 should hit you like a ton of bricks that you need to sum the groups of three
 together and then convert the number to its <span class="caps">ASCII</span>&nbsp;value.</p>
@@ -129,10 +129,10 @@ together and then convert the number to its <span class="caps">ASCII</span>&nbsp
 challenge, but no, it&#8217;s not quite done. This is where &#8220;The Difference&#8221; comes
 back into play in that you have to subtract these two numbers to get
 forty-seven. There were 596 submissions for this challenge of which 2 were
-correct. I&#8217;ve made the source to both <a href="http://cs.ucsb.edu/~bboe/public/ictf09/the_difference_maker.py">generate</a> and <a href="http://cs.ucsb.edu/~bboe/public/ictf09/the_difference_checker.py">verify</a> this
+correct. I&#8217;ve made the source to both <a href="/public/ictf09/the_difference_maker.py">generate</a> and <a href="/public/ictf09/the_difference_checker.py">verify</a> this
 challenge&nbsp;available.</p>
 <p>The second challenge I wrote had 75 submissions and 0 correct solutions. This
-challenge was one of the Trivia 3 problems that had a <a href="http://cs.ucsb.edu/~bboe/public/ictf09/theparagraphs.txt">text file</a> and the
+challenge was one of the Trivia 3 problems that had a <a href="/public/ictf09/theparagraphs.txt">text file</a> and the
 following blurb associated with&nbsp;it:</p>
 <blockquote>
 <p>Rummaging through the attic one afternoon Sally found a notebook which on the
@@ -142,9 +142,9 @@ copied the two paragraphs down as best she could, however there were
 forty-five characters which she couldn&#8217;t make out from the first paragraph,
 which she simply neglected. What are those 45&nbsp;characters?</p>
 </blockquote>
-<p>The concept behind this problem is a <a href="http://en.wikipedia.org/wiki/One-time_pad">one-time pad</a>, where a completely
+<p>The concept behind this problem is a <a href="https://en.wikipedia.org/wiki/One-time_pad">one-time pad</a>, where a completely
 random sequence of characters the same length as the original text is generated
-and then <a href="http://en.wikipedia.org/wiki/Exclusive_or"><span class="caps">XOR</span></a>ed with the original text to create the cipher text. At this
+and then <a href="https://en.wikipedia.org/wiki/Exclusive_or"><span class="caps">XOR</span></a>ed with the original text to create the cipher text. At this
 point the original text can be discarded and recovered by XORing the cipher
 text with the one-time&nbsp;pad.</p>
 <p>The challenge to this problem is finding where the 45 missing characters go,
@@ -163,22 +163,22 @@ one-time pad. This process needs to be repeated for all 45&nbsp;characters.</p>
 will result in the missing character. The solution is the concatenation of all
 the missing characters. This is &#8220;sdnalsilennahcehtdnuoradnuofebnacsehcnarbidun&#8221;
 which is &#8220;nudibranchescanbefoundaroundthechannelislands&#8221;&nbsp;reversed.</p>
-<p>I&#8217;ve made the <a href="http://cs.ucsb.edu/~bboe/public/ictf09/otp_creator.py">code to generate</a> this challenge available. You&#8217;ll notice it
+<p>I&#8217;ve made the <a href="/public/ictf09/otp_creator.py">code to generate</a> this challenge available. You&#8217;ll notice it
 loops until the one-time pad contains the characters of the solution. The
-<a href="http://cs.ucsb.edu/~bboe/public/ictf09/otp_text.txt">original text</a> is a passage from <a href="http://en.wikipedia.org/wiki/James_Joyce">Joyce&#8217;s</a> <a href="http://en.wikipedia.org/wiki/Dubliners">Dubliners</a> that contains the
-oldest reference I know of to the phrase, &#8220;<a href="http://www.urbandictionary.com/define.php?term=how+goes+it">how goes it</a>&#8220;. I did not write a
+<a href="/public/ictf09/otp_text.txt">original text</a> is a passage from <a href="https://en.wikipedia.org/wiki/James_Joyce">Joyce&#8217;s</a> <a href="https://en.wikipedia.org/wiki/Dubliners">Dubliners</a> that contains the
+oldest reference I know of to the phrase, &#8220;<a href="https://www.urbandictionary.com/define.php?term=how+goes+it">how goes it</a>&#8220;. I did not write a
 solution for this&nbsp;problem.</p>
 <p>The third and final problem I wrote was called 0xDEAFBABE or Trivia 2. A
-<a href="http://cs.ucsb.edu/~bboe/public/ictf09/0xDEAFBABE.mid">binary file</a> (renamed to include .mid to resolve content type issues) was
+<a href="/public/ictf09/0xDEAFBABE.mid">binary file</a> (renamed to include .mid to resolve content type issues) was
 provided which the program file correctly informs that it is a midi audio file.
 By playing the file one hears about one note a second. Many teams tried to
 figure out what the notes were as they would be on a musical scale, such as c
 sharp or b flat, however that was a bit over thinking it. The solution was
-simply to print the <span class="caps">ASCII</span> character that corresponds to each <a href="http://www.midi.org/techspecs/midimessages.php">midi note
+simply to print the <span class="caps">ASCII</span> character that corresponds to each <a href="https://www.midi.org/techspecs/midimessages.php">midi note
 number</a>. These numbers range from 0 to 127, thus they&#8217;re perfect for text.
 The solution to this was &#8220;does this not sound super cool?&#8221; There were 207
-submissions of which 21 were correct. I have made my source to <a href="http://cs.ucsb.edu/~bboe/public/ictf09/midi_generation.py">generate</a>
-and <a href="http://cs.ucsb.edu/~bboe/public/ictf09/midi_checker.py">verify</a> this challenge&nbsp;available.</p>
+submissions of which 21 were correct. I have made my source to <a href="/public/ictf09/midi_generation.py">generate</a>
+and <a href="/public/ictf09/midi_checker.py">verify</a> this challenge&nbsp;available.</p>
 <p>If you competed in the iCTF and attempted or completed any of these challenges
 let me know what you thought and how long you spent on them. I recall someone
 in the chat yesterday saying they were losing their sanity trying to solve &#8220;The
