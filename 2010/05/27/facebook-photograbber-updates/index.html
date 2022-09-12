@@ -92,7 +92,7 @@ things were to store the photo captions, photo comments, and photo tags for
 each photo&nbsp;downloaded.</p>
 <p>Yesterday, in order to extract this information from Facebook, I spent some
 time and made some significant modifications to <a href="http://code.google.com/p/photograbber/">photograbber</a>. You can
-download the patch <a href="http://cs.ucsb.edu/~bboe/public/patches/photograbber-r38+bboe.patch">here</a>. The changes are as&nbsp;follows:</p>
+download the patch <a href="/public/photograbber/photograbber-r38+bboe.patch">here</a>. The changes are as&nbsp;follows:</p>
 <ul>
 <li><span class="caps">GUI</span> checkbox option to download entire album if&nbsp;tagged</li>
 <li>Saves photo caption and comments in <em>{pid}</em>_comments.txt</li>
@@ -140,7 +140,7 @@ terminal and have <em>svn</em>, <em>wget</em>, <em>patch</em>, and <em>python</e
 modified version of photograbber&nbsp;via:</p>
 <div class="highlight"><pre><span></span><code>svn checkout http://photograbber.googlecode.com/svn/trunk/ photograbber-read-only -r38
 cd photograbber-read-only/
-wget -qO - http://cs.ucsb.edu/~bboe/public/patches/photograbber-r38+bboe.patch | patch -p0
+wget -qO - https://bryceboe.com/public/photograbber/photograbber-r38+bboe.patch | patch -p0
 echo &quot;Run via: python pg.py&quot;
 python pg.py
 </code></pre></div>

@@ -2268,7 +2268,7 @@ things were to store the photo captions, photo comments, and photo tags for
 each photo&amp;nbsp;downloaded.&lt;/p&gt;
 &lt;p&gt;Yesterday, in order to extract this information from Facebook, I spent some
 time and made some significant modifications to &lt;a href="http://code.google.com/p/photograbber/"&gt;photograbber&lt;/a&gt;. You can
-download the patch &lt;a href="http://cs.ucsb.edu/~bboe/public/patches/photograbber-r38+bboe.patch"&gt;here&lt;/a&gt;. The changes are as&amp;nbsp;follows:&lt;/p&gt;
+download the patch &lt;a href="/public/photograbber/photograbber-r38+bboe.patch"&gt;here&lt;/a&gt;. The changes are as&amp;nbsp;follows:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span class="caps"&gt;GUI&lt;/span&gt; checkbox option to download entire album if&amp;nbsp;tagged&lt;/li&gt;
 &lt;li&gt;Saves photo caption and comments in &lt;em&gt;{pid}&lt;/em&gt;_comments.txt&lt;/li&gt;
@@ -2316,7 +2316,7 @@ terminal and have &lt;em&gt;svn&lt;/em&gt;, &lt;em&gt;wget&lt;/em&gt;, &lt;em&gt
 modified version of photograbber&amp;nbsp;via:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;svn checkout http://photograbber.googlecode.com/svn/trunk/ photograbber-read-only -r38
 cd photograbber-read-only/
-wget -qO - http://cs.ucsb.edu/~bboe/public/patches/photograbber-r38+bboe.patch | patch -p0
+wget -qO - https://bryceboe.com/public/photograbber/photograbber-r38+bboe.patch | patch -p0
 echo &amp;quot;Run via: python pg.py&amp;quot;
 python pg.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="all"></category><category term="facebook"></category><category term="python"></category></entry><entry><title>Defcon 18 Quals Forensics 200 Write up</title><link href="https://bryceboe.com/2010/05/25/defcon-18-quals-forensics-200-write-up/" rel="alternate"></link><published>2010-05-25T14:43:00-07:00</published><updated>2010-05-25T14:43:00-07:00</updated><author><name>Bryce Boe</name></author><id>tag:bryceboe.com,2010-05-25:/2010/05/25/defcon-18-quals-forensics-200-write-up/</id><summary type="html">&lt;p&gt;&lt;ins&gt;
@@ -2401,34 +2401,34 @@ that will combine all the images into&amp;nbsp;one:&lt;/p&gt;
 Update 2010/05/27: I&amp;#8217;ve made further updates to photograbber. Read about them
 in my post titled, &amp;#8220;&lt;a href="/2010/05/27/facebook-photograbber-updates/"&gt;Facebook Photograbber Updates&lt;/a&gt;&amp;#8220;. The patch file linked
 to from this page has been updated to include those changes.&lt;/ins&gt;&lt;/p&gt;
-&lt;p&gt;I started using &lt;a href="http://www.facebook.com/"&gt;Facebook&lt;/a&gt; in October of 2004, during my freshmen year of
+&lt;p&gt;I started using &lt;a href="https://www.facebook.com/"&gt;Facebook&lt;/a&gt; in October of 2004, during my freshmen year of
 college …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;ins&gt;
 Update 2010/05/27: I&amp;#8217;ve made further updates to photograbber. Read about them
 in my post titled, &amp;#8220;&lt;a href="/2010/05/27/facebook-photograbber-updates/"&gt;Facebook Photograbber Updates&lt;/a&gt;&amp;#8220;. The patch file linked
 to from this page has been updated to include those changes.&lt;/ins&gt;&lt;/p&gt;
-&lt;p&gt;I started using &lt;a href="http://www.facebook.com/"&gt;Facebook&lt;/a&gt; in October of 2004, during my freshmen year of
-college, just a few months after it became available at &lt;span class="caps"&gt;UCSB&lt;/span&gt; (&lt;a href="http://web.archive.org/web/20040624152328/http://thefacebook.com/"&gt;June 24&lt;/a&gt;). To
+&lt;p&gt;I started using &lt;a href="https://www.facebook.com/"&gt;Facebook&lt;/a&gt; in October of 2004, during my freshmen year of
+college, just a few months after it became available at &lt;span class="caps"&gt;UCSB&lt;/span&gt; (&lt;a href="https://web.archive.org/web/20040624152328/http://thefacebook.com/"&gt;June 24&lt;/a&gt;). To
 sign up I was required to have an email ending in @ucsb.edu and once signed up
 I could easily communicate with people at &lt;span class="caps"&gt;UCSB&lt;/span&gt;, and more specifically people in
-my courses; a useful feature they &lt;a href="http://blog.facebook.com/blog.php?post=4314497130"&gt;later removed&lt;/a&gt;. Eventually I had the
+my courses; a useful feature they &lt;a href="https://blog.facebook.com/blog.php?post=4314497130"&gt;later removed&lt;/a&gt;. Eventually I had the
 ability to post and tag photos and well as create events to which I could
 easily invite all my friends. Life was simple and so was&amp;nbsp;Facebook.&lt;/p&gt;
 &lt;p&gt;Over time, Facebook expanded to allow anyone with an email address to sign up.
 While I initially didn&amp;#8217;t like that just anyone could join our exclusive college
 website, I gained the ability to easily keep in contact with a few more people
 thus I was happy with that feature. However, when Facebook released their
-&lt;a href="http://developers.facebook.com/"&gt;developer &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;, I was initially happy, though soon later I was sorely
+&lt;a href="https://developers.facebook.com/"&gt;developer &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;, I was initially happy, though soon later I was sorely
 disappointed with the way Facebook provided third-parties with my information.
 Primarily I had always wanted a way to make myself appear non-existent to
 third-party applications, except for those I explicitly allowed. This is a
 feature that now appears utterly&amp;nbsp;unobtainable.&lt;/p&gt;
 &lt;p&gt;These last few weeks Facebook has been hot news with respect to their dishing
-out of users&amp;#8217; information to &lt;a href="http://www.microsoft.com"&gt;Microsoft&lt;/a&gt;, &lt;a href="http://www.pandora.com/"&gt;Pandora&lt;/a&gt;, and &lt;a href="http://www.yelp.com/"&gt;yelp&lt;/a&gt;. Their
-information whoring has prompted Minnesota&amp;#8217;s Senator, &lt;a href="http://en.wikipedia.org/wiki/Al_Franken"&gt;Al Franken&lt;/a&gt;, to
-&lt;a href="http://franken.senate.gov/press/?page=news_single&amp;amp;news_item=Facebook_Privacy_Instructions"&gt;include instructions on his website&lt;/a&gt; detailing how to restrict the
-information flow. Wired&amp;#8217;s article, &amp;#8220;&lt;a href="http://www.wired.com/epicenter/2010/05/facebook-rogue/"&gt;Facebook&amp;#8217;s Gone Rogue; It&amp;#8217;s Time for an
+out of users&amp;#8217; information to &lt;a href="https://www.microsoft.com"&gt;Microsoft&lt;/a&gt;, &lt;a href="https://www.pandora.com/"&gt;Pandora&lt;/a&gt;, and &lt;a href="https://www.yelp.com/"&gt;yelp&lt;/a&gt;. Their
+information whoring has prompted Minnesota&amp;#8217;s Senator, &lt;a href="https://en.wikipedia.org/wiki/Al_Franken"&gt;Al Franken&lt;/a&gt;, to
+&lt;a href="https://franken.senate.gov/press/?page=news_single&amp;amp;news_item=Facebook_Privacy_Instructions"&gt;include instructions on his website&lt;/a&gt; detailing how to restrict the
+information flow. Wired&amp;#8217;s article, &amp;#8220;&lt;a href="https://www.wired.com/epicenter/2010/05/facebook-rogue/"&gt;Facebook&amp;#8217;s Gone Rogue; It&amp;#8217;s Time for an
 Open Alternative&lt;/a&gt;&amp;#8221; pretty much covers many of the recent&amp;nbsp;issues.&lt;/p&gt;
-&lt;p&gt;Thus, like many other Facebook users, the recent changes included &lt;a href="http://en.wikipedia.org/wiki/The_last_straw"&gt;the straw
+&lt;p&gt;Thus, like many other Facebook users, the recent changes included &lt;a href="https://en.wikipedia.org/wiki/The_last_straw"&gt;the straw
 that broke the camel&amp;#8217;s back&lt;/a&gt; and therefore I am prepared to leave Facebook
 behind for good. However, before doing so there are a few tasks that I wanted
 to accomplish prior to leaving. These tasks are as&amp;nbsp;follows:&lt;/p&gt;
@@ -2440,13 +2440,13 @@ to accomplish prior to leaving. These tasks are as&amp;nbsp;follows:&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;At this point I have accomplished all these tasks, thus while I now can leave
 Facebook, there are a few precautionary things I&amp;#8217;d like to do before finally
-clicking that &lt;a href="http://www.facebook.com/help/contact.php?show_form=delete_account"&gt;delete button&lt;/a&gt; such as removing image tags and posting a &lt;a href="/2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/"&gt;link
+clicking that &lt;a href="https://www.facebook.com/help/contact.php?show_form=delete_account"&gt;delete button&lt;/a&gt; such as removing image tags and posting a &lt;a href="/2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/"&gt;link
 to this blog posting&lt;/a&gt;. Below I will detail the steps to accomplish the tasks
 I have&amp;nbsp;outlined.&lt;/p&gt;
 &lt;h3&gt;Obtain a copy of all the albums I am tagged&amp;nbsp;in&lt;/h3&gt;
 &lt;p&gt;Quite plainly there are two primary routes, which I think are good. The first
 involves a Firefox extension, &lt;a href="https://addons.mozilla.org/en-US/firefox/addon/8442/"&gt;facePAD&lt;/a&gt;, and the second involves a desktop
-application, &lt;a href="http://code.google.com/p/photograbber/"&gt;photograbber&lt;/a&gt;.&lt;/p&gt;
+application, &lt;a href="https://code.google.com/p/photograbber/"&gt;photograbber&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;FacePAD simply will allow you to right click on an album link and download all
 of its images to your download directory. The two drawbacks to this approach
 are that it&amp;#8217;s not automated, and if you want to group pictures into folders by
@@ -2457,7 +2457,7 @@ by&amp;nbsp;you.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="facePAD Usage" src="/images/2010/05/facepad.jpg" title="facePAD Usage"&gt;&lt;/p&gt;
 &lt;p&gt;The other approach is using the opensource desktop application Photograbber.
 Photograbber is written in python thus allowing it to run on Windows, &lt;span class="caps"&gt;OS&lt;/span&gt; X, and
-Linux. As of today, photograbber is at &lt;a href="http://code.google.com/p/photograbber/source/detail?r=38"&gt;revision 38&lt;/a&gt;, which only allows you
+Linux. As of today, photograbber is at &lt;a href="https://code.google.com/p/photograbber/source/detail?r=38"&gt;revision 38&lt;/a&gt;, which only allows you
 to download the pictures that you are tagged in, or the pictures that a
 particular friend is in. These pictures are all downloaded into the same
 directory and thus to me is somewhat&amp;nbsp;worthless.&lt;/p&gt;
@@ -2465,12 +2465,12 @@ directory and thus to me is somewhat&amp;nbsp;worthless.&lt;/p&gt;
 I fairly quickly was able to hack together modifications to photograbber that
 allow it to accomplish precisely what I want. Which is, downloading albums that
 I am tagged in where photos in each album are grouped into their own folder. I
-have made available my &lt;a href="http://cs.ucsb.edu/~bboe/public/patches/photograbber-r38+bboe.patch"&gt;patch&lt;/a&gt; to photograbber which you can use to patch the
+have made available my &lt;a href="/public/photograbber/photograbber-r38+bboe.patch"&gt;patch&lt;/a&gt; to photograbber which you can use to patch the
 source and run yourself. Alternatively, I have also repackaged photograbber for
-Mac so you don&amp;#8217;t have to mess with patching the application (&lt;a href="http://cs.ucsb.edu/~bboe/public/bin/PhotoGrabber-OSX-r38+bboe.zip"&gt;download&lt;/a&gt;).
+Mac so you don&amp;#8217;t have to mess with patching the application (&lt;a href="/public/photograbber/PhotoGrabber-OSX-r38+bboe.zip"&gt;download&lt;/a&gt;).
 &lt;del&gt;A window&amp;#8217;s repackage will follow shortly.&lt;/del&gt; Running the application is
 pretty simple, but if you need any assistance please post a comment.
-&lt;ins datetime="2010-05-14T07:22:29+00:00"&gt;I have now made a &lt;a href="http://cs.ucsb.edu/~bboe/public/bin/PhotoGrabber-WIN-r38+bboe.zip"&gt;zip file&lt;/a&gt;
+&lt;ins datetime="2010-05-14T07:22:29+00:00"&gt;I have now made a &lt;a href="/public/photograbber/PhotoGrabber-WIN-r38+bboe.zip"&gt;zip file&lt;/a&gt;
 available which should work on windows. Unzip, and run pg.exe. &lt;/ins&gt;&lt;/p&gt;
 &lt;p&gt;While photograbber is fully automated once started, it does have a few
 drawbacks. The first drawback is that it has a more restricted view of pictures
@@ -2484,7 +2484,7 @@ important feature. I&amp;#8217;ll probably add in this feature sometime before I
 delete my account, so check back for&amp;nbsp;updates.&lt;/p&gt;
 &lt;h3&gt;Import my Facebook contacts&amp;#8217; emails into my Google&amp;nbsp;contacts&lt;/h3&gt;
 &lt;p&gt;I didn&amp;#8217;t find a direct way to solve this problem, though I&amp;#8217;ll admit I didn&amp;#8217;t
-look very hard as I stopped with the &lt;a href="http://www.google.com/support/forum/p/gmail/thread?tid=058dc912c433f1b8&amp;amp;hl=en"&gt;first result&lt;/a&gt; I found for &amp;#8220;export
+look very hard as I stopped with the &lt;a href="https://www.google.com/support/forum/p/gmail/thread?tid=058dc912c433f1b8&amp;amp;hl=en"&gt;first result&lt;/a&gt; I found for &amp;#8220;export
 facebook emails to gmail&amp;#8221;. The method suggested involves using a Yahoo email
 account. From Yahoo&amp;#8217;s contact page you can select &amp;#8220;Tools&amp;#8221; followed by
 &amp;#8220;Import&amp;#8230;&amp;#8221; and finally you have the option to import from Facebook. This uses
@@ -2496,8 +2496,8 @@ and provide it with the downloaded &lt;span class="caps"&gt;CSV&lt;/span&gt;&amp
 &lt;h3&gt;Import my Facebook contacts&amp;#8217; profile pictures into my Google&amp;nbsp;contacts&lt;/h3&gt;
 &lt;p&gt;This may not be essential for many people. I wanted to accomplish this so that
 all of my contacts on my Android Device have pictures next to them. For this
-step I used &lt;a href="http://phaceboogle.bisounours.net/"&gt;phaceboogle&lt;/a&gt;. At first I thought this web service was a little
-sketchy, however it uses both &lt;a href="http://developers.facebook.com/blog/post/108"&gt;Facebook Connect&lt;/a&gt;, and &lt;a href="http://code.google.com/apis/accounts/docs/OAuth.html"&gt;Google&amp;#8217;s OAuth&lt;/a&gt; thus
+step I used &lt;a href="https://phaceboogle.bisounours.net/"&gt;phaceboogle&lt;/a&gt;. At first I thought this web service was a little
+sketchy, however it uses both &lt;a href="https://developers.facebook.com/blog/post/108"&gt;Facebook Connect&lt;/a&gt;, and &lt;a href="https://code.google.com/apis/accounts/docs/OAuth.html"&gt;Google&amp;#8217;s OAuth&lt;/a&gt; thus
 I was cool with using it. Phaceboggle did almost exactly what I wanted, though
 rather than copying the thumbnail picture, phaceboogle copied the un-cropped
 profile picture, which in some cases appears with the wrong aspect ratio.
@@ -2508,7 +2508,7 @@ as it utilizes the Android application, ebobirthday. This app connects to
 Facebook via the Facebook &lt;span class="caps"&gt;API&lt;/span&gt; and copies over all the birthdates for your
 contacts. The next time your phone syncs to your Google account, many of your
 contacts will have their birthdate field completed. Now you can add a birthday
-calendar to your Google Calendar (&lt;a href="http://www.google.com/support/calendar/bin/answer.py?hl=en&amp;amp;answer=37098"&gt;See section &amp;#8216;More&amp;#8217;&lt;/a&gt;). Task&amp;nbsp;completed!&lt;/p&gt;
+calendar to your Google Calendar (&lt;a href="https://www.google.com/support/calendar/bin/answer.py?hl=en&amp;amp;answer=37098"&gt;See section &amp;#8216;More&amp;#8217;&lt;/a&gt;). Task&amp;nbsp;completed!&lt;/p&gt;
 &lt;p&gt;Well that&amp;#8217;s all. Feel free to post alternative methods to accomplish these
 tasks, or other tasks, in the comments. Bye bye&amp;nbsp;Facebook!&lt;/p&gt;</content><category term="all"></category><category term="facebook"></category><category term="google"></category><category term="hacking"></category><category term="mac"></category><category term="python"></category></entry><entry><title>He is Two for Two</title><link href="https://bryceboe.com/2010/03/27/he-is-two-for-two/" rel="alternate"></link><published>2010-03-27T16:01:00-07:00</published><updated>2010-03-27T16:01:00-07:00</updated><author><name>Bryce Boe</name></author><id>tag:bryceboe.com,2010-03-27:/2010/03/27/he-is-two-for-two/</id><summary type="html">&lt;p&gt;&lt;a href="/2010/03/20/the-best-phone-message-ive-ever-received/"&gt;Last week&lt;/a&gt; I wrote about the awesome message my brother left me regarding
 what he wanted for his birthday. Naturally I felt compelled to splurge a little
