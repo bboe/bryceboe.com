@@ -7,7 +7,7 @@ Slug: tethering-os-x-lion-to-android
 I'm currently in Chicago, having just attended the [18th ACM Conference on
 Computer and Communications Security][], where [Adam Doupé][] presented our
 paper, [Fear the EAR: Discovering and Mitigating Execution After Redirect
-Vulnerabilities](http://cs.ucsb.edu/~bboe/public/pubs/fear-the-ear-ccs2011.pdf). As
+Vulnerabilities](/public/publications/fear-the-ear-ccs2011.pdf). As
 always, when I'm traveling, the problem of how to connect to the Internet
 arises. Fortunately, we were provided with Internet access via WiFi in our
 rooms throughout the duration of the conference, however, now that the
