@@ -838,12 +838,12 @@ your own pool functionality is the best solution I am aware&amp;nbsp;of.&lt;/p&g
     &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="all"></category><category term="python"></category></entry><entry><title>Tethering OS X Lion to Android</title><link href="https://bryceboe.com/2011/10/20/tethering-os-x-lion-to-android/" rel="alternate"></link><published>2011-10-20T14:24:00-07:00</published><updated>2011-10-20T14:24:00-07:00</updated><author><name>Bryce Boe</name></author><id>tag:bryceboe.com,2011-10-20:/2011/10/20/tethering-os-x-lion-to-android/</id><summary type="html">&lt;p&gt;I&amp;#8217;m currently in Chicago, having just attended the &lt;a href="http://www.sigsac.org/ccs/CCS2011/"&gt;18th &lt;span class="caps"&gt;ACM&lt;/span&gt; Conference on
 Computer and Communications Security&lt;/a&gt;, where &lt;a href="http://adamdoupe.com/"&gt;Adam Doupé&lt;/a&gt; presented our
-paper, &lt;a href="http://cs.ucsb.edu/~bboe/public/pubs/fear-the-ear-ccs2011.pdf"&gt;Fear the &lt;span class="caps"&gt;EAR&lt;/span&gt;: Discovering and Mitigating Execution After Redirect
+paper, &lt;a href="/public/publications/fear-the-ear-ccs2011.pdf"&gt;Fear the &lt;span class="caps"&gt;EAR&lt;/span&gt;: Discovering and Mitigating Execution After Redirect
 Vulnerabilities&lt;/a&gt;. As
 always, when I&amp;#8217;m traveling, the problem of how to connect to the Internet
 arises. Fortunately …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I&amp;#8217;m currently in Chicago, having just attended the &lt;a href="http://www.sigsac.org/ccs/CCS2011/"&gt;18th &lt;span class="caps"&gt;ACM&lt;/span&gt; Conference on
 Computer and Communications Security&lt;/a&gt;, where &lt;a href="http://adamdoupe.com/"&gt;Adam Doupé&lt;/a&gt; presented our
-paper, &lt;a href="http://cs.ucsb.edu/~bboe/public/pubs/fear-the-ear-ccs2011.pdf"&gt;Fear the &lt;span class="caps"&gt;EAR&lt;/span&gt;: Discovering and Mitigating Execution After Redirect
+paper, &lt;a href="/public/publications/fear-the-ear-ccs2011.pdf"&gt;Fear the &lt;span class="caps"&gt;EAR&lt;/span&gt;: Discovering and Mitigating Execution After Redirect
 Vulnerabilities&lt;/a&gt;. As
 always, when I&amp;#8217;m traveling, the problem of how to connect to the Internet
 arises. Fortunately, we were provided with Internet access via WiFi in our
