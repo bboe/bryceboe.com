@@ -101,8 +101,8 @@ linked to this file:</ins> <a href="/public/f200_02b7b50f575759cff7.tar">f200_02
 however fortunately the lzma extension was useful to identify that this
 possibly be uncompressed with 7zip (<a href="http://lmgtfy.com/?q=lzma+file&amp;l=1">lmgtfy lzma file</a>). On ubuntu there is a
 package called p7zip&nbsp;thus:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">bryce@sarek:f200$ </span>mv f200_02b7b50f575759cff7.tar.lzma f200_02b7b50f575759cff7.tar.7z
-<span class="gp">bryce@sarek:f200$ </span>p7zip -d f200_02b7b50f575759cff7.tar.7z
+<div class="highlight"><pre><span></span><code><span class="gp">bryce@sarek:f200$ </span>mv<span class="w"> </span>f200_02b7b50f575759cff7.tar.lzma<span class="w"> </span>f200_02b7b50f575759cff7.tar.7z
+<span class="gp">bryce@sarek:f200$ </span>p7zip<span class="w"> </span>-d<span class="w"> </span>f200_02b7b50f575759cff7.tar.7z
 
 <span class="go">7-Zip (A) 9.04 beta  Copyright (c) 1999-2009 Igor Pavlov  2009-05-30</span>
 <span class="go">p7zip Version 9.04 (locale=en_US.UTF-8,Utf16=on,HugeFiles=on,8 CPUs)</span>
@@ -115,11 +115,11 @@ package called p7zip&nbsp;thus:</p>
 
 <span class="go">Size:       1730560</span>
 <span class="go">Compressed: 487746</span>
-<span class="gp">bryce@sarek:f200$ </span>tar -xf f200_02b7b50f575759cff7.tar
+<span class="gp">bryce@sarek:f200$ </span>tar<span class="w"> </span>-xf<span class="w"> </span>f200_02b7b50f575759cff7.tar
 </code></pre></div>
 
 <p>This extracts 1121 png image&nbsp;files.</p>
-<div class="highlight"><pre><span></span><code><span class="gp">bryce@sarek:f200$ </span>ls <span class="p">|</span> head
+<div class="highlight"><pre><span></span><code><span class="gp">bryce@sarek:f200$ </span>ls<span class="w"> </span><span class="p">|</span><span class="w"> </span>head
 <span class="go">f200_02b7b50f575759cff7.tar</span>
 <span class="go">IMG_0001.png</span>
 <span class="go">IMG_0002.png</span>
@@ -312,21 +312,14 @@ that will combine all the images into&nbsp;one:</p>
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
         }());
     </script>
-    <script type="text/javascript">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E3Q7B98GNP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-510348-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-
+      gtag('config', 'G-E3Q7B98GNP');
     </script>
 </body>
 </html>

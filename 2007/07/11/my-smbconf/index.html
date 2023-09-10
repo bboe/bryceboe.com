@@ -88,35 +88,35 @@ upgrade the hardware or software, and there really is no reason to except for
 this one file. Well I think I&#8217;ve finally mastered it, and I want to put it in a
 location where I&#8217;ll be able to find it for future&nbsp;resources.</p>
 <div class="highlight"><pre><span></span><code><span class="k">[global]</span>
-   <span class="na">workgroup</span> <span class="o">=</span> <span class="s">MSHOME</span>
-   <span class="na">server string</span> <span class="o">=</span> <span class="s">%h server (Samba, Ubuntu)</span>
-   <span class="na">dns proxy</span> <span class="o">=</span> <span class="s">no</span>
-   <span class="na">log file</span> <span class="o">=</span> <span class="s">/var/log/samba/log.%m</span>
-   <span class="na">max log size</span> <span class="o">=</span> <span class="s">1000</span>
-   <span class="na">syslog</span> <span class="o">=</span> <span class="s">0</span>
-   <span class="na">panic action</span> <span class="o">=</span> <span class="s">/usr/share/samba/panic-action %d</span>
-   <span class="na">encrypt passwords</span> <span class="o">=</span> <span class="s">true</span>
-   <span class="na">passdb backend</span> <span class="o">=</span> <span class="s">tdbsam</span>
-   <span class="na">obey pam restrictions</span> <span class="o">=</span> <span class="s">yes</span>
-   <span class="na">invalid users</span> <span class="o">=</span> <span class="s">root</span>
-   <span class="na">printcap name</span> <span class="o">=</span> <span class="s">/dev/null</span>
-   <span class="na">map to guest</span> <span class="o">=</span> <span class="s">Bad User</span>
+<span class="w">   </span><span class="na">workgroup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">MSHOME</span>
+<span class="w">   </span><span class="na">server string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">%h server (Samba, Ubuntu)</span>
+<span class="w">   </span><span class="na">dns proxy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">no</span>
+<span class="w">   </span><span class="na">log file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/log/samba/log.%m</span>
+<span class="w">   </span><span class="na">max log size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1000</span>
+<span class="w">   </span><span class="na">syslog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0</span>
+<span class="w">   </span><span class="na">panic action</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/usr/share/samba/panic-action %d</span>
+<span class="w">   </span><span class="na">encrypt passwords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span>
+<span class="w">   </span><span class="na">passdb backend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">tdbsam</span>
+<span class="w">   </span><span class="na">obey pam restrictions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
+<span class="w">   </span><span class="na">invalid users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">root</span>
+<span class="w">   </span><span class="na">printcap name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/dev/null</span>
+<span class="w">   </span><span class="na">map to guest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Bad User</span>
 
 <span class="k">[homes]</span>
-   <span class="na">browseable</span> <span class="o">=</span> <span class="s">no</span>
-   <span class="na">valid users</span> <span class="o">=</span> <span class="s">%S</span>
-   <span class="na">read only</span> <span class="o">=</span> <span class="s">no</span>
-   <span class="na">create mask</span> <span class="o">=</span> <span class="s">0664</span>
-   <span class="na">directory mask</span> <span class="o">=</span> <span class="s">0775</span>
+<span class="w">   </span><span class="na">browseable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">no</span>
+<span class="w">   </span><span class="na">valid users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">%S</span>
+<span class="w">   </span><span class="na">read only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">no</span>
+<span class="w">   </span><span class="na">create mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0664</span>
+<span class="w">   </span><span class="na">directory mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0775</span>
 
 <span class="k">[Programs]</span>
-   <span class="na">path</span> <span class="o">=</span> <span class="s">/home2/Programs</span>
-   <span class="na">guest ok</span> <span class="o">=</span> <span class="s">yes</span>
-   <span class="na">read only</span> <span class="o">=</span> <span class="s">yes</span>
-   <span class="na">force group</span> <span class="o">=</span> <span class="s">+trigo</span>
-   <span class="na">write list</span> <span class="o">=</span> <span class="s">@trigo</span>
-   <span class="na">create mask</span> <span class="o">=</span> <span class="s">0664</span>
-   <span class="na">directory mask</span> <span class="o">=</span> <span class="s">0775</span>
+<span class="w">   </span><span class="na">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/home2/Programs</span>
+<span class="w">   </span><span class="na">guest ok</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
+<span class="w">   </span><span class="na">read only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
+<span class="w">   </span><span class="na">force group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">+trigo</span>
+<span class="w">   </span><span class="na">write list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@trigo</span>
+<span class="w">   </span><span class="na">create mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0664</span>
+<span class="w">   </span><span class="na">directory mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0775</span>
 </code></pre></div>
 
 <p>We have more shares but from the Programs share I know I&#8217;ll be able to figure
@@ -287,21 +287,14 @@ the question of which is more important, speed or&nbsp;security?</p>
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
         }());
     </script>
-    <script type="text/javascript">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E3Q7B98GNP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-510348-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-
+      gtag('config', 'G-E3Q7B98GNP');
     </script>
 </body>
 </html>

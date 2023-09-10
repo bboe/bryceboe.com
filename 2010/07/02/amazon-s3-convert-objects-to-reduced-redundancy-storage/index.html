@@ -106,12 +106,12 @@ the following will get you up and running with the script, which can be
 downloaded <a href="/images/2010/07/convert_to_rrs.py">here</a>. Running the script concurrent times will take
 significantly much less time, therefore stopping the script midway through is
 of minor&nbsp;consequence.</p>
-<div class="highlight"><pre><span></span><code>svn checkout http://boto.googlecode.com/svn/trunk/@1595 boto-read-only
-<span class="nb">cd</span> boto-read-only  <span class="c1"># (as root)</span>
-python setup.py install
-<span class="nb">cd</span> ..
-rm -rf boto-read-only
-./convert_to_rss.py your_bucket_name <span class="o">[</span>aws_access_key_id aws_secret_access_key<span class="o">]</span>
+<div class="highlight"><pre><span></span><code>svn<span class="w"> </span>checkout<span class="w"> </span>http://boto.googlecode.com/svn/trunk/@1595<span class="w"> </span>boto-read-only
+<span class="nb">cd</span><span class="w"> </span>boto-read-only<span class="w">  </span><span class="c1"># (as root)</span>
+python<span class="w"> </span>setup.py<span class="w"> </span>install
+<span class="nb">cd</span><span class="w"> </span>..
+rm<span class="w"> </span>-rf<span class="w"> </span>boto-read-only
+./convert_to_rss.py<span class="w"> </span>your_bucket_name<span class="w"> </span><span class="o">[</span>aws_access_key_id<span class="w"> </span>aws_secret_access_key<span class="o">]</span>
 </code></pre></div>
 
 <p>Note that you may alternatively put your aws_access_key_id and
@@ -339,21 +339,14 @@ and AWS_SECRET_ACCESS_KEY&nbsp;respectively.</p>
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
         }());
     </script>
-    <script type="text/javascript">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E3Q7B98GNP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-510348-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-
+      gtag('config', 'G-E3Q7B98GNP');
     </script>
 </body>
 </html>

@@ -99,8 +99,8 @@ counterclockwise order. So say you have three points A, B and C. If the slope
 of the line <span class="caps">AB</span> is less than the slope of the line <span class="caps">AC</span> then the three points are
 listed in a counterclockwise&nbsp;order.</p>
 <p>This is equivalent&nbsp;to:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">def</span> <span class="nv">ccw</span><span class="ss">(</span><span class="nv">A</span>,<span class="nv">B</span>,<span class="nv">C</span><span class="ss">)</span>:
-    <span class="k">return</span> <span class="ss">(</span><span class="nv">C</span>.<span class="nv">y</span><span class="o">-</span><span class="nv">A</span>.<span class="nv">y</span><span class="ss">)</span><span class="o">*</span><span class="ss">(</span><span class="nv">B</span>.<span class="nv">x</span><span class="o">-</span><span class="nv">A</span>.<span class="nv">x</span><span class="ss">)</span> <span class="o">&gt;</span> <span class="ss">(</span><span class="nv">B</span>.<span class="nv">y</span><span class="o">-</span><span class="nv">A</span>.<span class="nv">y</span><span class="ss">)</span><span class="o">*</span><span class="ss">(</span><span class="nv">C</span>.<span class="nv">x</span><span class="o">-</span><span class="nv">A</span>.<span class="nv">x</span><span class="ss">)</span>
+<div class="highlight"><pre><span></span><code><span class="nv">def</span><span class="w"> </span><span class="nv">ccw</span><span class="ss">(</span><span class="nv">A</span>,<span class="nv">B</span>,<span class="nv">C</span><span class="ss">)</span>:
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="ss">(</span><span class="nv">C</span>.<span class="nv">y</span><span class="o">-</span><span class="nv">A</span>.<span class="nv">y</span><span class="ss">)</span><span class="o">*</span><span class="ss">(</span><span class="nv">B</span>.<span class="nv">x</span><span class="o">-</span><span class="nv">A</span>.<span class="nv">x</span><span class="ss">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="ss">(</span><span class="nv">B</span>.<span class="nv">y</span><span class="o">-</span><span class="nv">A</span>.<span class="nv">y</span><span class="ss">)</span><span class="o">*</span><span class="ss">(</span><span class="nv">C</span>.<span class="nv">x</span><span class="o">-</span><span class="nv">A</span>.<span class="nv">x</span><span class="ss">)</span>
 </code></pre></div>
 
 <p>You might be wondering how does this help? Think of two line segments <span class="caps">AB</span>, and
@@ -109,8 +109,8 @@ and points C and D are separated by segment <span class="caps">AB</span>. If poi
 by segment <span class="caps">CD</span> then <span class="caps">ACD</span> and <span class="caps">BCD</span> should have opposite orientation meaning either
 <span class="caps">ACD</span> or <span class="caps">BCD</span> is counterclockwise but not both. Therefore calculating if two line
 segments <span class="caps">AB</span> and <span class="caps">CD</span> intersect is as&nbsp;follows:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">def</span> <span class="nv">intersect</span><span class="ss">(</span><span class="nv">A</span>,<span class="nv">B</span>,<span class="nv">C</span>,<span class="nv">D</span><span class="ss">)</span>:
-        <span class="k">return</span> <span class="nv">ccw</span><span class="ss">(</span><span class="nv">A</span>,<span class="nv">C</span>,<span class="nv">D</span><span class="ss">)</span> <span class="o">!=</span> <span class="nv">ccw</span><span class="ss">(</span><span class="nv">B</span>,<span class="nv">C</span>,<span class="nv">D</span><span class="ss">)</span> <span class="nv">and</span> <span class="nv">ccw</span><span class="ss">(</span><span class="nv">A</span>,<span class="nv">B</span>,<span class="nv">C</span><span class="ss">)</span> <span class="o">!=</span> <span class="nv">ccw</span><span class="ss">(</span><span class="nv">A</span>,<span class="nv">B</span>,<span class="nv">D</span><span class="ss">)</span>
+<div class="highlight"><pre><span></span><code><span class="nv">def</span><span class="w"> </span><span class="nv">intersect</span><span class="ss">(</span><span class="nv">A</span>,<span class="nv">B</span>,<span class="nv">C</span>,<span class="nv">D</span><span class="ss">)</span>:
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nv">ccw</span><span class="ss">(</span><span class="nv">A</span>,<span class="nv">C</span>,<span class="nv">D</span><span class="ss">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nv">ccw</span><span class="ss">(</span><span class="nv">B</span>,<span class="nv">C</span>,<span class="nv">D</span><span class="ss">)</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">ccw</span><span class="ss">(</span><span class="nv">A</span>,<span class="nv">B</span>,<span class="nv">C</span><span class="ss">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nv">ccw</span><span class="ss">(</span><span class="nv">A</span>,<span class="nv">B</span>,<span class="nv">D</span><span class="ss">)</span>
 </code></pre></div>
 
 <p>I&#8217;ve created a <a href="/images/2006/10/intersect.py">python script</a> which demonstrates this&nbsp;algorithm.</p>
@@ -266,21 +266,14 @@ segments <span class="caps">AB</span> and <span class="caps">CD</span> intersect
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
         }());
     </script>
-    <script type="text/javascript">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E3Q7B98GNP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-510348-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-
+      gtag('config', 'G-E3Q7B98GNP');
     </script>
 </body>
 </html>

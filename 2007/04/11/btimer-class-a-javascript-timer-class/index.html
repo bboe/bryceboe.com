@@ -100,74 +100,74 @@ particularly useful in cases where a page has different <span class="caps">AJAX<
 to be updated at different&nbsp;rates.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Bryce Boe</span>
 <span class="c1">// http://www.bryceboe.com/2007/04/11/btimer-class-a-javascript-timer-class/</span>
-<span class="kd">function</span> <span class="nx">BTimer</span><span class="p">(</span><span class="nx">interval</span><span class="p">,</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">interval</span><span class="p">,</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">);</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">BTimer</span><span class="p">(</span><span class="nx">interval</span><span class="p">,</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">interval</span><span class="p">,</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="nx">BTimer</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">init</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">interval</span><span class="p">,</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">setUpdateFunction</span><span class="p">(</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">);</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">setStartFunction</span><span class="p">(</span><span class="kc">null</span><span class="p">,[]);</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">setStopFunction</span><span class="p">(</span><span class="kc">null</span><span class="p">,[]);</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">setResetFunction</span><span class="p">(</span><span class="kc">null</span><span class="p">,[]);</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">running</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">ms</span> <span class="o">=</span> <span class="nx">interval</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">count</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">limit</span> <span class="o">=</span> <span class="kc">Infinity</span><span class="p">;</span>
-    <span class="p">},</span>
-    <span class="nx">_run</span><span class="o">:</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">running</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="o">&gt;=</span><span class="k">this</span><span class="p">.</span><span class="nx">limit</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">stop</span><span class="p">();</span>
-            <span class="k">return</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="o">++</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">updateFunc</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">updateArgs</span><span class="p">);</span>
-        <span class="kd">var</span> <span class="nx">self</span><span class="o">=</span><span class="k">this</span><span class="p">;</span>
-        <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span><span class="nx">self</span><span class="p">.</span><span class="nx">_run</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">ms</span><span class="p">);},</span><span class="k">this</span><span class="p">.</span><span class="nx">ms</span><span class="p">);</span>
-    <span class="p">},</span>
-    <span class="nx">start</span><span class="o">:</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">running</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">running</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">_run</span><span class="p">();</span>
-            <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">startFunc</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span>
-                <span class="k">this</span><span class="p">.</span><span class="nx">startFunc</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">startArgs</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nx">stop</span><span class="o">:</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">running</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">running</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-            <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">stopFunc</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="k">this</span><span class="p">.</span><span class="nx">stopFunc</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">stopArgs</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nx">reset</span><span class="o">:</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">count</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">resetFunc</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="k">this</span><span class="p">.</span><span class="nx">resetFunc</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">resetArgs</span><span class="p">);</span>
-    <span class="p">},</span>
-    <span class="nx">setUpdateFunction</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">updateFunc</span> <span class="o">=</span> <span class="nx">f</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">updateArgs</span> <span class="o">=</span> <span class="nx">args</span><span class="p">;</span>
-    <span class="p">},</span>
-    <span class="nx">setStartFunction</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">startFunc</span> <span class="o">=</span> <span class="nx">f</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">startArgs</span> <span class="o">=</span> <span class="nx">args</span><span class="p">;</span>
-    <span class="p">},</span>
-    <span class="nx">setStopFunction</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">stopFunc</span> <span class="o">=</span> <span class="nx">f</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">stopArgs</span> <span class="o">=</span> <span class="nx">args</span><span class="p">;</span>
-    <span class="p">},</span>
-    <span class="nx">setResetFunction</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">resetFunc</span> <span class="o">=</span> <span class="nx">f</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">resetArgs</span> <span class="o">=</span> <span class="nx">args</span><span class="p">;</span>
-    <span class="p">},</span>
-    <span class="nx">setLimit</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">limit</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">limit</span><span class="o">=</span><span class="nx">limit</span><span class="p">;</span>
-    <span class="p">},</span>
-    <span class="nx">setInterval</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">interval</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">ms</span><span class="o">=</span><span class="nx">interval</span><span class="p">;</span>
-    <span class="p">},</span>
-    <span class="nx">getCount</span><span class="o">:</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="nx">BTimer</span><span class="p">.</span><span class="nx">prototype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">init</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">interval</span><span class="p">,</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">setUpdateFunction</span><span class="p">(</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">setStartFunction</span><span class="p">(</span><span class="kc">null</span><span class="p">,[]);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">setStopFunction</span><span class="p">(</span><span class="kc">null</span><span class="p">,[]);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">setResetFunction</span><span class="p">(</span><span class="kc">null</span><span class="p">,[]);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">running</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">interval</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">limit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">Infinity</span><span class="p">;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">_run</span><span class="o">:</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">running</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="o">&gt;=</span><span class="k">this</span><span class="p">.</span><span class="nx">limit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="nx">stop</span><span class="p">();</span>
+<span class="w">            </span><span class="k">return</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">updateFunc</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">updateArgs</span><span class="p">);</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">self</span><span class="o">=</span><span class="k">this</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span><span class="nx">self</span><span class="p">.</span><span class="nx">_run</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">ms</span><span class="p">);},</span><span class="k">this</span><span class="p">.</span><span class="nx">ms</span><span class="p">);</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">start</span><span class="o">:</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">running</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="nx">running</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="nx">_run</span><span class="p">();</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">startFunc</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span>
+<span class="w">                </span><span class="k">this</span><span class="p">.</span><span class="nx">startFunc</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">startArgs</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">stop</span><span class="o">:</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">running</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="nx">running</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">stopFunc</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">stopFunc</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">stopArgs</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">reset</span><span class="o">:</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">resetFunc</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">resetFunc</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">resetArgs</span><span class="p">);</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">setUpdateFunction</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">updateFunc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">f</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">updateArgs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">args</span><span class="p">;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">setStartFunction</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">startFunc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">f</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">startArgs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">args</span><span class="p">;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">setStopFunction</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">stopFunc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">f</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">stopArgs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">args</span><span class="p">;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">setResetFunction</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">f</span><span class="p">,</span><span class="nx">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">resetFunc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">f</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">resetArgs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">args</span><span class="p">;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">setLimit</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">limit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">limit</span><span class="o">=</span><span class="nx">limit</span><span class="p">;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">setInterval</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">interval</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">ms</span><span class="o">=</span><span class="nx">interval</span><span class="p">;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">getCount</span><span class="o">:</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 
@@ -224,57 +224,57 @@ Status Area
 <p><strong>Note</strong>: Clicking on reset does not update the count to&nbsp;0.</p>
 <hr>
 <p>The extra needed javascript functions for this are the&nbsp;following:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">BTimerMyStart0</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerPause0&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerReset0&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerStart0&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerRadio00&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerRadio10&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerRadio20&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="ow">typeof</span> <span class="nx">BTimerMyTimer0</span> <span class="o">==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">BTimerMyTimer0</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">BTimer</span><span class="p">(</span><span class="mf">300</span><span class="p">,</span><span class="nx">BTimerMyUpdate0</span><span class="p">,[]);</span>
-        <span class="nx">BTimerMyTimer0</span><span class="p">.</span><span class="nx">setLimit</span><span class="p">(</span><span class="mf">50</span><span class="p">);</span>
-        <span class="nx">BTimerMyTimer0</span><span class="p">.</span><span class="nx">setStopFunction</span><span class="p">(</span><span class="nx">BTimerMyPause0</span><span class="p">,[]);</span>
-        <span class="nx">BTimerMyTimer0</span><span class="p">.</span><span class="nx">setResetFunction</span><span class="p">(</span><span class="nx">BTimerOther0</span><span class="p">,[</span><span class="s1">&#39;called reset&#39;</span><span class="p">]);</span>
-        <span class="nx">BTimerMyTimer0</span><span class="p">.</span><span class="nx">setStartFunction</span><span class="p">(</span><span class="nx">BTimerOther0</span><span class="p">,[</span><span class="s1">&#39;called start&#39;</span><span class="p">]);</span>
-    <span class="p">}</span>
-    <span class="nx">BTimerMyTimer0</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">BTimerMyStart0</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerPause0&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerReset0&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerStart0&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerRadio00&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerRadio10&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerRadio20&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">BTimerMyTimer0</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;undefined&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">BTimerMyTimer0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">BTimer</span><span class="p">(</span><span class="mf">300</span><span class="p">,</span><span class="nx">BTimerMyUpdate0</span><span class="p">,[]);</span>
+<span class="w">        </span><span class="nx">BTimerMyTimer0</span><span class="p">.</span><span class="nx">setLimit</span><span class="p">(</span><span class="mf">50</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">BTimerMyTimer0</span><span class="p">.</span><span class="nx">setStopFunction</span><span class="p">(</span><span class="nx">BTimerMyPause0</span><span class="p">,[]);</span>
+<span class="w">        </span><span class="nx">BTimerMyTimer0</span><span class="p">.</span><span class="nx">setResetFunction</span><span class="p">(</span><span class="nx">BTimerOther0</span><span class="p">,[</span><span class="s1">&#39;called reset&#39;</span><span class="p">]);</span>
+<span class="w">        </span><span class="nx">BTimerMyTimer0</span><span class="p">.</span><span class="nx">setStartFunction</span><span class="p">(</span><span class="nx">BTimerOther0</span><span class="p">,[</span><span class="s1">&#39;called start&#39;</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">BTimerMyTimer0</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
 <span class="p">}</span>
-<span class="kd">function</span> <span class="nx">BTimerMyUpdate0</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerDynamic0&#39;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="o">=</span><span class="s2">&quot;Count: &quot;</span>
-        <span class="o">+</span><span class="nx">BTimerMyTimer0</span><span class="p">.</span><span class="nx">count</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">BTimerMyUpdate0</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerDynamic0&#39;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="o">=</span><span class="s2">&quot;Count: &quot;</span>
+<span class="w">        </span><span class="o">+</span><span class="nx">BTimerMyTimer0</span><span class="p">.</span><span class="nx">count</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="kd">function</span> <span class="nx">BTimerMyPause0</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerStart0&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerPause0&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
-    <span class="nx">BTimerOther0</span><span class="p">(</span><span class="s1">&#39;called pause&#39;</span><span class="p">);</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">BTimerMyPause0</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerStart0&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerPause0&#39;</span><span class="p">).</span><span class="nx">disabled</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">BTimerOther0</span><span class="p">(</span><span class="s1">&#39;called pause&#39;</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="kd">function</span> <span class="nx">BTimerOther0</span><span class="p">(</span><span class="nx">string</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="ow">typeof</span> <span class="nx">BTimerMyStatusCount0</span> <span class="o">==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="nx">BTimerMyStatusCount0</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerStatus0&#39;</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">BTimerMyStatusCount0</span><span class="o">++</span>
-        <span class="o">+</span><span class="s2">&quot;: &quot;</span> <span class="o">+</span> <span class="nx">string</span> <span class="o">+</span> <span class="s2">&quot;\n&quot;</span>
-        <span class="o">+</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerStatus0&#39;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="p">;</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">BTimerOther0</span><span class="p">(</span><span class="nx">string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">BTimerMyStatusCount0</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;undefined&#39;</span><span class="p">)</span><span class="w"> </span><span class="nx">BTimerMyStatusCount0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerStatus0&#39;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">BTimerMyStatusCount0</span><span class="o">++</span>
+<span class="w">        </span><span class="o">+</span><span class="s2">&quot;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;\n&quot;</span>
+<span class="w">        </span><span class="o">+</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;BTimerStatus0&#39;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 
 <p>And the accompanying&nbsp;html:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">&quot;BTimerStatus0&quot;</span> <span class="na">style=</span><span class="s">&quot;width:200px;height:150px;&quot;</span><span class="nt">&gt;</span>Status Area<span class="nt">&lt;/textarea&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;BTimerDynamic0&quot;</span><span class="nt">&gt;</span>Count: 0<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">value=</span><span class="s">&quot;Start&quot;</span> <span class="na">id=</span><span class="s">&quot;BTimerStart0&quot;</span> <span class="na">onclick=</span><span class="s">&quot;BTimerMyStart0();&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">value=</span><span class="s">&quot;Pause&quot;</span> <span class="na">id=</span><span class="s">&quot;BTimerPause0&quot;</span>
-       <span class="na">onclick=</span><span class="s">&quot;BTimerMyTimer0.stop();&quot;</span> <span class="err">DISABLED</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">value=</span><span class="s">&quot;Reset&quot;</span> <span class="na">id=</span><span class="s">&quot;BTimerReset0&quot;</span>
-       <span class="na">onclick=</span><span class="s">&quot;BTimerMyTimer0.reset();&quot;</span> <span class="err">DISABLED</span> <span class="nt">/&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;textarea</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;BTimerStatus0&quot;</span><span class="w"> </span><span class="na">style=</span><span class="s">&quot;width:200px;height:150px;&quot;</span><span class="nt">&gt;</span>Status<span class="w"> </span>Area<span class="nt">&lt;/textarea&gt;</span>
+<span class="nt">&lt;div</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;BTimerDynamic0&quot;</span><span class="nt">&gt;</span>Count:<span class="w"> </span>0<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;input</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;button&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Start&quot;</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;BTimerStart0&quot;</span><span class="w"> </span><span class="na">onclick=</span><span class="s">&quot;BTimerMyStart0();&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;button&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Pause&quot;</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;BTimerPause0&quot;</span>
+<span class="w">       </span><span class="na">onclick=</span><span class="s">&quot;BTimerMyTimer0.stop();&quot;</span><span class="w"> </span><span class="err">DISABLED</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;button&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Reset&quot;</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;BTimerReset0&quot;</span>
+<span class="w">       </span><span class="na">onclick=</span><span class="s">&quot;BTimerMyTimer0.reset();&quot;</span><span class="w"> </span><span class="err">DISABLED</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="nt">&lt;br/&gt;&lt;br/&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">id=</span><span class="s">&quot;BTimerRadio00&quot;</span> <span class="na">name=</span><span class="s">&quot;BTimertimeout&quot;</span>
-       <span class="na">onclick=</span><span class="s">&quot;BTimerMyTimer0.setInterval(300);</span>
-<span class="s">       BTimerOther0(&#39;selected .3 second&#39;);&quot;</span> <span class="err">CHECKED</span> <span class="err">DISABLED</span><span class="nt">/&gt;</span> 0.3 second<span class="nt">&lt;br/&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">id=</span><span class="s">&quot;BTimerRadio10&quot;</span> <span class="na">name=</span><span class="s">&quot;BTimertimeout&quot;</span>
-       <span class="na">onclick=</span><span class="s">&quot;BTimerMyTimer0.setInterval(1000);</span>
-<span class="s">       BTimerOther0(&#39;selected 1 second&#39;);&quot;</span> <span class="err">DISABLED</span><span class="nt">/&gt;</span> 1 second<span class="nt">&lt;br/&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">id=</span><span class="s">&quot;BTimerRadio20&quot;</span> <span class="na">name=</span><span class="s">&quot;BTimertimeout&quot;</span>
-       <span class="na">onclick=</span><span class="s">&quot;BTimerMyTimer0.setInterval(5000);</span>
-<span class="s">       BTimerOther0(&#39;selected 5 seconds&#39;);&quot;</span> <span class="err">DISABLED</span><span class="nt">/&gt;</span> 5 seconds<span class="nt">&lt;br/&gt;</span>
+<span class="nt">&lt;input</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;radio&quot;</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;BTimerRadio00&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;BTimertimeout&quot;</span>
+<span class="w">       </span><span class="na">onclick=</span><span class="s">&quot;BTimerMyTimer0.setInterval(300);</span>
+<span class="s">       BTimerOther0(&#39;selected .3 second&#39;);&quot;</span><span class="w"> </span><span class="err">CHECKED</span><span class="w"> </span><span class="err">DISABLED</span><span class="nt">/&gt;</span><span class="w"> </span>0.3<span class="w"> </span>second<span class="nt">&lt;br/&gt;</span>
+<span class="nt">&lt;input</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;radio&quot;</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;BTimerRadio10&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;BTimertimeout&quot;</span>
+<span class="w">       </span><span class="na">onclick=</span><span class="s">&quot;BTimerMyTimer0.setInterval(1000);</span>
+<span class="s">       BTimerOther0(&#39;selected 1 second&#39;);&quot;</span><span class="w"> </span><span class="err">DISABLED</span><span class="nt">/&gt;</span><span class="w"> </span>1<span class="w"> </span>second<span class="nt">&lt;br/&gt;</span>
+<span class="nt">&lt;input</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;radio&quot;</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;BTimerRadio20&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;BTimertimeout&quot;</span>
+<span class="w">       </span><span class="na">onclick=</span><span class="s">&quot;BTimerMyTimer0.setInterval(5000);</span>
+<span class="s">       BTimerOther0(&#39;selected 5 seconds&#39;);&quot;</span><span class="w"> </span><span class="err">DISABLED</span><span class="nt">/&gt;</span><span class="w"> </span>5<span class="w"> </span>seconds<span class="nt">&lt;br/&gt;</span>
 </code></pre></div>
 
 <p>This javascript code is fairly self explanatory with the exception of
@@ -440,21 +440,14 @@ lines of comments so that one may have access to this post for support on the&nb
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
         }());
     </script>
-    <script type="text/javascript">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E3Q7B98GNP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-510348-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-
+      gtag('config', 'G-E3Q7B98GNP');
     </script>
 </body>
 </html>

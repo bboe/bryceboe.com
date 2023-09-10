@@ -111,44 +111,44 @@ pressed. When closing the program via ctrl+c it will print the message&nbsp;&#82
 <span class="c1">#include &lt;stdlib.h&gt; // exit</span>
 <span class="c1">#include &lt;unistd.h&gt; // STDIN_FILENO</span>
 
-<span class="n">void</span> <span class="n">exit_error</span><span class="p">(</span><span class="nb">char</span><span class="o">*</span> <span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">perror</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
-  <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="nb nb-Type">void</span><span class="w"> </span><span class="n">exit_error</span><span class="p">(</span><span class="nb">char</span><span class="o">*</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">perror</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+<span class="w">  </span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="n">void</span> <span class="n">KBInterrupt</span><span class="p">(</span><span class="nb nb-Type">int</span> <span class="n">sig</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Exit!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
-  <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="nb nb-Type">void</span><span class="w"> </span><span class="n">KBInterrupt</span><span class="p">(</span><span class="nb nb-Type">int</span><span class="w"> </span><span class="n">sig</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Exit!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="nb nb-Type">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="o">//</span> <span class="n">Variables</span>
-  <span class="n">fd_set</span> <span class="n">fd</span><span class="p">;</span>
-  <span class="nb nb-Type">int</span> <span class="n">charsRead</span><span class="p">;</span>
-  <span class="nb">char</span> <span class="n">buff</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span>
-  <span class="n">struct</span> <span class="n">sigaction</span> <span class="n">handler</span><span class="p">;</span>
+<span class="nb nb-Type">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="n">Variables</span>
+<span class="w">  </span><span class="n">fd_set</span><span class="w"> </span><span class="n">fd</span><span class="p">;</span>
+<span class="w">  </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="n">charsRead</span><span class="p">;</span>
+<span class="w">  </span><span class="nb">char</span><span class="w"> </span><span class="n">buff</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span>
+<span class="w">  </span><span class="n">struct</span><span class="w"> </span><span class="n">sigaction</span><span class="w"> </span><span class="n">handler</span><span class="p">;</span>
 
-  <span class="o">//</span> <span class="n">Setup</span> <span class="n">Action</span> <span class="n">Handler</span>
-  <span class="n">handler</span><span class="o">.</span><span class="n">sa_handler</span> <span class="o">=</span> <span class="n">KBInterrupt</span><span class="p">;</span> <span class="o">//</span> <span class="n">Function</span> <span class="n">to</span> <span class="n">call</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">sigfillset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">handler</span><span class="o">.</span><span class="n">sa_mask</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="n">exit_error</span><span class="p">(</span><span class="s2">&quot;sigfillset failed&quot;</span><span class="p">);</span>
-  <span class="n">handler</span><span class="o">.</span><span class="n">sa_flags</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">sigaction</span><span class="p">(</span><span class="n">SIGINT</span><span class="p">,</span><span class="o">&amp;</span><span class="n">handler</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">//</span> <span class="n">Setup</span> <span class="k">signal</span>
-    <span class="n">exit_error</span><span class="p">(</span><span class="s2">&quot;sigaction failed&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="n">Setup</span><span class="w"> </span><span class="n">Action</span><span class="w"> </span><span class="n">Handler</span>
+<span class="w">  </span><span class="n">handler</span><span class="o">.</span><span class="n">sa_handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KBInterrupt</span><span class="p">;</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">Function</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">call</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sigfillset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">handler</span><span class="o">.</span><span class="n">sa_mask</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="n">exit_error</span><span class="p">(</span><span class="s2">&quot;sigfillset failed&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">handler</span><span class="o">.</span><span class="n">sa_flags</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sigaction</span><span class="p">(</span><span class="n">SIGINT</span><span class="p">,</span><span class="o">&amp;</span><span class="n">handler</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">Setup</span><span class="w"> </span><span class="k">signal</span>
+<span class="w">    </span><span class="n">exit_error</span><span class="p">(</span><span class="s2">&quot;sigaction failed&quot;</span><span class="p">);</span>
 
-  <span class="o">//</span> <span class="n">Setup</span> <span class="n">file</span> <span class="n">descriptors</span>
-  <span class="n">FD_ZERO</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fd</span><span class="p">);</span>
-  <span class="n">FD_SET</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="p">,</span><span class="o">&amp;</span><span class="n">fd</span><span class="p">);</span>
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="n">Setup</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">descriptors</span>
+<span class="w">  </span><span class="n">FD_ZERO</span><span class="p">(</span><span class="o">&amp;</span><span class="n">fd</span><span class="p">);</span>
+<span class="w">  </span><span class="n">FD_SET</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="p">,</span><span class="o">&amp;</span><span class="n">fd</span><span class="p">);</span>
 
-  <span class="o">//</span> <span class="n">The</span> <span class="n">main</span> <span class="n">part</span> <span class="n">of</span> <span class="n">the</span> <span class="n">program</span>
-  <span class="k">for</span> <span class="p">(;;)</span> <span class="p">{</span>
-    <span class="n">select</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="o">&amp;</span><span class="n">fd</span><span class="p">,</span><span class="n">NULL</span><span class="p">,</span><span class="n">NULL</span><span class="p">,</span><span class="n">NULL</span><span class="p">);</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">FD_ISSET</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="p">,</span><span class="o">&amp;</span><span class="n">fd</span><span class="p">))</span> <span class="p">{</span> <span class="o">//</span> <span class="n">Checks</span> <span class="k">if</span> <span class="n">enter</span> <span class="n">has</span> <span class="n">been</span> <span class="n">pressed</span>
-      <span class="n">charsRead</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="p">,</span><span class="n">buff</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span>
-      <span class="n">write</span><span class="p">(</span><span class="n">STDOUT_FILENO</span><span class="p">,</span><span class="n">buff</span><span class="p">,</span><span class="n">charsRead</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="o">//</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="n">part</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">program</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(;;)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">select</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="o">&amp;</span><span class="n">fd</span><span class="p">,</span><span class="n">NULL</span><span class="p">,</span><span class="n">NULL</span><span class="p">,</span><span class="n">NULL</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">FD_ISSET</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="p">,</span><span class="o">&amp;</span><span class="n">fd</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">Checks</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">enter</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">pressed</span>
+<span class="w">      </span><span class="n">charsRead</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="p">,</span><span class="n">buff</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span>
+<span class="w">      </span><span class="n">write</span><span class="p">(</span><span class="n">STDOUT_FILENO</span><span class="p">,</span><span class="n">buff</span><span class="p">,</span><span class="n">charsRead</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 
@@ -308,21 +308,14 @@ interrupt signal sent by ctrl+c in&nbsp;linux.</p>
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
         }());
     </script>
-    <script type="text/javascript">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E3Q7B98GNP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-510348-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-
+      gtag('config', 'G-E3Q7B98GNP');
     </script>
 </body>
 </html>

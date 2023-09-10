@@ -112,21 +112,21 @@ use without my information please email&nbsp;me.</p>
 <span class="c1">// needs to be called at a specified interval.</span>
 <span class="c1">// The count specifies how many times to repeat. Any</span>
 <span class="c1">// negative value specifies to repeat forever.</span>
-<span class="kd">function</span> <span class="nx">timer</span><span class="p">(</span><span class="nx">interval</span><span class="p">,</span><span class="nx">count</span><span class="p">,</span><span class="nx">someFunction</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">args</span> <span class="o">=</span> <span class="p">[];</span>
-    <span class="k">for</span> <span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mf">3</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="nx">args</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mf">3</span><span class="p">]</span><span class="o">=</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
-    <span class="nx">someFunction</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">args</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">count</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="nx">tCount</span> <span class="o">=</span> <span class="nx">count</span><span class="o">-</span><span class="mf">1</span><span class="p">;</span>
-    <span class="k">else</span> <span class="nx">tCount</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1</span><span class="p">;</span>
-    <span class="nx">command</span><span class="o">=</span><span class="s1">&#39;timer(&#39;</span><span class="o">+</span><span class="nx">interval</span><span class="o">+</span><span class="s1">&#39;,&#39;</span><span class="o">+</span><span class="nx">tCount</span><span class="o">+</span><span class="s1">&#39;,&#39;</span><span class="o">+</span><span class="nx">someFunction</span><span class="o">+</span><span class="s1">&#39;,&#39;</span><span class="p">;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mf">3</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="ow">typeof</span> <span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;string&#39;</span><span class="p">)</span>
-            <span class="nx">command</span><span class="o">+=</span><span class="s1">&#39;\&#39;&#39;</span><span class="o">+</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;\&#39;&#39;</span><span class="p">;</span>
-        <span class="k">else</span> <span class="nx">command</span><span class="o">+=</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
-        <span class="k">if</span><span class="p">(</span><span class="nx">i</span><span class="o">+</span><span class="mf">1</span><span class="o">&lt;</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="nx">command</span><span class="o">+=</span><span class="s1">&#39;,&#39;</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="nx">command</span><span class="o">+=</span><span class="s1">&#39;)&#39;</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">tCount</span> <span class="o">!=</span> <span class="mf">0</span><span class="p">)</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">command</span><span class="p">,</span><span class="nx">interval</span><span class="p">);</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">timer</span><span class="p">(</span><span class="nx">interval</span><span class="p">,</span><span class="nx">count</span><span class="p">,</span><span class="nx">someFunction</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mf">3</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="nx">args</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mf">3</span><span class="p">]</span><span class="o">=</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="w">    </span><span class="nx">someFunction</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">args</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="nx">tCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">count</span><span class="o">-</span><span class="mf">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="nx">tCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">command</span><span class="o">=</span><span class="s1">&#39;timer(&#39;</span><span class="o">+</span><span class="nx">interval</span><span class="o">+</span><span class="s1">&#39;,&#39;</span><span class="o">+</span><span class="nx">tCount</span><span class="o">+</span><span class="s1">&#39;,&#39;</span><span class="o">+</span><span class="nx">someFunction</span><span class="o">+</span><span class="s1">&#39;,&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mf">3</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;string&#39;</span><span class="p">)</span>
+<span class="w">            </span><span class="nx">command</span><span class="o">+=</span><span class="s1">&#39;\&#39;&#39;</span><span class="o">+</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;\&#39;&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="nx">command</span><span class="o">+=</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="nx">i</span><span class="o">+</span><span class="mf">1</span><span class="o">&lt;</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="w"> </span><span class="nx">command</span><span class="o">+=</span><span class="s1">&#39;,&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">command</span><span class="o">+=</span><span class="s1">&#39;)&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">tCount</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">command</span><span class="p">,</span><span class="nx">interval</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 
@@ -162,13 +162,13 @@ before running the start point can be&nbsp;adjusted.</p>
 <input type="button" onclick="timer(300,100,myCounter,-25,25,-25,0.5,'jsTimerText1');" value="start timer"></p>
 <hr>
 <p>Here is the code of the timer&nbsp;function:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">myCounter</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span><span class="nx">max</span><span class="p">,</span><span class="nx">start</span><span class="p">,</span><span class="nx">step</span><span class="p">,</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">curr</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">id</span><span class="p">).</span><span class="nx">value</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">curr</span><span class="p">))</span> <span class="nx">curr</span> <span class="o">=</span> <span class="nx">start</span>
-    <span class="nx">n</span> <span class="o">=</span> <span class="nx">curr</span><span class="o">+</span><span class="nx">step</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">min</span> <span class="o">&lt;=</span> <span class="nx">n</span> <span class="o">&amp;&amp;</span> <span class="nx">n</span> <span class="o">&lt;=</span> <span class="nx">max</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">id</span><span class="p">).</span><span class="nx">value</span><span class="o">=</span><span class="nx">n</span><span class="p">;</span>
-    <span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">myCounter</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span><span class="nx">max</span><span class="p">,</span><span class="nx">start</span><span class="p">,</span><span class="nx">step</span><span class="p">,</span><span class="nx">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">curr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">id</span><span class="p">).</span><span class="nx">value</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">curr</span><span class="p">))</span><span class="w"> </span><span class="nx">curr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">start</span>
+<span class="w">    </span><span class="nx">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">curr</span><span class="o">+</span><span class="nx">step</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">min</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nx">n</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nx">max</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">id</span><span class="p">).</span><span class="nx">value</span><span class="o">=</span><span class="nx">n</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 
@@ -340,21 +340,14 @@ have regarding&nbsp;this.</p>
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
         }());
     </script>
-    <script type="text/javascript">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E3Q7B98GNP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-510348-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-
+      gtag('config', 'G-E3Q7B98GNP');
     </script>
 </body>
 </html>

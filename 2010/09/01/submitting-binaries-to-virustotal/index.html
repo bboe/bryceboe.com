@@ -114,7 +114,7 @@ required to run the scan file&nbsp;example.</p>
 <span class="c1"># The following function is modified from the snippet at:</span>
 <span class="c1"># http://code.activestate.com/recipes/146306/</span>
 <span class="k">def</span> <span class="nf">encode_multipart_formdata</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="p">()):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    fields is a dictionary of name to value for regular form fields.</span>
 <span class="sd">    files is a sequence of (name, filename, value) elements for data to be</span>
 <span class="sd">    uploaded as files.</span>
@@ -143,7 +143,7 @@ required to run the scan file&nbsp;example.</p>
     <span class="k">return</span> <span class="n">content_type</span><span class="p">,</span> <span class="n">body</span>
 
 <span class="k">def</span> <span class="nf">post_multipart</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="p">()):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    url is the full to send the post request to.</span>
 <span class="sd">    fields is a dictionary of name to value for regular form fields.</span>
 <span class="sd">    files is a sequence of (name, filename, value) elements for data to be</span>
@@ -351,21 +351,14 @@ key. The entire script can be <a href="/images/2010/09/virustotal_report.py">dow
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
         }());
     </script>
-    <script type="text/javascript">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E3Q7B98GNP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-510348-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-
+      gtag('config', 'G-E3Q7B98GNP');
     </script>
 </body>
 </html>
