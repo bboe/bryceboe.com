@@ -5,6 +5,6 @@ from pelicanconf import *
 
 DELETE_OUTPUT_DIRECTORY = True
 DISQUS_SITENAME = 'bboe'
-GOOGLE_ANALYTICS = 'UA-510348-1'
+GOOGLE_ANALYTICS = 'G-E3Q7B98GNP'
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 RELATIVE_URLS = False
