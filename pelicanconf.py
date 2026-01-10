@@ -59,9 +59,10 @@ SOCIAL = (('github', 'https://github.com/bboe'),
 ARTICLE_EXCLUDES = ['public']
 STATIC_CREATE_LINKS = True
 STATIC_EXCLUDE_SOURCES = False
-STATIC_PATHS = ['extra/CNAME', 'extra/keybase.txt', 'extra/robots.txt',
-                'images', 'public']
+STATIC_PATHS = ['extra/CNAME', 'extra/com.tesla.3p.public-key.pem',
+                'extra/keybase.txt', 'extra/robots.txt', 'images', 'public']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
+                       'extra/com.tesla.3p.public-key.pem': {'path': '.well-known/appspecific/com.tesla.3p.public-key.pem'},
                        'extra/keybase.txt': {'path': 'keybase.txt'},
                        'extra/robots.txt': {'path': 'robots.txt'}}
 
