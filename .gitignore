@@ -1,5 +1,8 @@
-*~
-*.pyc
+__pycache__/
+.env
 *.DS_Store
-output/
+*.pid
+*.pyc
+*~
 cache/
+output/

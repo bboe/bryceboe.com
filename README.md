@@ -1,15 +1,18 @@
 # bryceboe.com
 
-__Installation__:
+Powered by [Pelican](https://blog.getpelican.com).
 
-    pip install pelican Markdown ghp-import pelican_gist typogrify
+## Setup
 
-__Building__:
+    uv sync
 
-    pelican -s publishconf.py content/
+## Development
 
-__Deploying__:
+    make devserver
 
-    ghp-import -pm COMMIT_MESSAGE output/
+Then visit http://localhost:8000.
 
-Powered by [Pelican](http://blog.getpelican.com).
+## Deploy
+
+Pushes to `main` are automatically built and deployed to GitHub Pages via
+GitHub Actions. A manual deploy can also be triggered from the Actions tab.

@@ -1,0 +1,15 @@
+[project]
+dependencies = [
+    "markdown",
+    "pelican",
+    "pelican-gist",
+    "pytz",
+    "typogrify",
+]
+description = "Static site for bryceboe.com"
+name = "bryceboe-com"
+requires-python = ">=3.13"
+version = "0.1.0"
+
+[tool.uv]
+exclude-newer = "3 days"
