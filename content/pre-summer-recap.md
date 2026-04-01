@@ -94,6 +94,6 @@ me, which has been great so far. Nonetheless Scotty and Adam are missed.
   [Expert City]: https://en.wikipedia.org/wiki/Citrix_Online
   [Citrix]: https://en.wikipedia.org/wiki/Citrix_Systems,_Inc.
   [Citrix Online]: http://www.citrixonline.com/
-  [Appfolio]: http://www.appfolio.com
+  [Appfolio]: https://www.appfolio.com
   [Adam]: https://adamdoupe.com/
   [Jon]: https://www.regexprn.com/

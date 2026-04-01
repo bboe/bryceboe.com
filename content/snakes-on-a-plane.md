@@ -26,7 +26,6 @@ right, and tonight that's Samuel L. Jackson and mother f\*\*\*in' Snakes On A
 Plane!
 
   [Snakes on a Plane Ticket]: /images/2006/09/snakes.jpg
-  [Official]: http://www.snakesonaplane.com/
   [IMDB]: https://www.imdb.com/title/tt0417148/
   [Wikipedia]: https://en.wikipedia.org/wiki/Snakes_on_a_plane
   [this clip from the Daily Show]: https://www.youtube.com/watch?v=BZijbpxNXII

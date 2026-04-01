@@ -26,4 +26,4 @@ goal post through Isla Vista and threw it off the bluffs to the ocean.
 
 Congrats UCSB Soccer! I can't wait for next season.
 
-  [video of the celebration after the game]: http://www.collegehumor.com/video:1729060
+  [video of the celebration after the game]: https://www.youtube.com/watch?v=ml8fRjDn5eM

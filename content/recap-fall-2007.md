@@ -89,7 +89,7 @@ and a fake email address and assuming it's a non-spam comment I'll accept it.
   [Vizard]: http://www.worldviz.com/products/vizard/index.html
   [one of the coolest Professors on campus]: https://sites.cs.ucsb.edu/~sherwood/
   [NS-2]: https://www.isi.edu/websites/nsnam/ns/
-  [TCL]: http://www.tcl.tk/
+  [TCL]: https://www.tcl-lang.org/
   [python]: https://www.python.org/
   [this]: https://www.xkcd.com/353/
   [Ron Burgandy]: https://en.wikipedia.org/wiki/Anchorman:_The_Legend_of_Ron_Burgundy

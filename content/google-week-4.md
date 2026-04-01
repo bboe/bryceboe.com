@@ -83,5 +83,5 @@ twenty or so years from now.
   [second wikipedia edit]: https://en.wikipedia.org/w/index.php?title=Miles_O%27Brien_(Star_Trek)&diff=prev&oldid=225958081
   [Amazon's S3 storage service]: http://www.amazon.com/gp/browse.html?node=16427261
   [awspylib]: https://code.google.com/archive/p/awspylib
-  [my changes]: http://code.google.com/p/awspylib/source/detail?r=31
+  [my changes]: https://github.com/n006/awspylib/commit/9d1cacf63b736e3e1c147995199a02386759b654
   [Isilon Systems]: http://www.isilon.com/

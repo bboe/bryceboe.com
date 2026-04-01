@@ -22,7 +22,7 @@ reading list. I don't have time to provide my thoughts on the matter,
 nonetheless I thought it was worth sharing. I'll end by saying that if this
 technology wasn't for the better, then I'd be out of a job :)
 
-  [Google I/O]: http://code.google.com/events/io/
+  [Google I/O]: https://web.archive.org/web/20090513175543/http://code.google.com/events/io/
   [Eric Schmidt]: https://en.wikipedia.org/wiki/Eric_E._Schmidt
   [Amusing Ourselves to Death: The Comic]: https://michaelzimmer.org/2009/05/27/amusing-ourselves-to-death-the-comic/
   [Orwell's 1984]: https://en.wikipedia.org/wiki/Nineteen_Eighty-Four

@@ -238,5 +238,5 @@ timer.
 
 [BTimer Class Source][]
 
-  [Get Firefox.]: http://www.getfirefox.com
+  [Get Firefox.]: https://www.firefox.com/
   [BTimer Class Source]: /images/2007/04/btimer.js "BTimer Class"

@@ -134,7 +134,7 @@ tasks, or other tasks, in the comments. Bye bye Facebook!
   [Facebook Photograbber Updates]: /2010/05/27/facebook-photograbber-updates/
   [Facebook]: https://www.facebook.com/
   [June 24]: https://web.archive.org/web/20040624152328/http://thefacebook.com/
-  [later removed]: https://blog.facebook.com/blog.php?post=4314497130
+  [later removed]: https://web.archive.org/web/20090701104546/http://blog.facebook.com/blog.php?post=4314497130
   [developer API]: https://developers.facebook.com/
   [Microsoft]: https://www.microsoft.com/
   [Pandora]: https://www.pandora.com/
@@ -143,7 +143,7 @@ tasks, or other tasks, in the comments. Bye bye Facebook!
   [include instructions on his website]: https://franken.senate.gov/press/?page=news_single&news_item=Facebook_Privacy_Instructions
   [Facebook's Gone Rogue; It's Time for an Open Alternative]: https://www.wired.com/epicenter/2010/05/facebook-rogue/
   [the straw that broke the camel's back]: https://en.wikipedia.org/wiki/The_last_straw
-  [delete button]: https://www.facebook.com/help/contact.php?show_form=delete_account
+  [delete button]: https://www.facebook.com/help/224562897555674/
   [link to this blog posting]: /2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/
   [facePAD]: https://addons.mozilla.org/en-US/firefox/addon/8442/
   [photograbber]: https://code.google.com/archive/p/photograbber
@@ -155,5 +155,5 @@ tasks, or other tasks, in the comments. Bye bye Facebook!
   [first result]: https://www.google.com/support/forum/p/gmail/thread?tid=058dc912c433f1b8&hl=en
   [phaceboogle]: https://phaceboogle.bisounours.net/
   [Facebook Connect]: https://developers.facebook.com/blog/post/108
-  [Google's OAuth]: https://code.google.com/apis/accounts/docs/OAuth.html
+  [Google's OAuth]: https://developers.google.com/identity/protocols/oauth2/web-server
   [See section 'More']: https://www.google.com/support/calendar/bin/answer.py?hl=en&answer=37098

@@ -199,16 +199,16 @@ Happy "free" surfing, for now anyway :)
   [Google Chrome]: https://www.google.com/chrome/
   [Google Reader Notifier]: https://chromewebstore.google.com/detail/empty-title/apflmjolhbonpkbkooiamcnenbmbjcbf
   [Google Voice]: https://chromewebstore.google.com/detail/google-voice-by-google/kcnhkahnjcbndmmehfkdnkjomaanaooo
-  [mail.google.com]: http://mail.google.com
-  [docs.google.com]: http://docs.google.com
-  [Google+]: http://plus.google.com
+  [mail.google.com]: https://mail.google.com
+  [docs.google.com]: https://docs.google.com
+  [Google+]: https://plus.google.com
   [YouTube]: https://www.youtube.com/
-  [Google Code]: http://code.google.com/
+  [Google Code]: https://code.google.com/
   [Google AppEngine]: https://cloud.google.com/appengine
   [Digital Inspiration]: https://www.labnol.org/internet/setup-proxy-server/12890
   [Windows Guides]: http://mintywhite.com/software-reviews/security-software/set-proxy-google-app-engine/
   [Google Analytics]: http://www.google.com/analytics/
-  [Google Adsense]: https://www.google.com/adsense/
+  [Google Adsense]: https://adsense.google.com/
   [Server Name Indication]: https://en.wikipedia.org/wiki/Server_Name_Indication
   [still commonly used]: https://en.wikipedia.org/wiki/Server_Name_Indication#No_support
   [man-in-the-middle]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack

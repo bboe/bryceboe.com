@@ -141,5 +141,5 @@ friend from High School, Mohammad. Week 9 should be another exciting week!
   [segment]: https://www.cnbc.com/2008/08/13/googling-eric-schmidt.html
   [Cricket]: https://en.wikipedia.org/wiki/Cricket_(darts)
   [Shannon]: http://shannonebarry.blogspot.com/
-  [Thule]: http://www.thuleracks.com/
+  [Thule]: https://www.thule.com/en-us/
   [Cheri]: http://blogthismom.blogspot.com/

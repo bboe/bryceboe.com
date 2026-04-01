@@ -57,7 +57,7 @@ memories. Happy birthday brother.
 Love, 
 Bryce
 
-[1]: http://www.utsandiego.com/news/2014/Feb/28/poway-man-el-centro-crash/
+[1]: https://www.sandiegouniontribune.com/2014/02/28/poway-man-killed-in-el-centro-crash/
 [2]: https://sandiegoaces.com/2014/03/01/san-diego-disc-golf-loses-a-gentle-giant/
 [see Mexicali]: http://firstgen.bpong.com/event/638/the-world-series-of-beer-pong-v-1
 [professional disc golfer]: https://www.pdga.com/player/53503

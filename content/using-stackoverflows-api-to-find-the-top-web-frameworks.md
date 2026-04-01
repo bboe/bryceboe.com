@@ -252,7 +252,7 @@ Happy web-framework coding!
   [Framework Usage Statistics]: https://trends.builtwith.com/framework
   [model, view, controller]: https://en.wikipedia.org/wiki/Model%E2%80%93View%E2%80%93Controller
   [Google Trends]: https://trends.google.com/trends/
-  [StackOverflow]: http://stackoverflow.com/
+  [StackOverflow]: https://stackoverflow.com/questions
   [ruby on rails compared to python]: https://trends.google.com/trends?q=ruby+on+rails,+python
   [ruby-on-rails]: https://stackoverflow.com/tags/ruby-on-rails
   [asp.net-mvc]: https://stackoverflow.com/tags/asp.net-mvc

@@ -154,5 +154,5 @@ the status of priceTrackr at the [priceTrackr project page][]. Thanks again.
   [pear's Cache_Lite]: https://pear.php.net/package/Cache_Lite
   [Bryce Boe Traffic Graph]: /images/2006/09/2006-bbdigggraph.png
   [priceTrackr Traffic Graph]: /images/2006/09/2006-ptdigggraph.png
-  [Google Adsense]: https://google.com/adsense/
+  [Google Adsense]: https://adsense.google.com/
   [priceTrackr project page]: /projects/pricetrackr/

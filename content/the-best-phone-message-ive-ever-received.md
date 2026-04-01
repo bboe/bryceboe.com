@@ -14,4 +14,4 @@ a message so it's super special to me.
 <param name="movie" value="https://clients4.google.com/voice/embed/embedPlayer"></param><param name="wmode" value="transparent"></param><param name="FlashVars" value="u=12003091102054585858&amp;k=AHwOX_CoMwIPcDJaPow4edFGizQcJcZ_msvUgrV2pItIED7Uo7V5d0jvQWEsZS0XgHxmHeiAiBcKh1XZPKUd9Nr-07q__gnuLvyymRfdZmZFjM0hV5CCYEM0eXpJ14zYqPMQ1gypxYSsCenfPEc3Dg8li2qrsY-ofw1qxC6GnVOQUwrBR9AC1H0&amp;baseurl=https://clients4.google.com/voice&amp;autoPlay=false∩=Connor%27s%20Message"></param>
 </object>
 
-  [Google Voice]: https://www.google.com/voice
+  [Google Voice]: https://workspace.google.com/products/voice/
