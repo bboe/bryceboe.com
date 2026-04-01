@@ -1,6 +1,5 @@
 Title: Google: Week 9
 Date: 2008-08-27 00:07
-Category: all
 Tags: google
 Slug: google-week-9
 

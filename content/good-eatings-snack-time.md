@@ -1,6 +1,5 @@
 Title: Good Eatings: Snack Time
 Date: 2008-09-17 17:01
-Category: all
 Tags: google
 Slug: good-eatings-snack-time
 

@@ -1,6 +1,5 @@
 Title: UCSB 'Bender' Takes Fifth
 Date: 2006-11-15 00:03
-Category: all
 Slug: ucsb-bender-takes-fifth
 
 Saturday November 11, five students from UCSB drove into Riverside, three of

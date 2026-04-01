@@ -1,6 +1,5 @@
 Title: Implementation of a Process-Based Job Management System in C
 Date: 2012-02-23 23:03
-Category: all
 Tags: C, python
 Slug: implementation-of-a-process-based-job-management-system-in-c
 

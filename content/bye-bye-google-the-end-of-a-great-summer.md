@@ -1,6 +1,5 @@
 Title: Bye Bye Google: The End of a Great Summer
 Date: 2008-11-16 12:15
-Category: all
 Tags: google
 Slug: bye-bye-google-the-end-of-a-great-summer
 

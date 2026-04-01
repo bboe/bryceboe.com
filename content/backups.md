@@ -1,6 +1,5 @@
 Title: Backups
 Date: 2009-04-06 17:53
-Category: all
 Tags: s3, unix commands
 Slug: backups
 

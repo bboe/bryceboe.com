@@ -1,6 +1,5 @@
 Title: Snakes On A Plane! Part Deux
 Date: 2006-08-18 03:31
-Category: all
 Slug: snakes-on-a-plane-part-deux
 
 First I have to say Adam beat me to the post with his [Snakes On A Plane

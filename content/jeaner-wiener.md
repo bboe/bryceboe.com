@@ -1,6 +1,5 @@
 Title: Jeaner Wiener
 Date: 2006-10-01 23:28
-Category: all
 Slug: jeaner-wiener
 
 Upon celebrating Adam's 20th birthday last night the question regarding the

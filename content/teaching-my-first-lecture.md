@@ -1,6 +1,5 @@
 Title: Teaching My First Lecture
 Date: 2009-05-05 22:02
-Category: all
 Tags: teaching
 Slug: teaching-my-first-lecture
 

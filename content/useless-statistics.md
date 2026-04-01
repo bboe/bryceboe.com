@@ -1,6 +1,5 @@
 Title: Useless Statistics
 Date: 2007-10-27 14:55
-Category: all
 Slug: useless-statistics
 
 I was just checking out my Google Analytics and wanted to share some random

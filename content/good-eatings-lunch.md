@@ -1,6 +1,5 @@
 Title: Good Eatings: Lunch
 Date: 2008-09-17 13:57
-Category: all
 Tags: google
 Slug: good-eatings-lunch
 

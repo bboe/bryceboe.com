@@ -1,6 +1,5 @@
 Title: Pre-Summer Recap
 Date: 2009-08-17 23:58
-Category: all
 Tags: teaching
 Slug: pre-summer-recap
 

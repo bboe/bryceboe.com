@@ -1,6 +1,5 @@
 Title: A Little Time for BryceBoe.com
 Date: 2006-08-16 01:21
-Category: all
 Slug: a-little-time-for-bryceboecom
 
 My time recently has been filled with trying to complete [priceTrackr][] so

@@ -1,6 +1,5 @@
 Title: Paper Writing
 Date: 2006-07-24 02:08
-Category: all
 Slug: paper-writing
 
 Paper writing is a time of absolute procrastination and major productivity with

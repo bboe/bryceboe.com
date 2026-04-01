@@ -1,6 +1,5 @@
 Title: Quarter From Hell
 Date: 2007-02-01 20:33
-Category: all
 Slug: quarter-from-hell
 
 It's been a very long time since my last post, and I felt I would take this

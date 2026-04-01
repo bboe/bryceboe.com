@@ -1,6 +1,5 @@
 Title: Google: Week 1
 Date: 2008-06-29 20:46
-Category: all
 Tags: google
 Slug: google-week-1
 

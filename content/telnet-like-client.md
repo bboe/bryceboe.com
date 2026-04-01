@@ -1,6 +1,5 @@
 Title: Telnet-like client
 Date: 2007-09-22 10:17
-Category: all
 Tags: C
 Slug: telnet-like-client
 

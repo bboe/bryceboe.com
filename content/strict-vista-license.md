@@ -1,6 +1,5 @@
 Title: Strict Vista License
 Date: 2006-10-16 19:47
-Category: all
 Slug: strict-vista-license
 
 For those that [don't already know][] Microsoft's Windows Vista license looks

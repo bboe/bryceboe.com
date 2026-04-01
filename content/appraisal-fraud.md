@@ -1,6 +1,5 @@
 Title: Appraisal Fraud
 Date: 2006-07-26 03:18
-Category: all
 Slug: appraisal-fraud
 
 While actually finishing my paper (I've been good tonight) I received my first

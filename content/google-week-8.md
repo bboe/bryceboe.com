@@ -1,6 +1,5 @@
 Title: Google: Week 8
 Date: 2008-08-17 19:05
-Category: all
 Tags: google
 Slug: google-week-8
 

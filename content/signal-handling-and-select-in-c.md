@@ -1,6 +1,5 @@
 Title: Signal Handling and Select in C
 Date: 2007-09-02 18:26
-Category: all
 Tags: C
 Slug: signal-handling-and-select-in-c
 

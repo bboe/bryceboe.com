@@ -1,6 +1,5 @@
 Title: Wednesday WTF #2: ICANN Domains Hijacked
 Date: 2008-07-09 12:54
-Category: all
 Tags: Wednesday WTF
 Slug: wednesday-wtf-2-icann-domains-hijacked
 

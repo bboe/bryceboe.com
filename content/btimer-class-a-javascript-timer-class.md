@@ -1,6 +1,5 @@
 Title: BTimer Class: A Javascript Timer Class
 Date: 2007-04-11 18:26
-Category: all
 Tags: javascript
 Slug: btimer-class-a-javascript-timer-class
 

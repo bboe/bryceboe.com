@@ -1,6 +1,5 @@
 Title: Time Zones in Python and Date/Time Representations
 Date: 2012-11-05 01:57
-Category: all
 Tags: python, time zones
 Slug: time-zones-in-python-and-datetime-representations
 

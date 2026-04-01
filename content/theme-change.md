@@ -1,6 +1,5 @@
 Title: Theme Change
 Date: 2007-04-18 13:39
-Category: all
 Slug: theme-change
 
 Just announcing that I finally changed my theme from the default. This is

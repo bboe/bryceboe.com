@@ -1,6 +1,5 @@
 Title: Using StackOverflow's API to Find the Top Web Frameworks
 Date: 2011-02-21 18:09
-Category: all
 Tags: EAR, python
 Slug: using-stackoverflows-api-to-find-the-top-web-frameworks
 

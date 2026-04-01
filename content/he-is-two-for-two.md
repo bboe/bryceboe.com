@@ -1,6 +1,5 @@
 Title: He is Two for Two
 Date: 2010-03-27 16:01
-Category: all
 Slug: he-is-two-for-two
 
 [Last week][] I wrote about the awesome message my brother left me regarding

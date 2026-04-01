@@ -1,6 +1,5 @@
 Title: Good Eatings: Breakfast
 Date: 2008-09-17 10:22
-Category: all
 Tags: google
 Slug: good-eatings-breakfast
 

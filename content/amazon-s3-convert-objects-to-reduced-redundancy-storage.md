@@ -1,6 +1,5 @@
 Title: Amazon S3: Convert Objects to Reduced Redundancy Storage
 Date: 2010-07-02 13:37
-Category: all
 Tags: python, s3
 Slug: amazon-s3-convert-objects-to-reduced-redundancy-storage
 

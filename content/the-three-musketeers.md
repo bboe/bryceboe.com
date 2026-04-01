@@ -1,6 +1,5 @@
 Title: The Three Musketeers
 Date: 2007-10-04 13:25
-Category: all
 Slug: the-three-musketeers
 
 College was something I didn't think too much about until my senior year of

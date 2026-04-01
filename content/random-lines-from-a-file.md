@@ -1,6 +1,5 @@
 Title: Random Lines from a File
 Date: 2009-03-23 01:36
-Category: all
 Tags: google, interview question, python
 Slug: random-lines-from-a-file
 

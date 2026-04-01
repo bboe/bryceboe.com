@@ -1,6 +1,5 @@
 Title: Computer Science at the Center of the Universe
 Date: 2009-05-28 00:23
-Category: all
 Tags: google
 Slug: computer-science-at-the-center-of-the-universe
 

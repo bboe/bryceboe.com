@@ -1,6 +1,5 @@
 Title: Everything but Research
 Date: 2008-11-18 01:57
-Category: all
 Tags: acm
 Slug: everything-but-research
 

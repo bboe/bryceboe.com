@@ -1,6 +1,5 @@
 Title: Tethering OS X Lion to Android
 Date: 2011-10-20 14:24
-Category: all
 Tags: mac
 Slug: tethering-os-x-lion-to-android
 

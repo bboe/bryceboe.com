@@ -1,6 +1,5 @@
 Title: Google Week 12: One More!
 Date: 2008-09-16 00:55
-Category: all
 Tags: google, mac
 Slug: google-week-12-one-more
 

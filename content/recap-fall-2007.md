@@ -1,6 +1,5 @@
 Title: Recap: Fall 2007
 Date: 2007-12-13 17:56
-Category: all
 Slug: recap-fall-2007
 
 Another quarter has passed at UCSB as I just finished my last final about two

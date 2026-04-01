@@ -1,6 +1,5 @@
 Title: Facebook Photograbber Updates
 Date: 2010-05-27 11:28
-Category: all
 Tags: facebook, python
 Slug: facebook-photograbber-updates
 

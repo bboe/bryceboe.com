@@ -1,6 +1,5 @@
 Title: Bye Bye Facebook: A Guide to Leaving Facebook
 Date: 2010-05-13 01:34
-Category: all
 Tags: facebook, google, hacking, mac, python
 Slug: bye-bye-facebook-a-guide-to-leaving-facebook
 

@@ -1,6 +1,5 @@
 Title: Combining PHP and Python
 Date: 2006-11-07 13:32
-Category: all
 Tags: priceTrackr, python
 Slug: combining-php-and-python
 

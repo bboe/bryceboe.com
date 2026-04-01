@@ -1,6 +1,5 @@
 Title: Daniel Boe: March 27, 1988 - February 28, 2014
 Date: 2014-03-27
-Category: all
 Tags: family
 Slug: daniel-boe-march-27-1988-february-28-2014
 

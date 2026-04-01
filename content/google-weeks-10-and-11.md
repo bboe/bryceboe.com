@@ -1,6 +1,5 @@
 Title: Google: Weeks 10 and 11
 Date: 2008-09-07 22:49
-Category: all
 Tags: google
 Slug: google-weeks-10-and-11
 

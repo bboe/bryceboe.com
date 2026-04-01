@@ -1,6 +1,5 @@
 Title: Sleeping in the Garage
 Date: 2008-11-17 22:53
-Category: all
 Slug: sleeping-in-the-garage
 
 The drive back down to Santa Barbara was awesome. I really got to enjoy

@@ -1,6 +1,5 @@
 Title: Hash House Harriers and My New Love of Running
 Date: 2009-12-08 02:21
-Category: all
 Tags: recreation
 Slug: hash-house-harriers-and-my-new-love-of-running
 

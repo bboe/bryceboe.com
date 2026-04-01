@@ -1,6 +1,5 @@
 Title: UCSB's International Capture The Flag Competition 2010 Challenge 6: Fear The EAR
 Date: 2010-12-09 15:34
-Category: all
 Tags: EAR, hacking, python, security
 Slug: ucsbs-international-capture-the-flag-competition-2010-challenge-6-fear-the-ear
 

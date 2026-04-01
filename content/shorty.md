@@ -1,6 +1,5 @@
 Title: Shorty
 Date: 2007-03-22 02:31
-Category: all
 Slug: shorty
 
 This is a quick post as I feel a need to brag a bit about my recent

@@ -1,6 +1,5 @@
 Title: My Little Bro Pitching
 Date: 2009-04-23 19:52
-Category: all
 Tags: family
 Slug: my-little-bro-pitching
 

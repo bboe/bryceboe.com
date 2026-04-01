@@ -1,6 +1,5 @@
 Title: Process-Based Job Management in C and Python
 Date: 2012-02-20 15:56
-Category: all
 Tags: C, python
 Slug: process-based-job-management-in-c-and-python
 

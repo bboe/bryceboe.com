@@ -1,6 +1,5 @@
 Title: Meme?
 Date: 2007-06-07 02:18
-Category: all
 Slug: meme
 
 So I'm sitting in my room pondering working on one of my projects and I get an

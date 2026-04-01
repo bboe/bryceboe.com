@@ -1,6 +1,5 @@
 Title: Wednesday WTF #4
 Date: 2008-07-24 15:47
-Category: all
 Tags: Wednesday WTF
 Slug: wednesday-wtf-4
 

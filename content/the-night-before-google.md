@@ -1,6 +1,5 @@
 Title: The Night Before Google
 Date: 2008-06-24 00:15
-Category: all
 Tags: google, interview question
 Slug: the-night-before-google
 

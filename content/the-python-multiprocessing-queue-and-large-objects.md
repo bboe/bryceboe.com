@@ -1,6 +1,5 @@
 Title: The Python Multiprocessing Queue and Large Objects
 Date: 2011-01-28 01:16
-Category: all
 Tags: python
 Slug: the-python-multiprocessing-queue-and-large-objects
 

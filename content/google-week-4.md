@@ -1,6 +1,5 @@
 Title: Google: Week 4
 Date: 2008-07-21 20:26
-Category: all
 Tags: google, s3
 Slug: google-week-4
 

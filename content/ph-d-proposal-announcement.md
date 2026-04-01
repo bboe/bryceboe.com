@@ -1,6 +1,5 @@
 Title: Ph.D. Proposal Announcement
 Date: 2013-05-29 14:32
-Category: all
 Tags: phd, teaching
 Slug: ph-d-proposal-announcement
 

@@ -1,6 +1,5 @@
 Title: Just A Quickie
 Date: 2006-08-26 21:57
-Category: all
 Slug: just-a-quickie
 
 I was looking at the google analytics results for bryceboe.com and discovered

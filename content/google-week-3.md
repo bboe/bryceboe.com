@@ -1,6 +1,5 @@
 Title: Google: Week 3
 Date: 2008-07-13 23:01
-Category: all
 Tags: google
 Slug: google-week-3
 

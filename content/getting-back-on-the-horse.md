@@ -1,6 +1,5 @@
 Title: Getting Back on the Horse
 Date: 2006-09-24 23:45
-Category: all
 Slug: getting-back-on-the-horse
 
 It's been awhile since my last blog post, in fact it's been a few weeks since I

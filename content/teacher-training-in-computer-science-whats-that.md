@@ -1,6 +1,5 @@
 Title: Teacher Training in Computer Science: What's That?
 Date: 2009-11-09 00:36
-Category: all
 Tags: teaching
 Slug: teacher-training-in-computer-science-whats-that
 

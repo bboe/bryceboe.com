@@ -1,6 +1,5 @@
 Title: Good Eatings: Dinner
 Date: 2008-09-17 20:36
-Category: all
 Tags: google
 Slug: good-eatings-dinner
 

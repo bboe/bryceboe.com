@@ -1,6 +1,5 @@
 Title: Switched Web Servers
 Date: 2010-08-11 15:03
-Category: all
 Slug: switched-web-servers
 
 Buz's and my previous web hosting recently expired and thus on Sunday I moved

@@ -1,6 +1,5 @@
 Title: Wii and Finals
 Date: 2006-12-13 22:55
-Category: all
 Slug: wii-and-finals
 
 Well the first part of this post was supposed to occur directly after my

@@ -1,6 +1,5 @@
 Title: Undergraduate Conclusion
 Date: 2008-06-21 01:53
-Category: all
 Slug: undergraduate-conclusion
 
 My undergraduate education at UCSB can simply be described as AMAZING.

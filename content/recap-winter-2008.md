@@ -1,6 +1,5 @@
 Title: Recap: Winter 2008
 Date: 2008-03-27 19:21
-Category: all
 Slug: recap-winter-2008
 
 Winter quarter is to the school year as Wednesday is to the week; it is right

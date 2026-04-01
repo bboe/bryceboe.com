@@ -1,6 +1,5 @@
 Title: Google: Week 7
 Date: 2008-08-11 23:42
-Category: all
 Tags: google, s3
 Slug: google-week-7
 

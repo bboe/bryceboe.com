@@ -1,6 +1,5 @@
 Title: How do I end it?
 Date: 2009-03-11 20:59
-Category: all
 Slug: how-do-i-end-it
 
 Next quarter I am TAing the Operating Systems course at UCSB, which was one of

@@ -1,6 +1,5 @@
 Title: Move Over! Avoid Passing on the Right
 Date: 2006-08-22 00:14
-Category: all
 Slug: move-over-avoid-passing-on-the-right
 
 I took a drive down to Ventura with my girlfriend this weekend and I must say

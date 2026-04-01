@@ -1,6 +1,5 @@
 Title: Line Segment Intersection Algorithm
 Date: 2006-10-23 19:59
-Category: all
 Tags: python
 Slug: line-segment-intersection-algorithm
 

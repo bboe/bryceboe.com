@@ -1,6 +1,5 @@
 Title: Defcon 18 Quals Forensics 200 Write up
 Date: 2010-05-25 14:43
-Category: all
 Tags: hacking, python
 Slug: defcon-18-quals-forensics-200-write-up
 

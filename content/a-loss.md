@@ -1,6 +1,5 @@
 Title: A Loss -- RIP Jaymie Darrow
 Date: 2008-07-20 16:00
-Category: all
 Slug: a-loss
 
 As a twenty-two year old, I am fortunate to have not lost any close loved ones,

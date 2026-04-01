@@ -1,6 +1,5 @@
 Title: My Summer Secret: Google Chrome
 Date: 2008-09-01 17:09
-Category: all
 Tags: google
 Slug: my-summer-secret-google-chrome
 

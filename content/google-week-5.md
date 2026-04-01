@@ -1,6 +1,5 @@
 Title: Google: Week 5
 Date: 2008-07-29 01:10
-Category: all
 Tags: google
 Slug: google-week-5
 

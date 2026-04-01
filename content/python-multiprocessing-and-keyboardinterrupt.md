@@ -1,6 +1,5 @@
 Title: Python Multiprocessing and KeyboardInterrupt
 Date: 2010-08-26 01:28
-Category: all
 Tags: python
 Slug: python-multiprocessing-and-keyboardinterrupt
 

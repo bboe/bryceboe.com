@@ -1,6 +1,5 @@
 Title: Mother's Day
 Date: 2013-05-12 00:00
-Category: all
 Tags: family
 Slug: mothers-day
 

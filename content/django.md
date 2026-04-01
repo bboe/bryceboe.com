@@ -1,6 +1,5 @@
 Title: Django
 Date: 2007-04-22 15:27
-Category: all
 Tags: python
 Slug: django
 

@@ -1,6 +1,5 @@
 Title: New-buntu: Fesity Fawn
 Date: 2007-04-22 14:52
-Category: all
 Slug: new-buntu-fesity-fawn
 
 This last week was quite exciting mainly because [Ubuntu 7.04][] (Feisty Fawn)

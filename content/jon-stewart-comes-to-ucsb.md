@@ -1,6 +1,5 @@
 Title: Jon Stewart Comes to UCSB
 Date: 2006-10-31 00:26
-Category: all
 Slug: jon-stewart-comes-to-ucsb
 
 Wednesday morning's [Daily Nexus][] filled my body with excitement as the title

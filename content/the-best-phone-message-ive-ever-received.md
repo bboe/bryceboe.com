@@ -1,6 +1,5 @@
 Title: The Best Phone Message I've Ever Received
 Date: 2010-03-20 11:43
-Category: all
 Slug: the-best-phone-message-ive-ever-received
 
 I was working away one day and I missed a phone call. Just mom's cell, so not

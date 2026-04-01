@@ -1,6 +1,5 @@
 Title: Google: Week 2
 Date: 2008-07-07 01:20
-Category: all
 Tags: google
 Slug: google-week-2
 

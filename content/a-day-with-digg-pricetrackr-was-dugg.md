@@ -1,6 +1,5 @@
 Title: A Day With Digg: priceTrackr was Dugg
 Date: 2006-09-07 10:46
-Category: all
 Tags: priceTrackr
 Slug: a-day-with-digg-pricetrackr-was-dugg
 

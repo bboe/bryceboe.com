@@ -1,6 +1,5 @@
 Title: Wednesday WTF #3: moo!
 Date: 2008-07-16 12:18
-Category: all
 Tags: Wednesday WTF
 Slug: wednesday-wtf-3-moo
 

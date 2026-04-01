@@ -1,6 +1,5 @@
 Title: My Major Area Exam Announcement
 Date: 2012-03-06 22:14
-Category: all
 Tags: phd, teaching
 Slug: my-major-area-exam-announcement
 

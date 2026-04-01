@@ -1,6 +1,5 @@
 Title: Properly Handling the Keyboard Interrupt Exception (SIGINT) within a Python C Module
 Date: 2010-09-14 23:54
-Category: all
 Tags: C, python
 Slug: properly-handling-the-keyboard-interrupt-exception-sigint-within-a-python-c-module
 

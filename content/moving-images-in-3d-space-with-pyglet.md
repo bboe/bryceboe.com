@@ -1,6 +1,5 @@
 Title: Moving Images in 3D Space with Pyglet
 Date: 2011-10-08 16:04
-Category: all
 Tags: python, visualization
 Slug: moving-images-in-3d-space-with-pyglet
 

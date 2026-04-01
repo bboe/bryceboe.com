@@ -1,6 +1,5 @@
 Title: MySpace is Unimpressive
 Date: 2006-09-04 23:33
-Category: all
 Slug: myspace-is-unimpressive
 
 After at least two years of avoiding MySpace I finally did the unthinkable and

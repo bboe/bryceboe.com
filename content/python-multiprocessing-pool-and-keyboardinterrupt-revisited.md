@@ -1,6 +1,5 @@
 Title: Python Multiprocessing Pool and KeyboardInterrupt Revisited
 Date: 2012-02-14 13:54
-Category: all
 Tags: python
 Slug: python-multiprocessing-pool-and-keyboardinterrupt-revisited
 

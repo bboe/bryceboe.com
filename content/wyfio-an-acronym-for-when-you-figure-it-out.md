@@ -1,6 +1,5 @@
 Title: WYFIO an Acronym for "When you figure it out"
 Date: 2010-02-09 00:47
-Category: all
 Slug: wyfio-an-acronym-for-when-you-figure-it-out
 
 This is a ridiculously silly post however I predict it will work out in my

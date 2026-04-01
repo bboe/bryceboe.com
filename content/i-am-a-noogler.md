@@ -1,6 +1,5 @@
 Title: I am a Noogler
 Date: 2008-06-24 20:50
-Category: all
 Tags: google
 Slug: i-am-a-noogler
 

@@ -1,6 +1,5 @@
 Title: Tomato Accident
 Date: 2006-12-14 13:49
-Category: all
 Slug: tomato-accident
 
 I forgot to post this under my denoiser application. I accidently created the

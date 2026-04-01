@@ -1,6 +1,5 @@
 Title: Bypassing Gogo's Inflight Internet Authentication
 Date: 2012-03-12 17:19
-Category: all
 Slug: bypassing-gogos-inflight-internet-authentication
 
 Two weeks ago I attended [SIGCSE 2012][] in Raleigh, NC. The plane on my return

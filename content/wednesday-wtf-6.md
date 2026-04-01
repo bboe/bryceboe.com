@@ -1,6 +1,5 @@
 Title: Wednesday WTF #6
 Date: 2008-08-06 23:29
-Category: all
 Tags: Wednesday WTF
 Slug: wednesday-wtf-6
 

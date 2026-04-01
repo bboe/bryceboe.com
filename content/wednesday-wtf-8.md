@@ -1,6 +1,5 @@
 Title: Wednesday WTF #8
 Date: 2008-08-20 16:28
-Category: all
 Tags: Wednesday WTF
 Slug: wednesday-wtf-8
 

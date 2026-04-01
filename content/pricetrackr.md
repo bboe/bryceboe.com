@@ -1,6 +1,5 @@
 Title: priceTrackr
 Date: 2006-08-07 19:05
-Category: all
 Slug: pricetrackr
 
 Thanks to Adam Nelson's suggestion I registered [www.pricetrackr.com][] thus

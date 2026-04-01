@@ -1,6 +1,5 @@
 Title: Core 2 Duo Prices Drop
 Date: 2006-08-15 03:45
-Category: all
 Slug: core-2-duo-prices-drop
 
 While updating [priceTrackr][] tonight I noticed that newegg has dropped their

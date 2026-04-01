@@ -1,6 +1,5 @@
 Title: Defcon 19 Quals Forensics 100 and Forensics 300 Solution
 Date: 2011-06-05 19:18
-Category: all
 Tags: hacking, python
 Slug: defcon-19-quals-forensics-100-and-forensics-300-solution
 

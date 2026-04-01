@@ -1,6 +1,5 @@
 Title: Submitting Binaries to VirusTotal
 Date: 2010-09-01 01:12
-Category: all
 Tags: python, security
 Slug: submitting-binaries-to-virustotal
 

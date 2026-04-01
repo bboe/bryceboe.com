@@ -1,6 +1,5 @@
 Title: Google: Week 6 - Woah-oh We're Half Way There!
 Date: 2008-08-05 23:42
-Category: all
 Tags: google
 Slug: google-week-6-–-woah-oh-were-half-way-there
 

@@ -1,6 +1,5 @@
 Title: Paper Done Equals Less Updates
 Date: 2006-07-30 18:12
-Category: all
 Slug: paper-done-equals-less-updates
 
 I finished my paper before class Wednesday morning and it felt so good to be

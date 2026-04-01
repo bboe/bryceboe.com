@@ -1,6 +1,5 @@
 Title: German Autofest 2006
 Date: 2006-09-13 00:59
-Category: all
 Tags: priceTrackr
 Slug: german-autofest-2006
 

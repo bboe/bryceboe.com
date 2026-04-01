@@ -1,6 +1,5 @@
 Title: Paging Dr. Boe
 Date: 2008-02-13 14:31
-Category: all
 Slug: paging-dr-boe
 
 Okay, so I will probably never hear that line in a serious situation.

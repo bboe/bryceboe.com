@@ -1,6 +1,5 @@
 Title: JavaScript Timer
 Date: 2007-04-06 01:03
-Category: all
 Tags: javascript
 Slug: javascript-timer
 

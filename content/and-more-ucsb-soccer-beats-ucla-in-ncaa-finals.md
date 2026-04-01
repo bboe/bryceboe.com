@@ -1,6 +1,5 @@
 Title: And More: UCSB Soccer Beats UCLA in NCAA Finals
 Date: 2006-12-15 18:00
-Category: all
 Slug: and-more-ucsb-soccer-beats-ucla-in-ncaa-finals
 
 I knew I forgot something else that I wanted to put in my previous post. Sunday

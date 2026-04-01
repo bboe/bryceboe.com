@@ -1,6 +1,5 @@
 Title: My smb.conf
 Date: 2007-07-11 00:29
-Category: all
 Slug: my-smbconf
 
 This is about the 5th time I had to redo our smb.conf for our file server in

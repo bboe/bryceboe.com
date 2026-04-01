@@ -1,6 +1,5 @@
 Title: Snakes On A Plane!
 Date: 2006-08-17 11:28
-Category: all
 Slug: snakes-on-a-plane
 
 ![Snakes on a Plane Ticket][]If you haven't heard about Snakes On A Plane go

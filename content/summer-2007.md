@@ -1,6 +1,5 @@
 Title: Summer 2007
 Date: 2007-09-02 12:48
-Category: all
 Slug: summer-2007
 
 Over the past month there have been a ton of happenings. For the most part I've
