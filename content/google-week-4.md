@@ -82,6 +82,6 @@ twenty or so years from now.
   [Hands Off Our Ovaries]: https://www.handsoffourovaries.com/
   [second wikipedia edit]: https://en.wikipedia.org/w/index.php?title=Miles_O%27Brien_(Star_Trek)&diff=prev&oldid=225958081
   [Amazon's S3 storage service]: http://www.amazon.com/gp/browse.html?node=16427261
-  [awspylib]: http://code.google.com/p/awspylib/
+  [awspylib]: https://code.google.com/archive/p/awspylib
   [my changes]: http://code.google.com/p/awspylib/source/detail?r=31
   [Isilon Systems]: http://www.isilon.com/

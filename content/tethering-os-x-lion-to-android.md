@@ -54,6 +54,6 @@ the script. Happy tethering!
   [yelp]: https://www.yelp.com/
   [Android Forums post]: http://androidforums.com/droid-how-tips/18532-mac-os-x-droid-tethering-usb-wired.html
   [Azilink]: http://code.google.com/p/azilink/
-  [Tunnelblick]: http://code.google.com/p/tunnelblick/
+  [Tunnelblick]: https://code.google.com/archive/p/tunnelblick
   [shell script]: http://pastie.org/701122
   [great blog post]: http://mornin.org/blog/howto-tether-android-phone-mac-os-x/

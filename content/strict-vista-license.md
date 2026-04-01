@@ -24,5 +24,5 @@ free. And if you happen to see me at a Microsoft meeting, I'm only there for
 the free stuff.
 
   [don't already know]: http://www.extremetech.com/article2/0,1558,2030003,00.asp?kc=ETRSS02129TX1K0000532
-  [Paralles]: http://www.parallels.com/en/
+  [Paralles]: https://www.parallels.com/
   [$399 for Vista Ultimate]: http://www.microsoft.com/windowsvista/getready/editions/ultimate.mspx

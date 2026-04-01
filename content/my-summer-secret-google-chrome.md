@@ -42,5 +42,5 @@ Also:
   [Check it out tomorrow]: https://www.google.com/chrome/
   [digg]: http://digg.com/software/Google_Chrome_a_browser_by_Google
   [reddit]: https://www.reddit.com/r/programming/comments/6z2eg/google_chrome_googles_browser_project/
-  [Slashdot]: http://tech.slashdot.org/tech/08/09/01/162224.shtml
+  [Slashdot]: https://tech.slashdot.org/story/08/09/01/162224/google-chrome-the-google-browser
   [A great prediction from someone who probably had inside knowledge.]: http://thetruthaboutmozilla.wordpress.com/2008/02/25/the-google-browser/

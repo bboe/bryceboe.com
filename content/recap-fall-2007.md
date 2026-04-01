@@ -83,12 +83,12 @@ By the way if you do actually read this how about some comments which spark
 discussion, or just comments? If you want to be anonymous just use a fake name
 and a fake email address and assuming it's a non-spam comment I'll accept it.
 
-  [Ben Zhao]: http://cs.ucsb.edu/~ravenben/
+  [Ben Zhao]: https://sites.cs.ucsb.edu/~ravenben/
   [awesome Professor]: http://cs.ucsb.edu/~ebelding/
   [WorldViz]: https://www.worldviz.com/
   [Vizard]: http://www.worldviz.com/products/vizard/index.html
-  [one of the coolest Professors on campus]: http://cs.ucsb.edu/~sherwood/
-  [NS-2]: http://www.isi.edu/nsnam/ns/
+  [one of the coolest Professors on campus]: https://sites.cs.ucsb.edu/~sherwood/
+  [NS-2]: https://www.isi.edu/websites/nsnam/ns/
   [TCL]: http://www.tcl.tk/
   [python]: https://www.python.org/
   [this]: https://www.xkcd.com/353/

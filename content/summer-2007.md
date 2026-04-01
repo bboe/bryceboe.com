@@ -80,4 +80,4 @@ few research papers. It's going to be a good year.
   [Cheri]: http://blogthismom.blogspot.com/
   [Storage Area Network]: https://en.wikipedia.org/wiki/Storage_area_network
   [Trac]: http://trac.edgewall.org/
-  [Ben Zhao]: http://www.cs.ucsb.edu/~ravenben/
+  [Ben Zhao]: https://sites.cs.ucsb.edu/~ravenben/

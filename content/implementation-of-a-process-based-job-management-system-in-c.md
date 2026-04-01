@@ -118,9 +118,9 @@ Happy coding!
 
 [gist:id=1894848,file=main.c]
 
-  [multiprocessing.Pool]: http://docs.python.org/library/multiprocessing.html#module-multiprocessing.pool
+  [multiprocessing.Pool]: https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing.pool
   [POSIX-based]: https://en.wikipedia.org/wiki/POSIX
-  [found and downloaded in entirety]: https://gist.github.com/1894848
+  [found and downloaded in entirety]: https://gist.github.com/bboe/1894848
   [the issue]: /2010/08/26/python-multiprocessing-and-keyboardinterrupt/
     "Python Multiprocessing and KeyboardInterrupt"
   [volatile]: https://en.wikipedia.org/wiki/Volatile_variable

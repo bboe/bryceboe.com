@@ -187,5 +187,5 @@ Thanks for bringing the solution to my attention Georges.
   [Added commentary]: #georges
   [this stackoverflow thread]: https://stackoverflow.com/questions/1408356/keyboard-interrupts-with-pythons-multiprocessing-pool
   [The Python Multiprocessing Queue and Large Objects]: /2011/01/28/the-python-multiprocessing-queue-and-large-objects/
-  [multiprocessing]: http://docs.python.org/library/multiprocessing.html
-  [threading]: http://docs.python.org/library/threading.html
+  [multiprocessing]: https://docs.python.org/3/library/multiprocessing.html
+  [threading]: https://docs.python.org/3/library/threading.html

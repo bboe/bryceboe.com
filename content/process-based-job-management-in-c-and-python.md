@@ -90,11 +90,11 @@ I've now written about it. Read the followup: [Implementation of a
 Process-Based Job Management System in C][]</ins>
 
   [Python Multiprocessing Pool and KeyboardInterrupt Revisited]: /2012/02/14/python-multiprocessing-pool-and-keyboardinterrupt-revisited/
-  [multiprocessing.Pool]: http://docs.python.org/library/multiprocessing.html#module-multiprocessing.pool
+  [multiprocessing.Pool]: https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing.pool
   [python C module]: /2010/09/14/properly-handling-the-keyboard-interrupt-exception-sigint-within-a-python-c-module/
     "Properly Handling the Keyboard Interrupt Exception (SIGINT) within a Python C Module"
   [operating system concepts]: http://cs.ucsb.edu/~bboe/p/cv#teaching
-  [os package]: http://docs.python.org/library/os.html
+  [os package]: https://docs.python.org/3/library/os.html
   [ANSI-C]: https://en.wikipedia.org/wiki/ANSI_C
   [POSIX-based]: https://en.wikipedia.org/wiki/POSIX
   [fork]: https://pubs.opengroup.org/onlinepubs/009604599/functions/fork.html
@@ -106,6 +106,6 @@ Process-Based Job Management System in C][]</ins>
   [2]: /2011/01/28/the-python-multiprocessing-queue-and-large-objects/
     "The Python Multiprocessing Queue and Large Objects"
   [inter-process communication]: https://en.wikipedia.org/wiki/Inter-process_communication
-  [multiprocessing.Queue]: http://docs.python.org/library/multiprocessing.html#exchanging-objects-between-processes
+  [multiprocessing.Queue]: https://docs.python.org/3/library/multiprocessing.html#exchanging-objects-between-processes
   [Implementation of a Process-Based Job Management System in C]: /2012/02/23/implementation-of-a-process-based-job-management-system-in-c/
     "Implementation of a Process-Based Job Management System in C"

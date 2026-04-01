@@ -70,8 +70,8 @@ UCSB means the girls start wearing skirts again, and being back on day light
 savings time means long afternoons. Weekends will entail drinking on the beach
 and enjoying the sun. I love Santa Barbara.
 
-  [Ben Zhao]: http://www.cs.ucsb.edu/~ravenben/
-  [Giovanni Vigna]: http://www.cs.ucsb.edu/~vigna/
+  [Ben Zhao]: https://sites.cs.ucsb.edu/~ravenben/
+  [Giovanni Vigna]: https://sites.cs.ucsb.edu/~vigna/
   [onion routing]: https://en.wikipedia.org/wiki/Onion_routing
   [defcon]: https://www.defcon.org/
   [UCSB Association for Computing Machinery (ACM) club]: http://www.acmucsb.com/

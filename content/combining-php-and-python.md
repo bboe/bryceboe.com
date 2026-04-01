@@ -85,7 +85,7 @@ The whole package with proper extensions can be downloaded:
   [python]: https://www.python.org/
   [documentation]: https://docs.python.org/2/library/
   [php's]: https://www.php.net/manual/en/
-  [mysql-python]: http://sourceforge.net/project/showfiles.php?group_id=22307
+  [mysql-python]: https://sourceforge.net/projects/mysql-python/files/
   [main.sh]: /images/2006/11/main.txt
   [phpPart1.php]: /images/2006/11/phppart1.txt
   [Queue]: https://docs.python.org/2/library/queue.html

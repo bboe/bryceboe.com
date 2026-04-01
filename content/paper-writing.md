@@ -30,4 +30,4 @@ And finally write this entry. What a weekend. The good news is only five pages
 left to go.
 
   [thepricetracker.com]: http://www.thepricetracker.com/
-  [sedo]: http://www.sedo.com/
+  [sedo]: https://sedo.com/us/

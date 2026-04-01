@@ -46,4 +46,4 @@ $10,000 for this domain yet. Oh well.
 Lesson of the day: Writing papers can even be interrupted by fraudulent emails.
 
 [this link]: http://www.sitepoint.com/forums/showthread.php?t=405336
-[this one]: http://www.namepros.com/warnings-and-alerts/165976-fallen-half-way-into-popular-appraisal.html
+[this one]: https://www.namepros.com/threads/fallen-half-way-into-a-popular-appraisal-scam-be-careful.165976/

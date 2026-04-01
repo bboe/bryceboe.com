@@ -117,4 +117,4 @@ from [send][] as I wasn't able to properly test this behavior.
 
 Pretty simple.
 
-  [send]: http://www.opengroup.org/onlinepubs/009695399/functions/send.html
+  [send]: https://pubs.opengroup.org/onlinepubs/009695399/functions/send.html

@@ -87,10 +87,10 @@ the Three Musketeers. However, the move also marked the start of a new life for
 me, which has been great so far. Nonetheless Scotty and Adam are missed.
 
   [Flat Stanley's Adventures]: /2009/03/03/flat-stanley%E2%80%99s-not-so-adventures-at-ucsb/
-  [Tim Sherwood]: http://cs.ucsb.edu/~sherwood/
+  [Tim Sherwood]: https://sites.cs.ucsb.edu/~sherwood/
   [automatic grading utilities]: http://cs.ucsb.edu/~bboe/static/projects
-  [Chris Kruegel]: http://cs.ucsb.edu/~chris/
-  [Klaus Schauser]: http://www.cs.ucsb.edu/~schauser/
+  [Chris Kruegel]: https://sites.cs.ucsb.edu/~chris/
+  [Klaus Schauser]: https://sites.cs.ucsb.edu/~schauser/
   [Expert City]: https://en.wikipedia.org/wiki/Citrix_Online
   [Citrix]: https://en.wikipedia.org/wiki/Citrix_Systems,_Inc.
   [Citrix Online]: http://www.citrixonline.com/

@@ -119,7 +119,7 @@ required to run the scan file example.
 Be sure to change the API\_KEY value on line 8 to reflect your VirusTotal API
 key. The entire script can be [downloaded here][] to save you a copy and paste.
 
-  [VirusTotal]: http://www.virustotal.com/
+  [VirusTotal]: https://www.virustotal.com/gui/
   [see full list]: http://www.virustotal.com/about.html
   [API]: http://www.virustotal.com/advanced.html#publicapi
   [this snippet]: http://code.activestate.com/recipes/146306/

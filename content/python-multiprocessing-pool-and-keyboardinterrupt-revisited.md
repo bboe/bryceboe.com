@@ -82,4 +82,4 @@ Below is a verbatim copy of my original solution for your convenience:
   [Python: Using KeyboardInterrupt with a Multiprocessing Pool]: https://noswap.com/blog/python-multiprocessing-keyboardinterrupt
   [Python Multiprocessing and KeyboardInterrupt]: /2010/08/26/python-multiprocessing-and-keyboardinterrupt/
   [second update]: /2010/08/26/python-multiprocessing-and-keyboardinterrupt/#georges
-  [multiprocessing.Pool]: http://docs.python.org/library/multiprocessing.html#module-multiprocessing.pool
+  [multiprocessing.Pool]: https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing.pool

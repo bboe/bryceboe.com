@@ -64,5 +64,5 @@ modified version of photograbber via:
     python pg.py
 
   [previously wrote]: /2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/
-  [photograbber]: http://code.google.com/p/photograbber/
+  [photograbber]: https://code.google.com/archive/p/photograbber
   [here]: /public/photograbber/photograbber-r38+bboe.patch

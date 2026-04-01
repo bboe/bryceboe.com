@@ -81,4 +81,4 @@ Barbara. Adios from the Hills!
   [Keri Walsh]: https://en.wikipedia.org/wiki/Keri_walsh
   [Knob Creek]: https://en.wikipedia.org/wiki/Knob_Creek_(bourbon)
   [Pilsner]: https://en.wikipedia.org/wiki/Pilsner
-  [Android]: http://code.google.com/android/
+  [Android]: https://developers.google.com/android/?csw=1

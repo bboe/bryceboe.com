@@ -42,7 +42,7 @@ next week. I'm open for unique car names as I never named my 944 and I think I
 should start off my next car properly.
 
   [Amazon's S3]: http://www.amazon.com/gp/browse.html?node=16427261
-  [s3fs]: http://code.google.com/p/s3fs/wiki/FuseOverAmazon
+  [s3fs]: https://code.google.com/archive/p/s3fs/wikis/FuseOverAmazon.wiki
   [rsync]: https://en.wikipedia.org/wiki/Rsync
   [Volkswagen Golfs]: https://en.wikipedia.org/wiki/Volkswagen_Golf
   [Audi A4s]: https://en.wikipedia.org/wiki/Audi_A4

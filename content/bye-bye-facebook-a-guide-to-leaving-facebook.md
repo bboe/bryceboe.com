@@ -136,7 +136,7 @@ tasks, or other tasks, in the comments. Bye bye Facebook!
   [June 24]: https://web.archive.org/web/20040624152328/http://thefacebook.com/
   [later removed]: https://blog.facebook.com/blog.php?post=4314497130
   [developer API]: https://developers.facebook.com/
-  [Microsoft]: https://www.microsoft.com
+  [Microsoft]: https://www.microsoft.com/
   [Pandora]: https://www.pandora.com/
   [yelp]: https://www.yelp.com/
   [Al Franken]: https://en.wikipedia.org/wiki/Al_Franken
@@ -146,7 +146,7 @@ tasks, or other tasks, in the comments. Bye bye Facebook!
   [delete button]: https://www.facebook.com/help/contact.php?show_form=delete_account
   [link to this blog posting]: /2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/
   [facePAD]: https://addons.mozilla.org/en-US/firefox/addon/8442/
-  [photograbber]: https://code.google.com/p/photograbber/
+  [photograbber]: https://code.google.com/archive/p/photograbber
   [facePAD Usage]: /images/2010/05/facepad.jpg "facePAD Usage"
   [revision 38]: https://code.google.com/p/photograbber/source/detail?r=38
   [patch]: /public/photograbber/photograbber-r38+bboe.patch

@@ -56,7 +56,7 @@ So much to do.
 
   [F8]: /2008/07/29/f8-08-%E2%80%93-the-facebook-developers-conference/
   [IRC]: https://en.wikipedia.org/wiki/Internet_Relay_Chat
-  [ERC]: http://www.emacswiki.org/cgi-bin/wiki/ERC
+  [ERC]: https://www.emacswiki.org/emacs/ERC
   [Cheri]: http://blogthismom.blogspot.com/
   [Pusoy Dos]: https://en.wikipedia.org/wiki/Pusoy_Dos
   [Allen Edmonds "Wendel"]: http://www.allenedmonds.com/aeonline/ProductDisplay?catalogId=40000000001&storeId=1&langId=-1&productId=6463281&parentCategoryId=&imageType=2&parent_category_rn=0

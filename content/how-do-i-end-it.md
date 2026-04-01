@@ -300,4 +300,4 @@ computer lab
 > AW
 
   [here]: /2008/06/21/undergraduate-conclusion/
-  [Ben Zhao]: http://cs.ucsb.edu/~ravenben
+  [Ben Zhao]: https://sites.cs.ucsb.edu/~ravenben/

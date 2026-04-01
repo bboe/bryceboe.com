@@ -210,7 +210,7 @@ for CPU intensive tasks, and second that a pure C implementation doesn't gain
 you much in this particular case.
 
   [SIGINT]: https://en.wikipedia.org/wiki/SIGINT_(POSIX)
-  [KeyboardInterrupt exception,]: http://docs.python.org/library/exceptions.html#exceptions.KeyboardInterrupt
+  [KeyboardInterrupt exception,]: https://docs.python.org/3/library/exceptions.html#exceptions.KeyboardInterrupt
   [Fibonacci]: https://en.wikipedia.org/wiki/Fibonacci_number
   [bad practice]: http://linux.die.net/man/2/signal
   [this tarball]: /images/2010/09/bboe_module.tgz

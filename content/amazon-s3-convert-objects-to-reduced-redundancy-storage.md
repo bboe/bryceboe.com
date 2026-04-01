@@ -113,6 +113,6 @@ and AWS\_SECRET\_ACCESS\_KEY respectively.
   [about a month ago]: https://aws.amazon.com/about-aws/whats-new/2010/07/14/s3-announces-enhanced-support-reduced-redundancy-storage/
   [reduced redundancy storage model]: https://aws.amazon.com/about-aws/whats-new/2010/05/19/announcing-amazon-s3-reduced-redundancy-storage/
   [recently]: http://code.google.com/p/boto/source/detail?r=1595
-  [boto]: http://code.google.com/p/boto/
+  [boto]: https://github.com/boto/boto
   [one by the boto author]: http://www.elastician.com/2010/06/using-reduced-redundancy-storage-rrs-in.html
   [here]: /images/2010/07/convert_to_rrs.py
