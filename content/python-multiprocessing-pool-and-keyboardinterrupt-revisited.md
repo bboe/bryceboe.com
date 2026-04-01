@@ -79,7 +79,7 @@ Below is a verbatim copy of my original solution for your convenience:
     if __name__ == "__main__":
         main()
 
-  [Python: Using KeyboardInterrupt with a Multiprocessing Pool]: http://noswap.com/blog/python-multiprocessing-keyboardinterrupt/
+  [Python: Using KeyboardInterrupt with a Multiprocessing Pool]: https://noswap.com/blog/python-multiprocessing-keyboardinterrupt
   [Python Multiprocessing and KeyboardInterrupt]: /2010/08/26/python-multiprocessing-and-keyboardinterrupt/
   [second update]: /2010/08/26/python-multiprocessing-and-keyboardinterrupt/#georges
   [multiprocessing.Pool]: http://docs.python.org/library/multiprocessing.html#module-multiprocessing.pool

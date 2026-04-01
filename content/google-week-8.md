@@ -139,7 +139,7 @@ friend from High School, Mohammad. Week 9 should be another exciting week!
   [Verena from the Back]: /images/2008/08/img_3651-300x225.jpg
     "Verena from the Back"
   [segment]: http://www.cnbc.com/id/26182232
-  [Cricket]: http://en.wikipedia.org/wiki/Cricket_(darts)
+  [Cricket]: https://en.wikipedia.org/wiki/Cricket_(darts)
   [Shannon]: http://shannonebarry.blogspot.com/
   [Thule]: http://www.thuleracks.com/
   [Cheri]: http://blogthismom.blogspot.com/

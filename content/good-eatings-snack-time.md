@@ -16,4 +16,4 @@ is a different treat of the day. Today my snack time consisted of:
 
 Mmm enjoying my beer prior to dinner.
 
-  [profiteroles]: http://en.wikipedia.org/wiki/Profiterole
+  [profiteroles]: https://en.wikipedia.org/wiki/Profiterole

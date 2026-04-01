@@ -60,4 +60,4 @@ none of them had any formal teacher training, therefore are solely relying on
 past experience and observer feedback. Those that are excellent instructors
 have done incredibly well, but they could do so much better. As can I.
 
-  [pedagogy]: http://en.wikipedia.org/wiki/Pedagogy
+  [pedagogy]: https://en.wikipedia.org/wiki/Pedagogy

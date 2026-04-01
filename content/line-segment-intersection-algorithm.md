@@ -40,7 +40,7 @@ I've created a [python script][] which demonstrates this algorithm.
   [Southern California Regional]: http://www.socalcontest.org/
   [ACM]: http://www.acm.org/
   [programing competition]: http://icpc.baylor.edu/icpc/
-  [Adam's]: http://www.adamdoupe.com
+  [Adam's]: https://adamdoupe.com/
   [practice problems]: http://www-rcf.usc.edu/~dkempe/contest/fall06/fall06.pdf
   [solution]: http://www-rcf.usc.edu/~dkempe/contest/fall06/ee.c.txt
   [simpler way]: http://compgeom.cs.uiuc.edu/~jeffe/teaching/373/notes/x06-sweepline.pdf

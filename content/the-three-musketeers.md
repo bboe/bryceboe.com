@@ -72,9 +72,9 @@ night on the town, downtown Santa Barbara that is.
 [![Scott, Bryce, Adam - Senior Year Good Times][]](/images/2007/10/senior.jpg)
 
   [people]: http://blogthismom.blogspot.com/
-  [Cal Poly]: http://www.calpoly.edu/
-  [UC Santa Barbara]: http://www.ucsb.edu/
-  [Adam]: http://www.adamdoupe.com/
+  [Cal Poly]: https://www.calpoly.edu/
+  [UC Santa Barbara]: https://www.ucsb.edu/
+  [Adam]: https://adamdoupe.com/
   [Academic Misconduct]: /public/AcademicMisconduct.html
   [Bryce, Adam, Scott - Sophomore Year Cocktail Party]: /images/2007/10/sophmore0-150x150.jpg
   [Scott, Adam, Bryce - Sophomore Year With Silly Hats]: /images/2007/10/sophmore1-150x150.jpg

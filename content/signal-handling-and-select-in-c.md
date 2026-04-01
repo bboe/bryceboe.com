@@ -78,8 +78,8 @@ obviously has increased overhead, and multiplexing easily solves that problem.
 In addition to multiplexing the program demonstrates how to handle the
 interrupt signal sent by ctrl+c in linux.
 
-  [Computer Networking: A Top-Down Approach Featuring the Internet]: http://www.amazon.com/Computer-Networking-Top-Down-Approach-Featuring/dp/0321227352/ref=sr_11_1/102-4260619-0027306?ie=UTF8&qid=1188781467&sr=11-1
+  [Computer Networking: A Top-Down Approach Featuring the Internet]: https://www.amazon.com/Computer-Networking-Top-Down-Approach-Featuring/dp/0321227352/ref=sr_11_1/102-4260619-0027306?ie=UTF8&qid=1188781467&sr=11-1
   [James F. Kuross]: http://www-net.cs.umass.edu/personnel/kurose.html
   [Keith W. Ross]: http://cis.poly.edu/~ross/
-  [Adam]: http://www.adamdoupe.com
-  [The Pocket Guide to TCP/IP Sockets]: http://www.amazon.com/Pocket-Sockets-Version-Kaufmann-Practical/dp/1558606866/ref=sr_11_1/102-4260619-0027306?ie=UTF8&qid=1188781976&sr=11-1
+  [Adam]: https://adamdoupe.com/
+  [The Pocket Guide to TCP/IP Sockets]: https://www.amazon.com/Pocket-Sockets-Version-Kaufmann-Practical/dp/1558606866/ref=sr_11_1/102-4260619-0027306?ie=UTF8&qid=1188781976&sr=11-1

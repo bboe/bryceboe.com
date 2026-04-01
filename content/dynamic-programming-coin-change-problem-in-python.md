@@ -76,5 +76,5 @@ the minimum at each point. See the code below.
             usage()
         solve_coin_change(coins, value)
 
-  [dynamic programming]: http://en.wikipedia.org/wiki/Dynamic_programming
-  [coin problem]: http://en.wikipedia.org/wiki/Coin_problem
+  [dynamic programming]: https://en.wikipedia.org/wiki/Dynamic_programming
+  [coin problem]: https://en.wikipedia.org/wiki/Coin_problem

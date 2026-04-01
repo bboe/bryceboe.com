@@ -56,6 +56,6 @@ few hours and then dropping them. This could show up as a drop on the Daily
 Drops section but the graph may indicate a raise in price for the day. I'll
 figure out what to do and fix this by the weekend.
 
-  [Porsche 944]: http://en.wikipedia.org/wiki/Porsche_944
+  [Porsche 944]: https://en.wikipedia.org/wiki/Porsche_944
   [German Autofest]: http://www.germanautofest.com/
   [Daily Drops]: http://www.pricetrackr.com/daily/

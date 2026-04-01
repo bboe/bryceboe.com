@@ -84,9 +84,9 @@ I encourage you all to seek out your local Hash House Harrier kennel and get a
 first hand experience. If you need more convincing check out the Washington
 Post article titled, "[Making a Hash of Exercise][]". On-On!
 
-  [Hash House Harriers]: http://en.wikipedia.org/wiki/Hash_House_Harriers
+  [Hash House Harriers]: https://en.wikipedia.org/wiki/Hash_House_Harriers
   [H3SoB]: http://h3sob.com/
-  [The Count from Sesame Street]: http://www.youtube.com/watch?v=5l7KbMVdN7E%20
+  [The Count from Sesame Street]: https://www.youtube.com/watch?v=5l7KbMVdN7E+
   [bikini]: /images/2009/12/bikini-300x225.jpg "bikini"
   [Super Hare!]: /images/2009/12/super_hare-225x300.jpg "Super Hare!"
   [Making a Hash of Exercise]: http://www.washingtonpost.com/wp-dyn/content/article/2009/09/18/AR2009091801357.html

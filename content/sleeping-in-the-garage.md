@@ -50,4 +50,4 @@ three years. Finally words cannot describe how awesome sleeping on my own bed
 for the first time since June was, however I can say that I was finally home.
 
   [Verena]: /2008/08/17/google-week-8/
-  [Helicopter parent]: http://en.wikipedia.org/wiki/Helicopter_parent
+  [Helicopter parent]: https://en.wikipedia.org/wiki/Helicopter_parent

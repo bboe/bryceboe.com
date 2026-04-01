@@ -215,19 +215,19 @@ Update</ins>: I just discovered that python 3.3 now has a `datetime.timestamp`
 function which handles the conversion from datetime objects to unix timestamps
 ([source][]).
 
-  [daylight saving time]: http://en.wikipedia.org/wiki/Daylight_saving_time
-  [default]: http://docs.python.org/2/library/logging.html#logging.Formatter.formatTime
-  [PST]: http://en.wikipedia.org/wiki/Pacific_Time_Zone
-  [EST]: http://en.wikipedia.org/wiki/Eastern_Time_Zone
-  [unix timestamps]: http://en.wikipedia.org/wiki/Unix_time
-  [UTC]: http://en.wikipedia.org/wiki/Coordinated_Universal_Time
-  [datetime]: http://docs.python.org/2/library/datetime.html#datetime-objects
+  [daylight saving time]: https://en.wikipedia.org/wiki/Daylight_saving_time
+  [default]: https://docs.python.org/2/library/logging.html#logging.Formatter.formatTime
+  [PST]: https://en.wikipedia.org/wiki/Pacific_Time_Zone
+  [EST]: https://en.wikipedia.org/wiki/Eastern_Time_Zone
+  [unix timestamps]: https://en.wikipedia.org/wiki/Unix_time
+  [UTC]: https://en.wikipedia.org/wiki/Coordinated_Universal_Time
+  [datetime]: https://docs.python.org/2/library/datetime.html#datetime-objects
   [pytz]: http://pytz.sourceforge.net/
-  [tzinfo]: http://docs.python.org/2/library/datetime.html#datetime.tzinfo
-  [astimezone]: http://docs.python.org/2/library/datetime.html#datetime.datetime.astimezone
-  [time.mktime]: http://docs.python.org/2/library/time.html#time.mktime
-  [calendar.timegm]: http://docs.python.org/2/library/calendar.html#calendar.timegm
-  [struct_time]: http://docs.python.org/2/library/time.html#time.struct_time
-  [timetuple]: http://docs.python.org/2/library/datetime.html#datetime.date.timetuple
-  [utctimetuple]: http://docs.python.org/2/library/datetime.html#datetime.datetime.utctimetuple
-  [source]: http://docs.python.org/dev/library/datetime.html#datetime.datetime.timestamp
+  [tzinfo]: https://docs.python.org/2/library/datetime.html#datetime.tzinfo
+  [astimezone]: https://docs.python.org/2/library/datetime.html#datetime.datetime.astimezone
+  [time.mktime]: https://docs.python.org/2/library/time.html#time.mktime
+  [calendar.timegm]: https://docs.python.org/2/library/calendar.html#calendar.timegm
+  [struct_time]: https://docs.python.org/2/library/time.html#time.struct_time
+  [timetuple]: https://docs.python.org/2/library/datetime.html#datetime.date.timetuple
+  [utctimetuple]: https://docs.python.org/2/library/datetime.html#datetime.datetime.utctimetuple
+  [source]: https://docs.python.org/dev/library/datetime.html#datetime.datetime.timestamp

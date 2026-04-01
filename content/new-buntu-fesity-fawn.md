@@ -45,8 +45,8 @@ Regardless the Ubuntu distribution has done excellent work in making Linux more
 user friendly and I predict within five years Linux will be a major competitor
 to Windows and Apple.
 
-  [Ubuntu 7.04]: http://www.ubuntu.com
-  [Adam]: http://www.adamdoupe.com
+  [Ubuntu 7.04]: https://ubuntu.com/
+  [Adam]: https://adamdoupe.com/
   [my post]: http://ubuntuforums.org/showpost.php?p=2495909&postcount=3
   [debian change log]: http://changelogs.ubuntu.com/changelogs/pool/main/l/linux-source-2.6.20/linux-source-2.6.20_2.6.20-15.27/changelog
-  [Kernel.org]: http://kernel.org/
+  [Kernel.org]: https://kernel.org/

@@ -162,17 +162,17 @@ If you worked on this challenge in the competition let me know what you
 thought. As always I appreciate all feedback, and challenge related feedback
 will help me create better challenges for next year's iCTF.
 
-  [International Capture the Flag]: http://ictf.cs.ucsb.edu/
+  [International Capture the Flag]: https://ictf.cs.ucsb.edu/
   [security groups at various universities]: http://ictf.cs.ucsb.edu/ictf10/participants.php
   [contributing significantly]: /2009/12/06/ictf09-%E2%80%93-ucsbs-international-capture-the-flag-competition/
   [Organizing Large Scale Hacking Competitions]: http://portal.acm.org/citation.cfm?id=1884859
   [DIMVA 2010]: http://dimva2010.fkie.fraunhofer.de/program.html
-  [301]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.2
-  [302]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.3
-  [303]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.4
-  [307]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.8
-  [Adam Doupé]: http://adamdoupe.com/
+  [301]: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.2
+  [302]: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.3
+  [303]: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.4
+  [307]: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.8
+  [Adam Doupé]: https://adamdoupe.com/
   [this video]: http://www.archive.org/download/MannyCanard_USCSpeedRemix/MannyCanardH264.ogv
-  [XSS vulnerability]: http://en.wikipedia.org/wiki/Cross-site_scripting
-  [SQL injection vulnerability]: http://en.wikipedia.org/wiki/SQL_injection
+  [XSS vulnerability]: https://en.wikipedia.org/wiki/Cross-site_scripting
+  [SQL injection vulnerability]: https://en.wikipedia.org/wiki/SQL_injection
   [here]: /public/ictf2010_challenge6.tar.gz

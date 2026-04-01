@@ -20,6 +20,6 @@ There are some good comments on [this reddit thread][].
   [cuil]: http://cuil.com
   [bryce boe]: http://www.cuil.com/search?q=bryce%20boe&sl=long
   [UCSB CS page]: http://www.cs.ucsb.edu/~bboe/
-  [digg]: http://digg.com/
+  [digg]: https://digg.com/
   [ubuntuforums.org]: http://ubuntuforums.org
-  [this reddit thread]: http://www.reddit.com/comments/6tsbg/not_so_cuil_after_all/
+  [this reddit thread]: https://www.reddit.com/comments/6tsbg/not_so_cuil_after_all/

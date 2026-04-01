@@ -49,9 +49,9 @@ the script. Happy tethering!
 [gist:id=1302227]
 
   [18th ACM Conference on Computer and Communications Security]: http://www.sigsac.org/ccs/CCS2011/
-  [Adam Doupé]: http://adamdoupe.com/
-  [reddit]: http://reddit.com
-  [yelp]: http://yelp.com
+  [Adam Doupé]: https://adamdoupe.com/
+  [reddit]: https://www.reddit.com/
+  [yelp]: https://www.yelp.com/
   [Android Forums post]: http://androidforums.com/droid-how-tips/18532-mac-os-x-droid-tethering-usb-wired.html
   [Azilink]: http://code.google.com/p/azilink/
   [Tunnelblick]: http://code.google.com/p/tunnelblick/

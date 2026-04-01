@@ -85,11 +85,11 @@ and a fake email address and assuming it's a non-spam comment I'll accept it.
 
   [Ben Zhao]: http://cs.ucsb.edu/~ravenben/
   [awesome Professor]: http://cs.ucsb.edu/~ebelding/
-  [WorldViz]: http://www.worldviz.com/
+  [WorldViz]: https://www.worldviz.com/
   [Vizard]: http://www.worldviz.com/products/vizard/index.html
   [one of the coolest Professors on campus]: http://cs.ucsb.edu/~sherwood/
   [NS-2]: http://www.isi.edu/nsnam/ns/
   [TCL]: http://www.tcl.tk/
-  [python]: http://www.python.org/
-  [this]: http://www.xkcd.com/353/
-  [Ron Burgandy]: http://en.wikipedia.org/wiki/Anchorman:_The_Legend_of_Ron_Burgundy
+  [python]: https://www.python.org/
+  [this]: https://www.xkcd.com/353/
+  [Ron Burgandy]: https://en.wikipedia.org/wiki/Anchorman:_The_Legend_of_Ron_Burgundy

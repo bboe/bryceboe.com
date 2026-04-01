@@ -27,8 +27,8 @@ Plane!
 
   [Snakes on a Plane Ticket]: /images/2006/09/snakes.jpg
   [Official]: http://www.snakesonaplane.com/
-  [IMDB]: http://www.imdb.com/title/tt0417148/
-  [Wikipedia]: http://en.wikipedia.org/wiki/Snakes_on_a_plane
-  [this clip from the Daily Show]: http://www.youtube.com/watch?v=BZijbpxNXII
-  [Samuel L. Jackson]: http://en.wikipedia.org/wiki/Samuel_L._Jackson
-  [Beirut]: http://en.wikipedia.org/wiki/Beer_Pong
+  [IMDB]: https://www.imdb.com/title/tt0417148/
+  [Wikipedia]: https://en.wikipedia.org/wiki/Snakes_on_a_plane
+  [this clip from the Daily Show]: https://www.youtube.com/watch?v=BZijbpxNXII
+  [Samuel L. Jackson]: https://en.wikipedia.org/wiki/Samuel_L._Jackson
+  [Beirut]: https://en.wikipedia.org/wiki/Beer_Pong

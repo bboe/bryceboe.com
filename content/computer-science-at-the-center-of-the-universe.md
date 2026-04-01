@@ -23,7 +23,7 @@ nonetheless I thought it was worth sharing. I'll end by saying that if this
 technology wasn't for the better, then I'd be out of a job :)
 
   [Google I/O]: http://code.google.com/events/io/
-  [Eric Schmidt]: http://en.wikipedia.org/wiki/Eric_E._Schmidt
-  [Amusing Ourselves to Death: The Comic]: http://michaelzimmer.org/2009/05/27/amusing-ourselves-to-death-the-comic/
-  [Orwell's 1984]: http://en.wikipedia.org/wiki/Nineteen_Eighty-Four
-  [Huxley's Brave New World]: http://en.wikipedia.org/wiki/Brave_New_World
+  [Eric Schmidt]: https://en.wikipedia.org/wiki/Eric_E._Schmidt
+  [Amusing Ourselves to Death: The Comic]: https://michaelzimmer.org/2009/05/27/amusing-ourselves-to-death-the-comic/
+  [Orwell's 1984]: https://en.wikipedia.org/wiki/Nineteen_Eighty-Four
+  [Huxley's Brave New World]: https://en.wikipedia.org/wiki/Brave_New_World

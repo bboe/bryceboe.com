@@ -46,5 +46,5 @@ lady, she turned her laptop on, and simply connected to the internet, but the
 process was *too* simple that she didn't realize she had done it improperly.
 After all, why fix something that isn't broke?
 
-  [thedailywtf]: http://thedailywtf.com/
+  [thedailywtf]: https://thedailywtf.com/
   [The Dream Customer]: http://thedailywtf.com/Articles/The-Dream-Customer.aspx

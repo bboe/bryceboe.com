@@ -23,4 +23,4 @@ else. Jeeze 3 posts this week; one might start to think I have nothing better
 to do ;)
 
   [priceTrackr]: http://www.pricetrackr.com
-  [newegg]: http://newegg.com
+  [newegg]: https://www.newegg.com/

@@ -98,8 +98,8 @@ one of the most awesome days this summer, despite now needing a new pair of
 jeans and continuously worrying that I smell like espresso.
 
   [F8 08]: /images/2008/07/img_3543-300x225.jpg "F8 08"
-  [Terrible, Horrible, No Good, Very Bad Day]: http://en.wikipedia.org/wiki/Alexander_and_the_Terrible,_Horrible,_No_Good,_Very_Bad_Day
+  [Terrible, Horrible, No Good, Very Bad Day]: https://en.wikipedia.org/wiki/Alexander_and_the_Terrible,_Horrible,_No_Good,_Very_Bad_Day
   [Zimride]: http://www.zimride.com/home.php
-  [Mark Zuckerberg]: http://en.wikipedia.org/wiki/Mark_Zuckerberg
-  [Rock Band]: http://en.wikipedia.org/wiki/Rock_Band_(video_game)
+  [Mark Zuckerberg]: https://en.wikipedia.org/wiki/Mark_Zuckerberg
+  [Rock Band]: https://en.wikipedia.org/wiki/Rock_Band_(video_game)
   [Mark and I]: /images/2008/07/img_3560-300x225.jpg "Mark and I"

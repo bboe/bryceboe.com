@@ -188,27 +188,27 @@ Happy "free" surfing, for now anyway :)
 
   [SIGCSE 2012]: http://www.sigcse.org/sigcse2012/
   [Gogo's Inflight Internet]: http://www.gogoair.com/
-  [Living Social]: http://livingsocial.com
+  [Living Social]: https://www.livingsocial.com
   [Eventful]: http://eventful.com/
   [TCP-over-ICMP]: http://www.cs.uit.no/~daniels/PingTunnel/
   [TCP-over-DNS]: http://analogbit.com/tcp-over-dns_howto
   [www.google.com]: http://www.google.com
   [1]: /images/2012/03/gogo_dm.png
   [2]: https://twitter.com/#!/Gogo/status/176504298967015424
-  [Now back to the good part]: http://www.youtube.com/watch?v=GI6CfKcMhjY&t=1m37s
+  [Now back to the good part]: https://www.youtube.com/watch?v=GI6CfKcMhjY&t=1m37s
   [Google Chrome]: https://www.google.com/chrome
   [Google Reader Notifier]: https://chrome.google.com/webstore/detail/apflmjolhbonpkbkooiamcnenbmbjcbf
   [Google Voice]: https://chrome.google.com/webstore/detail/kcnhkahnjcbndmmehfkdnkjomaanaooo
   [mail.google.com]: http://mail.google.com
   [docs.google.com]: http://docs.google.com
   [Google+]: http://plus.google.com
-  [YouTube]: http://youtube.com
+  [YouTube]: https://www.youtube.com/
   [Google Code]: http://code.google.com
   [Google AppEngine]: http://code.google.com/appengine/
-  [Digital Inspiration]: http://www.labnol.org/internet/setup-proxy-server/12890/
+  [Digital Inspiration]: https://www.labnol.org/internet/setup-proxy-server/12890
   [Windows Guides]: http://mintywhite.com/software-reviews/security-software/set-proxy-google-app-engine/
   [Google Analytics]: http://www.google.com/analytics/
   [Google Adsense]: https://www.google.com/adsense/
-  [Server Name Indication]: http://en.wikipedia.org/wiki/Server_Name_Indication
-  [still commonly used]: http://en.wikipedia.org/wiki/Server_Name_Indication#No_support
-  [man-in-the-middle]: http://en.wikipedia.org/wiki/Man-in-the-middle_attack
+  [Server Name Indication]: https://en.wikipedia.org/wiki/Server_Name_Indication
+  [still commonly used]: https://en.wikipedia.org/wiki/Server_Name_Indication#No_support
+  [man-in-the-middle]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack

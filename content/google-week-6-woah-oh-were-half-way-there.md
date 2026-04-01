@@ -96,13 +96,13 @@ was Rock Band. I had played once last Thanksgiving and wasn't very intrigued by
 it, but that definitely changed last week. Anyway, I think Adam, Scott, and I
 will be purchasing it when we get back to Santa Barbara - woo!
 
-  [here]: http://www.youtube.com/atgoogletalks
+  [here]: https://www.youtube.com/atgoogletalks
   [Burn Rate]: http://www.cool-studio.net/
-  [Nuclear War]: http://en.wikipedia.org/wiki/Nuclear_War_(card_game)
+  [Nuclear War]: https://en.wikipedia.org/wiki/Nuclear_War_(card_game)
   [Pandemic]: http://www.zmangames.com/boardgames/pandemic.htm
-  [PowerGrid]: http://en.wikipedia.org/wiki/Power_Grid_(board_game)
+  [PowerGrid]: https://en.wikipedia.org/wiki/Power_Grid_(board_game)
   [Autotest]: http://test.kernel.org/autotest
-  [Rock Band]: http://en.wikipedia.org/wiki/Rock_Band_(video_game)
+  [Rock Band]: https://en.wikipedia.org/wiki/Rock_Band_(video_game)
   [Northern California Youth Leadership Seminar]: http://www.californialeaders.org/index.html
-  [Kevin Nealon]: http://en.wikipedia.org/wiki/Kevin_Nealon
-  [Winchester Mystery House]: http://en.wikipedia.org/wiki/Winchester_Mystery_House
+  [Kevin Nealon]: https://en.wikipedia.org/wiki/Kevin_Nealon
+  [Winchester Mystery House]: https://en.wikipedia.org/wiki/Winchester_Mystery_House

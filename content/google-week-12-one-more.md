@@ -78,7 +78,7 @@ am eager to officially start my Ph.D.. Other than Wednesday WTF (assuming I
 write one), the next time you read from me, it'll be written from Santa
 Barbara. Adios from the Hills!
 
-  [Keri Walsh]: http://en.wikipedia.org/wiki/Keri_walsh
-  [Knob Creek]: http://en.wikipedia.org/wiki/Knob_Creek_(bourbon)
-  [Pilsner]: http://en.wikipedia.org/wiki/Pilsner
+  [Keri Walsh]: https://en.wikipedia.org/wiki/Keri_walsh
+  [Knob Creek]: https://en.wikipedia.org/wiki/Knob_Creek_(bourbon)
+  [Pilsner]: https://en.wikipedia.org/wiki/Pilsner
   [Android]: http://code.google.com/android/

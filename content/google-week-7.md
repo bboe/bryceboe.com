@@ -43,6 +43,6 @@ should start off my next car properly.
 
   [Amazon's S3]: http://www.amazon.com/gp/browse.html?node=16427261
   [s3fs]: http://code.google.com/p/s3fs/wiki/FuseOverAmazon
-  [rsync]: http://en.wikipedia.org/wiki/Rsync
-  [Volkswagen Golfs]: http://en.wikipedia.org/wiki/Volkswagen_Golf
-  [Audi A4s]: http://en.wikipedia.org/wiki/Audi_A4
+  [rsync]: https://en.wikipedia.org/wiki/Rsync
+  [Volkswagen Golfs]: https://en.wikipedia.org/wiki/Volkswagen_Golf
+  [Audi A4s]: https://en.wikipedia.org/wiki/Audi_A4

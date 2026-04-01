@@ -46,4 +46,4 @@ is probably my eighth time 100% the game.
 
 Merry Christmas!
 
-  [go flying across the room]: http://www.youtube.com/watch?v=3wo_TXb6dgs&eurl=
+  [go flying across the room]: https://www.youtube.com/watch?v=3wo_TXb6dgs&eurl

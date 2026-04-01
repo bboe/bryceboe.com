@@ -95,17 +95,17 @@ Process-Based Job Management System in C][]</ins>
     "Properly Handling the Keyboard Interrupt Exception (SIGINT) within a Python C Module"
   [operating system concepts]: http://cs.ucsb.edu/~bboe/p/cv#teaching
   [os package]: http://docs.python.org/library/os.html
-  [ANSI-C]: http://en.wikipedia.org/wiki/ANSI_C
-  [POSIX-based]: http://en.wikipedia.org/wiki/POSIX
-  [fork]: http://pubs.opengroup.org/onlinepubs/009604599/functions/fork.html
-  [exec]: http://pubs.opengroup.org/onlinepubs/009604499/functions/exec.html
-  [pipe]: http://pubs.opengroup.org/onlinepubs/009604599/functions/pipe.html
-  [dup]: http://pubs.opengroup.org/onlinepubs/007904975/functions/dup.html
+  [ANSI-C]: https://en.wikipedia.org/wiki/ANSI_C
+  [POSIX-based]: https://en.wikipedia.org/wiki/POSIX
+  [fork]: https://pubs.opengroup.org/onlinepubs/009604599/functions/fork.html
+  [exec]: https://pubs.opengroup.org/onlinepubs/009604499/functions/exec.html
+  [pipe]: https://pubs.opengroup.org/onlinepubs/009604599/functions/pipe.html
+  [dup]: https://pubs.opengroup.org/onlinepubs/007904975/functions/dup.html
   [1]: /2010/08/26/python-multiprocessing-and-keyboardinterrupt/
     "Python Multiprocessing and KeyboardInterrupt"
   [2]: /2011/01/28/the-python-multiprocessing-queue-and-large-objects/
     "The Python Multiprocessing Queue and Large Objects"
-  [inter-process communication]: http://en.wikipedia.org/wiki/Inter-process_communication
+  [inter-process communication]: https://en.wikipedia.org/wiki/Inter-process_communication
   [multiprocessing.Queue]: http://docs.python.org/library/multiprocessing.html#exchanging-objects-between-processes
   [Implementation of a Process-Based Job Management System in C]: /2012/02/23/implementation-of-a-process-based-job-management-system-in-c/
     "Implementation of a Process-Based Job Management System in C"

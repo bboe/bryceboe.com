@@ -36,5 +36,5 @@ Science home page. If you're interested in what academic and professional
 things I've been up to [check it out][].
 
   [mentioned]: /2009/03/11/how-do-i-end-it/
-  [It's a trap!]: http://www.youtube.com/watch?v=dddAi8FF3F4
+  [It's a trap!]: https://www.youtube.com/watch?v=dddAi8FF3F4
   [check it out]: http://cs.ucsb.edu/~bboe/static/cv

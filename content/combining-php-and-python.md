@@ -81,10 +81,10 @@ The whole package with proper extensions can be downloaded:
 
 [phpPython][]
 
-  [php]: http://php.net
-  [python]: http://python.org
+  [php]: https://www.php.net/
+  [python]: https://www.python.org/
   [documentation]: https://docs.python.org/2/library/
-  [php's]: http://www.php.net/manual/en/
+  [php's]: https://www.php.net/manual/en/
   [mysql-python]: http://sourceforge.net/project/showfiles.php?group_id=22307
   [main.sh]: /images/2006/11/main.txt
   [phpPart1.php]: /images/2006/11/phppart1.txt

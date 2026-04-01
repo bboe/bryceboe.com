@@ -36,5 +36,5 @@ Oh and the new version is a super cow, as can be seen with the cape it is
 wearing. Haha, wtf? I just love the way open source software works.
 
   [this]: https://bugs.launchpad.net/ubuntu/+source/apt/+bug/56125
-  [Ubuntu]: http://ubuntu.com
-  [digg]: http://digg.com
+  [Ubuntu]: https://ubuntu.com/
+  [digg]: https://digg.com/

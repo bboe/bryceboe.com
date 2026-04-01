@@ -25,4 +25,4 @@ occurrence for men.
 Jeaner wiener -- a single protrusion caused by a folded zipper which can apply
 to both men and women, and usually only occurs when sitting down.
 
-  [Camel toe]: http://en.wikipedia.org/wiki/Camel_toe
+  [Camel toe]: https://en.wikipedia.org/wiki/Camel_toe

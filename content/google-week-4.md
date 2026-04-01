@@ -78,9 +78,9 @@ twenty or so years from now.
 
   [A Loss -- RIP Jaymie Darrow]: /2008/07/20/a-loss/
   [autotest]: http://test.kernel.org/autotest/Developer
-  [Ovarian Hyperstimulation Syndrome]: http://en.wikipedia.org/wiki/Ovarian_hyperstimulation_syndrome
-  [Hands Off Our Ovaries]: http://handsoffourovaries.com/
-  [second wikipedia edit]: http://en.wikipedia.org/w/index.php?title=Miles_O%27Brien_(Star_Trek)&diff=prev&oldid=225958081
+  [Ovarian Hyperstimulation Syndrome]: https://en.wikipedia.org/wiki/Ovarian_hyperstimulation_syndrome
+  [Hands Off Our Ovaries]: https://www.handsoffourovaries.com/
+  [second wikipedia edit]: https://en.wikipedia.org/w/index.php?title=Miles_O%27Brien_(Star_Trek)&diff=prev&oldid=225958081
   [Amazon's S3 storage service]: http://www.amazon.com/gp/browse.html?node=16427261
   [awspylib]: http://code.google.com/p/awspylib/
   [my changes]: http://code.google.com/p/awspylib/source/detail?r=31

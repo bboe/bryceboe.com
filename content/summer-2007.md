@@ -70,14 +70,14 @@ that I'll be up to speed once the quarter starts allowing me to dive straight
 into a project. It's all very exciting and I speculate I'll get my name on a
 few research papers. It's going to be a good year.
 
-  [Worldviz]: http://www.worldviz.com
-  [SIGGRAPH]: http://www.siggraph.org/
+  [Worldviz]: https://www.worldviz.com/
+  [SIGGRAPH]: https://www.siggraph.org//
   [Live Characters]: http://www.worldviz.com/products/livecharacters/index.html
-  [force feedback]: http://en.wikipedia.org/wiki/Haptic
+  [force feedback]: https://en.wikipedia.org/wiki/Haptic
   [SIGGRAPH 2007]: /images/2007/09/siggraph-0-150x150.jpg
   [Connor_Bike_0]: /images/2007/09/connor-bike-0-150x150.jpg
   [Connor_Bike_1]: /images/2007/09/connor-bike-1-150x150.jpg
   [Cheri]: http://blogthismom.blogspot.com/
-  [Storage Area Network]: http://en.wikipedia.org/wiki/Storage_area_network
+  [Storage Area Network]: https://en.wikipedia.org/wiki/Storage_area_network
   [Trac]: http://trac.edgewall.org/
   [Ben Zhao]: http://www.cs.ucsb.edu/~ravenben/

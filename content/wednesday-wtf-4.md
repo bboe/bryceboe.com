@@ -12,4 +12,4 @@ See how carelessly he goes from uptight to calm and collected once on air.
 Haha, wtf?
 
   [F8]: http://www.new.facebook.com/f8
-  [Watch Bill O'Reilly flip out!]: http://www.youtube.com/watch?v=2tJjNVVwRCY
+  [Watch Bill O'Reilly flip out!]: https://www.youtube.com/watch?v=2tJjNVVwRCY

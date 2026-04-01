@@ -55,5 +55,5 @@ was a good week.
 
   [previously]: /2008/06/24/i-am-a-noogler/
   [The avp logo]: /images/2008/06/avp.gif "avp"
-  [Wanted]: http://www.imdb.com/title/tt0493464/
-  [camelbak]: http://www.camelbak.com/
+  [Wanted]: https://www.imdb.com/title/tt0493464/
+  [camelbak]: https://www.camelbak.com/

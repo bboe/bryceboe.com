@@ -91,9 +91,9 @@ me, which has been great so far. Nonetheless Scotty and Adam are missed.
   [automatic grading utilities]: http://cs.ucsb.edu/~bboe/static/projects
   [Chris Kruegel]: http://cs.ucsb.edu/~chris/
   [Klaus Schauser]: http://www.cs.ucsb.edu/~schauser/
-  [Expert City]: http://en.wikipedia.org/wiki/Citrix_Online
-  [Citrix]: http://en.wikipedia.org/wiki/Citrix_Systems,_Inc.
+  [Expert City]: https://en.wikipedia.org/wiki/Citrix_Online
+  [Citrix]: https://en.wikipedia.org/wiki/Citrix_Systems,_Inc.
   [Citrix Online]: http://www.citrixonline.com/
   [Appfolio]: http://www.appfolio.com
-  [Adam]: http://adamdoupe.com/
-  [Jon]: http://www.regexprn.com/
+  [Adam]: https://adamdoupe.com/
+  [Jon]: https://www.regexprn.com/

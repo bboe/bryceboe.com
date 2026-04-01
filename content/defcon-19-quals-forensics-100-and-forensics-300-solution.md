@@ -99,9 +99,9 @@ following locations: [Rogunix][], [negative foo][], [VNSecurity site][].
   [resulted in success]: /images/2011/06/f100_solution.png
   [iPhoneTracker]: http://petewarden.github.com/iPhoneTracker/
   [google search for the coordinates -77.846 166.667]: http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=-77.846+166.677&sll=-77.578778,167.409668&sspn=1.030596,5.218506&ie=UTF8&t=h&z=15
-  [revert to Bing]: http://www.bing.com/maps/?v=2&where1=-77.846%20166.677
-  [Ross Island's wikpiedia page]: http://en.wikipedia.org/wiki/Ross_Island
+  [revert to Bing]: https://www.bing.com/maps?v=2&where1=-77.846%20166.677
+  [Ross Island's wikpiedia page]: https://en.wikipedia.org/wiki/Ross_Island
   [consolodated.db input file]: /images/2011/06/consolidated.db
   [Rogunix]: http://rogunix.com/defconquals19.html
   [negative foo]: http://t.negativefoo.org/post/6235620215/dc19-ctf-quals-writeups
-  [VNSecurity site]: http://www.vnsecurity.net/2011/05/defcon-19-ctf-quals-writeups-collection/
+  [VNSecurity site]: https://www.vnsecurity.net/2011/05/defcon-19-ctf-quals-writeups-collection/

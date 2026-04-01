@@ -47,7 +47,7 @@ find myself in.
 
 Up next: Between Google and School
 
-  [Rockband 2]: http://en.wikipedia.org/wiki/Rock_Band_2
-  [Jukebox Hero, by Foreigner]: http://www.youtube.com/watch?v=Z5_qhnWByA4
-  [Step Up 2: The Streets]: http://www.imdb.com/title/tt1023481/
-  [Kings Cup]: http://en.wikipedia.org/wiki/Kings_(drinking_game)
+  [Rockband 2]: https://en.wikipedia.org/wiki/Rock_Band_2
+  [Jukebox Hero, by Foreigner]: https://www.youtube.com/watch?v=Z5_qhnWByA4
+  [Step Up 2: The Streets]: https://www.imdb.com/title/tt1023481/
+  [Kings Cup]: https://en.wikipedia.org/wiki/Kings_(drinking_game)

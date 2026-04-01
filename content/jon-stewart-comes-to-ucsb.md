@@ -16,6 +16,6 @@ UCSB students tickets range from $70-500; I'd say we got a sweet deal.
 
 ![Jon Stewart Ticket][]
 
-  [Daily Nexus]: http://www.dailynexus.com/
+  [Daily Nexus]: https://dailynexus.com/
   [Comedy Central Host Jon Stewart To Perform Live.]: http://www.dailynexus.com/news/2006/12290.html
   [Jon Stewart Ticket]: /images/2006/10/jon_stewart.jpg

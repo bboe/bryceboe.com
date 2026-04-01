@@ -23,5 +23,5 @@ from somewhere. Also I'll have to look for a spell checking addition to
 WordPress as I am very prone to mistakes.
 
   [priceTrackr]: http://www.pricetrackr.com
-  [WorldViz]: http://www.worldviz.com
-  [lastfm]: http://www.last.fm/user/bbzbryce/
+  [WorldViz]: https://www.worldviz.com/
+  [lastfm]: https://www.last.fm/user/bbzbryce

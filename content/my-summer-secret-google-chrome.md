@@ -36,11 +36,11 @@ Also:
 
 -   [A great prediction from someone who probably had inside knowledge.][]
 
-  [Google Chrome]: http://googleblog.blogspot.com/2008/09/fresh-take-on-browser.html
-  [comic book]: http://books.google.com/books?id=8UsqHohwwVYC
-  [blogged about it]: http://blogoscoped.com/archive/2008-09-01-n47.html
-  [Check it out tomorrow]: http://www.google.com/chrome
+  [Google Chrome]: https://googleblog.blogspot.com/2008/09/fresh-take-on-browser.html
+  [comic book]: https://books.google.com/books?id=8UsqHohwwVYC&hl=en
+  [blogged about it]: https://blogoscoped.com/archive/2008-09-01-n47.html
+  [Check it out tomorrow]: https://www.google.com/chrome/
   [digg]: http://digg.com/software/Google_Chrome_a_browser_by_Google
-  [reddit]: http://www.reddit.com/r/programming/comments/6z2eg/google_chrome_googles_browser_project/
+  [reddit]: https://www.reddit.com/r/programming/comments/6z2eg/google_chrome_googles_browser_project/
   [Slashdot]: http://tech.slashdot.org/tech/08/09/01/162224.shtml
   [A great prediction from someone who probably had inside knowledge.]: http://thetruthaboutmozilla.wordpress.com/2008/02/25/the-google-browser/

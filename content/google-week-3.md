@@ -65,5 +65,5 @@ still considering religion when making political decisions?
 I hope everyone has a great week!
 
   [Stole of Gratitude]: http://www.bookstore.ucsb.edu/graduation/grad_commence_attire.html
-  [Naked Juice]: http://en.wikipedia.org/wiki/Naked_Juice
-  [cutthroat]: http://en.wikipedia.org/wiki/Cutthroat_(pool)
+  [Naked Juice]: https://en.wikipedia.org/wiki/Naked_Juice
+  [cutthroat]: https://en.wikipedia.org/wiki/Cutthroat_(pool)

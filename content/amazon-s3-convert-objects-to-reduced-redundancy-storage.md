@@ -110,8 +110,8 @@ and AWS\_SECRET\_ACCESS\_KEY respectively.
     if __name__ == '__main__':
         main()
 
-  [about a month ago]: http://aws.amazon.com/about-aws/whats-new/2010/07/14/s3-announces-enhanced-support-reduced-redundancy-storage/
-  [reduced redundancy storage model]: http://aws.amazon.com/about-aws/whats-new/2010/05/19/announcing-amazon-s3-reduced-redundancy-storage/
+  [about a month ago]: https://aws.amazon.com/about-aws/whats-new/2010/07/14/s3-announces-enhanced-support-reduced-redundancy-storage/
+  [reduced redundancy storage model]: https://aws.amazon.com/about-aws/whats-new/2010/05/19/announcing-amazon-s3-reduced-redundancy-storage/
   [recently]: http://code.google.com/p/boto/source/detail?r=1595
   [boto]: http://code.google.com/p/boto/
   [one by the boto author]: http://www.elastician.com/2010/06/using-reduced-redundancy-storage-rrs-in.html

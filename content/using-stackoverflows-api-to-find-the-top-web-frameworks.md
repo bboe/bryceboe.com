@@ -245,42 +245,42 @@ be easily modified to add additional tags or change the filtering methods.
 Happy web-framework coding!
 
   [here is the table]: https://spreadsheets0.google.com/pub?key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&output=html
-  [Adam]: http://adamdoupe.com/
+  [Adam]: https://adamdoupe.com/
   [2010 iCTF]: /2010/12/09/ucsbs-international-capture-the-flag-competition-2010-challenge-6-fear-the-ear/
-  [ruby on rails]: http://rubyonrails.org/
-  [Best Web-Frameworks]: http://www.bestwebframeworks.com/
-  [Framework Usage Statistics]: http://trends.builtwith.com/framework
-  [model, view, controller]: http://en.wikipedia.org/wiki/Model%E2%80%93View%E2%80%93Controller
+  [ruby on rails]: https://rubyonrails.org/
+  [Best Web-Frameworks]: https://www.bestwebframeworks.com/
+  [Framework Usage Statistics]: https://trends.builtwith.com/framework
+  [model, view, controller]: https://en.wikipedia.org/wiki/Model%E2%80%93View%E2%80%93Controller
   [Google Trends]: http://www.google.com/trends
   [StackOverflow]: http://stackoverflow.com/
   [ruby on rails compared to python]: http://www.google.com/trends?q=ruby+on+rails,+python
-  [ruby-on-rails]: http://stackoverflow.com/tags/ruby-on-rails
-  [asp.net-mvc]: http://stackoverflow.com/tags/asp.net-mvc
-  [django]: http://stackoverflow.com/tags/django
-  [zend-framework]: http://stackoverflow.com/tags/zend-framework
-  [jsf]: http://stackoverflow.com/tags/jsf
-  [gwt]: http://stackoverflow.com/tags/gwt
-  [cakephp]: http://stackoverflow.com/tags/cakephp
-  [codeigniter]: http://stackoverflow.com/tags/codeigniter
-  [grails]: http://stackoverflow.com/tags/grails
-  [spring-mvc]: http://stackoverflow.com/tags/spring-mvc
-  [symfony]: http://stackoverflow.com/tags/symfony
-  [struts]: http://stackoverflow.com/tags/struts
-  [kohana]: http://stackoverflow.com/tags/kohana
-  [pylons]: http://stackoverflow.com/tags/pylons
-  [sinatra]: http://stackoverflow.com/tags/sinatra
-  [dotnetnuke]: http://stackoverflow.com/tags/dotnetnuke
-  [wicket]: http://stackoverflow.com/tags/wicket
-  [lift]: http://stackoverflow.com/tags/lift
-  [yii]: http://stackoverflow.com/tags/yii
-  [cherrypy]: http://stackoverflow.com/tags/cherrypy
-  [web2py]: http://stackoverflow.com/tags/web2py
-  [catalyst]: http://stackoverflow.com/tags/catalyst
-  [hibernate]: http://stackoverflow.com/tags/hibernate
-  [spring]: http://stackoverflow.com/tags/spring
-  [sass]: http://stackoverflow.com/tags/sass
+  [ruby-on-rails]: https://stackoverflow.com/tags/ruby-on-rails
+  [asp.net-mvc]: https://stackoverflow.com/tags/asp.net-mvc
+  [django]: https://stackoverflow.com/tags/django
+  [zend-framework]: https://stackoverflow.com/tags/zend-framework
+  [jsf]: https://stackoverflow.com/tags/jsf
+  [gwt]: https://stackoverflow.com/tags/gwt
+  [cakephp]: https://stackoverflow.com/tags/cakephp
+  [codeigniter]: https://stackoverflow.com/tags/codeigniter
+  [grails]: https://stackoverflow.com/tags/grails
+  [spring-mvc]: https://stackoverflow.com/tags/spring-mvc
+  [symfony]: https://stackoverflow.com/tags/symfony
+  [struts]: https://stackoverflow.com/tags/struts
+  [kohana]: https://stackoverflow.com/tags/kohana
+  [pylons]: https://stackoverflow.com/tags/pylons
+  [sinatra]: https://stackoverflow.com/tags/sinatra
+  [dotnetnuke]: https://stackoverflow.com/tags/dotnetnuke
+  [wicket]: https://stackoverflow.com/tags/wicket
+  [lift]: https://stackoverflow.com/tags/lift
+  [yii]: https://stackoverflow.com/tags/yii
+  [cherrypy]: https://stackoverflow.com/tags/cherrypy
+  [web2py]: https://stackoverflow.com/tags/web2py
+  [catalyst]: https://stackoverflow.com/tags/catalyst
+  [hibernate]: https://stackoverflow.com/tags/hibernate
+  [spring]: https://stackoverflow.com/tags/spring
+  [sass]: https://stackoverflow.com/tags/sass
   [StackOverflow API]: http://api.stackoverflow.com/
   [top10]: /images/2011/02/top10.png
   [normalized_top10]: /images/2011/02/normalized_top10.png
   [Interactive version]: https://spreadsheets1.google.com/pub?hl=en&key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&hl=en&gid=11
-  [py-stackexchange]: http://stackapps.com/questions/198/py-stackexchange-an-api-wrapper-for-python
+  [py-stackexchange]: https://stackapps.com/questions/198/py-stackexchange-an-api-wrapper-for-python

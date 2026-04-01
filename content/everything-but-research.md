@@ -59,8 +59,8 @@ Excluding what has really been taking up the majority of my life for the last
 eight weeks this pretty much covers everything up until now. My next entry will
 really focus on the adventures of a Ph.D. student.
 
-  [Peter Norvig]: http://en.wikipedia.org/wiki/Peter_Norvig
+  [Peter Norvig]: https://en.wikipedia.org/wiki/Peter_Norvig
   [UCSB ACM club]: http://www.acmucsb.com/
   [Annual UCSB Programming Competition]: http://cs.ucsb.edu/~bboe/acm/pc2008/
   [Southern California Regional Competition]: http://socalcontest.org/
-  [Ubuntu]: http://www.ubuntu.com/
+  [Ubuntu]: https://ubuntu.com/

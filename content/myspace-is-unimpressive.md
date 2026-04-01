@@ -57,4 +57,4 @@ testing, and referring people to here and priceTrackr.
   [#6 website for traffic globally]: http://www.alexa.com/data/details/main?q=&url=http://www.myspace.com
   [brother's MySpace]: http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&friendid=18401585
   [A Call For Justice]: http://216.220.97.17/beslut.htm
-  [NAMBLA]: http://www.nambla.org/
+  [NAMBLA]: https://www.nambla.org/
