@@ -48,7 +48,7 @@ the script. Happy tethering!
 
 [gist:id=1302227]
 
-  [18th ACM Conference on Computer and Communications Security]: http://www.sigsac.org/ccs/CCS2011/
+  [18th ACM Conference on Computer and Communications Security]: https://www.sigsac.org/ccs/CCS2011/
   [Adam Doupé]: https://adamdoupe.com/
   [reddit]: https://www.reddit.com/
   [yelp]: https://www.yelp.com/

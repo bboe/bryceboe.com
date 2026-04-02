@@ -16,6 +16,6 @@ which I find hilarious, the WTF really goes out to some of the strange cakes
 that people request. I really can't imagine my reaction to someone handing me a
 cake and saying, "this is part of right breast, enjoy!"
 
-  [Cake Wrecks]: http://cakewrecks.blogspot.com/
-  [Wedding Cake, of yourself]: http://cakewrecks.blogspot.com/2008/08/play-it-again-wrecks.html
-  [Literal Transcriptions]: http://cakewrecks.blogspot.com/2008/08/what-we-have-here-is-failure-to.html
+  [Cake Wrecks]: https://cakewrecks.blogspot.com/
+  [Wedding Cake, of yourself]: # "Dead link: https://cakewrecks.blogspot.com/2008/08/play-it-again-wrecks.html"
+  [Literal Transcriptions]: # "Dead link: https://cakewrecks.blogspot.com/2008/08/what-we-have-here-is-failure-to.html"

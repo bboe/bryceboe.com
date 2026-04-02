@@ -58,4 +58,4 @@ same project using php (or in python using python-mysql) so that one may learn
 what's going on under the covers, and so that they may fully appreciate the
 Django project.
 
-  [Django Project]: http://www.djangoproject.com/
+  [Django Project]: https://www.djangoproject.com/

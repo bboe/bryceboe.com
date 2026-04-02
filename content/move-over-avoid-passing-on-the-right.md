@@ -36,5 +36,5 @@ failure to yield to faster drivers would be for every car that passes you on
 the right your auto insurance increases one percent. Seems pretty fair, and
 much better than impalement, although I wouldn't mind that either.
 
-  [passing on the right]: http://www.ibiblio.org/rdu/resp/025-passing-on-right.html
+  [passing on the right]: https://www.ibiblio.org/rdu/resp/025-passing-on-right.html
   [Section 21754]: https://web.archive.org/web/20060924113532/http://www.dmv.ca.gov/pubs/vctop/d11/vc21754.htm

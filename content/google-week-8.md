@@ -132,14 +132,14 @@ otherwise it's more Olympics and Star Trek. Next Saturday a bunch of Santa
 Barbara people are coming up and I'm finally going on an Alcatraz tour with a
 friend from High School, Mohammad. Week 9 should be another exciting week!
 
-  [WOSN]: http://conferences.sigcomm.org/sigcomm/2008/workshops/wosn/
-  [Can Social Networks Improve e-Commerce: a Study on Social Marketplaces]: http://conferences.sigcomm.org/sigcomm/2008/workshops/wosn/papers/p1.pdf
+  [WOSN]: https://conferences.sigcomm.org/sigcomm/2008/workshops/wosn/
+  [Can Social Networks Improve e-Commerce: a Study on Social Marketplaces]: https://conferences.sigcomm.org/sigcomm/2008/workshops/wosn/papers/p1.pdf
   [Verena from the Front]: /images/2008/08/img_3649-300x225.jpg
     "Verena from the Front"
   [Verena from the Back]: /images/2008/08/img_3651-300x225.jpg
     "Verena from the Back"
   [segment]: https://www.cnbc.com/2008/08/13/googling-eric-schmidt.html
   [Cricket]: https://en.wikipedia.org/wiki/Cricket_(darts)
-  [Shannon]: http://shannonebarry.blogspot.com/
+  [Shannon]: https://shannonebarry.blogspot.com/
   [Thule]: https://www.thule.com/en-us/
   [Cheri]: # "Dead link: http://blogthismom.blogspot.com/"

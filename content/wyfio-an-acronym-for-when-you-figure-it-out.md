@@ -25,7 +25,7 @@ defined the acronym WYFIO as being short for "when you figure it out".
 I even previously [tweeted][] this announcement just to lay my claim a tad
 quicker.
 
-  [Google]: http://www.google.com/search?source=ig&hl=en&rlz=&q=WYFIO+figure
+  [Google]: https://www.google.com/search?source=ig&hl=en&rlz=&q=WYFIO+figure
   [bing]: https://www.bing.com/search?q=WYFIO+figure
   [YAHOO!]: # "Dead link: https://search.yahoo.com/search?p=WYFIO+figure"
   [this one]: https://www.rcgroups.com/forums/showthread.php?45408-I-give-up-what-is-IIRC

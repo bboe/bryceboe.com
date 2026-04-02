@@ -190,9 +190,9 @@ Happy "free" surfing, for now anyway :)
   [Gogo's Inflight Internet]: https://www.gogoair.com/
   [Living Social]: https://en.wikipedia.org/wiki/LivingSocial
   [Eventful]: # "Dead link: http://eventful.com/"
-  [TCP-over-ICMP]: http://www.cs.uit.no/~daniels/PingTunnel/
+  [TCP-over-ICMP]: https://www.cs.uit.no/~daniels/PingTunnel/
   [TCP-over-DNS]: https://analogbit.com/2008/07/27/tcp-over-dns-tunnel-software-howto/
-  [www.google.com]: http://www.google.com/
+  [www.google.com]: https://www.google.com/
   [1]: /images/2012/03/gogo_dm.png
   [2]: # "Dead link: https://twitter.com/#!/Gogo/status/176504298967015424"
   [Now back to the good part]: https://www.youtube.com/watch?v=GI6CfKcMhjY&t=1m37s

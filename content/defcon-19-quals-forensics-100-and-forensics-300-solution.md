@@ -95,7 +95,7 @@ the [consolodated.db input file][]:
   [761x25]: /images/2011/06/f100_761_25.png
   [resulted in success]: /images/2011/06/f100_solution.png
   [iPhoneTracker]: https://petewarden.github.io/iPhoneTracker/
-  [google search for the coordinates -77.846 166.667]: http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=-77.846+166.677&sll=-77.578778,167.409668&sspn=1.030596,5.218506&ie=UTF8&t=h&z=15
+  [google search for the coordinates -77.846 166.667]: https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=-77.846+166.677&sll=-77.578778,167.409668&sspn=1.030596,5.218506&ie=UTF8&t=h&z=15
   [revert to Bing]: https://www.bing.com/maps?v=2&where1=-77.846%20166.677
   [Ross Island's wikpiedia page]: https://en.wikipedia.org/wiki/Ross_Island
   [consolodated.db input file]: /images/2011/06/consolidated.db

@@ -11,5 +11,5 @@ To further justify my claim I've attached a screenshot of this:
 
 [![Google Search][]](/images/2006/08/2006-08-google.png)
 
-  [snakes on a plane fake boobs]: http://www.google.com/search?hl=en&lr=&rls=com.microsoft%3Aen-US&q=snakes+on+a+plane+fake+boobs
+  [snakes on a plane fake boobs]: https://www.google.com/search?hl=en&lr=&rls=com.microsoft%3Aen-US&q=snakes+on+a+plane+fake+boobs
   [Google Search]: /images/2006/08/2006-08-google-300x181.png "Google Search"

@@ -1,7 +1,6 @@
 a[title^="Dead link"] {
     color: #999;
     cursor: help;
-    pointer-events: none;
     text-decoration: line-through;
 }
 
