@@ -47,13 +47,12 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS = (('Adam Doupé', 'http://adamdoupe.com/'),)
+LINKS = (('Adam Doupé', 'https://adamdoupe.com/'),)
 
 # Social widget
 SOCIAL = (('github', 'https://github.com/bboe'),
-          ('stack-overflow', 'http://stackoverflow.com/users/176978/bboe'),
-          ('linkedin', 'http://www.linkedin.com/in/bbzbryce'),
-          ('twitter', 'https://twitter.com/bboe'))
+          ('stack-overflow', 'https://stackoverflow.com/users/176978/bboe'),
+          ('linkedin', 'https://www.linkedin.com/in/bryceboe/'))
 
 # Static files (robots.txt)
 ARTICLE_EXCLUDES = ['public']
