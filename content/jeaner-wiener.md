@@ -1,6 +1,7 @@
 Title: Jeaner Wiener
 Date: 2006-10-01 23:28
 Slug: jeaner-wiener
+Pre2014_Disclaimer: true
 
 Upon celebrating Adam's 20th birthday last night the question regarding the
 proper name of a protrusion caused by the zipper of pants came up. Growing up

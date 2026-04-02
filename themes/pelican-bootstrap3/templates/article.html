@@ -36,6 +36,16 @@
                         {% include "includes/article_info.html" %}
                     </div>
                 </div>
+                {% if article.pre2014_disclaimer %}
+                <div class="disclaimer">
+                    Disclaimer: This post, like others from my early twenties,
+                    reflects attitudes I'm not proud of. In particular, a lack of
+                    empathy, a disregard for women, and a casual relationship
+                    with alcohol that I didn't recognize as problems at the time.
+                    I've left it unaltered as an honest record, not because I
+                    stand by what I wrote.
+                </div>
+                {% endif %}
                 {{ article.content }}
             </div>
             <!-- /.entry-content -->

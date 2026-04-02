@@ -1,6 +1,7 @@
 Title: Recap: Winter 2008
 Date: 2008-03-27 19:21
 Slug: recap-winter-2008
+Pre2014_Disclaimer: true
 
 Winter quarter is to the school year as Wednesday is to the week; it is right
 in the middle. Fall quarter has the excitement of the new school year, which is

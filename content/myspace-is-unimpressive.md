@@ -1,6 +1,7 @@
 Title: MySpace is Unimpressive
 Date: 2006-09-04 23:33
 Slug: myspace-is-unimpressive
+Pre2014_Disclaimer: true
 
 After at least two years of avoiding MySpace I finally did the unthinkable and
 created a [profile][]. Now you may be thinking "why", or "are you mad" however

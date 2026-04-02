@@ -2,6 +2,7 @@ Title: Google: Week 9
 Date: 2008-08-27 00:07
 Tags: google
 Slug: google-week-9
+Pre2014_Disclaimer: true
 
 Damn! It's been 9 weeks so far. Well the fun has continued. Monday through
 Thursday was pretty standard. I advanced my project more, which I realized I

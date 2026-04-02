@@ -2,12 +2,13 @@ Title: Google: Weeks 10 and 11
 Date: 2008-09-07 22:49
 Tags: google
 Slug: google-weeks-10-and-11
+Pre2014_Disclaimer: true
 
 First I'd like to mention the obvious; I sold the Porsche this morning. Hmm ok
 maybe that's not the obvious. Anyway my 944 of 6 years is finally gone, and
 it's sad. Maybe someday when I have money to play with and a child who is into
 cars I'll get another 944. Onto the obvious news you're probably thinking of; I
-changed the layout following a conversation with a Lauren who said the previous
+changed the layout following a conversation with Lauren who said the previous
 one sucked, which I agreed. Another slightly obvious is my lack of an update
 last week, so this one is a twofer.
 

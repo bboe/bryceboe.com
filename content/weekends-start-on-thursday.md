@@ -1,6 +1,7 @@
 Title: Weekends Start on Thursday
 Date: 2007-07-20 01:30
 Slug: weekends-start-on-thursday
+Pre2014_Disclaimer: true
 
 It is a well known fact that weekends in Isla Vista start on Thursday, despite
 that fact that people may have classes or work on Friday. To aid in Thursday

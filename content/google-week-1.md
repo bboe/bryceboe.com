@@ -2,6 +2,7 @@ Title: Google: Week 1
 Date: 2008-06-29 20:46
 Tags: google
 Slug: google-week-1
+Pre2014_Disclaimer: true
 
 I'm going to try to give a brief week by week update on my Google adventure so
 here goes, with a few extras. As I mentioned [previously][], working at Google

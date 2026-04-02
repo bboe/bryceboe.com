@@ -1,6 +1,7 @@
 Title: Getting Back on the Horse
 Date: 2006-09-24 23:45
 Slug: getting-back-on-the-horse
+Pre2014_Disclaimer: true
 
 It's been awhile since my last blog post, in fact it's been a few weeks since I
 felt I've done something productive. Of course I make progress with tasks at

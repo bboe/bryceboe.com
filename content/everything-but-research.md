@@ -2,6 +2,7 @@ Title: Everything but Research
 Date: 2008-11-18 01:57
 Tags: acm
 Slug: everything-but-research
+Pre2014_Disclaimer: true
 
 So much has happened this quarter that it's now difficult to recall specifics,
 but knowing all too well that it only gets more difficult with time I'll try to

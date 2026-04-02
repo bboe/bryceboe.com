@@ -2,6 +2,7 @@ Title: Google: Week 3
 Date: 2008-07-13 23:01
 Tags: google
 Slug: google-week-3
+Pre2014_Disclaimer: true
 
 First I would like to acknowledge my mother's coworkers who started reading
 following last week's bidet story. I hate to set the bar low, however I do not

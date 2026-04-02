@@ -2,6 +2,7 @@ Title: Bye Bye Facebook: A Guide to Leaving Facebook
 Date: 2010-05-13 01:34
 Tags: facebook, google, hacking, mac, python
 Slug: bye-bye-facebook-a-guide-to-leaving-facebook
+Pre2014_Disclaimer: true
 
 <ins>
 Update 2010/05/27: I've made further updates to photograbber. Read about them

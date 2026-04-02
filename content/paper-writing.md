@@ -1,6 +1,7 @@
 Title: Paper Writing
 Date: 2006-07-24 02:08
 Slug: paper-writing
+Pre2014_Disclaimer: true
 
 Paper writing is a time of absolute procrastination and major productivity with
 everything but the paper it self. The following is the list of things I've
