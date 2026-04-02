@@ -87,7 +87,7 @@ Flat Stanley working on [torrentphobe][] with Jon and Adam
 [![image][6]](/images/2009/03/img_3832.jpg)  
 Bye bye Flat Stanley
 
-  [torrentphobe]: http://torrentpho.be
+  [torrentphobe]: # "Dead link: http://torrentpho.be"
   [image]: /images/2009/03/img_3816-300x225.jpg "stanley_tv"
   [1]: /images/2009/03/img_3818-300x225.jpg "stanley_dinner"
   [2]: /images/2009/03/img_3823-300x225.jpg "stanley_programming"

@@ -22,5 +22,5 @@ Anyway I'll make updates with priceTrackr's progress along with everything
 else. Jeeze 3 posts this week; one might start to think I have nothing better
 to do ;)
 
-  [priceTrackr]: http://www.pricetrackr.com
+  [priceTrackr]: # "Dead link: http://www.pricetrackr.com/"
   [newegg]: https://www.newegg.com/

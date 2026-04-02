@@ -137,22 +137,22 @@ promotion. I hope priceTrackr will be useful and there is anything that you
 would like to see please send me an email or make a comment. You may check on
 the status of priceTrackr at the [priceTrackr project page][]. Thanks again.
 
-  [priceTrackr]: http://www.pricetrackr.com
+  [priceTrackr]: # "Dead link: http://www.pricetrackr.com/"
   [Digg]: https://digg.com/
   [Official priceTrackr Launch]: /2006/08/27/official-pricetrackr-launch/
-  [Here's the Digg article]: http://www.digg.com/tech_deals/Newegg_priceTrackr
+  [Here's the Digg article]: # "Dead link: http://www.digg.com/tech_deals/Newegg_priceTrackr"
   [the Digg Effect]: https://en.wikipedia.org/wiki/Slashdot_effect
-  [wp-cache plugin]: http://mnm.uib.es/gallir/wp-cache-2/
-  [Digg This plugin]: http://www.aviransplace.com/index.php/digg-this-wordpress-plugin/
-  [Digg Spy]: http://www.digg.com/spy
+  [wp-cache plugin]: https://web.archive.org/web/20060903050924/http://mnm.uib.es:80/gallir/wp-cache-2/
+  [Digg This plugin]: # "Dead link: http://www.aviransplace.com/index.php/digg-this-wordpress-plugin/"
+  [Digg Spy]: # "Dead link: http://www.digg.com/spy"
   [www.newegg.com]: https://www.newegg.com/
   [newegg.com]: https://www.newegg.com/
-  [herrshuster]: http://www.digg.com/users/herrshuster
+  [herrshuster]: # "Dead link: http://www.digg.com/users/herrshuster"
   [the Dean Scream]: https://en.wikipedia.org/wiki/Howard_Dean#Iowa_results_and_the_.22Scream_Heard_.27Round_the_World.22
   [your site is down, probably will never visit again. nice knowing you]: /2006/08/27/official-pricetrackr-launch/#comment-19
   [posted]: /2006/08/27/official-pricetrackr-launch/#comment-29
   [pear's Cache_Lite]: https://pear.php.net/package/Cache_Lite
   [Bryce Boe Traffic Graph]: /images/2006/09/2006-bbdigggraph.png
   [priceTrackr Traffic Graph]: /images/2006/09/2006-ptdigggraph.png
-  [Google Adsense]: https://adsense.google.com/
+  [Google Adsense]: https://adsense.google.com/start/
   [priceTrackr project page]: /projects/pricetrackr/

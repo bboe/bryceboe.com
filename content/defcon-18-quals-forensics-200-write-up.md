@@ -3,10 +3,6 @@ Date: 2010-05-25 14:43
 Tags: hacking, python
 Slug: defcon-18-quals-forensics-200-write-up
 
-<ins>
-Edit: A bunch more DEFCON 18 write ups can be found at the [vnSecurity
-site][].</ins>
-
 This weekend I competed in the Defcon 18 Qualifiers with team Shellphish. We
 unfortunately only placed 15th, nonetheless, it was an exciting and challenging
 weekend. Below is my write up for the Forensics 200 challenge.
@@ -85,9 +81,8 @@ Running this eventually produces the following image, from which the is.gd url
 
 [![Defcon 18 Forensics 200 Result][]](/images/2010/05/f200_result.png)
 
-  [vnSecurity site]: https://www.vnsecurity.net/2010/05/defcon-18-quals-writeups-collection/
   [f200_02b7b50f575759cff7.tar.lzma]: /public/f200_02b7b50f575759cff7.tar
-  [lmgtfy lzma file]: http://lmgtfy.com/?q=lzma+file&l=1
+  [lmgtfy lzma file]: https://letmegooglethat.com/?q=lzma+file
   [python's imaging library]: https://www.pythonware.com/products/pil/
   [Defcon 18 Forensics 200 Result]: /images/2010/05/f200_result-43x300.png
     "Defcon 18 Forensics 200 Result"

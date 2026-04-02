@@ -95,9 +95,9 @@ Women's Volleyball scrimmage which was pretty exciting to watch. Julie came for
 the last bit as she lives not too far away, so we chatted it up a bit. And that
 brings me to a close. Have a great week!
 
-  [the work I've done]: http://autotest.kernel.org/search?q=bboe
+  [the work I've done]: https://github.com/autotest/autotest/commits?author=bboe@google.com
   [talk]: https://www.youtube.com/watch?v=s-JoXL8iaNM
   [Constitutional Limits on Coercive Interrogation]: https://www.amazon.com/Constitutional-Limits-Coercive-Interrogation-Guiora/dp/0195340310
   [12 Monkeys]: https://www.imdb.com/title/tt0114746/
-  [this consumerist article]: http://consumerist.com/tag/bad-install/?i=5020723&t=car-stereo-company-tries-to-install-gps-causes-1239854-damage-to-your-car
-  [yelp reviews]: http://www.yelp.com/biz/the-car-stereo-company-los-altos#hrid:f3ia9ggynOqFhrRGuHaGSA/query:Car%20Stereo
+  [this consumerist article]: # "Dead link: http://consumerist.com/tag/bad-install/?i=5020723&t=car-stereo-company-tries-to-install-gps-causes-1239854-damage-to-your-car"
+  [yelp reviews]: # "Dead link: http://www.yelp.com/biz/the-car-stereo-company-los-altos#hrid:f3ia9ggynOqFhrRGuHaGSA/query:Car%20Stereo"

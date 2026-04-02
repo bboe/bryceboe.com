@@ -48,4 +48,4 @@ future. I would not be where I am today without the numerous things that these
 women have done for me. Thank you both for everything you have done. I love you
 both. Happy Mother's day.
 
-  [ref]: http://www.babble.com/mom/relationships/anna-jarvis-mothers-day-history-gifts-enough-thank-you/
+  [ref]: https://en.wikipedia.org/wiki/Anna_Jarvis

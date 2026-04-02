@@ -43,4 +43,4 @@ unfortunately that doesn't matter to them.
 So that's all, until next time, which hopefully will come sooner.
 
   [lots of fluffy water]: https://www.flickr.com/photos/exoskeleton/331750884/
-  [my other parent's house]: http://blogthismom.blogspot.com/
+  [my other parent's house]: # "Dead link: http://blogthismom.blogspot.com/"

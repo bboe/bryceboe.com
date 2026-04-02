@@ -140,20 +140,20 @@ tasks, or other tasks, in the comments. Bye bye Facebook!
   [Pandora]: https://www.pandora.com/
   [yelp]: https://www.yelp.com/
   [Al Franken]: https://en.wikipedia.org/wiki/Al_Franken
-  [include instructions on his website]: https://franken.senate.gov/press/?page=news_single&news_item=Facebook_Privacy_Instructions
-  [Facebook's Gone Rogue; It's Time for an Open Alternative]: https://www.wired.com/epicenter/2010/05/facebook-rogue/
+  [include instructions on his website]: https://web.archive.org/web/20100511093736/http://franken.senate.gov:80/press/?page=news_single&news_item=Facebook_Privacy_Instructions
+  [Facebook's Gone Rogue; It's Time for an Open Alternative]: https://web.archive.org/web/20100515222556/http://www.wired.com:80/epicenter/2010/05/facebook-rogue
   [the straw that broke the camel's back]: https://en.wikipedia.org/wiki/The_last_straw
-  [delete button]: https://www.facebook.com/help/224562897555674/
+  [delete button]: https://web.archive.org/web/20121014125306/https://www.facebook.com/help/224562897555674/
   [link to this blog posting]: /2010/05/13/bye-bye-facebook-a-guide-to-leaving-facebook/
-  [facePAD]: https://addons.mozilla.org/en-US/firefox/addon/8442/
+  [facePAD]: https://web.archive.org/web/20100106074120/https://addons.mozilla.org/en-US/firefox/addon/8442
   [photograbber]: https://code.google.com/archive/p/photograbber
   [facePAD Usage]: /images/2010/05/facepad.jpg "facePAD Usage"
-  [revision 38]: https://code.google.com/p/photograbber/source/detail?r=38
+  [revision 38]: # "Dead link: https://code.google.com/p/photograbber/source/detail?r=38"
   [patch]: /public/photograbber/photograbber-r38+bboe.patch
   [download]: /public/photograbber/PhotoGrabber-OSX-r38+bboe.zip
   [zip file]: /public/photograbber/PhotoGrabber-WIN-r38+bboe.zip
-  [first result]: https://www.google.com/support/forum/p/gmail/thread?tid=058dc912c433f1b8&hl=en
-  [phaceboogle]: https://phaceboogle.bisounours.net/
-  [Facebook Connect]: https://developers.facebook.com/blog/post/108
+  [first result]: https://web.archive.org/web/20100208200749/http://www.google.com:80/support/forum/p/gmail/thread?tid=058dc912c433f1b8&hl=en
+  [phaceboogle]: # "Dead link: https://phaceboogle.bisounours.net/"
+  [Facebook Connect]: https://web.archive.org/web/20100529002343/http://developers.facebook.com/blog/post/108
   [Google's OAuth]: https://developers.google.com/identity/protocols/oauth2/web-server
-  [See section 'More']: https://www.google.com/support/calendar/bin/answer.py?hl=en&answer=37098
+  [See section 'More']: https://support.google.com/calendar/answer/13748346

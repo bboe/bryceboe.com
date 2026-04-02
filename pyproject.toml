@@ -11,5 +11,10 @@ name = "bryceboe-com"
 requires-python = ">=3.13"
 version = "0.1.0"
 
+[project.optional-dependencies]
+dev = [
+    "httpx[http2]",
+]
+
 [tool.uv]
 exclude-newer = "3 days"

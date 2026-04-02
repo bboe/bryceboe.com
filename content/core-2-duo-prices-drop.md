@@ -19,10 +19,10 @@ FAQ, About, and contact pages. It's looking quite good though I must say and
 hopefully doesn't have IE problems like this page. If you would like to beta
 test please contact me.
 
-  [priceTrackr]: http://www.pricetrackr.com
-  [X6800]: http://www.newegg.com/Product/Product.asp?Item=N82E16819115001
-  [E6700]: http://www.newegg.com/Product/Product.asp?Item=N82E16819115002
-  [E6600]: http://www.newegg.com/Product/Product.asp?Item=N82E16819115003
-  [E6400]: http://www.newegg.com/Product/Product.asp?Item=N82E16819115004
-  [E6300]: http://www.newegg.com/Product/Product.asp?Item=N82E16819115005
-  [1]: http://www.pricetrackr.com/
+  [priceTrackr]: # "Dead link: http://www.pricetrackr.com/"
+  [X6800]: # "Dead link: http://www.newegg.com/Product/Product.asp?Item=N82E16819115001"
+  [E6700]: # "Dead link: http://www.newegg.com/Product/Product.asp?Item=N82E16819115002"
+  [E6600]: # "Dead link: http://www.newegg.com/Product/Product.asp?Item=N82E16819115003"
+  [E6400]: # "Dead link: http://www.newegg.com/Product/Product.asp?Item=N82E16819115004"
+  [E6300]: # "Dead link: http://www.newegg.com/Product/Product.asp?Item=N82E16819115005"
+  [1]: # "Dead link: http://www.pricetrackr.com/"

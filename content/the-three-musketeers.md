@@ -71,7 +71,7 @@ night on the town, downtown Santa Barbara that is.
 [![Bryce, Adam, Scott - Junior Year Halloween as Top Gun Pilots][]](/images/2007/10/junior.jpg)
 [![Scott, Bryce, Adam - Senior Year Good Times][]](/images/2007/10/senior.jpg)
 
-  [people]: http://blogthismom.blogspot.com/
+  [people]: # "Dead link: http://blogthismom.blogspot.com/"
   [Cal Poly]: https://www.calpoly.edu/
   [UC Santa Barbara]: https://www.ucsb.edu/
   [Adam]: https://adamdoupe.com/

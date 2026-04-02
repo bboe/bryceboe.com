@@ -186,29 +186,29 @@ servers.
 
 Happy "free" surfing, for now anyway :)
 
-  [SIGCSE 2012]: http://www.sigcse.org/sigcse2012/
-  [Gogo's Inflight Internet]: http://www.gogoair.com/
-  [Living Social]: https://www.livingsocial.com
-  [Eventful]: http://eventful.com/
+  [SIGCSE 2012]: https://sigcse.org/events/symposia/2012.html
+  [Gogo's Inflight Internet]: https://www.gogoair.com/
+  [Living Social]: https://en.wikipedia.org/wiki/LivingSocial
+  [Eventful]: # "Dead link: http://eventful.com/"
   [TCP-over-ICMP]: http://www.cs.uit.no/~daniels/PingTunnel/
   [TCP-over-DNS]: https://analogbit.com/2008/07/27/tcp-over-dns-tunnel-software-howto/
   [www.google.com]: http://www.google.com/
   [1]: /images/2012/03/gogo_dm.png
-  [2]: https://twitter.com/#!/Gogo/status/176504298967015424
+  [2]: # "Dead link: https://twitter.com/#!/Gogo/status/176504298967015424"
   [Now back to the good part]: https://www.youtube.com/watch?v=GI6CfKcMhjY&t=1m37s
   [Google Chrome]: https://www.google.com/chrome/
   [Google Reader Notifier]: https://chromewebstore.google.com/detail/empty-title/apflmjolhbonpkbkooiamcnenbmbjcbf
   [Google Voice]: https://chromewebstore.google.com/detail/google-voice-by-google/kcnhkahnjcbndmmehfkdnkjomaanaooo
-  [mail.google.com]: https://mail.google.com
+  [mail.google.com]: https://mail.google.com/mail
   [docs.google.com]: https://docs.google.com
-  [Google+]: https://plus.google.com
+  [Google+]: # "Dead link: https://plus.google.com"
   [YouTube]: https://www.youtube.com/
   [Google Code]: https://code.google.com/
   [Google AppEngine]: https://cloud.google.com/appengine
   [Digital Inspiration]: https://www.labnol.org/internet/setup-proxy-server/12890
-  [Windows Guides]: http://mintywhite.com/software-reviews/security-software/set-proxy-google-app-engine/
-  [Google Analytics]: http://www.google.com/analytics/
-  [Google Adsense]: https://adsense.google.com/
+  [Windows Guides]: https://web.archive.org/web/20251122052601/https://www.mintywhite.com/software-reviews/security-software/set-proxy-google-app-engine/
+  [Google Analytics]: https://en.wikipedia.org/wiki/Google_Analytics
+  [Google Adsense]: https://adsense.google.com/start/
   [Server Name Indication]: https://en.wikipedia.org/wiki/Server_Name_Indication
   [still commonly used]: https://en.wikipedia.org/wiki/Server_Name_Indication#No_support
   [man-in-the-middle]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack

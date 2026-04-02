@@ -11,4 +11,4 @@ which hopefully will be sooner.
 Until [priceTrackr][www.pricetrackr.com] goes public its features will go
 undisclosed but as everyone has said thus far it will be quite useful.
 
-  [www.pricetrackr.com]: http://www.pricetrackr.com
+  [www.pricetrackr.com]: # "Dead link: http://www.pricetrackr.com/"

@@ -44,4 +44,4 @@ priceTrackr:
 
 Now go check out [priceTrackr][].
 
-  [priceTrackr]: http://www.pricetrackr.com
+  [priceTrackr]: # "Dead link: http://www.pricetrackr.com/"

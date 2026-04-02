@@ -26,7 +26,7 @@ I even previously [tweeted][] this announcement just to lay my claim a tad
 quicker.
 
   [Google]: http://www.google.com/search?source=ig&hl=en&rlz=&q=WYFIO+figure
-  [bing]: http://www.bing.com/search?q=WYFIO+figure
-  [YAHOO!]: http://search.yahoo.com/search?p=WYFIO+figure
-  [this one]: http://www.rcgroups.com/forums/showthread.php?t=45408
-  [tweeted]: http://twitter.com/bboe/status/8846941794
+  [bing]: https://www.bing.com/search?q=WYFIO+figure
+  [YAHOO!]: # "Dead link: https://search.yahoo.com/search?p=WYFIO+figure"
+  [this one]: https://www.rcgroups.com/forums/showthread.php?45408-I-give-up-what-is-IIRC
+  [tweeted]: # "Dead link: http://twitter.com/bboe/status/8846941794"

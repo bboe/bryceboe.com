@@ -47,6 +47,6 @@ to Windows and Apple.
 
   [Ubuntu 7.04]: https://ubuntu.com/
   [Adam]: https://adamdoupe.com/
-  [my post]: http://ubuntuforums.org/showpost.php?p=2495909&postcount=3
-  [debian change log]: http://changelogs.ubuntu.com/changelogs/pool/main/l/linux-source-2.6.20/linux-source-2.6.20_2.6.20-15.27/changelog
+  [my post]: # "Dead link: http://ubuntuforums.org/showpost.php?p=2495909&postcount=3"
+  [debian change log]: https://web.archive.org/web/20070820194640/http://changelogs.ubuntu.com:80/changelogs/pool/main/l/linux-source-2.6.20/linux-source-2.6.20_2.6.20-15.27/changelog
   [Kernel.org]: https://kernel.org/

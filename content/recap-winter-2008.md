@@ -74,5 +74,5 @@ and enjoying the sun. I love Santa Barbara.
   [Giovanni Vigna]: https://sites.cs.ucsb.edu/~vigna/
   [onion routing]: https://en.wikipedia.org/wiki/Onion_routing
   [defcon]: https://www.defcon.org/
-  [UCSB Association for Computing Machinery (ACM) club]: http://www.acmucsb.com/
-  [Interactive Informational Sessions]: http://cs.ucsb.edu/~bboe/static/iis
+  [UCSB Association for Computing Machinery (ACM) club]: https://web.archive.org/web/20081012070433/http://acmucsb.com:80/
+  [Interactive Informational Sessions]: https://ucsb.bryceboe.com/iis

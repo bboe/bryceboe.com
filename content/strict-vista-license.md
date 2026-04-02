@@ -23,6 +23,6 @@ My recommendation is obvious, learn to use something other than windows; it's
 free. And if you happen to see me at a Microsoft meeting, I'm only there for
 the free stuff.
 
-  [don't already know]: http://www.extremetech.com/article2/0,1558,2030003,00.asp?kc=ETRSS02129TX1K0000532
+  [don't already know]: https://www.cio.com/article/263118/windows-microsoft-allows-1-vista-transfer-under-new-license.html
   [Paralles]: https://www.parallels.com/
-  [$399 for Vista Ultimate]: http://www.microsoft.com/windowsvista/getready/editions/ultimate.mspx
+  [$399 for Vista Ultimate]: https://arstechnica.com/information-technology/2006/09/7663/

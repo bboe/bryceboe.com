@@ -11,6 +11,6 @@ company in charge of assigning IP address and domain names loses, even
 temporarily, control of their domain names? Of course they are probably
 constantly under attack, nonetheless wtf?
 
-  [New York Times reported]: http://www.nytimes.com/idg/IDG_852573C40069388000257475005F6F4D.html?ref=technology
-  [ICANN]: http://icann.org/
-  [confirmed]: http://icann.org/en/announcements/announcement-03jul08-en.htm
+  [New York Times reported]: https://archive.nytimes.com/www.nytimes.com/idg/IDG_852573C40069388000257475005F6F4D.html?ref=technology
+  [ICANN]: https://www.icann.org/
+  [confirmed]: https://web.archive.org/web/20080710071233/http://icann.org:80/en/announcements/announcement-03jul08-en.htm

@@ -52,8 +52,8 @@ the script. Happy tethering!
   [Adam Doupé]: https://adamdoupe.com/
   [reddit]: https://www.reddit.com/
   [yelp]: https://www.yelp.com/
-  [Android Forums post]: http://androidforums.com/droid-how-tips/18532-mac-os-x-droid-tethering-usb-wired.html
+  [Android Forums post]: https://web.archive.org/web/20141030190312/http://androidforums.com/droid-how-tips/18532-mac-os-x-droid-tethering-usb-wired.html
   [Azilink]: https://github.com/jnperry/azilink
   [Tunnelblick]: https://code.google.com/archive/p/tunnelblick
-  [shell script]: http://pastie.org/701122
-  [great blog post]: http://mornin.org/blog/howto-tether-android-phone-mac-os-x/
+  [shell script]: https://web.archive.org/web/20111007081133/http://pastie.org/701122
+  [great blog post]: https://web.archive.org/web/20160820055622/http://www.mornin.org/blog/howto-tether-android-phone-mac-os-x/

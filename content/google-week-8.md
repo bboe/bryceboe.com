@@ -142,4 +142,4 @@ friend from High School, Mohammad. Week 9 should be another exciting week!
   [Cricket]: https://en.wikipedia.org/wiki/Cricket_(darts)
   [Shannon]: http://shannonebarry.blogspot.com/
   [Thule]: https://www.thule.com/en-us/
-  [Cheri]: http://blogthismom.blogspot.com/
+  [Cheri]: # "Dead link: http://blogthismom.blogspot.com/"

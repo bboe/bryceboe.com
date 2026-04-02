@@ -71,13 +71,13 @@ into a project. It's all very exciting and I speculate I'll get my name on a
 few research papers. It's going to be a good year.
 
   [Worldviz]: https://www.worldviz.com/
-  [SIGGRAPH]: https://www.siggraph.org//
-  [Live Characters]: http://www.worldviz.com/products/livecharacters/index.html
+  [SIGGRAPH]: https://www.siggraph.org/
+  [Live Characters]: https://docs.worldviz.com/vizard/latest/LiveCharacter.htm
   [force feedback]: https://en.wikipedia.org/wiki/Haptic
   [SIGGRAPH 2007]: /images/2007/09/siggraph-0-150x150.jpg
   [Connor_Bike_0]: /images/2007/09/connor-bike-0-150x150.jpg
   [Connor_Bike_1]: /images/2007/09/connor-bike-1-150x150.jpg
-  [Cheri]: http://blogthismom.blogspot.com/
+  [Cheri]: # "Dead link: http://blogthismom.blogspot.com/"
   [Storage Area Network]: https://en.wikipedia.org/wiki/Storage_area_network
-  [Trac]: http://trac.edgewall.org/
+  [Trac]: https://trac.edgewall.org/
   [Ben Zhao]: https://sites.cs.ucsb.edu/~ravenben/

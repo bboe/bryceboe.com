@@ -22,4 +22,4 @@ problems running power lines.
 So, what the fuck US? Stop bickering and arguing about whose power lines are
 whose or whose property is whose. Just build the damn power lines.
 
-  [Wind Energy Bumps Into Power Grid's Limits]: http://www.nytimes.com/2008/08/27/business/27grid.html
+  [Wind Energy Bumps Into Power Grid's Limits]: https://web.archive.org/web/20090401210743/http://www.nytimes.com/2008/08/27/business/27grid.html

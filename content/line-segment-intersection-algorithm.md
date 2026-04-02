@@ -37,12 +37,12 @@ segments AB and CD intersect is as follows:
 
 I've created a [python script][] which demonstrates this algorithm.
 
-  [Southern California Regional]: http://www.socalcontest.org/
-  [ACM]: http://www.acm.org/
-  [programing competition]: http://icpc.baylor.edu/icpc/
+  [Southern California Regional]: https://scl.na.icpc.global/
+  [ACM]: https://www.acm.org/
+  [programing competition]: https://icpc.global/
   [Adam's]: https://adamdoupe.com/
-  [practice problems]: http://www-rcf.usc.edu/~dkempe/contest/fall06/fall06.pdf
-  [solution]: http://www-rcf.usc.edu/~dkempe/contest/fall06/ee.c.txt
-  [simpler way]: http://compgeom.cs.uiuc.edu/~jeffe/teaching/373/notes/x06-sweepline.pdf
-  [this]: http://compgeom.cs.uiuc.edu/~jeffe/teaching/373/notes/x05-convexhull.pdf
+  [practice problems]: https://contest.usc.edu/pmwiki.php/Fall06/Home?action=download&upname=fall06.pdf
+  [solution]: https://contest.usc.edu/pmwiki.php/Fall06/Home?action=download&upname=ee.c.txt
+  [simpler way]: https://jeffe.cs.illinois.edu/teaching/373/notes/x06-sweepline.pdf
+  [this]: https://jeffe.cs.illinois.edu/teaching/373/notes/x05-convexhull.pdf
   [python script]: /images/2006/10/intersect.py

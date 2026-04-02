@@ -50,5 +50,5 @@ visit on his next Daily Show.
 [Some highlights of Jon Stewart at UCSB.][]
 
   [Brief intro clip I found on youtube.]: https://www.youtube.com/watch?v=MP6IV7mSwok
-  [overwhelming support for legalized marijuana in Santa Barbara]: http://www.sensiblesantabarbara.org/
+  [overwhelming support for legalized marijuana in Santa Barbara]: # "Dead link: http://www.sensiblesantabarbara.org/"
   [Some highlights of Jon Stewart at UCSB.]: https://www.youtube.com/watch?v=odUcHpFY4sM

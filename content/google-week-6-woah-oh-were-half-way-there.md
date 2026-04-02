@@ -99,10 +99,10 @@ will be purchasing it when we get back to Santa Barbara - woo!
   [here]: https://www.youtube.com/atgoogletalks
   [Burn Rate]: http://www.cool-studio.net/
   [Nuclear War]: https://en.wikipedia.org/wiki/Nuclear_War_(card_game)
-  [Pandemic]: http://www.zmangames.com/boardgames/pandemic.htm
+  [Pandemic]: https://www.zmangames.com/game/pandemic/
   [PowerGrid]: https://en.wikipedia.org/wiki/Power_Grid_(board_game)
-  [Autotest]: http://test.kernel.org/autotest
+  [Autotest]: https://autotest.github.io/
   [Rock Band]: https://en.wikipedia.org/wiki/Rock_Band_(video_game)
-  [Northern California Youth Leadership Seminar]: http://www.californialeaders.org/index.html
+  [Northern California Youth Leadership Seminar]: # "Dead link: http://www.californialeaders.org/index.html"
   [Kevin Nealon]: https://en.wikipedia.org/wiki/Kevin_Nealon
   [Winchester Mystery House]: https://en.wikipedia.org/wiki/Winchester_Mystery_House

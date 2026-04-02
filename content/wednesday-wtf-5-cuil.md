@@ -17,9 +17,9 @@ is not so cool.
 
 There are some good comments on [this reddit thread][].
 
-  [cuil]: http://cuil.com
-  [bryce boe]: http://www.cuil.com/search?q=bryce%20boe&sl=long
-  [UCSB CS page]: http://www.cs.ucsb.edu/~bboe/
+  [cuil]: https://en.wikipedia.org/wiki/Cuil
+  [bryce boe]: # "Dead link: http://www.cuil.com/search?q=bryce%20boe&sl=long"
+  [UCSB CS page]: https://ucsb.bryceboe.com/
   [digg]: https://digg.com/
-  [ubuntuforums.org]: http://ubuntuforums.org
-  [this reddit thread]: https://www.reddit.com/comments/6tsbg/not_so_cuil_after_all/
+  [ubuntuforums.org]: # "Dead link: http://ubuntuforums.org"
+  [this reddit thread]: https://www.reddit.com/r/programming/comments/6tsbg/not_so_cuil_after_all/

@@ -212,5 +212,5 @@ you much in this particular case.
   [SIGINT]: https://en.wikipedia.org/wiki/SIGINT_(POSIX)
   [KeyboardInterrupt exception,]: https://docs.python.org/3/library/exceptions.html#exceptions.KeyboardInterrupt
   [Fibonacci]: https://en.wikipedia.org/wiki/Fibonacci_number
-  [bad practice]: http://linux.die.net/man/2/signal
+  [bad practice]: https://pubs.opengroup.org/onlinepubs/9799919799/functions/signal.html
   [this tarball]: /images/2010/09/bboe_module.tgz

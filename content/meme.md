@@ -71,8 +71,8 @@ that's dust in the wind. However, I recently did some work with OpenGL and GLSL
 which I would like to share, so stay tuned.
 
   [meme]: https://en.wikipedia.org/wiki/Meme
-  [Cheri]: http://blogthismom.blogspot.com/
+  [Cheri]: # "Dead link: http://blogthismom.blogspot.com/"
   [Adam]: https://adamdoupe.com/
   [Jason]: https://boeknows.wordpress.com/
-  [Chris]: http://drinkingmansnyt.blogspot.com/
+  [Chris]: # "Dead link: http://drinkingmansnyt.blogspot.com/"
   [Space Camp]: https://en.wikipedia.org/wiki/United_States_Space_Camp

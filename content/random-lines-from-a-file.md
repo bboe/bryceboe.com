@@ -81,5 +81,5 @@ properly.</ins>
 
         file.close()
 
-  [Jonathan's blog]: http://jmkupferman.blogspot.com/
-  [March 2008 post]: http://jmkupferman.blogspot.com/2008/11/read-random-line-in-large-file-in.html
+  [Jonathan's blog]: # "Dead link: http://jmkupferman.blogspot.com/"
+  [March 2008 post]: # "Dead link: http://jmkupferman.blogspot.com/2008/11/read-random-line-in-large-file-in.html"

@@ -93,7 +93,7 @@ Process-Based Job Management System in C][]</ins>
   [multiprocessing.Pool]: https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing.pool
   [python C module]: /2010/09/14/properly-handling-the-keyboard-interrupt-exception-sigint-within-a-python-c-module/
     "Properly Handling the Keyboard Interrupt Exception (SIGINT) within a Python C Module"
-  [operating system concepts]: http://cs.ucsb.edu/~bboe/p/cv#teaching
+  [operating system concepts]: https://ucsb.bryceboe.com/cv#teaching
   [os package]: https://docs.python.org/3/library/os.html
   [ANSI-C]: https://en.wikipedia.org/wiki/ANSI_C
   [POSIX-based]: https://en.wikipedia.org/wiki/POSIX

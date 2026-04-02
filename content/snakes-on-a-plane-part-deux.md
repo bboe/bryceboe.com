@@ -61,5 +61,5 @@ will do so.
 
 Now go see the movie! "Mother f\*\*\*ing snakes on a mother f\*\*\*ing plane!"
 
-  [Snakes On A Plane review]: http://adamdoupe.com/2006/08/18/snakes-on-a-plane-review/
+  [Snakes On A Plane review]: # "Dead link: http://adamdoupe.com/2006/08/18/snakes-on-a-plane-review/"
   [David Koechner]: https://www.imdb.com/name/nm0462712/

@@ -135,6 +135,6 @@ Difference"; that gave me a good laugh :)
   [Dubliners]: https://en.wikipedia.org/wiki/Dubliners
   [how goes it]: https://www.urbandictionary.com/define.php?term=how+goes+it
   [binary file]: /public/ictf09/0xDEAFBABE.mid
-  [midi note number]: https://www.midi.org/techspecs/midimessages.php
+  [midi note number]: https://midi.org/expanded-midi-1-0-messages-list
   [2]: /public/ictf09/midi_generation.py
   [3]: /public/ictf09/midi_checker.py

@@ -32,7 +32,7 @@ required to run the scan file example.
     API_KEY = 'YOUR KEY HERE'
 
     # The following function is modified from the snippet at:
-    # http://code.activestate.com/recipes/146306/
+    # https://web.archive.org/web/20100504210707/http://code.activestate.com:80/recipes/146306/
     def encode_multipart_formdata(fields, files=()):
         """
         fields is a dictionary of name to value for regular form fields.
@@ -120,7 +120,7 @@ Be sure to change the API\_KEY value on line 8 to reflect your VirusTotal API
 key. The entire script can be [downloaded here][] to save you a copy and paste.
 
   [VirusTotal]: https://www.virustotal.com/gui/
-  [see full list]: http://www.virustotal.com/about.html
-  [API]: http://www.virustotal.com/advanced.html#publicapi
-  [this snippet]: http://code.activestate.com/recipes/146306/
+  [see full list]: https://docs.virustotal.com/docs/how-it-works
+  [API]: https://docs.virustotal.com/docs/api-overview
+  [this snippet]: https://web.archive.org/web/20100504210707/http://code.activestate.com:80/recipes/146306/
   [downloaded here]: /images/2010/09/virustotal_report.py

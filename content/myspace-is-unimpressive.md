@@ -53,8 +53,8 @@ testing, and referring people to here and priceTrackr.
 > elder man. Further more I speculate problems with any such relationship once
 > the boy becomes a man.
 
-  [profile]: http://www.myspace.com/bryceboe
+  [profile]: # "Dead link: http://www.myspace.com/bryceboe"
   [#6 website for traffic globally]: https://web.archive.org/web/20070102024656/http://www.alexa.com/data/details/main?q=&url=http://www.myspace.com
-  [brother's MySpace]: http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&friendid=18401585
-  [A Call For Justice]: http://216.220.97.17/beslut.htm
+  [brother's MySpace]: # "Dead link: http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&friendid=18401585"
+  [A Call For Justice]: https://web.archive.org/web/20060211092727/http://216.220.97.17:80/beslut.htm
   [NAMBLA]: https://www.nambla.org/

@@ -89,19 +89,13 @@ the [consolodated.db input file][]:
     if __name__ == '__main__':
         sys.exit(main())
 
-You can find links to solutions to other Defcon 19 Quals challenges at the
-following locations: [Rogunix][], [negative foo][], [VNSecurity site][].
-
-  [8th place]: http://stalkr.net/defcon/graph.htm
+  [8th place]: https://stalkr.net/files/defcon/2011/quals/board/graph.htm
   [provided a png file]: /images/2011/06/f100.png
   [25x761]: /images/2011/06/f100_25_761.png
   [761x25]: /images/2011/06/f100_761_25.png
   [resulted in success]: /images/2011/06/f100_solution.png
-  [iPhoneTracker]: http://petewarden.github.com/iPhoneTracker/
+  [iPhoneTracker]: https://petewarden.github.io/iPhoneTracker/
   [google search for the coordinates -77.846 166.667]: http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=-77.846+166.677&sll=-77.578778,167.409668&sspn=1.030596,5.218506&ie=UTF8&t=h&z=15
   [revert to Bing]: https://www.bing.com/maps?v=2&where1=-77.846%20166.677
   [Ross Island's wikpiedia page]: https://en.wikipedia.org/wiki/Ross_Island
   [consolodated.db input file]: /images/2011/06/consolidated.db
-  [Rogunix]: http://rogunix.com/defconquals19.html
-  [negative foo]: http://t.negativefoo.org/post/6235620215/dc19-ctf-quals-writeups
-  [VNSecurity site]: https://www.vnsecurity.net/2011/05/defcon-19-ctf-quals-writeups-collection/

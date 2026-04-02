@@ -84,9 +84,9 @@ discussion, or just comments? If you want to be anonymous just use a fake name
 and a fake email address and assuming it's a non-spam comment I'll accept it.
 
   [Ben Zhao]: https://sites.cs.ucsb.edu/~ravenben/
-  [awesome Professor]: http://cs.ucsb.edu/~ebelding/
+  [awesome Professor]: https://ebelding.cs.ucsb.edu/
   [WorldViz]: https://www.worldviz.com/
-  [Vizard]: http://www.worldviz.com/products/vizard/index.html
+  [Vizard]: https://docs.worldviz.com/vizard/latest/
   [one of the coolest Professors on campus]: https://sites.cs.ucsb.edu/~sherwood/
   [NS-2]: https://www.isi.edu/websites/nsnam/ns/
   [TCL]: https://www.tcl-lang.org/

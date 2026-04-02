@@ -6,7 +6,7 @@ As a twenty-two year old, I am fortunate to have not lost any close loved ones,
 however there have been four people who I was moderately close to that passed
 away. The first, whose name is escaping me, was in seventh grade when a fellow
 student who I shared classes, and occasionally ate with, died from cancer. The
-second and third were [Angela Nguyen][] and [Jonathan Kendall][]. I met Angela
+second and third were [Angela Nguyen and Jonathan Kendall][]. I met Angela
 freshmen year of college and later Jonathan when she began dating him. They
 were traveling with some friends in the Bay Area during Winter break of our
 junior year when their vehicle rolled and engulfed in flames; three others
@@ -40,5 +40,4 @@ say:
 >
 > Rest in peace.
 
-  [Angela Nguyen]: http://www.mem.com/Story.aspx?ID=1671541
-  [Jonathan Kendall]: http://www.mem.com/Story.aspx?ID=1671301
+  [Angela Nguyen and Jonathan Kendall]: https://dailynexus.com/2007-01-10/two-ucsb-students-die-saturday-in-bay-area-car-accident/

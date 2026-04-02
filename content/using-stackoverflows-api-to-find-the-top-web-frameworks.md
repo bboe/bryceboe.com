@@ -17,10 +17,6 @@ each item on the list.</ins>
 Adding spring-mvc as that was what I originally was originally supposed to
 have.</ins>
 
-<ins datetime="2011-02-22T18:31:36+00:00">
-**Update 2011/02/22 10:36 PST**  
-For the interested, [here is the table][] used to generate the graph.</ins>
-
 <ins datetime="2011-02-22T18:05:43+00:00">
 **Update 2011/02/22 10:05 PST**  
 As per comments on this post, I updated the list by removing hibernate, spring,
@@ -244,7 +240,6 @@ be easily modified to add additional tags or change the filtering methods.
 
 Happy web-framework coding!
 
-  [here is the table]: https://spreadsheets0.google.com/pub?key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&output=html
   [Adam]: https://adamdoupe.com/
   [2010 iCTF]: /2010/12/09/ucsbs-international-capture-the-flag-competition-2010-challenge-6-fear-the-ear/
   [ruby on rails]: https://rubyonrails.org/
@@ -279,8 +274,7 @@ Happy web-framework coding!
   [hibernate]: https://stackoverflow.com/tags/hibernate
   [spring]: https://stackoverflow.com/tags/spring
   [sass]: https://stackoverflow.com/tags/sass
-  [StackOverflow API]: http://api.stackoverflow.com/
+  [StackOverflow API]: https://api.stackexchange.com/docs
   [top10]: /images/2011/02/top10.png
   [normalized_top10]: /images/2011/02/normalized_top10.png
-  [Interactive version]: https://spreadsheets1.google.com/pub?hl=en&key=0AtdxNnTLM0xddDIwRTFlR25PQkprQUF6SHZKQ2xMSUE&hl=en&gid=11
   [py-stackexchange]: https://stackapps.com/questions/198/py-stackexchange-an-api-wrapper-for-python

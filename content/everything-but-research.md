@@ -60,7 +60,7 @@ eight weeks this pretty much covers everything up until now. My next entry will
 really focus on the adventures of a Ph.D. student.
 
   [Peter Norvig]: https://en.wikipedia.org/wiki/Peter_Norvig
-  [UCSB ACM club]: http://www.acmucsb.com/
-  [Annual UCSB Programming Competition]: http://cs.ucsb.edu/~bboe/acm/pc2008/
-  [Southern California Regional Competition]: http://socalcontest.org/
+  [UCSB ACM club]: https://web.archive.org/web/20081012070433/http://acmucsb.com:80/
+  [Annual UCSB Programming Competition]: https://ucsb.bryceboe.com/battle08
+  [Southern California Regional Competition]: https://scl.na.icpc.global/
   [Ubuntu]: https://ubuntu.com/

@@ -22,6 +22,6 @@ and assuming people actually click on those links; the money has got to come
 from somewhere. Also I'll have to look for a spell checking addition to
 WordPress as I am very prone to mistakes.
 
-  [priceTrackr]: http://www.pricetrackr.com
+  [priceTrackr]: # "Dead link: http://www.pricetrackr.com/"
   [WorldViz]: https://www.worldviz.com/
   [lastfm]: https://www.last.fm/user/bbzbryce

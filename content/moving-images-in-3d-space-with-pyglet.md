@@ -149,7 +149,7 @@ you'll need to run it via: `VERSIONER_PYTHON_PREFER_32_BIT=yes ./animator.py`
 
   [6th annual Graduate Student Workshop on Computing (GSWC)]: http://gswc.cs.ucsb.edu/2011/
   [Worldviz]: https://www.worldviz.com/
-  [Vizard]: http://www.worldviz.com/products/vizard4/index.html
+  [Vizard]: https://docs.worldviz.com/vizard/latest/
   [image]: /images/2011/10/animator0-150x150.png "animator0"
   [1]: /images/2011/10/animator1-150x150.png "animator1"
   [2]: /images/2011/10/animator2-150x150.png "animator2"

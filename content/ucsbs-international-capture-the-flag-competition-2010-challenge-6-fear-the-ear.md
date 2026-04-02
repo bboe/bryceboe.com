@@ -163,16 +163,16 @@ thought. As always I appreciate all feedback, and challenge related feedback
 will help me create better challenges for next year's iCTF.
 
   [International Capture the Flag]: https://ictf.cs.ucsb.edu/
-  [security groups at various universities]: http://ictf.cs.ucsb.edu/ictf10/participants.php
+  [security groups at various universities]: https://ictf.cs.ucsb.edu/archive/ictf_2010.html
   [contributing significantly]: /2009/12/06/ictf09-%E2%80%93-ucsbs-international-capture-the-flag-competition/
-  [Organizing Large Scale Hacking Competitions]: http://portal.acm.org/citation.cfm?id=1884859
-  [DIMVA 2010]: http://dimva2010.fkie.fraunhofer.de/program.html
+  [Organizing Large Scale Hacking Competitions]: https://dl.acm.org/doi/10.5555/1884848.1884859
+  [DIMVA 2010]: https://dimva.org/dimva2010/program.html
   [301]: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.2
   [302]: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.3
   [303]: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.4
   [307]: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.8
   [Adam Doupé]: https://adamdoupe.com/
-  [this video]: http://www.archive.org/download/MannyCanard_USCSpeedRemix/MannyCanardH264.ogv
+  [this video]: https://archive.org/download/MannyCanard_USCSpeedRemix/MannyCanardH264.ogv
   [XSS vulnerability]: https://en.wikipedia.org/wiki/Cross-site_scripting
   [SQL injection vulnerability]: https://en.wikipedia.org/wiki/SQL_injection
   [here]: /public/ictf2010_challenge6.tar.gz

@@ -77,11 +77,11 @@ thoughts on parenthood. That one will be interesting, especially when I read it
 twenty or so years from now.
 
   [A Loss -- RIP Jaymie Darrow]: /2008/07/20/a-loss/
-  [autotest]: http://test.kernel.org/autotest/Developer
+  [autotest]: https://autotest.github.io/
   [Ovarian Hyperstimulation Syndrome]: https://en.wikipedia.org/wiki/Ovarian_hyperstimulation_syndrome
   [Hands Off Our Ovaries]: https://www.handsoffourovaries.com/
   [second wikipedia edit]: https://en.wikipedia.org/w/index.php?title=Miles_O%27Brien_(Star_Trek)&diff=prev&oldid=225958081
-  [Amazon's S3 storage service]: http://www.amazon.com/gp/browse.html?node=16427261
+  [Amazon's S3 storage service]: https://aws.amazon.com/s3/
   [awspylib]: https://code.google.com/archive/p/awspylib
   [my changes]: https://github.com/n006/awspylib/commit/9d1cacf63b736e3e1c147995199a02386759b654
-  [Isilon Systems]: http://www.isilon.com/
+  [Isilon Systems]: https://web.archive.org/web/20080706115101/http://isilon.com/

@@ -36,7 +36,7 @@ combo rented, and my mom was there.
 
 There was actually some ballin sales going on, or at least they did a good
 enough job to make me believe they were on sale. I ended up with black Hugo
-Boss pants, a light blue Hugo Boss button down and [Allen Edmonds "Wendel"][]
+Boss pants, a light blue Hugo Boss button down and Allen Edmonds "Wendel"
 shoes in black. Yes I probably spent a bit much, but damn it feels good to be a
 baller.
 
@@ -57,9 +57,8 @@ So much to do.
   [F8]: /2008/07/29/f8-08-%E2%80%93-the-facebook-developers-conference/
   [IRC]: https://en.wikipedia.org/wiki/Internet_Relay_Chat
   [ERC]: https://www.emacswiki.org/emacs/ERC
-  [Cheri]: http://blogthismom.blogspot.com/
+  [Cheri]: # "Dead link: http://blogthismom.blogspot.com/"
   [Pusoy Dos]: https://en.wikipedia.org/wiki/Pusoy_Dos
-  [Allen Edmonds "Wendel"]: http://www.allenedmonds.com/aeonline/ProductDisplay?catalogId=40000000001&storeId=1&langId=-1&productId=6463281&parentCategoryId=&imageType=2&parent_category_rn=0
   [Aren't we ballers?]: /images/2008/07/img_3588-300x225.jpg
     "Bryce and the WordViz Crew"
   [Splash Cafe]: https://www.splashcafe.com/

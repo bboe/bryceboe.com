@@ -222,7 +222,7 @@ function which handles the conversion from datetime objects to unix timestamps
   [unix timestamps]: https://en.wikipedia.org/wiki/Unix_time
   [UTC]: https://en.wikipedia.org/wiki/Coordinated_Universal_Time
   [datetime]: https://docs.python.org/2/library/datetime.html#datetime-objects
-  [pytz]: http://pytz.sourceforge.net/
+  [pytz]: https://pypi.org/project/pytz/
   [tzinfo]: https://docs.python.org/2/library/datetime.html#datetime.tzinfo
   [astimezone]: https://docs.python.org/2/library/datetime.html#datetime.datetime.astimezone
   [time.mktime]: https://docs.python.org/2/library/time.html#time.mktime

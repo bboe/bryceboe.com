@@ -41,7 +41,7 @@ Well I think that's all for last week. Hopefully I'll have a car to write about
 next week. I'm open for unique car names as I never named my 944 and I think I
 should start off my next car properly.
 
-  [Amazon's S3]: http://www.amazon.com/gp/browse.html?node=16427261
+  [Amazon's S3]: https://aws.amazon.com/s3/
   [s3fs]: https://code.google.com/archive/p/s3fs/wikis/FuseOverAmazon.wiki
   [rsync]: https://en.wikipedia.org/wiki/Rsync
   [Volkswagen Golfs]: https://en.wikipedia.org/wiki/Volkswagen_Golf
