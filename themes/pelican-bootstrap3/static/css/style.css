@@ -150,3 +150,12 @@ figure.floatcenter, .align-center {
     margin-right: 10px;
 }
 
+.disclaimer {
+    background-color: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+    color: #664d03;
+    font-style: italic;
+    margin-bottom: 1.5em;
+    padding: 0.75em 1em;
+}
