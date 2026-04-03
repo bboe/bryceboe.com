@@ -46,6 +46,13 @@
                     stand by what I wrote.
                 </div>
                 {% endif %}
+                {% if article.noainote %}
+                <div class="disclaimer">
+                    While I use Claude Code to write code, plan content outlines,
+                    and review my writing, 100% of the text you are reading here
+                    is and will continue to be my own.
+                </div>
+                {% endif %}
                 {{ article.content }}
             </div>
             <!-- /.entry-content -->

@@ -144,6 +144,16 @@ figure.floatcenter, .align-center {
     border-radius: inherit;
 }
 
+figcaption {
+  font-style: italic;
+  padding: 0 20px 20px 20px;
+  text-align: center;
+}
+
+figure {
+  margin: auto;
+}
+
 .categories-timestamp {
     color: #AAAAAA;
     font-size: 0.9em;
@@ -158,4 +168,8 @@ figure.floatcenter, .align-center {
     font-style: italic;
     margin-bottom: 1.5em;
     padding: 0.75em 1em;
+}
+
+.text-align-right {
+  text-align: right;
 }
