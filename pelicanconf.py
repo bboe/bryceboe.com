@@ -60,12 +60,10 @@ STATIC_CREATE_LINKS = True
 STATIC_EXCLUDE_SOURCES = False
 STATIC_PATHS = ['extra/.nojekyll', 'extra/CNAME',
                 'extra/com.tesla.3p.public-key.pem',
-                'extra/custom.css',
                 'extra/robots.txt', 'images', 'public']
 EXTRA_PATH_METADATA = {'extra/.nojekyll': {'path': '.nojekyll'},
                        'extra/CNAME': {'path': 'CNAME'},
                        'extra/com.tesla.3p.public-key.pem': {'path': '.well-known/appspecific/com.tesla.3p.public-key.pem'},
-                       'extra/custom.css': {'path': 'static/custom.css'},
                        'extra/robots.txt': {'path': 'robots.txt'}}
 
 # Sitemap
@@ -76,7 +74,6 @@ SITEMAP = {'format': 'xml',
 
 # pelican-bootstrap3 settings
 BOOTSTRAP_THEME = 'cerulean'
-CUSTOM_CSS = 'static/custom.css'
 DISPLAY_CATEGORIES_ON_SIDEBAR = False
 DISPLAY_RECENT_POSTS_ON_SIDEBAR = True
 DISPLAY_TAGS_ON_SIDEBAR = True
