@@ -29,9 +29,21 @@ jobs:
 
       - run: uv run make publish
 
-      - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b  # v4.0.0
+      # Note: upload-pages-artifact hardcodes `--exclude=".[^/]*"`, which drops
+      # dot-directories like `.well-known`. Package the tar ourselves to keep it.
+      - name: Package Pages artifact (keep .well-known)
+        run: |
+          tar --dereference --hard-dereference \
+            --directory ./output \
+            -cvf "$RUNNER_TEMP/artifact.tar" \
+            --exclude=.git --exclude=.github .
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02  # v4.6.2
         with:
-          path: ./output
+          name: github-pages
+          path: ${{ runner.temp }}/artifact.tar
+          include-hidden-files: true
+          retention-days: 1
 
       - id: deployment
         uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128  # v5.0.0
